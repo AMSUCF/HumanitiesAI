@@ -104,12 +104,12 @@ including some open access materials. The primary texts include:
 -   Michael L. Littman. *Code to Joy: Why Everyone Should Learn a Little Programming* (MIT Press, 2023). [Unlimited Access Ebook via UCF Library](https://ebookcentral.proquest.com/lib/ucf/detail.action?docID=30319504)
 -   Emily Bender and Alex Hanna. *The AI Con: How to Fight Big Tech's Hype and Create the Future We Want* (Beacon Press, 2024).
 
+In addition, each module includes samples, tutorials, and resources to
+guide the week's making experiments. Relevant recent articles will be integrated regularly to encourage awareness of the current discourse and the field.
+
 ## Required Subscriptions
 
 Students will need to subscribe to [Anthropic's Claude](https://claude.ai/) for hands-on exercises throughout the semester. A paid subscription is required to access the full functionality needed for course assignments.
-
-In addition, each module includes samples, tutorials, and resources to
-guide the week's making experiments. Relevant recent articles will be integrated regularly to encourage awareness of the current discourse and the field.
 
 ## Evaluation and Grading
 
@@ -169,6 +169,7 @@ circumstances will require additional time!
 
 [**Tutorial: Eliza and Bots**](weekone.md)
 
+-   *The AI Con* - Chapter 1: An Introduction to AI Hype
 -   Berry, D. M. (2023). The Limits of Computation: Joseph Weizenbaum and the ELIZA Chatbot. *Weizenbaum Journal of the Digital Society*, 3(3). [https://doi.org/10.34669/WI.WJDS/3.3.2](https://ojs.weizenbaum-institut.de/index.php/wjds/article/view/106)
 -   **Due: Activity Verification (Friday August 22nd)**
 -   **Generative Exercise One: Conversation**
@@ -177,9 +178,8 @@ circumstances will require additional time!
 
 [**Tutorial: Interfaces**](weektwo.md)
 
--   *Bitstreams* - The Poetics of Macintosh; The Story of S; Coda
+-   *The AI Con* - Chapter 2: It's Alive! The Hype of Thinking Machines
 -   [Emerson, Lori, 'Interfaced', in Matthew Rubery, and Leah Price (eds), Further Reading (2020; online edn, Oxford Academic, 5 Mar. 2020).](https://loriemerson.net/2020/02/07/interfaced/)
--   [Bogost, Ian. "AI Cheating Is Getting Worse." *The Atlantic.* August 19, 2024. ](https://www.theatlantic.com/technology/archive/2024/08/another-year-ai-college-cheating/679502/)
 -   **Generative Exercise Two: Interface Critique**
 
 ### Week Three: Textual - Sources (Monday, September 1)
@@ -187,9 +187,9 @@ circumstances will require additional time!
 [**Tutorial: Reading Across Texts**](weekthree.md) 
 
 -   *Artificial Intelligence* - Part I: Background
+-   *The AI Con* - Chapter 3: Leisure for Me, Gig Work for Thee: AI Hype at Work
 -   Underwood, Ted. "A Genealogy of Distant Reading." *DHQ: Digital Humanities Quarterly* 11.2 (2017). [http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html](http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html).
 -   [Kirschenbaum, Matthew. "Prepare for the Textpocalypse." *The Atlantic.* March 8, 2023.](https://www.theatlantic.com/technology/archive/2023/03/ai-chatgpt-writing-language-models/673318/)
--   [Bhatia, Aatish. "When A.I.'s Output Is a Threat to A.I. Itself." *The New York Times.* August 25, 2024.](https://www.nytimes.com/interactive/2024/08/26/upshot/ai-synthetic-data.html)
 -   **Generative Exercise Three: Textual Analysis**
 
 ### Week Four: Textual - Combinatory (Monday, September 8)
@@ -197,10 +197,8 @@ circumstances will require additional time!
 [**Tutorial: Combining Texts**](weekfour.md)
 
 -   *Artificial Intelligence* - Part II: Looking and Seeing
+-   *The AI Con* - Chapter 4: If It Quacks Like a Doc: AI Hype and Social Services
 -   Mackay, James and Polina Mackay. “Experiments in Generating Cut-up texts with Commercial AI”, Electronic Book Review, June 9, 2024, [https://doi.org/10.7273/gkrg-5d74](https://electronicbookreview.com/essay/experiments-in-generating-cut-up-texts-with-commercial-ai/).
--   [Barber, Gregory. "Text-Savvy AI Is Here to Write Fiction." *Wired Magazine.* November 23, 2019.](https://www.wired.com/story/nanogenmo-ai-novels-gpt2/) 
--   [Beckerman, Gal. "AI is Coming for Amateur Novelists. That's Fine." *The Atlantic.* September 4, 2024.](https://www.theatlantic.com/books/archive/2024/09/ai-is-coming-for-the-amateur-novelists-thats-fine/679696/)
--   [Chiang, Ted. "Why A.I. Isn't Going to Make Art." *The New Yorker.* August 31, 2024.](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 -   **Generative Exercise Four: Cut-up Texts**
 
 ### Week Five: Visual - Aesthetics (Monday, September 15)
@@ -208,8 +206,7 @@ circumstances will require additional time!
 [**Tutorial: Mash-ups and Remixes**](weekfive.md)
 
 -   *Artificial Intelligence* - Part III: Learning to Play
--   [Feiger, Leah. "Could AI and Deepfakes Sway the US Election?" *Wired Magazine.* September 6, 2024.](https://www.wired.com/story/deepfake-porn-election/)
--   [Bobrowsky, Meghan and Miles Kruppa. "Mickey Mouse Smoking: How AI Images Tools Are Generating New Content-Moderation Problems." *The Wall Street Journal.* September 2, 2024.](https://www.wsj.com/tech/ai/mickey-mouse-smoking-how-ai-image-tools-are-generating-new-content-moderation-problems-da90148e)
+-   *The AI Con* - Chapter 5: Artifice or Intelligence? AI Hype in Art, Journalism, and Science
 -   **Generative Exercise Five: Playful Generation**
 
 ### Week Six: Visual - Art and Creativity (Monday, September 22)
@@ -217,6 +214,7 @@ circumstances will require additional time!
 [**Tutorial: Archival Images**](weeksix.md)
 
 -   *Artificial Intelligence* - Part IV: Artificial Intelligence Meets Natural Language
+-   *The AI Con* - Chapter 6: I'm Sorry, Dave, I'm Afraid I Can't Do That: AI Doomers, AI Boosters, and Why None of That Makes Sense
 -   [Jebb, Louis. "On process: Refik Anadol seeks to demystify AI art by showing how it is put together." *The Art Newspaper.* April 5, 2024](https://www.theartnewspaper.com/2024/04/05/on-process-refik-anadol-seeks-to-demystify-ai-art-by-showing-how-it-is-put-together)
 -   [Nyce, Caroline Mimbs. "Why Does AI Art Look Like That?" *The Atlantic.* August 16, 2024.](https://www.theatlantic.com/technology/archive/2024/08/why-does-all-ai-art-look-same/679488/)
 -   **Generative Exercise Six: Meaningful Images**
@@ -226,8 +224,7 @@ circumstances will require additional time!
 [**Tutorial: Video**](weekseven.md)
 
 -   *Artificial Intelligence* - Part V: The Barrier of Meaning
--   [Watercutter, Angela. "Lionsgate's New Deal is a Test of Hollywood's Relationship with AI." *Wired Magazine.* September 18, 2024.](https://www.wired.com/story/lionsgates-new-deal-is-a-test-of-hollywoods-relationship-with-ai/)
--   [Thompson, Stuart. "California Passes Election 'Deepfake' Laws, Forcing Social Media Companies to Take Action." *New York Times.* September 17, 2024.](https://www.nytimes.com/2024/09/17/technology/california-deepfakes-law-social-media-newsom.html)
+-   *The AI Con* - Chapter 7: Do You Believe in Hope After Hype?
 -   **Generative Exercise Seven: Expansive Imaginaries**
 
 ### Week Eight: Visual - Perceptions (Monday, October 6)
@@ -236,12 +233,11 @@ circumstances will require additional time!
 
 -   *Code to Joy* - Telling Computers What to Do
 -   [Farrell, Henry. "After software eats the world, what comes out the other end?" October 3, 2024.](https://www.programmablemutter.com/p/after-software-eats-the-world-what)
--   [Knight, Will. "Hacking Generative AI for Fun and Profit." *Wired Magazine.* October 2, 2024.](https://www.wired.com/story/sundai-club-generative-ai-hackathon-group/)
 -   **Generative Exercise Eight: Interactive Visualizations**
 
 ### Week Nine: Procedural - Code and Rules (Monday, October 13)
 
-Tutorial: Cancelled due to Hurricane
+Tutorial: Code Interfaces
 
 -   *Code to Joy* - The What of Programming
 -   *Algorithms of Oppression* - The Power of Algorithms
@@ -262,8 +258,6 @@ Tutorial: Cancelled due to Hurricane
 
 -   *Code to Joy* - Splitting on Conditionals
 -   *Algorithms of Oppression* - Searching for Black Girls
--   [Firth, Niall. "How generative AI could reinvent what it means to play." *MIT Technology Review*, June 20, 2024.](https://www.technologyreview.com/2024/06/20/1093428/generative-ai-reinventing-video-games-immersive-npcs/)
--   [Looper, Christian de. "Meet the developers integrating generative AI in a new video game." *Mashable*, October 21, 2024.](https://mashable.com/article/generative-ai-in-video-games-retail-mage)
 -   **Generative Exercise Eleven: Games**
 
 ### Week Twelve: Procedural - Hypertext (Monday, November 3)
@@ -281,7 +275,6 @@ Tutorial: Cancelled due to Hurricane
 
 -   *Code to Joy* - Consolidating Into Loops
 -   *Algorithms of Oppression* - Searching for Protections
--   [Wong, Matteo. "AI Is Killing the Internet's Curiosity." *The Atlantic.* November 8, 2024.](https://www.theatlantic.com/newsletters/archive/2024/11/ai-is-killing-the-internets-curiosity/680600/)
 -   **Generative Exercise Thirteen: Portfolio of Experiments**
 
 ### Week Fourteen: Applications: Art (Monday, November 17)
@@ -290,8 +283,6 @@ Tutorial: Cancelled due to Hurricane
 
 -   *Code to Joy* - Defining Functions
 -   *Algorithms of Oppression* - Future of Knowledge in Public
--   [Fishman, Ted C. "The AI Boom Rests on Billions of Tonnes of Concrete." *IEEE Spectrum.* October 30, 2024.](https://spectrum.ieee.org/green-concrete)
--   ["AI Robots" (interactive piece) *IEEE Spectrum.*](https://spectrum.ieee.org/ai-robots)
 -   **Generative Exercise Fourteen: Experimental Interactive Bot**
 
 ### Week Fifteen: Applications: Humanities (Monday, November 24)
