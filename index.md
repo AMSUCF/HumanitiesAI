@@ -8,8 +8,11 @@ title: Humanities in the Age of AI
 
 ## Contents
 
-- [Contents](#contents)
-- [Course Description](#course-description)
+- [Contents](#contents)[**Tutorial: Interfaces**](weektwo.md)
+
+-   [Emerson, Lori, 'Interfaced', in Matthew Rubery, and Leah Price (eds), Further Reading (2020; online edn, Oxford Academic, 5 Mar. 2020).](https://loriemerson.net/2020/02/07/interfaced/)
+-   [Bogost, Ian. "AI Cheating Is Getting Worse." *The Atlantic.* August 19, 2024. ](https://www.theatlantic.com/technology/archive/2024/08/another-year-ai-college-cheating/679502/)
+-   **Generative Exercise Two: Interface Critique**ourse Description](#course-description)
 - [Course Objectives](#course-objectives)
 - [Materials and Texts](#materials-and-texts)
 - [Evaluation and Grading](#evaluation-and-grading)
@@ -99,12 +102,13 @@ This course requires a mix of applied and theoretical readings,
 including some open access materials. The primary texts include:
 
 -   Melanie Mitchell. *Artificial Intelligence: A Guide for Thinking Humans* (Farrar, Straus and Giroux, 2019). (Physical copy on reserve in the UCF Library)
--   Matthew Kirschenbaum. *Bitstreams: The future of Digital Literary
-    Heritage* (University of Pennsylvania Press, 2021). [Unlimited Access Ebook via UCF Library](https://go.openathens.net/redirector/ucf.edu?url=https%3A%2F%2Fdoi.org%2F10.2307%2Fj.ctv1f45qbq)
 -   Safiya Noble. *Algorithms of Oppression: How Search Engines Reinforce Racism.* (NYU Press, 2018). [Unlimited Access Ebook via UCF Library](https://go.openathens.net/redirector/ucf.edu?url=https%3A%2F%2Fdoi.org%2F10.2307%2Fj.ctt1pwt9w5)
--   Joanna Zylinska. *The Perception Machine: Our Photographic Future
-    between the Eye and AI* (MIT Press, 2023). [Unlimited Access Ebook via UCF Library](https://search.ebscohost.com/login.aspx?direct=true&AuthType=cookie,shib&db=nlebk&AN=3549494&authtype=shib&site=ehost-live&scope=site&custid=current&groupid=main&authtype=shib)
 -   Michael L. Littman. *Code to Joy: Why Everyone Should Learn a Little Programming* (MIT Press, 2023). [Unlimited Access Ebook via UCF Library](https://ebookcentral.proquest.com/lib/ucf/detail.action?docID=30319504)
+-   Emily Bender and Alex Hanna. *The AI Con: How to Fight Big Tech's Hype and Create the Future We Want* (Beacon Press, 2024).
+
+## Required Subscriptions
+
+Students will need to subscribe to [Anthropic's Claude](https://claude.ai/) for hands-on exercises throughout the semester. A paid subscription is required to access the full functionality needed for course assignments.
 
 In addition, each module includes samples, tutorials, and resources to
 guide the week's making experiments. Relevant recent articles will be integrated regularly to encourage awareness of the current discourse and the field.
@@ -167,7 +171,6 @@ circumstances will require additional time!
 
 [**Tutorial: Eliza and Bots**](weekone.md)
 
--   *Bitsreams* - Introduction; Archives Without Dust
 -   Berry, D. M. (2023). The Limits of Computation: Joseph Weizenbaum and the ELIZA Chatbot. *Weizenbaum Journal of the Digital Society*, 3(3). [https://doi.org/10.34669/WI.WJDS/3.3.2](https://ojs.weizenbaum-institut.de/index.php/wjds/article/view/106)
 -   **Due: Activity Verification (Friday August 22nd)**
 -   **Generative Exercise One: Conversation**
@@ -206,7 +209,6 @@ circumstances will require additional time!
 
 [**Tutorial: Mash-ups and Remixes**](weekfive.md)
 
--   *The Perception Machine* - Introduction; Does Photography Have a Future?
 -   *Artificial Intelligence* - Part III: Learning to Play
 -   [Feiger, Leah. "Could AI and Deepfakes Sway the US Election?" *Wired Magazine.* September 6, 2024.](https://www.wired.com/story/deepfake-porn-election/)
 -   [Bobrowsky, Meghan and Miles Kruppa. "Mickey Mouse Smoking: How AI Images Tools Are Generating New Content-Moderation Problems." *The Wall Street Journal.* September 2, 2024.](https://www.wsj.com/tech/ai/mickey-mouse-smoking-how-ai-image-tools-are-generating-new-content-moderation-problems-da90148e)
@@ -216,7 +218,6 @@ circumstances will require additional time!
 
 [**Tutorial: Archival Images**](weeksix.md)
 
--   *The Perception Machine* - After-Photography; Screen Cuts; From Machine Vision to a Nontrivial Perception Machine
 -   *Artificial Intelligence* - Part IV: Artificial Intelligence Meets Natural Language
 -   [Jebb, Louis. "On process: Refik Anadol seeks to demystify AI art by showing how it is put together." *The Art Newspaper.* April 5, 2024](https://www.theartnewspaper.com/2024/04/05/on-process-refik-anadol-seeks-to-demystify-ai-art-by-showing-how-it-is-put-together)
 -   [Nyce, Caroline Mimbs. "Why Does AI Art Look Like That?" *The Atlantic.* August 16, 2024.](https://www.theatlantic.com/technology/archive/2024/08/why-does-all-ai-art-look-same/679488/)
@@ -226,7 +227,6 @@ circumstances will require additional time!
 
 [**Tutorial: Video**](weekseven.md)
 
--   *The Perception Machine* - AUTO-FOTO-KINO; Can You Photograph the Future?
 -   *Artificial Intelligence* - Part V: The Barrier of Meaning
 -   [Watercutter, Angela. "Lionsgate's New Deal is a Test of Hollywood's Relationship with AI." *Wired Magazine.* September 18, 2024.](https://www.wired.com/story/lionsgates-new-deal-is-a-test-of-hollywoods-relationship-with-ai/)
 -   [Thompson, Stuart. "California Passes Election 'Deepfake' Laws, Forcing Social Media Companies to Take Action." *New York Times.* September 17, 2024.](https://www.nytimes.com/2024/09/17/technology/california-deepfakes-law-social-media-newsom.html)
@@ -236,7 +236,6 @@ circumstances will require additional time!
 
 [**Tutorial: Image Classification**](weekeight.md)
 
--   *The Perception Machine* - "Loser Images"; Conclusion
 -   *Code to Joy* - Telling Computers What to Do
 -   [Farrell, Henry. "After software eats the world, what comes out the other end?" October 3, 2024.](https://www.programmablemutter.com/p/after-software-eats-the-world-what)
 -   [Knight, Will. "Hacking Generative AI for Fun and Profit." *Wired Magazine.* October 2, 2024.](https://www.wired.com/story/sundai-club-generative-ai-hackathon-group/)

@@ -81,8 +81,8 @@ function initializeFloatingNodes() {
   const container = document.querySelector('.floating-nodes');
   if (!container) return;
   
-  // Create floating nodes
-  for (let i = 0; i < 15; i++) {
+  // Create floating nodes with varied properties
+  for (let i = 0; i < 20; i++) {
     const node = document.createElement('div');
     node.className = 'floating-node';
     
@@ -94,11 +94,27 @@ function initializeFloatingNodes() {
     node.style.animationDelay = Math.random() * 6 + 's';
     node.style.animationDuration = (Math.random() * 4 + 4) + 's';
     
-    // Random colors
+    // Random sizes for variety
+    const size = Math.random() * 6 + 4; // 4-10px
+    node.style.width = size + 'px';
+    node.style.height = size + 'px';
+    
+    // Random colors with different intensities
     const colors = ['#00ffff', '#a855f7', '#ec4899', '#10b981', '#3b82f6'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     node.style.background = randomColor;
-    node.style.boxShadow = `0 0 20px ${randomColor}`;
+    
+    // Enhanced glow with motion blur effect
+    const glowIntensity = Math.random() * 20 + 10;
+    node.style.boxShadow = `0 0 ${glowIntensity}px ${randomColor}, 0 0 ${glowIntensity * 2}px ${randomColor}`;
+    
+    // Add different animation classes for variety
+    const animationTypes = ['', 'nth-child(2n)', 'nth-child(3n)'];
+    if (i % 3 === 1) {
+      node.style.animationName = 'floatReverse';
+    } else if (i % 3 === 2) {
+      node.style.animationName = 'floatDiagonal';
+    }
     
     container.appendChild(node);
   }
@@ -127,17 +143,19 @@ function initializeTextEffects() {
   const style = document.createElement('style');
   style.textContent = `
     .letter-animation {
-      animation: letterGlow 3s ease-in-out infinite;
+      animation: letterGlow 4s ease-in-out infinite;
     }
     
     @keyframes letterGlow {
       0%, 100% { 
         transform: translateY(0px) scale(1);
-        text-shadow: 0 0 10px currentColor;
+        text-shadow: 0 0 3px currentColor;
+        opacity: 0.9;
       }
       50% { 
-        transform: translateY(-5px) scale(1.05);
-        text-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+        transform: translateY(-2px) scale(1.02);
+        text-shadow: 0 0 6px currentColor;
+        opacity: 1;
       }
     }
   `;
