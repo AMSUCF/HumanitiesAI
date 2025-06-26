@@ -244,7 +244,7 @@ Tutorial: Code Interfaces
 -   *Code to Joy* - The What of Programming
 -   *Algorithms of Oppression* - The Power of Algorithms
 -   Evans, Julia. [*So you want to be a wizard.*](https://wizardzines.com/zines/wizard/) 
--   **Exercise cancelled due to hurricane: Install Visual Studio Code + Github Desktop**
+-   **Generative Exercise Nine: Tools**
 
 ### Week Ten: Procedural - Digital Humanities (Monday, October 20)
 
