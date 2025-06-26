@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci Fi Book Finder</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1b1b2f;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+            font-size: 3em;
+            margin-bottom: 40px;
+        }
+        #instructions {
+            max-width: 1000px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 1.2em;
+            color: #ffcc00;
+        }
+        #results {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2e2e4f;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+        .book-container {
+            background-color: #2e2e4f;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .book-container h2 {
+            margin: 0 0 10px;
+            color: #ffcc00;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: 10px 0;
+        }
+        .rating label {
+            margin-right: 5px;
+        }
+        .submit-button, .more-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .submit-button:hover, .more-button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sci Fi Book Finder</h1>
+    <div id="instructions">Rate the books below from 1 (low) to 5 (high) to help us understand your preferences! If you haven't read a book, select "Haven't read it."</div>
+    <form id="ratingForm"></form>
+
+    <button type="button" class="submit-button" onclick="submitRatings()">Submit Ratings</button>
+
+    <div id="results">
+        <h2>Your Preferences and Recommendations</h2>
+        <div id="preferences"></div>
+        <div id="recommendations"></div>
+        <button type="button" class="more-button" onclick="loadMoreBooks()">Rate More Books</button>
+    </div>
+
+    <script>
+        let selectedBooks = [];
+        let allBooks = [];
+        let genreCounts = {};
+        let round = 1;
+
+        // Function to load JSON and display books
+        async function loadBooks() {
+            const response = await fetch('sci_fi_books_genres.json');
+            allBooks = await response.json();
+
+            // Initialize the read property for each book if not already set
+            allBooks.forEach(book => {
+                if (typeof book.read === 'undefined') {
+                    book.read = false;
+                }
+            });
+
+            // Randomly select 10 books that have not been read
+            selectedBooks = allBooks.filter(book => !book.read).sort(() => 0.5 - Math.random()).slice(0, 10);
+
+            const form = document.getElementById('ratingForm');
+            form.innerHTML = ''; // Clear any previous content
+
+            // Create the rating form dynamically
+            selectedBooks.forEach((book, index) => {
+                const container = document.createElement('div');
+                container.className = 'book-container';
+
+                const title = document.createElement('h2');
+                title.innerText = `${book.title} by ${book.author} (${book.year})`;
+                container.appendChild(title);
+
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'rating';
+                
+                const label = document.createElement('label');
+                label.innerText = 'Rate: ';
+                ratingDiv.appendChild(label);
+
+                for (let i = 1; i <= 5; i++) {
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `book${index}`;
+                    radio.value = i;
+                    ratingDiv.appendChild(radio);
+                    ratingDiv.appendChild(document.createTextNode(i));
+                }
+
+                const notReadRadio = document.createElement('input');
+                notReadRadio.type = 'radio';
+                notReadRadio.name = `book${index}`;
+                notReadRadio.value = 'not_read';
+                ratingDiv.appendChild(notReadRadio);
+                ratingDiv.appendChild(document.createTextNode("Haven't read it"));
+
+                container.appendChild(ratingDiv);
+                form.appendChild(container);
+            });
+        }
+
+        // Function to handle form submission and analyze genre preferences
+        function submitRatings() {
+            const ratings = {};
+            selectedBooks.forEach((book, index) => {
+                const rating = document.querySelector(`input[name="book${index}"]:checked`);
+                if (rating) {
+                    if (rating.value !== 'not_read') {
+                        ratings[book.title] = parseInt(rating.value);
+                        book.read = true; // Mark the book as read if rated
+                    }
+                }
+            });
+
+            // Count preferences based on books rated 3 or higher
+            for (const [title, rating] of Object.entries(ratings)) {
+                if (rating >= 3) { // Consider books rated 3, 4, or 5
+                    const book = selectedBooks.find(b => b.title === title);
+                    if (!genreCounts[book.genre]) {
+                        genreCounts[book.genre] = 0;
+                    }
+                    genreCounts[book.genre]++;
+                }
+            }
+
+            // Hide the form and button
+            document.getElementById('ratingForm').style.display = 'none';
+            document.querySelector('.submit-button').style.display = 'none';
+
+            // Update instructions for the next round
+            if (round === 1) {
+                document.getElementById('instructions').innerText = 'Rank more books to improve our suggestions!';
+            }
+
+            // Display the reader's top 3 genre preferences
+            let preferenceSummary = '<h3>Your Top 3 Genre Preferences:</h3><ul>';
+            const topGenres = Object.entries(genreCounts).sort((a, b) => b[1] - a[1]).slice(0, 3);
+            topGenres.forEach(([genre, count]) => {
+                preferenceSummary += `<li><strong>${genre}:</strong> ${count} votes</li>`;
+            });
+            preferenceSummary += '</ul>';
+            document.getElementById('preferences').innerHTML = preferenceSummary;
+
+            // Recommend 3 books based on top 3 genres
+            const recommendations = getRecommendations(topGenres);
+            let recommendationSummary = '<h3>Recommended Books for You:</h3><ul>';
+            recommendations.forEach(book => {
+                recommendationSummary += `<li>${book.title} by ${book.author} (${book.year})</li>`;
+            });
+            recommendationSummary += '</ul>';
+            document.getElementById('recommendations').innerHTML = recommendationSummary;
+
+            // Show the results section
+            document.getElementById('results').style.display = 'block';
+
+            // Check if there are enough books left for another round
+            const availableBooks = allBooks.filter(book => !book.read);
+            if (availableBooks.length <= 10) {
+                document.querySelector('.more-button').style.display = 'none';
+            }
+
+            round++;
+        }
+
+        // Function to get book recommendations based on top genres
+        function getRecommendations(topGenres) {
+            // Filter out books that have already been read
+            const availableBooks = allBooks.filter(book => !book.read);
+
+            // Select one book from each of the top 3 genres
+            const recommendations = [];
+            topGenres.forEach(([genre]) => {
+                const book = availableBooks.find(b => b.genre === genre);
+                if (book) {
+                    recommendations.push(book);
+                }
+            });
+
+            return recommendations;
+        }
+
+        // Function to load more books for additional ranking
+        function loadMoreBooks() {
+            // Hide the results section
+            document.getElementById('results').style.display = 'none';
+
+            // Show the form again
+            document.getElementById('ratingForm').style.display = 'block';
+
+            // Filter out previously read books
+            const availableBooks = allBooks.filter(book => !book.read);
+
+            // Randomly select 10 new books
+            selectedBooks = availableBooks.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+            const form = document.getElementById('ratingForm');
+            form.innerHTML = '';
+
+            // Create the new rating form dynamically
+            selectedBooks.forEach((book, index) => {
+                const container = document.createElement('div');
+                container.className = 'book-container';
+
+                const title = document.createElement('h2');
+                title.innerText = `${book.title} by ${book.author} (${book.year})`;
+                container.appendChild(title);
+
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'rating';
+                
+                const label = document.createElement('label');
+                label.innerText = 'Rate: ';
+                ratingDiv.appendChild(label);
+
+                for (let i = 1; i <= 5; i++) {
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `book${index}`;
+                    radio.value = i;
+                    ratingDiv.appendChild(radio);
+                    ratingDiv.appendChild(document.createTextNode(i));
+                }
+
+                const notReadRadio = document.createElement('input');
+                notReadRadio.type = 'radio';
+                notReadRadio.name = `book${index}`;
+                notReadRadio.value = 'not_read';
+                ratingDiv.appendChild(notReadRadio);
+                ratingDiv.appendChild(document.createTextNode("Haven't read it"));
+
+                container.appendChild(ratingDiv);
+                form.appendChild(container);
+            });
+
+            // Show the submit button again
+            document.querySelector('.submit-button').style.display = 'block';
+        }
+
+        // Load books when the page is ready
+        document.addEventListener('DOMContentLoaded', loadBooks);
+    </script>
+
+</body>
+</html>
