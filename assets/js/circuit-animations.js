@@ -330,10 +330,13 @@ function initializePageLoader() {
   loader.innerHTML = '<div class="loader-circuit"></div>';
   document.body.appendChild(loader);
   
-  // Show loader on page navigation
+  // Show loader on page navigation (exclude anchor links)
   document.addEventListener('click', function(e) {
     const link = e.target.closest('a');
-    if (link && link.href && !link.href.startsWith('#') && link.hostname === window.location.hostname) {
+    if (link && link.href && 
+        !link.href.includes('#') && 
+        link.hostname === window.location.hostname &&
+        !link.classList.contains('anchor-link')) {
       loader.classList.add('active');
     }
   });

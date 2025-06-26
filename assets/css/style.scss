@@ -28,6 +28,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
   color: var(--text-light);
@@ -320,6 +324,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   margin-top: 2rem;
+  overflow-x: hidden;
 }
 
 #main_content {
@@ -329,6 +334,8 @@ body {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 /* Typography */
@@ -392,6 +399,34 @@ a::before {
 
 a:hover::before {
   width: 100%;
+}
+
+/* Anchor link handling */
+h2, h3, h4, h5, h6 {
+  scroll-margin-top: 2rem;
+}
+
+/* Table of Contents links */
+.main-content a[href^="#"] {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-content a[href^="#"]:hover {
+  color: var(--accent-purple);
+  text-shadow: 0 0 8px currentColor;
+}
+
+.main-content a[href^="#"]:before {
+  content: "→ ";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.main-content a[href^="#"]:hover:before {
+  opacity: 1;
 }
 
 /* Tables */
@@ -470,25 +505,40 @@ ul li::before {
   50% { opacity: 1; transform: scale(1.2); }
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
-
-#footer_wrap {
-  background: var(--primary-bg);
-  border-top: 2px solid var(--accent-blue);
-  margin-top: 4rem;
-}
-
-footer {
+/* Figure and image container handling */
+figure {
+  max-width: 100%;
+  margin: 1.5rem auto;
   text-align: center;
-  padding: 2rem;
-  color: var(--text-dim);
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+figure img {
+  margin: 0 auto 0.5rem auto;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  font-style: italic;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Handle any embedded content or iframes */
+iframe, embed, object, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Ensure tables don't overflow */
+table {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+}
 
 @media (max-width: 768px) {
   #header-container {
@@ -743,14 +793,40 @@ blockquote p {
 
 /* Image enhancements */
 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
   border-radius: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+}
+
+/* Specific styling for images within content areas */
+#main_content img,
+.main-content img,
+article img,
+.content img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  box-sizing: border-box;
+}
+
+/* Ensure images don't break out of containers on mobile */
+@media (max-width: 768px) {
+  img {
+    max-width: calc(100% - 1rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Special effects for headings */
