@@ -8,13 +8,11 @@ title: Humanities in the Age of AI
 
 ## Contents
 
-- [Contents](#contents)[**Tutorial: Interfaces**](weektwo.md)
-
--   [Emerson, Lori, 'Interfaced', in Matthew Rubery, and Leah Price (eds), Further Reading (2020; online edn, Oxford Academic, 5 Mar. 2020).](https://loriemerson.net/2020/02/07/interfaced/)
--   [Bogost, Ian. "AI Cheating Is Getting Worse." *The Atlantic.* August 19, 2024. ](https://www.theatlantic.com/technology/archive/2024/08/another-year-ai-college-cheating/679502/)
--   **Generative Exercise Two: Interface Critique**ourse Description](#course-description)
+- [Contents](#contents)
+- [Course Description](#course-description)
 - [Course Objectives](#course-objectives)
 - [Materials and Texts](#materials-and-texts)
+- [Required Subscriptions](#required-subscriptions)
 - [Evaluation and Grading](#evaluation-and-grading)
 - [Asynchronous Online Course Structure](#asynchronous-online-course-structure)
 - [Weekly Schedule](#weekly-schedule)
