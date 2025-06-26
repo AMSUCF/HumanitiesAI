@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,maximum-scale=2">
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  {% seo %}
+  
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- Compact Header for Pages -->
+  <div id="compact-header">
+    <div class="compact-circuit-bg">
+      <div class="mini-nodes"></div>
+    </div>
+    <nav class="page-nav">
+      <a href="{{ '/' | relative_url }}" class="nav-home">
+        <span class="nav-icon">◄</span>
+        <span class="nav-text">Humanities in the Age of AI</span>
+      </a>
+      <div class="page-title">
+        <h1>{{ page.title | default: site.title }}</h1>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+      {{ content }}
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer_wrap" class="outer">
+    <footer class="inner">
+      <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+    </footer>
+  </div>
+
+  <!-- JavaScript for animations -->
+  <script src="{{ '/assets/js/circuit-animations.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,4 +1,7 @@
-![Humanities in the Age of AI - DALL-E and Adobe Firefly](title.png)
+---
+layout: default
+title: Humanities in the Age of AI
+---
 
 -   **Course Number:** ENG 6806
 -   **Email:** anastasia at ucf
@@ -12,22 +15,22 @@
 - [Evaluation and Grading](#evaluation-and-grading)
 - [Asynchronous Online Course Structure](#asynchronous-online-course-structure)
 - [Weekly Schedule](#weekly-schedule)
-  - [Week One: Textual - Histories (Monday, August 19)](#week-one-textual---histories-monday-august-19)
-  - [Week Two: Textual - Generation (Monday, August 26)](#week-two-textual---generation-monday-august-26)
-  - [Week Three: Textual - Sources (Monday, September 2)](#week-three-textual---sources-monday-september-2)
-  - [Week Four: Textual - Combinatory (Monday, September 9)](#week-four-textual---combinatory-monday-september-9)
-  - [Week Five: Visual - Aesthetics (Monday, September 16)](#week-five-visual---aesthetics-monday-september-16)
-  - [Week Six: Visual - Art and Creativity (Monday, September 23)](#week-six-visual---art-and-creativity-monday-september-23)
-  - [Week Seven: Visual - Photography and Realism (Monday, September 30)](#week-seven-visual---photography-and-realism-monday-september-30)
-  - [Week Eight: Visual - Perceptions (Monday, October 7)](#week-eight-visual---perceptions-monday-october-7)
-  - [Week Nine: Procedural - Code and Rules (Monday, October 14)](#week-nine-procedural---code-and-rules-monday-october-14)
-  - [Week Ten: Procedural - Digital Humanities (Monday, October 21)](#week-ten-procedural---digital-humanities-monday-october-21)
-  - [Week Eleven: Procedural - Art and Play (Monday, October 28)](#week-eleven-procedural---art-and-play-monday-october-28)
-  - [Week Twelve: Procedural - Hypertext (Monday, November 4)](#week-twelve-procedural---hypertext-monday-november-4)
-  - [Week Thirteen: Textual-Visual-Procedural (Monday, November 11)](#week-thirteen-textual-visual-procedural-monday-november-11)
-  - [Week Fourteen: Applications: Art (Monday, November 18)](#week-fourteen-applications-art-monday-november-18)
-  - [Week Fifteen: Applications: Humanities (Monday, November 25)](#week-fifteen-applications-humanities-monday-november-25)
-  - [Final Reflection (Due December 7)](#final-reflection-due-december-7)
+  - [Week One: Textual - Histories (Monday, August 18)](#week-one-textual---histories-monday-august-18)
+  - [Week Two: Textual - Generation (Monday, August 25)](#week-two-textual---generation-monday-august-25)
+  - [Week Three: Textual - Sources (Monday, September 1)](#week-three-textual---sources-monday-september-1)
+  - [Week Four: Textual - Combinatory (Monday, September 8)](#week-four-textual---combinatory-monday-september-8)
+  - [Week Five: Visual - Aesthetics (Monday, September 15)](#week-five-visual---aesthetics-monday-september-15)
+  - [Week Six: Visual - Art and Creativity (Monday, September 22)](#week-six-visual---art-and-creativity-monday-september-22)
+  - [Week Seven: Visual - Photography and Realism (Monday, September 29)](#week-seven-visual---photography-and-realism-monday-september-29)
+  - [Week Eight: Visual - Perceptions (Monday, October 6)](#week-eight-visual---perceptions-monday-october-6)
+  - [Week Nine: Procedural - Code and Rules (Monday, October 13)](#week-nine-procedural---code-and-rules-monday-october-13)
+  - [Week Ten: Procedural - Digital Humanities (Monday, October 20)](#week-ten-procedural---digital-humanities-monday-october-20)
+  - [Week Eleven: Procedural - Art and Play (Monday, October 27)](#week-eleven-procedural---art-and-play-monday-october-27)
+  - [Week Twelve: Procedural - Hypertext (Monday, November 3)](#week-twelve-procedural---hypertext-monday-november-3)
+  - [Week Thirteen: Textual-Visual-Procedural (Monday, November 10)](#week-thirteen-textual-visual-procedural-monday-november-10)
+  - [Week Fourteen: Applications: Art (Monday, November 17)](#week-fourteen-applications-art-monday-november-17)
+  - [Week Fifteen: Applications: Humanities (Monday, November 24)](#week-fifteen-applications-humanities-monday-november-24)
+  - [Final Reflection (Due December 6)](#final-reflection-due-december-6)
 
 ## Course Description
 
@@ -110,9 +113,9 @@ guide the week's making experiments. Relevant recent articles will be integrated
 
 | Points | Assignment Summary                                                                                                      | Due Date    |
 |--------|-------------------------------------------------------------------------------------------------------------------------|-------------|
-| 5      | **Activity Verification** - Complete the brief survey posted on Webcourses as soon as possible to confirm your enrollment in the course. As this is required by the university, please attend to it as soon as possible at the start of classes. | Friday, August 23rd |
+| 5      | **Activity Verification** - Complete the brief survey posted on Webcourses as soon as possible to confirm your enrollment in the course. As this is required by the university, please attend to it as soon as possible at the start of classes. | Friday, August 22nd |
 | 75     | **Generative Exercises** - Weekly discussions will consist of making, sharing, and reflecting on the process of exploring. We will work from tutorials and try a new form every week, with reflective questions connecting our process of making to the theoretical frameworks and provocations offered by our readings. | Weekly |
-| 20     | **Reflection** - During the final exam week, students will complete a reflective essay on their journey, with particular consideration to next steps and potential future applications of the making mechanisms introduced throughout the semester. This reflection should include AI-generated material alongside materials produced directly by the student. | Tuesday, December 7th |
+| 20     | **Reflection** - During the final exam week, students will complete a reflective essay on their journey, with particular consideration to next steps and potential future applications of the making mechanisms introduced throughout the semester. This reflection should include AI-generated material alongside materials produced directly by the student. | Saturday, December 6th |
 
 
 Students can access their grades and feedback at any time using the
@@ -160,16 +163,16 @@ circumstances will require additional time!
 
 ## Weekly Schedule
 
-### Week One: Textual - Histories (Monday, August 19)
+### Week One: Textual - Histories (Monday, August 18)
 
 [**Tutorial: Eliza and Bots**](weekone.md)
 
 -   *Bitsreams* - Introduction; Archives Without Dust
 -   Berry, D. M. (2023). The Limits of Computation: Joseph Weizenbaum and the ELIZA Chatbot. *Weizenbaum Journal of the Digital Society*, 3(3). [https://doi.org/10.34669/WI.WJDS/3.3.2](https://ojs.weizenbaum-institut.de/index.php/wjds/article/view/106)
--   **Due: Activity Verification (Friday August 23rd)**
+-   **Due: Activity Verification (Friday August 22nd)**
 -   **Generative Exercise One: Conversation**
 
-### Week Two: Textual - Generation (Monday, August 26)
+### Week Two: Textual - Generation (Monday, August 25)
 
 [**Tutorial: Interfaces**](weektwo.md)
 
@@ -178,7 +181,7 @@ circumstances will require additional time!
 -   [Bogost, Ian. "AI Cheating Is Getting Worse." *The Atlantic.* August 19, 2024. ](https://www.theatlantic.com/technology/archive/2024/08/another-year-ai-college-cheating/679502/)
 -   **Generative Exercise Two: Interface Critique**
 
-### Week Three: Textual - Sources (Monday, September 2)
+### Week Three: Textual - Sources (Monday, September 1)
 
 [**Tutorial: Reading Across Texts**](weekthree.md) 
 
@@ -188,7 +191,7 @@ circumstances will require additional time!
 -   [Bhatia, Aatish. "When A.I.'s Output Is a Threat to A.I. Itself." *The New York Times.* August 25, 2024.](https://www.nytimes.com/interactive/2024/08/26/upshot/ai-synthetic-data.html)
 -   **Generative Exercise Three: Textual Analysis**
 
-### Week Four: Textual - Combinatory (Monday, September 9)
+### Week Four: Textual - Combinatory (Monday, September 8)
 
 [**Tutorial: Combining Texts**](weekfour.md)
 
@@ -199,7 +202,7 @@ circumstances will require additional time!
 -   [Chiang, Ted. "Why A.I. Isn't Going to Make Art." *The New Yorker.* August 31, 2024.](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 -   **Generative Exercise Four: Cut-up Texts**
 
-### Week Five: Visual - Aesthetics (Monday, September 16)
+### Week Five: Visual - Aesthetics (Monday, September 15)
 
 [**Tutorial: Mash-ups and Remixes**](weekfive.md)
 
@@ -209,7 +212,7 @@ circumstances will require additional time!
 -   [Bobrowsky, Meghan and Miles Kruppa. "Mickey Mouse Smoking: How AI Images Tools Are Generating New Content-Moderation Problems." *The Wall Street Journal.* September 2, 2024.](https://www.wsj.com/tech/ai/mickey-mouse-smoking-how-ai-image-tools-are-generating-new-content-moderation-problems-da90148e)
 -   **Generative Exercise Five: Playful Generation**
 
-### Week Six: Visual - Art and Creativity (Monday, September 23)
+### Week Six: Visual - Art and Creativity (Monday, September 22)
 
 [**Tutorial: Archival Images**](weeksix.md)
 
@@ -219,7 +222,7 @@ circumstances will require additional time!
 -   [Nyce, Caroline Mimbs. "Why Does AI Art Look Like That?" *The Atlantic.* August 16, 2024.](https://www.theatlantic.com/technology/archive/2024/08/why-does-all-ai-art-look-same/679488/)
 -   **Generative Exercise Six: Meaningful Images**
 
-### Week Seven: Visual - Photography and Realism (Monday, September 30)
+### Week Seven: Visual - Photography and Realism (Monday, September 29)
 
 [**Tutorial: Video**](weekseven.md)
 
@@ -229,7 +232,7 @@ circumstances will require additional time!
 -   [Thompson, Stuart. "California Passes Election 'Deepfake' Laws, Forcing Social Media Companies to Take Action." *New York Times.* September 17, 2024.](https://www.nytimes.com/2024/09/17/technology/california-deepfakes-law-social-media-newsom.html)
 -   **Generative Exercise Seven: Expansive Imaginaries**
 
-### Week Eight: Visual - Perceptions (Monday, October 7)
+### Week Eight: Visual - Perceptions (Monday, October 6)
 
 [**Tutorial: Image Classification**](weekeight.md)
 
@@ -239,7 +242,7 @@ circumstances will require additional time!
 -   [Knight, Will. "Hacking Generative AI for Fun and Profit." *Wired Magazine.* October 2, 2024.](https://www.wired.com/story/sundai-club-generative-ai-hackathon-group/)
 -   **Generative Exercise Eight: Interactive Visualizations**
 
-### Week Nine: Procedural - Code and Rules (Monday, October 14)
+### Week Nine: Procedural - Code and Rules (Monday, October 13)
 
 Tutorial: Cancelled due to Hurricane
 
@@ -248,7 +251,7 @@ Tutorial: Cancelled due to Hurricane
 -   Evans, Julia. [*So you want to be a wizard.*](https://wizardzines.com/zines/wizard/) 
 -   **Exercise cancelled due to hurricane: Install Visual Studio Code + Github Desktop**
 
-### Week Ten: Procedural - Digital Humanities (Monday, October 21)
+### Week Ten: Procedural - Digital Humanities (Monday, October 20)
 
 [**Tutorial: Talking to Your Computer**](weekten.md)
 
@@ -256,7 +259,7 @@ Tutorial: Cancelled due to Hurricane
 -   *Algorithms of Oppression* - A Society; Searching
 -   **Generative Exercise Ten: Recommendations from Data**
 
-### Week Eleven: Procedural - Art and Play (Monday, October 28)
+### Week Eleven: Procedural - Art and Play (Monday, October 27)
 
 [**Tutorial: Iteration and Design**](weekeleven.md)
 
@@ -266,7 +269,7 @@ Tutorial: Cancelled due to Hurricane
 -   [Looper, Christian de. "Meet the developers integrating generative AI in a new video game." *Mashable*, October 21, 2024.](https://mashable.com/article/generative-ai-in-video-games-retail-mage)
 -   **Generative Exercise Eleven: Games**
 
-### Week Twelve: Procedural - Hypertext (Monday, November 4)
+### Week Twelve: Procedural - Hypertext (Monday, November 3)
 
 [**Tutorial: Working Across Interfaces**](weektwelve.md)
 
@@ -275,7 +278,7 @@ Tutorial: Cancelled due to Hurricane
 -   [Martin, Meredith. "Command Lines for the Humanities." *PMLA/Publications of the Modern Language Association of America.* 2024;139(3):541-547. doi:10.1632/S0030812924000555](https://www.cambridge.org/core/journals/pmla/article/command-lines-for-the-humanities/097F959E6971063D05B085E698354BA2)
 -   **Generative Exercise Twelve: Distant Reading the Web**
 
-### Week Thirteen: Textual-Visual-Procedural (Monday, November 11)
+### Week Thirteen: Textual-Visual-Procedural (Monday, November 10)
 
 [**Tutorial: Multimodal Development**](weekthirteen.md)
 
@@ -284,7 +287,7 @@ Tutorial: Cancelled due to Hurricane
 -   [Wong, Matteo. "AI Is Killing the Internet's Curiosity." *The Atlantic.* November 8, 2024.](https://www.theatlantic.com/newsletters/archive/2024/11/ai-is-killing-the-internets-curiosity/680600/)
 -   **Generative Exercise Thirteen: Portfolio of Experiments**
 
-### Week Fourteen: Applications: Art (Monday, November 18)
+### Week Fourteen: Applications: Art (Monday, November 17)
 
 [**Tutorial: Back to Bots**](weekfourteen.md)
 
@@ -294,7 +297,7 @@ Tutorial: Cancelled due to Hurricane
 -   ["AI Robots" (interactive piece) *IEEE Spectrum.*](https://spectrum.ieee.org/ai-robots)
 -   **Generative Exercise Fourteen: Experimental Interactive Bot**
 
-### Week Fifteen: Applications: Humanities (Monday, November 25)
+### Week Fifteen: Applications: Humanities (Monday, November 24)
 
 [**Tutorial: Envisioning Complex Projects**](weekfifteen.md)
 
@@ -302,7 +305,7 @@ Tutorial: Cancelled due to Hurricane
 -   *Algorithms of Oppression* - Future of Information Culture; Conclusion
 -   **Extra Credit Exercise: Public Humanities Prototype**
 
-### Final Reflection (Due December 7)
+### Final Reflection (Due December 6)
 
 -   Submit & complete your [**Final Reflection**](finalreflection.md), as
-    well as any approved late work, by December 7th!
+    well as any approved late work, by December 6th!
