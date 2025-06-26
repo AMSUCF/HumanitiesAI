@@ -3,6 +3,8 @@ layout: default
 title: Humanities in the Age of AI
 ---
 
+-   **Instructor:** Dr. Anastasia Salter
+-   **Office Hours:** Tuesdays 2 - 5PM, TCH 236 and/or Zoom
 -   **Course Number:** ENG 6806
 -   **Email:** anastasia at ucf
 
