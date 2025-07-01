@@ -26,7 +26,7 @@ Again, spend at least 15 minutes, ideally more, conversing with Claude before yo
 
 For your third encounter, talk to [**Future ELIZA**](WeekOne/), which was created by prompting Claude Sonnet 4 to build an ELIZA-style chatbot that would "respond like an AI from the future." This demonstration represents how current AI can be directed to speculate about future AI development while maintaining the therapeutic conversation patterns of the original ELIZA.
 
-Spend another 15 minutes conversing with Future ELIZA. As you interact with it, consider: how do you react to the information that this chatbot was generated with a few prompts? What does this resulting bot suggest to you about the future of these technologies?
+Spend another short period conversing with Future ELIZA. As you interact with it, consider: how do you react to the information that this chatbot was generated with a few prompts? What does this resulting bot suggest to you about the future of these technologies?
 
 ### Discussion
 
