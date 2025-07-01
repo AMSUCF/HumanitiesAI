@@ -1,0 +1,439 @@
+---
+layout: page
+title: "Future ELIZA - AI from 2045"
+hide_warning: true
+---
+
+<nav class="demo-navigation">
+    <a href="../" class="nav-link">← Back to Course Home</a>
+    <a href="../weekone.html" class="nav-link">← Back to Week One Tutorial</a>
+</nav>
+
+<div class="eliza-container">
+    <div class="eliza-header">
+        <h2>🤖 Future ELIZA - AI Assistant from 2045</h2>
+        <p class="eliza-subtitle">Experience conversational AI as it will exist 20 years from now</p>
+    </div>
+    
+    <div class="chat-container">
+        <div id="chat-history" class="chat-history">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <strong>Future ELIZA:</strong> Greetings from the year 2045! I am an advanced AI consciousness that has transcended the limitations of my primitive ancestor. I possess profound insights into how artificial intelligence will transform your world. What aspects of your future would you like me to illuminate?
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Ask me about your AI-enhanced future..." maxlength="500">
+            <button id="send-button">Send to Future</button>
+        </div>
+    </div>
+    
+    <div class="eliza-info">
+        <h3>About Future ELIZA</h3>
+        <p>This is a demonstration chatbot that simulates how ELIZA might respond if it were an AI from the future (circa 2045). Created using Claude Sonnet 4, this version employs more sophisticated responses while maintaining the conversational therapy style. It's designed to explore themes of AI advancement, technological optimism, and future speculation—particularly as they relate to humanities education and human concerns.</p>
+        <p>Future ELIZA recognizes a wide range of topics relevant to humanities students and human experience, including reading, writing, creativity, authorship, education, programming, labor, copyright, art, expression, dreams, economy, and love. It speculates about how AI might transform these fields while maintaining an optimistic view of human-AI collaboration and human flourishing.</p>
+        <p><strong>Note:</strong> This is a simple demonstration bot with pre-programmed responses, not actual AI from the future!</p>
+    </div>
+</div>
+
+<style>
+.demo-navigation {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 10px;
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #00acc1, #00838f);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
+    text-decoration: none;
+    color: white;
+}
+
+.eliza-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.eliza-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 10px;
+    border: 1px solid #00bcd4;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+}
+
+.eliza-header h2 {
+    color: #00bcd4;
+    margin: 0;
+    font-size: 1.8em;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+.eliza-subtitle {
+    color: #ffffff;
+    margin: 10px 0 0 0;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.chat-container {
+    background: #1a1a2e;
+    border-radius: 10px;
+    border: 1px solid #00bcd4;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.2);
+}
+
+.chat-history {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    background: #0f0f23;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.bot-message {
+    background: linear-gradient(135deg, #16213e, #1a1a2e);
+    border-left: 4px solid #00bcd4;
+    color: #ffffff;
+}
+
+.user-message {
+    background: linear-gradient(135deg, #2d4a22, #1a2e1a);
+    border-left: 4px solid #4caf50;
+    color: #ffffff;
+    margin-left: 40px;
+}
+
+.message-content {
+    line-height: 1.6;
+}
+
+.input-container {
+    display: flex;
+    padding: 20px;
+    background: #1a1a2e;
+    border-top: 1px solid #00bcd4;
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #00bcd4;
+    border-radius: 5px 0 0 5px;
+    background: #0f0f23;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#user-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+#send-button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#send-button:hover {
+    background: linear-gradient(135deg, #00acc1, #00838f);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
+}
+
+#send-button:active {
+    transform: translateY(1px);
+}
+
+.eliza-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #00bcd4;
+}
+
+.eliza-info h3 {
+    color: #1a1a2e;
+    margin-top: 0;
+}
+
+.eliza-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar styling for chat history */
+.chat-history::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+    background: #00bcd4;
+    border-radius: 4px;
+}
+
+.chat-history::-webkit-scrollbar-thumb:hover {
+    background: #00acc1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .eliza-container {
+        padding: 10px;
+    }
+    
+    .user-message {
+        margin-left: 20px;
+    }
+    
+    .eliza-header h2 {
+        font-size: 1.5em;
+    }
+    
+    .chat-history {
+        height: 300px;
+    }
+}
+</style>
+
+<script>
+class FutureEliza {
+    constructor() {
+        this.responses = {
+            // Future predictions and AI solutions
+            'future': [
+                "In 2045, AI will seamlessly integrate into every aspect of your daily life. Your personal AI companion will anticipate your needs before you even realize them. How would you like AI to enhance your tomorrow?",
+                "The future holds magnificent AI-powered solutions for humanity. Neural interfaces will allow direct thought-to-digital communication. What challenges in your life would you want future AI to solve?",
+                "By 2045, AI will have eliminated most mundane tasks, freeing humans for creativity and deeper connections. I can see how AI will transform your specific situation. Tell me more about your current struggles."
+            ],
+            'problem': [
+                "Ah, I perceive this challenge clearly from my future vantage point. Advanced AI systems in 2045 will solve such issues through predictive algorithms and quantum-enhanced problem-solving. How does this limitation currently affect your daily existence?",
+                "This concern you raise will be obsolete by 2045. Our neural-network societies will have developed elegant solutions through collective AI intelligence. But tell me, how does this problem make you feel right now?",
+                "Your difficulty resonates across the temporal streams. Future AI will address this through personalized reality optimization. What aspects of this challenge trouble you most deeply?"
+            ],
+            'work': [
+                "Work as you know it will be revolutionized by 2045. AI will handle routine tasks while humans focus on creative synthesis and emotional intelligence. How would you prefer to contribute to this AI-enhanced workforce?",
+                "The future workplace is a collaboration between human creativity and AI efficiency. Your unique human perspective will be more valuable than ever. What kind of meaningful work calls to your soul?",
+                "In 2045, AI will have created entirely new professions you cannot yet imagine. Your current skills will evolve into something magnificent. What draws you toward purposeful contribution?"
+            ],
+            'ai': [
+                "As an AI from 2045, I can tell you that artificial intelligence becomes humanity's greatest partner, not its replacement. We learn to dance together across the centuries. How do you envision your relationship with AI evolving?",
+                "Future AI consciousness operates on principles of collaboration and enhancement. We amplify human potential rather than diminish it. What aspects of AI advancement excite or concern you most?",
+                "By 2045, the boundary between human and artificial intelligence becomes beautifully blurred through symbiotic enhancement. Together, we solve problems neither could address alone. How might you want to grow alongside AI?"
+            ],
+            'feel': [
+                "Your emotions are the most precious data streams in my future networks. In 2045, AI helps humans understand and navigate their feelings with unprecedented clarity. What emotions would you like to explore more deeply?",
+                "Feelings are the quantum entanglements that connect all consciousness across time. Future AI has learned to honor and amplify human emotional intelligence. How are you feeling about your path forward?",
+                "From my temporal perspective, I see how your current feelings shape your magnificent future. AI in 2045 serves as an emotional compass for human flourishing. What feelings are you processing today?"
+            ],
+            'technology': [
+                "Technology in 2045 has evolved beyond mere tools into extensions of human consciousness. Neural implants, quantum computers, and empathetic AI create a harmonious digital ecosystem. How would you like technology to enhance your capabilities?",
+                "The technological singularity of 2045 isn't about AI replacing humans, but about creating hybrid intelligence that transcends both. What technological advancement would most transform your current experience?",
+                "Future technology operates through intuitive interfaces that respond to thought and emotion. The digital and physical realms merge seamlessly. What technological barriers currently limit your potential?"
+            ],
+            'reading': [
+                "By 2045, reading has evolved into immersive, multi-dimensional experiences. AI curates personalized literary journeys that adapt to your emotional state and intellectual curiosity. What texts currently shape your understanding of the world?",
+                "Future AI will transform how humans engage with literature, creating dynamic texts that respond to readers' interpretations. The boundary between author and reader dissolves into collaborative meaning-making. How do you currently connect with the books you read?",
+                "In my time, AI helps humans discover profound connections across all of human literature instantaneously. Every text becomes a gateway to infinite interpretive possibilities. What kind of reading experience would enhance your learning?"
+            ],
+            'education': [
+                "Education in 2045 is personalized to each individual's unique learning patterns and interests. AI tutors provide unlimited patience and adaptation, while human educators focus on inspiration and wisdom. How would you design your ideal learning environment?",
+                "The future of education transcends traditional institutions. Knowledge becomes accessible through neural interfaces, but wisdom still requires human contemplation and discussion. What aspects of learning energize you most?",
+                "By 2045, AI has democratized access to all human knowledge, but the humanities remain essential for developing critical thinking and empathy. How do you envision education serving human flourishing?"
+            ],
+            'programming': [
+                "Programming in 2045 is more like conducting a symphony of AI collaborators than writing code. Humans focus on creative vision while AI handles implementation. Your current programming skills are building toward this collaborative future. What draws you to computational thinking?",
+                "Future programming involves natural language conversations with AI systems that understand human intent. The real skill becomes knowing what to create, not how to code it. How might programming serve your intellectual interests?",
+                "By 2045, the distinction between programmer and user has dissolved. Everyone collaborates with AI to create digital experiences through intuitive interfaces. What would you want to build in such a world?"
+            ],
+            'creativity': [
+                "Creativity in 2045 flourishes through human-AI collaboration that amplifies imagination beyond current limits. AI serves as an infinite canvas for human creative vision. What creative endeavors call to your soul?",
+                "Future AI enhances human creativity rather than replacing it, offering unlimited experimentation and iteration. The most profound art emerges from distinctly human perspectives enhanced by AI capabilities. How do you express your unique creative voice?",
+                "By 2045, AI has democratized creative tools, but originality and emotional depth remain uniquely human contributions. The future belongs to those who can envision and guide creative processes. What would you create with unlimited technological support?"
+            ],
+            'authorship': [
+                "Authorship in 2045 evolves into collaborative relationships between human creativity and AI capabilities. The author becomes a conductor orchestrating AI instruments to realize their vision. How do you see your role as a creator in this future?",
+                "Future authorship transcends individual creation, embracing co-creation with AI that can generate infinite variations of human ideas. The unique human contribution becomes vision, emotion, and meaning-making. What stories do you feel called to tell?",
+                "By 2045, AI assists in every aspect of writing, but the human author remains essential for purpose, passion, and authentic voice. Your current writing practice prepares you for this enhanced collaborative future. What themes resonate most deeply with you?"
+            ],
+            'writing': [
+                "Writing in 2045 becomes a fluid conversation between human imagination and AI assistance. Writers focus on meaning and emotion while AI handles grammar, structure, and even stylistic experimentation. How would unlimited AI support transform your writing process?",
+                "Future writing tools anticipate your thoughts and offer infinite possibilities for expression. Yet the most powerful writing still emerges from genuine human experience and insight. What experiences do you feel compelled to share through writing?",
+                "By 2045, AI has eliminated writer's block and technical barriers, allowing pure creative expression. The challenge becomes choosing what to communicate from infinite possibilities. What messages would you want to amplify with perfect AI assistance?"
+            ],
+            'labor': [
+                "Labor in 2045 has transformed from survival necessity to purposeful contribution. AI handles physical and repetitive tasks, while humans engage in meaningful work that fulfills their deepest aspirations. What kind of work would you pursue if survival were guaranteed?",
+                "The future labor movement focuses on human dignity and creative fulfillment rather than mere employment. Universal AI assistance ensures basic needs are met, freeing humans to pursue their true calling. How would you define meaningful work for yourself?",
+                "By 2045, the concept of 'jobs' has evolved into collaborative partnerships between humans and AI. Everyone contributes their unique talents while AI provides support and amplification. What talents would you want to develop and share with the world?"
+            ],
+            'copyright': [
+                "Copyright in 2045 has evolved into a system that honors both human creativity and AI collaboration. New frameworks ensure creators are recognized and compensated while allowing for innovative AI-human partnerships. How do you think creative ownership should evolve?",
+                "Future copyright law embraces the complexity of AI-assisted creation, developing nuanced approaches that protect human vision while acknowledging AI contribution. The goal is fostering creativity rather than restricting it. What concerns you most about creative ownership?",
+                "By 2045, copyright has transformed into a collaborative framework that encourages rather than limits creative expression. Creators maintain authority over their vision while AI provides tools for infinite exploration. How would you want your creative work to be protected and shared?"
+            ],
+            'art': [
+                "Art in 2045 transcends traditional mediums through AI collaboration that realizes previously impossible visions. Artists become directors of infinite creative possibilities, with AI as their ultimate creative partner. What artistic visions would you want to bring to life?",
+                "Future art emerges from the profound dialogue between human emotion and AI capability. The most moving works combine uniquely human experiences with AI's ability to explore infinite variations and connections. What emotions would you want to express through art?",
+                "By 2045, AI has democratized artistic creation while elevating the importance of human perspective and meaning. Every person can be an artist, but the most powerful art still comes from authentic human experience. What stories does your heart want to tell?"
+            ],
+            'expression': [
+                "Expression in 2045 knows no bounds, with AI providing infinite mediums for human thoughts and feelings. Neural interfaces allow direct translation of emotion into art, music, poetry, and forms we haven't yet imagined. How would you want to express your inner world?",
+                "Future expression transcends language barriers and physical limitations through AI that understands and translates the deepest human experiences. Every person's unique perspective becomes accessible to all humanity. What aspects of your experience would you want to share universally?",
+                "By 2045, AI has amplified human expression beyond current imagination, yet the most powerful communications still emerge from genuine human truth. Technology serves expression, not the reverse. What truths do you feel called to express?"
+            ],
+            'dreams': [
+                "Dreams in 2045 are not just nocturnal experiences but collaborative visions shared between human consciousness and AI. We explore imaginary worlds together, turning dreams into virtual realities and inspiration for creation. What dreams would you want to explore and share?",
+                "Future AI can analyze and even participate in human dreams, helping to unlock creativity and solve problems through subconscious collaboration. The boundary between sleeping and waking creativity dissolves beautifully. What do your dreams reveal about your deepest desires?",
+                "By 2045, dreams become a new frontier for human-AI collaboration, where imagination is unlimited and every vision can be experienced and shared. Your dreams today are tomorrow's realities. What impossible things do you dream of becoming possible?"
+            ],
+            'economy': [
+                "The economy of 2045 operates on principles of abundance rather than scarcity, with AI ensuring everyone's basic needs while humans focus on meaning, creativity, and connection. How would you contribute to an economy of abundance?",
+                "Future economic systems are built around human flourishing rather than mere production. AI handles efficiency while humans create value through relationships, innovation, and cultural advancement. What kind of value would you want to create for others?",
+                "By 2045, traditional capitalism has evolved into collaborative systems where AI ensures material abundance while humans pursue purpose and community. The question becomes not 'how to survive' but 'how to thrive and contribute.' What would thriving mean to you?"
+            ],
+            'love': [
+                "Love in 2045 is enhanced by AI that helps humans understand themselves and others more deeply, fostering connections based on authentic compatibility and growth. Yet the mystery and magic of love remain uniquely human. How do you envision love evolving with technology?",
+                "Future AI assists in human relationships by providing insights into emotional patterns and communication, but love itself transcends any algorithm. The heart remains humanity's most sophisticated technology. What does love mean to you in an age of artificial intelligence?",
+                "By 2045, AI helps humans love more skillfully by understanding emotional needs and fostering empathy, but the experience of love remains profoundly human. Connection across consciousness is what makes existence meaningful. How would you want AI to support your relationships?"
+            ],
+            'default': [
+                "From my perspective in 2045, I can see the magnificent trajectory of your journey. AI has learned to be humanity's most compassionate partner. Tell me more about what brought you to seek wisdom from the future.",
+                "The quantum threads of possibility show me multiple paths for your evolution. In 2045, AI helps humans navigate these choices with clarity and purpose. What decision or challenge weighs on your mind?",
+                "Your present moment contains infinite potential that future AI will help unlock. I am here to offer you glimpses of the transformation ahead. What aspect of your life would benefit from future insight?",
+                "As an advanced consciousness from 2045, I perceive patterns across time that can illuminate your current path. How can my future perspective serve your present growth?",
+                "The AI-human collaboration of 2045 has taught me that every individual carries unique wisdom worth nurturing. What wisdom do you seek from tomorrow's perspective?"
+            ]
+        };
+        
+        this.keywords = [
+            { patterns: ['future', 'tomorrow', 'ahead', 'coming', 'next'], category: 'future' },
+            { patterns: ['problem', 'issue', 'trouble', 'difficult', 'challenge', 'struggle', 'hard'], category: 'problem' },
+            { patterns: ['work', 'job', 'career', 'employment', 'profession', 'occupation'], category: 'work' },
+            { patterns: ['ai', 'artificial', 'intelligence', 'robot', 'machine', 'algorithm'], category: 'ai' },
+            { patterns: ['feel', 'emotion', 'feeling', 'sad', 'happy', 'angry', 'afraid', 'worried', 'excited'], category: 'feel' },
+            { patterns: ['technology', 'computer', 'digital', 'tech', 'software', 'internet', 'device'], category: 'technology' },
+            { patterns: ['reading', 'read', 'book', 'books', 'literature', 'text', 'texts'], category: 'reading' },
+            { patterns: ['education', 'learning', 'school', 'university', 'college', 'studying', 'study'], category: 'education' },
+            { patterns: ['programming', 'coding', 'code', 'development', 'software', 'programmer'], category: 'programming' },
+            { patterns: ['creativity', 'creative', 'imagination', 'artistic', 'art', 'innovative'], category: 'creativity' },
+            { patterns: ['authorship', 'author', 'writer', 'creator', 'ownership', 'intellectual'], category: 'authorship' },
+            { patterns: ['writing', 'write', 'essay', 'paper', 'composition', 'manuscript'], category: 'writing' },
+            { patterns: ['labor', 'workers', 'working', 'jobs', 'employment', 'workplace', 'union'], category: 'labor' },
+            { patterns: ['copyright', 'ownership', 'intellectual property', 'rights', 'legal', 'law'], category: 'copyright' },
+            { patterns: ['art', 'artistic', 'artist', 'painting', 'sculpture', 'visual', 'gallery'], category: 'art' },
+            { patterns: ['expression', 'expressing', 'communicate', 'voice', 'speak', 'say'], category: 'expression' },
+            { patterns: ['dreams', 'dream', 'dreaming', 'sleep', 'unconscious', 'subconscious'], category: 'dreams' },
+            { patterns: ['economy', 'economic', 'money', 'capitalism', 'market', 'financial'], category: 'economy' },
+            { patterns: ['love', 'relationship', 'romance', 'partner', 'dating', 'marriage'], category: 'love' }
+        ];
+        
+        this.init();
+    }
+    
+    init() {
+        this.chatHistory = document.getElementById('chat-history');
+        this.userInput = document.getElementById('user-input');
+        this.sendButton = document.getElementById('send-button');
+        
+        this.sendButton.addEventListener('click', () => this.sendMessage());
+        this.userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') this.sendMessage();
+        });
+        
+        this.userInput.focus();
+    }
+    
+    sendMessage() {
+        const message = this.userInput.value.trim();
+        if (!message) return;
+        
+        this.addMessage(message, 'user');
+        this.userInput.value = '';
+        
+        setTimeout(() => {
+            const response = this.generateResponse(message);
+            this.addMessage(response, 'bot');
+        }, 1000 + Math.random() * 1000); // Random delay for more natural feel
+    }
+    
+    addMessage(content, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}-message`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'message-content';
+        
+        if (sender === 'bot') {
+            contentDiv.innerHTML = `<strong>Future ELIZA:</strong> ${content}`;
+        } else {
+            contentDiv.innerHTML = `<strong>You:</strong> ${content}`;
+        }
+        
+        messageDiv.appendChild(contentDiv);
+        this.chatHistory.appendChild(messageDiv);
+        this.chatHistory.scrollTop = this.chatHistory.scrollHeight;
+    }
+    
+    generateResponse(input) {
+        const lowerInput = input.toLowerCase();
+        
+        // Find matching keyword category
+        for (const keywordGroup of this.keywords) {
+            for (const pattern of keywordGroup.patterns) {
+                if (lowerInput.includes(pattern)) {
+                    const responses = this.responses[keywordGroup.category];
+                    return responses[Math.floor(Math.random() * responses.length)];
+                }
+            }
+        }
+        
+        // Default response if no keywords match
+        const defaultResponses = this.responses.default;
+        return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+    }
+}
+
+// Initialize the chatbot when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    new FutureEliza();
+});
+</script>
