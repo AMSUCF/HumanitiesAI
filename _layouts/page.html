@@ -37,11 +37,13 @@
   <!-- Main Content -->
   <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
-      <!-- Warning Banner for Tutorial Pages -->
+      <!-- Warning Banner for Tutorial Pages (unless hide_warning is set) -->
+      {% unless page.hide_warning %}
       <div class="tutorial-warning-banner">
         <strong>⚠️ 2024 Assignment Guidelines: For Reference Only!</strong>
         <p>This content is from the previous year's course and is provided for reference purposes. Current assignments and requirements may differ.</p>
       </div>
+      {% endunless %}
       {{ content }}
     </section>
   </div>
