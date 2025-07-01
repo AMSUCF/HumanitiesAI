@@ -415,20 +415,77 @@ class FutureEliza {
     
     generateResponse(input) {
         const lowerInput = input.toLowerCase();
+        let matchedKeyword = null;
+        let selectedCategory = null;
         
-        // Find matching keyword category
+        // Find matching keyword category and capture the specific keyword used
         for (const keywordGroup of this.keywords) {
             for (const pattern of keywordGroup.patterns) {
                 if (lowerInput.includes(pattern)) {
-                    const responses = this.responses[keywordGroup.category];
-                    return responses[Math.floor(Math.random() * responses.length)];
+                    matchedKeyword = pattern;
+                    selectedCategory = keywordGroup.category;
+                    break;
                 }
             }
+            if (matchedKeyword) break;
         }
         
-        // Default response if no keywords match
-        const defaultResponses = this.responses.default;
-        return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+        let response;
+        if (selectedCategory) {
+            const responses = this.responses[selectedCategory];
+            response = responses[Math.floor(Math.random() * responses.length)];
+            
+            // Embed the user's keyword into the response when feasible
+            if (matchedKeyword) {
+                response = this.personalizeResponse(response, matchedKeyword, input);
+            }
+        } else {
+            // Default response if no keywords match
+            const defaultResponses = this.responses.default;
+            response = defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+        }
+        
+        return response;
+    }
+    
+    personalizeResponse(response, keyword, originalInput) {
+        // Extract some context words from the user's input for more personalization
+        const inputWords = originalInput.toLowerCase().split(/\s+/).filter(word => 
+            word.length > 3 && !['with', 'about', 'what', 'how', 'when', 'where', 'why', 'the', 'and', 'but', 'for', 'are', 'was', 'were', 'been', 'have', 'has', 'had', 'will', 'would', 'could', 'should'].includes(word)
+        );
+        
+        // Create personalized variations based on the keyword
+        const personalizations = {
+            'future': () => `Speaking of the ${keyword}, ${response.toLowerCase().charAt(0) + response.slice(1)}`,
+            'ai': () => response.replace(/AI/g, `${keyword.toUpperCase()}`).replace(/artificial intelligence/g, keyword),
+            'technology': () => response.replace(/technology/g, keyword).replace(/technological/g, `${keyword}-related`),
+            'reading': () => response.replace(/reading/g, keyword).replace(/read/g, keyword.endsWith('ing') ? keyword.slice(0, -3) : keyword),
+            'writing': () => response.replace(/writing/g, keyword).replace(/write/g, keyword.endsWith('ing') ? keyword.slice(0, -3) : keyword),
+            'creativity': () => response.replace(/creativity/g, keyword).replace(/creative/g, keyword.includes('creat') ? keyword : `${keyword}-driven`),
+            'art': () => response.replace(/art/g, keyword).replace(/artistic/g, `${keyword}istic`),
+            'work': () => response.replace(/work/g, keyword).replace(/workplace/g, `${keyword}place`),
+            'education': () => response.replace(/education/g, keyword).replace(/learning/g, keyword.includes('learn') ? keyword : `${keyword}-based learning`),
+            'love': () => response.replace(/love/g, keyword).replace(/relationships/g, keyword.includes('relation') ? keyword : `${keyword} connections`),
+            'dreams': () => response.replace(/dreams/g, keyword).replace(/dream/g, keyword.endsWith('s') ? keyword.slice(0, -1) : keyword),
+            'economy': () => response.replace(/economy/g, keyword).replace(/economic/g, `${keyword}ic`),
+            'programming': () => response.replace(/programming/g, keyword).replace(/code/g, keyword.includes('cod') ? keyword : `${keyword}-based development`),
+            'labor': () => response.replace(/labor/g, keyword).replace(/work/g, keyword.includes('work') ? keyword : `${keyword}-related work`),
+            'copyright': () => response.replace(/copyright/g, keyword).replace(/ownership/g, keyword.includes('owner') ? keyword : `${keyword} rights`),
+            'expression': () => response.replace(/expression/g, keyword).replace(/expressing/g, keyword.endsWith('ing') ? keyword : `${keyword}ing`),
+            'authorship': () => response.replace(/authorship/g, keyword).replace(/author/g, keyword.includes('author') ? keyword : `${keyword}-creator`)
+        };
+        
+        // Apply personalization if available, otherwise add a prefix
+        const categoryKey = Object.keys(personalizations).find(key => 
+            this.keywords.find(group => group.category === key)?.patterns.includes(keyword)
+        );
+        
+        if (categoryKey && personalizations[categoryKey]) {
+            return personalizations[categoryKey]();
+        } else {
+            // Generic personalization: add the keyword naturally to the beginning
+            return `Ah, you mention "${keyword}" - this resonates deeply with my future perspective. ${response}`;
+        }
     }
 }
 
