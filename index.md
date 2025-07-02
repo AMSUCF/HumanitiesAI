@@ -182,6 +182,7 @@ circumstances will require additional time!
 
 -   *The AI Con* - Chapter 2: It's Alive! The Hype of Thinking Machines
 -   [Emerson, Lori, 'Interfaced', in Matthew Rubery, and Leah Price (eds), Further Reading (2020; online edn, Oxford Academic, 5 Mar. 2020).](https://loriemerson.net/2020/02/07/interfaced/)
+-   [Underwood, Ted. "A more interesting upside of AI." July 2, 2025.](https://tedunderwood.com/2025/07/02/a-more-interesting-upside-of-ai/)
 -   **Generative Exercise Two: Interface Critique**
 
 ### Week Three: Textual - Sources (Monday, September 1)
