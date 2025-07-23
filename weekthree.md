@@ -8,6 +8,14 @@ hide_warning: true
 
 This week, we're going to contextualize some of the current AI "hype" surrounding research capacities and consider the implications of AI as a search engine. For this exercise, you'll use Claude's deep research capabilities to investigate a research question inspired by this week's readings, and think through the results both in terms of the current capacity of the technology and its potential future expansions (particularly in academic environments).
 
+To contextualize the promise of such tools, consider this [press release from Anthropic](https://www.anthropic.com/news/research) when the research feature was released in April 2025:
+
+> Research transforms how Claude finds and reasons with information. Claude operates agentically, conducting multiple searches that build on each other while determining exactly what to investigate next. It explores different angles of your question automatically and works through open questions systematically. This approach delivers thorough answers, complete with easy-to-check citations so you can trust Claude's findings.
+>
+> Research delivers high-quality, comprehensive answers in minutes, making it practical for the multiple research tasks you tackle throughout your workday. It's this balance of speed and quality that sets it apart.
+
+This approach is a response to the earlier challenges of hallucinations and non-existent sources often outputted in earlier models - with access to the web, Claude's agent is effectively Googling things for you and providing a synthesis of findings.
+
 ### AI-Assisted "Deep Research"
 
 As we've been reading in *The AI Con*, LLMs themselves operate as "synthetic text-extruding machines" - and Kirschenbaum's eassay, "Prepare for the Textpocalypse," raises further questions about the future of such text machines feeding upon themselves. These machines are already reshaping our entire information landscape, with implications for all forms of labor, particularly those involving text.
