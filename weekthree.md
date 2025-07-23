@@ -1,39 +1,54 @@
-## Tutorial: Reading Across Texts
+---
+layout: page
+title: "Week Three: Research and Sources"
+hide_warning: true
+---
 
-This week, we're going to go further in our interactions with prompt-based systems by providing them with new data. For this exercise, you're going to choose at least one text to analyze through distant reading, starting with my prompts and working towards developing and iterating your own questions. Depending on the level of access you have to the model you've chosen, you might find that you have trouble getting results with a complete text, particularly one of the longer books: keep iterating until you are happy with your results.
+## Tutorial: Research and Sources
 
-### AI-Assisted Distant Read
+This week, we're going to contextualize some of the current AI "hype" surrounding research capacities and consider the implications of AI as a search engine. For this exercise, you'll use Claude's deep research capabilities to investigate a research question inspired by this week's readings, and think through the results both in terms of the current capacity of the technology and its potential future expansions (particularly in academic environments).
 
-Start by selecting a work from [Project Gutenberg](https://www.gutenberg.org/) (anything other than *Frankenstein*, as I'm using that here as a sample), and make sure you download the "Plain Text UTF-8" version as a .txt file. For instance, the plain text version of *Frankenstein* is the file here: [TXT](https://www.gutenberg.org/cache/epub/41445/pg41445.txt). You'll notice that this plain text version has some noise at the top of the file, and at the end – this is information and metadata added by Project Gutenberg. We could delete that ourselves, but we're going to try out the model's preprocessing and have it work with us throughout the entire process. So, download that plain text file for now and have it ready to attach when you're in conversation with the system.
+### AI-Assisted "Deep Research"
 
-Here's a guiding set of basic prompts to try - these are general, and it might require several iterations to get the output of each:
+As we've been reading in *The AI Con*, LLMs themselves operate as "synthetic text-extruding machines" - and Kirschenbaum's eassay, "Prepare for the Textpocalypse," raises further questions about the future of such text machines feeding upon themselves. These machines are already reshaping our entire information landscape, with implications for all forms of labor, particularly those involving text.
 
-- I'd like to do some distant reading analysis of a novel. Can you help me through the process?
-- I've attached the Project Gutenberg version of our text. Let's start by pre-processing it for analysis.
-- Can you provide me the pre-processed text as a file to confirm?
-- Can you generate a bag of words for our next steps?
-- Many of these are common words, can you apply a basic stopwords to remove things like I, the, do, is, our, etc?
-- Can you visualize the top 30 words as a word cloud?
-- Using the bag of words and the cleaned text, could you make some determinations about the genre of this work and the themes?
-- Can you visualize the network of character relationships in this text?
-- Can you pull the most frequently recurring phrases?
-- Can you visualize the most frequent phrases?
+From these readings, identify a research question that interests you. Some potential areas to explore might include:
 
-These basic steps will result in errors, but they can also provide some useful rapid visualizations and data. Here's a few examples from my output - you'll notice that the charts in some cases mention they are corrected because I had to ask for several iterations:
+- The historical precedents for current AI workplace concerns (particularly in your own field)
+- The relationship between AI hype and actual implementation in specific industries
+- The impact of text generation on your field
+- The economic implications of AI adoption in knowledge work
+- The role of labor organizations in responding to AI implementation
+- International perspectives on AI regulation and workplace protection
 
-![phrases](phrases.png)
-*Figure 1. Frequent bigrams and trigrams*
+Don't feel limited to this list: anything that arises for you from our readings and discussions is fair game! Ideally, you want something where multiple sources will be addressing the point, especially with contention - almost guaranteed on any AI topic. Once you've identified your research question, use Claude's deep research mode to request a report.
 
-![word cloud](wordcloud.png)
-*Figure 2. Word cloud, after iterating stop words*
+Make sure you are using your allocation of queries to Claude Opus 4, and that you've selected "Research" mode. Your query interface should look like this screenshot, with "Research" in blue when it is active. The query will take some time to run, so be as specific in your question and goals as possible when making your initial request.
 
-![character network](network.png)
-*Figure 3. Character network, weighting for significance*
+![Claude Research interface](claude_research.png)
+*Figure 1. Claude interface, using Opus 4 and research mode*
 
-Use Ted Underwood's article on distant reading from this week's readings to guide your process and question development. You might find it easiest to analyze a text that's in an area that you're familiar with, or that is in an area of interest to you, so that you will have a better capacity to check and verify the output. Critique the quality of results you're getting, particularly in terms of their potential usefulness for this type of research.
+Throughout this process, pay attention to:
 
-If you'd like to venture further, you can also do some comparative analysis of texts. But for this week, the real goal is to get a better understanding of distant reading with the assistance of generative AI. You'll notice that your responses might take you down a rabbit hole, with the model suggesting deploying code to get better results. If you have experience in programming and you're interested in working that way with ChatGPT now, you certainly can start to pursue that path. But right now, it is not necessary
+- The quality and diversity of sources Claude identifies
+- How well Claude synthesizes information from multiple sources
+- The accuracy of Claude's analysis when you can verify it against sources you know
+- Any gaps or limitations in the research Claude produces
+
+Be particularly wary of misinterpretation of complex sources, and note where corporate marketing or press releases are treated as authoritative.
 
 ### Discussion
 
-After completing our readings, iterate on a distant read of your selected text from Project Gutenberg, using the model I provided in the tutorial to get started and experimenting with other approaches to textual analysis using your original prompts. As with last week, feel free to use ChatGPT, Copilot, Gemini, Claude, or another similar tool. Share the results of your textual analysis in the discussion post, with citations to this week's readings to ground your decisions and critique. 
+After completing your AI-assisted research investigation, share your findings and reflect on the process. Your discussion post should include:
+
+1. **Your Research Question**: Clearly state the question you investigated and why you chose it.
+
+2. **Key Findings**: Summarize the most interesting outputs, noting which sources were most relied upon.
+
+3. **Process Reflection**: Discuss your experience using Claude for research. What worked well? What limitations did you encounter?
+
+4. **Critique**: Evaluate the quality and reliability of your AI-assisted research. If your job involves research, do you find these tools useful? Concerning?
+
+5. **Connections to Readings**: Draw explicit connections between your research findings and this week's readings, particularly regarding AI hype, workplace impacts, and the "textpocalypse" concerns raised by Kirschenbaum.
+
+ Consider how your experience with AI-assisted research reflects broader questions about the role of AI in knowledge work and the role of human expertise in research and analysis.

@@ -1,31 +1,45 @@
-## Tutorial: Combinatorial Texts
+---
+layout: page
+title: "Week Four: Reading Across Texts"
+hide_warning: true
+---
 
-For this week's exercise, you're going to be taking influences from NaNoGenMo but work smaller to create a procedurally-generated, combinatorial short story. This prompt draws on some of the controversy around NaNoWriMo and, of course, the questions of AI authorship and particularly the questions of who's doing the authoring that came up when you all were "generating" poetry earlier this semester. As you were reading all the generated across the discussion board, I hope everyone noticed that some of the most successful were those that provided kind of strong existing materials and cues from existing authorship, kind of specificity of source material, rather than kind of just relying on whatever text is generated to response. Thus this exercise will require combining the type of work we've done for our last two weeks: you'll still be generating text, but instead of asking the LLM to produce text itself, you'll be drawing from a number of public domain or creative commons source texts and using procedural methods to combine them. As with last week, I recommend selecting your source texts from Project Gutenberg, but you are welcome to select any set of short stories appropriately licensed for this usage.
+## Tutorial: Reading Across Texts
 
-As we are getting into more advanced usage, you will now find that it's going to be nearly impossible for you to complete most assignments without investing in a subscription. You will run out of free queries, even working across the models, and you're going to hit lots of limits in output and usage. I recommend going with a two-month subscription to ChatGPT, as that is what I will be demoing on during the live sessions. However, Claude is another very capable tool for this type of work. Note that the context window and the manipulation of files is going to be key going forward: this week's exercise will bring that into focus as we're going to take a look "under" the interface and see how this process unfolds.
+This week, we're going to go further in our interactions with prompt-based systems by providing them with new data. For this exercise, you're going to choose at least one text to analyze through distant reading using your Claude.AI subscription, starting with my prompts and working towards developing and iterating your own questions. I recommend using Claude Sonnet 4 for this exercise, as it handles large text files and data analysis particularly well. Depending on the text length, you might find that you need to work in sections or iterate your approach: keep refining until you are happy with your results.
 
-### Cut and Paste Text
+### AI-Assisted Distant Read
 
-For examples of the type of work we're going to be creating here, start by [reading the overview on the NaNoGenMo repository](https://nanogenmo.github.io/).  I also recommend checking out the NaNoGenMo works featured in the Electronic Literature Collection Volume 4, particularly [Lee Tusman's "Pomelo: A Book of Instructions and Drawings" inspired by Yoko Ono's work](https://collection.eliterature.org/4/pomelo-a-yoko-ono-grapefruit-generator); [Delacannon's "Old School Dungeon Crawler GameBook Generator"](https://collection.eliterature.org/4/oldschool-dungeon-crawler-gamebook-generator); [Nick Montfort's minimalist experiment "consequence"](https://collection.eliterature.org/4/consequence); [Liza Daly's kinetic "A Physical Book"](https://collection.eliterature.org/4/a-physical-book). These are all much more ambitious projects than you'll be taking on this week, but they will give you an idea of what is possible!
+Start by selecting a work from [Project Gutenberg](https://www.gutenberg.org/) (anything other than *Frankenstein*, as I'm using that here as a sample), and make sure you download the "Plain Text UTF-8" version as a .txt file. For instance, the plain text version of *Frankenstein* is the file here: [TXT](https://www.gutenberg.org/cache/epub/41445/pg41445.txt). You'll notice that this plain text version has some noise at the top of the file, and at the end – this is information and metadata added by Project Gutenberg. We could delete that ourselves, but we're going to try out Claude's preprocessing capabilities and have it work with us throughout the entire process. So, download that plain text file for now and have it ready to upload to Claude when you're in conversation with the system.
 
-Next, source at least five text files to work with for your project. Plain text files will work best. For my examples, I used a set of science fiction short stories found in Project Gutenberg. As before, you'll need to ask it to pre-process the texts: however, this week, make sure to check the output as you go. When working with ChatGPT, select "View Analysis" after you ask for pre-processing. For instance, here's a sample of the Python code that ChatGPT 4.0 generated in response to my request to pre-process the Project Gutenberg files and remove the header and footer text: you can see the full script created for this stage [here](sample_cleaning.py). 
+Here's a guiding set of basic prompts to try - these are general, and it might require several iterations to get the output of each:
 
-![Python code generated by ChatGPT 4.0](python.png)
+- I'd like to do some distant reading analysis of a novel. Can you help me through the process?
+- I've attached the Project Gutenberg version of our text. Let's start by pre-processing it for analysis.
+- Can you provide me the pre-processed text as a file to confirm?
+- Can you generate a bag of words for our next steps?
+- Many of these are common words, can you apply a basic stopwords to remove things like I, the, do, is, our, etc?
+- Can you visualize the top 30 words as a word cloud?
+- Using the bag of words and the cleaned text, could you make some determinations about the genre of this work and the themes?
+- Can you visualize the network of character relationships in this text?
+- Can you pull the most frequently recurring phrases?
+- Can you visualize the most frequent phrases?
 
-Try to use the information you see to debug problems by asking ChatGPT for specific changes that might lead to better outcomes: this will be a challenge, but it can lead to great results!
+These basic steps will result in errors, but they can also provide some useful rapid visualizations and data. Here's a few examples from my output - you'll notice that the charts in some cases mention they are corrected because I had to ask for several iterations:
 
-Once you have at least five cleaned files that you're happy with, start asking ChatGPT to transform and/or combine the text(s) using different methods. Take a look through [Zach Whalen's NaNoGenMo Workshop](https://zachwhalen.notion.site/NaNoGenMo-Workshop-b984ee239e9e4cb8a99eb69fda617204) and this week's readings for ideas on how to approach combining your texts - and yes, you can explain the project to ChatGPT and ask it for suggestions as well. Here's a few of the methods you might try, both on individual texts and on re-mixed texts:
+![phrases](phrases.png)
+*Figure 1. Frequent bigrams and trigrams*
 
-- *Find and Replace* - Consider replacing specific words, swapping character names between stories, changing characters from humans to cats (and so on), or using a deterministic method: [Zach Whalen's overview has several examples](https://zachwhalen.notion.site/Find-and-Replace-3eb80d9ef13048469e37a43beb193047).
-- *Erasure / Lipogram* - Try to exclude a letter of the alphabet from your texts, and consider the results. You might have to get creative with this or decide to embrace some of the nonsense that will likely remain. You can also eliminate certain words or categories of words.
-- *Cento* - A cento is a text composed entirely out of other texts: ask ChatGPT to work across your texts to assist with this type of combinatorial process. For ideas on how to think about this type of constraint, take a look at [Christopher Higgs on the history of the Oulipo and "potential" literature](https://agnionline.bu.edu/essay/the-annoying-lacuna-one-unofficial-history-of-the-oulipo/).
+![word cloud](wordcloud.png)
+*Figure 2. Word cloud, after iterating stop words*
 
-### Shareable Story
+![character network](network.png)
+*Figure 3. Character network, weighting for significance*
 
-Continue iterating through at least five different approaches until you have a single "story text" that you are happy with. Some things aren't going to work as well when run through the ChatGPT interface as they would if you exported the code yourself, but don't worry about that this week: if you run into an error involving external libraries, ask ChatGPT to try a simpler solution. 
+Use Ted Underwood's article on distant reading from this week's readings to guide your process and question development. You might find it easiest to analyze a text that's in an area that you're familiar with, or that is in an area of interest to you, so that you will have a better capacity to check and verify the output. Critique the quality of results you're getting, particularly in terms of their potential usefulness for this type of research.
 
-![Sample Cento HTML](cento.png)
+If you'd like to venture further, you can also do some comparative analysis of texts. But for this week, the real goal is to get a better understanding of distant reading with the assistance of generative AI. You'll notice that Claude might suggest creating code artifacts or more sophisticated analysis tools to get better results. If you have experience in programming and you're interested in working that way with Claude now, you certainly can start to pursue that path. But right now, it is not necessary for completing the assignment.
 
-You can also check out the [Markov inspired](markov.html) generator we made as a group during the live session.
+### Discussion
 
-Once you have your story text, ask ChatGPT to convert it to an HTML format that's better for display. This doesn't need to be fancy, but think about how it might have meaning. For example, shown here is one iteration of my test, which is a Cento and includes lines from each story highlighted in different colors based on their original source text: I accomplished this by asking ChatGPT to add markers when building the Cento, then replace those markers with font colors after converting the file. Share the final HTML file as well as screenshots from your process back in this week's discussion.
+After completing our readings, iterate on a distant read of your selected text from Project Gutenberg using your Claude.AI subscription. Use the prompts I provided in the tutorial to get started and experiment with other approaches to textual analysis using your original prompts. Claude Sonnet 4 is particularly well-suited for this type of text analysis work. Share the results of your textual analysis in the discussion post, with citations to this week's readings to ground your decisions and critique. 

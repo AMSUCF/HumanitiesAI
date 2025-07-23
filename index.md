@@ -21,7 +21,7 @@ title: Humanities in the Age of AI
   - [Week One: Textual - Histories (Monday, August 18)](#week-one-textual---histories-monday-august-18)
   - [Week Two: Textual - Generation (Monday, August 25)](#week-two-textual---generation-monday-august-25)
   - [Week Three: Textual - Sources (Monday, September 1)](#week-three-textual---sources-monday-september-1)
-  - [Week Four: Textual - Combinatory (Monday, September 8)](#week-four-textual---combinatory-monday-september-8)
+  - [Week Four: Textual - Reading (Monday, September 8)](#week-four-textual---reading-monday-september-8)
   - [Week Five: Visual - Aesthetics (Monday, September 15)](#week-five-visual---aesthetics-monday-september-15)
   - [Week Six: Visual - Art and Creativity (Monday, September 22)](#week-six-visual---art-and-creativity-monday-september-22)
   - [Week Seven: Visual - Photography and Realism (Monday, September 29)](#week-seven-visual---photography-and-realism-monday-september-29)
@@ -187,22 +187,21 @@ circumstances will require additional time!
 
 ### Week Three: Textual - Sources (Monday, September 1)
 
-[**Tutorial: Reading Across Texts**](weekthree.md) 
+[**Tutorial: Research and Sources**](weekthree.md) 
 
 -   *Artificial Intelligence* - Part I: Background
 -   *The AI Con* - Chapter 3: Leisure for Me, Gig Work for Thee: AI Hype at Work
--   Underwood, Ted. "A Genealogy of Distant Reading." *DHQ: Digital Humanities Quarterly* 11.2 (2017). [http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html](http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html).
 -   [Kirschenbaum, Matthew. "Prepare for the Textpocalypse." *The Atlantic.* March 8, 2023.](https://www.theatlantic.com/technology/archive/2023/03/ai-chatgpt-writing-language-models/673318/)
--   **Generative Exercise Three: Textual Analysis**
+-   **Generative Exercise Three: Research Mode**
 
-### Week Four: Textual - Combinatory (Monday, September 8)
+### Week Four: Textual - Reading (Monday, September 8)
 
-[**Tutorial: Combining Texts**](weekfour.md)
+[**Tutorial: Reading Across Texts**](weekfour.md)
 
 -   *Artificial Intelligence* - Part II: Looking and Seeing
 -   *The AI Con* - Chapter 4: If It Quacks Like a Doc: AI Hype and Social Services
--   Mackay, James and Polina Mackay. “Experiments in Generating Cut-up texts with Commercial AI”, Electronic Book Review, June 9, 2024, [https://doi.org/10.7273/gkrg-5d74](https://electronicbookreview.com/essay/experiments-in-generating-cut-up-texts-with-commercial-ai/).
--   **Generative Exercise Four: Cut-up Texts**
+-   Underwood, Ted. "A Genealogy of Distant Reading." *DHQ: Digital Humanities Quarterly* 11.2 (2017). [http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html](http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html).
+-   **Generative Exercise Four: Distant Read**
 
 ### Week Five: Visual - Aesthetics (Monday, September 15)
 
