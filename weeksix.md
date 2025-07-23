@@ -1,10 +1,16 @@
+---
+layout: page
+title: "Week Six: Archival Images"
+hide_warning: true
+---
+
 ## Tutorial: Archival Images
 
 This week, we're going to think about the challenges of translation from one medium to another, and explore how LLMs process or "see" complex images. For this project, I recommend working with images you find interesting that are related to your work in some way - assemble these as a collection that speaks to a theme or subject that has significant complexity. If you need ideas, consider working from an existing archive, such as image collections within the [Internet Archive](https://archive.org/details/image) or the [Library of Congress](https://www.loc.gov/pictures/). Consider the work discussed in our readings, [Archive Dreaming](https://refikanadol.com/works/archive-dreaming/) - how might generative AI change how you approach a larger visual cultural dataset? While we won't be working at that scale for this exercise, consider the broader projects that might build on these methods.
 
 ### Image to Text Translation
 
-Iterate through a series of prompts to build from analyzing single images to a larger set. You will need the subscription to provide a sufficient number of images at once (through the upload function - just select multiple files in a folder) to see patterns. Work from simpler images (with or without text) to more complex and potentially confusing images. These can be photographs or, as with our readings, not-photographs of any kind - a set of screenshots, archival scans, hand-written documents, etc.
+Iterate through a series of prompts to build from analyzing single images to a larger set. You will need your Claude.AI subscription to provide a sufficient number of images at once (through the upload function - just select multiple files in a folder) to see patterns. Work from simpler images (with or without text) to more complex and potentially confusing images. These can be photographs or, as with our readings, not-photographs of any kind - a set of screenshots, archival scans, hand-written documents, etc.
 
 Here's a few examples of questions to ask about single sets and images to prompt different types of translation:
 
@@ -20,4 +26,4 @@ As you work, think about how this might change your approach to text to image pr
 
 ### Discussion
 
-Unlike last week, you don't need to produce one unified document from these explorations: instead, take screenshots of highlights (particularly visualizations and other analysis) to share out in the discussion. You should be able to submit a large number of images at once if you're using the ChatGPT subscription, so try to push the limits and see what type of results you can get working towards analysis at scale. While it will be easier to analyze the accuracy of the results with images you are familiar with, consider branching out as you experiment to see how useful you find the translations provided.
+Unlike last week, you don't need to produce one unified document from these explorations: instead, take screenshots of highlights (particularly visualizations and other analysis) to share out in the discussion. You should be able to submit a large number of images at once using your Claude.AI subscription, so try to push the limits and see what type of results you can get working towards analysis at scale. While it will be easier to analyze the accuracy of the results with images you are familiar with, consider branching out as you experiment to see how useful you find the translations provided.
