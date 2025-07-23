@@ -209,6 +209,7 @@ circumstances will require additional time!
 
 -   *Artificial Intelligence* - Part III: Learning to Play
 -   *The AI Con* - Chapter 5: Artifice or Intelligence? AI Hype in Art, Journalism, and Science
+-   [Demsky, Ian. "My Month with Midjourney." *Electronic Book Review.* April 2, 2023.](https://electronicbookreview.com/publications/my-month-with-midjourney/)
 -   **Generative Exercise Five: Playful Generation**
 
 ### Week Six: Visual - Art and Creativity (Monday, September 22)
