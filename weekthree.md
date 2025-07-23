@@ -43,20 +43,8 @@ Throughout this process, pay attention to:
 - The accuracy of Claude's analysis when you can verify it against sources you know
 - Any gaps or limitations in the research Claude produces
 
-Be particularly wary of misinterpretation of complex sources, and note where corporate marketing or press releases are treated as authoritative.
+Be particularly wary of misinterpretation of complex sources, and note where corporate marketing or press releases are treated as authoritative. Spend some time looking through the ilnks it has collected to verify if you agree with how the chatbot has contextualized and synthesized the response. Did it answer your question, or start to, or did it stray from your topic? 
 
 ### Discussion
 
-After completing your AI-assisted research investigation, share your findings and reflect on the process. Your discussion post should include:
-
-1. **Your Research Question**: Clearly state the question you investigated and why you chose it.
-
-2. **Key Findings**: Summarize the most interesting outputs, noting which sources were most relied upon.
-
-3. **Process Reflection**: Discuss your experience using Claude for research. What worked well? What limitations did you encounter?
-
-4. **Critique**: Evaluate the quality and reliability of your AI-assisted research. If your job involves research, do you find these tools useful? Concerning?
-
-5. **Connections to Readings**: Draw explicit connections between your research findings and this week's readings, particularly regarding AI hype, workplace impacts, and the "textpocalypse" concerns raised by Kirschenbaum.
-
- Consider how your experience with AI-assisted research reflects broader questions about the role of AI in knowledge work and the role of human expertise in research and analysis.
+After reviewing the findings Claude has presented from your query, share a summary and any unexpected or interesting results back in your discussion post. Consider how this experience with AI-assisted research reflects broader questions about the role of AI in knowledge work and the role of human expertise in research and analysis. Given our discussions of labor this week, how do you feel about this approach to outsourcing a preliminary query? Was it useful? How does this compaer to other ways you've worked with chatbots prior to this class?
