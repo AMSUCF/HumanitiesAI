@@ -70,12 +70,9 @@ module will be divided into three sections:
     schedule of required readings is listed in the syllabus: additional
     recommended readings will be provided in each module.
 -   **Generative Exercises.** Each week's generative exercise will
-    involve experimenting with a different tool for AI: guidance will be
-    provided on configuring and getting started with the tool, and
-    students will be required to purchases subscriptions to OpenAI for
-    some exercises.
+    involve experimenting with and reflecting upon generative AI tools in different contexts. Most will use the required Anthropic subscription, but some other free tools or trials will be recommended throughout.
 -   **Reflective Discussion.** A weekly online discussion will provide
-    the opportunity to share the process of making: the emphasis is not
+    the opportunity to share the process of each exercise: the emphasis is not
     on "success" or "failure," but on critiquing the process and
     products through a theoretical lens.
 
