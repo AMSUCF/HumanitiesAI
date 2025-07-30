@@ -1,28 +1,36 @@
-## Tutorial: Image Classification
+---
+layout: page
+title: "Week Eight: Images as Information"
+hide_warning: true
+---
 
-We've been working a lot with the output of models: now, as we prepare to shift our attention from images to code, we're going to get a bit more hands-on with the models themselves by introducing a visual dataset for comparative analysis. This is a tools-intensive week, as it will start us on the path towards building and controlling our generative AI tools, inputs, and outputs much more directly.
+## Exercise: Images as Information
 
-### Working with Teachable Machine
+We've been working a lot with the creation and analysis of AI-generated images in controlled environments. Now, as we prepare to shift our attention from images to code, we're going to investigate how AI imagery is already present and circulating in online communities and social spaces. This week focuses on developing your ability to identify AI-generated content "in the wild" and understanding how these images are already changing the information landscape.
 
-First, gather at least 10 sample images from at least 3 different categories. For my demo dataset, I'm using cover images from distinct titles of [comic book covers](https://www.coverbrowser.com/). You might try different art styles, architecture, palettes, animal types, etc. Remember to think about these as distinct sets - you'll need to categorize your inputs into specific labels, which in turn the model will try to place content.
+### Choosing Your Investigation Focus
 
-![Categories of covers](categories.png)
+First, select a current topic or hobby that genuinely interests you. This could be anything from home decoration, quilting, embroidery, cooking, gardening, fashion, fitness, art, gaming, or any other area where visual content plays a significant role in community sharing and discussion. The key is to choose something you have some familiarity with, as this will help you better assess what looks "normal" versus potentially artificial in that space.
 
-Next, [launch Teachable Machine](https://teachablemachine.withgoogle.com/train), a simple visual interface for training machine learning models that can be exported to TensorFlow, a feature we'll be playing with more as we take more control of the tools. Select **New Image Project -> Standard image model** to start training your model.
+For example, I spend a lot of time in textile groups, and AI embroidery is everywhere - including in patterns being sold on Etsy. An embroiderer and designer, Anne Marie Oliver, has spoken about the problem both [in an interview](https://egausa.org/anne-marie-oliver-impact-ai-embroidery/) and in [a post designed to help people recognize fake embroidery](https://lolliandgrace.com/blogs/blog/artificial-intelligence-in-the-embroidery-space). Here's an example of the type of not-acheivable embroidery that commonly circulates (in this case, generated with OpenAI's GPT Image 1 model):
 
-Upload the images from each category, labeling them as you go (as shown above). Then, train the model and export it by selecting the options **Tensorflow.js** and **Upload (shareable link).** Copy the resulting link, as shown in the screenshot:
+![Fake Cat Embroidery](fakecat.png)
 
-![Export your model](export.png)
+Consider communities where people regularly share images of their work, purchases, inspiration, or tutorials. Think about spaces where visual authenticity might matter to participants, or where the ease of AI generation might be particularly tempting for content creators.
 
-Next, we're going to set up a tool that will let you test your model against other images that fall in the same categories. This tool is one I built that is going to give you a simple framework - you only need to replace one line of code to make it work. Load [the sample application](https://openprocessing.org/sketch/2382215), select *</>*, and replace the URL in line 4 with your URL. Test several different examples of images that fit in your categories, and take a screenshot of the resulting confusion matrix to share the results.
+### Investigating AI Presence in Online Communities
 
-If you created a more complex model, you might need to edit the code to make it work. To do that, copy the existing code into ChatGPT and ask for the specific changes you need: I will demo this process of iteration during the live session.
+Next, spend time exploring your chosen topic across various social media platforms and online communities. Focus your investigation on platforms like:
 
-### From Teachable Machine to Application
+- Instagram (hashtags, influencer accounts, community posts)
+- Facebook Groups (hobby groups, buying/selling groups, advice communities)
+- Pinterest (inspiration boards, DIY content)
+- Reddit (relevant subreddits)
+- TikTok (tutorial videos, showcases)
+- Specialized forums or websites for your chosen interest
 
-Finally, explore an existing usage of these libraries from the [Tensorflow.js gallery](https://github.com/tensorflow/tfjs/blob/master/GALLERY.md) - note that since this is a crowdsourced list, quality and usability may vary, so I recommend trying several to find one or two of interest. 
+As you browse, look for images that strike you as potentially AI-generated. Images are not as obvious as they used to be, so consider how AI might be specifically used (or misused) in your chosen community. Are people using AI to create inspiration images? To fake completed projects? To generate tutorial content? To create product mockups? Document at least three images that either clearly appear to be AI-generated or are sparking debate among viewers about their authenticity. 
 
-Using these as inspiration, launch your generative AI tool: for this process, I recommend selecting the **ChatGPT 4o with canvas** model. Copy your existing code from the Open Processing window with a starting prompt, asking the tool to redesign this output to more resemble your goals: for instance, you could ask it to switch from visualizing a confusion matrix to showing you more information about the model, as in the [visualizations covered in the library](https://www.npmjs.com/package/@tensorflow/tfjs-vis), or you could build an entirely different application, like a tool that takes video input and categorizes it using your model.
+### Discussion
 
-Don't worry if your resulting application is completely buggy or doesn't work - just document the process of trying to convince the computer to build what you need, keeping in mind our opening readings from *Code to Joy* as you work.
-
+Your discussion post should include your three flagged images along with your analysis of each one. Provide context about the community you investigated, what drew you to suspect these images were AI-generated, and any community responses you observed. Connect your findings to this week's readings about visual perception and the broader implications of AI imagery in authentic community spaces. Consider how your investigation reveals the changing relationship between human creativity, digital tools, and online trust.

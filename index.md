@@ -216,7 +216,7 @@ circumstances will require additional time!
 
 -   *Code to Joy* - Telling Computers What to Do
 -   [Farrell, Henry. "After software eats the world, what comes out the other end?" October 3, 2024.](https://www.programmablemutter.com/p/after-software-eats-the-world-what)
--   [**Exercise: Image Classification**](weekeight.md)
+-   [**Exercise: Images as Information**](weekeight.md)
 
 ### Week Nine: Procedural - Code and Rules (Monday, October 13)
 
