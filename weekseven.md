@@ -12,15 +12,15 @@ Generative AI video is still emerging, but it's already made an impact on the in
 
 For this exercise, try either working from static images or from specific descriptions. For instance, this example was created using Google Gemini Veo 3 with the prompt: "a retrofuturist alien spaceship lands on memory mall at the University of Central Florida:" 
 
-<video src="Veo3.mp4"></video>
+<video src="Veo3.mp4" controls></video>
 
 Compare this to a second iteration of the same prompt (using the same model on the same day), but with additional information from this [Wikimedia photo](https://commons.wikimedia.org/wiki/File:UCF_Memory_Mall_(30395273585).jpg) of the UCF memory mall:
 
-<video src="VeoWithReference.mp4"></video>
+<video src="VeoWithReference.mp4" controls></video>
 
 Here's the Sora output from the exact same prompt and source image:
 
-<video src="Sora.mp4"></video>
+<video src="Sora.mp4" controls></video>
 
 Try both ways of working after selecting either a tool that you have access to through an existing account (usually with Google or OpenAI) or from this [comprehensive list of video tools](https://www.whytryai.com/p/free-ai-image-to-video-tools-tested) that includes samples of output and free options, and the [Tom's Guide to generative video](https://www.tomsguide.com/features/5-best-ai-video-generators-tested-and-compared). Generate 2-3 short videos to share with your peers, using either one tool, or a range. 
 
