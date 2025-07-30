@@ -1,16 +1,14 @@
 ## Tutorial: Video
 
-Generative AI video is still emerging: while there are many tools available already using the capabilities of the technology to assist in the modification of video content, relatively few models have been released that allow for full image-to-video or text-to-video content directly to the consumer market. Precursors to these tools, such as deepfakes video creators for working from photos or video to create false content featuring particular people, generally require dataset preparation of a type we won't be engaging here. Instead, we'll be running a limited experiment with generative video this week, then looking at the larger claims and outputs from companies developing tools in this space.
+Generative AI video is still emerging, but it's already made an impact on the industry: among other adopters, a recent Netflix science fiction  while there are many tools available already using the capabilities of the technology to assist in the modification of video content, relatively few models have been released that allow for full image-to-video or text-to-video content directly to the consumer market. Precursors to these tools, such as deepfakes video creators for working from photos or video to create false content featuring particular people, generally require dataset preparation of a type we won't be engaging here. Instead, we'll be running a limited experiment with generative video this week, then looking at the larger claims and outputs from companies developing tools in this space.
 
 ### Image to Video Exploration
 
-For this exercise, you'll need a few images that are either in the public domain or that you hold the rights to, and a free account with a generative video tool. Given the current coverage of [Runway](https://runwayml.com/), I suggest using it as at least one of the tools you try for this exercise. However, there are several [options](https://www.forbes.com/sites/bernardmarr/2024/02/14/5-generative-ai-video-tools-everyone-should-know-about/) - explore and select one that fits your interests. This example was generated using a static photo (shown below) and the Runway Gen-3 alpha model with a simple prompt: "Monarch butterfly, taking off, Florida garden" - in this case, the image provided most of the content, but notice how the wings change as the sequence progresses.
+For this exercise, try either working from static images or from specific descriptions. For instance, this example was created using Google Gemini Veo 3 with the prompt: "a retrofuturist alien spaceship lands on memory mall at the University of Central Florida:" 
 
-#### Source image:
-![Initial photo](butterfly.jpg)
+Compare this to a second iteration of the same prompt (using the same model on the same day), but with additiona information from this [Wikimedia photo](https://commons.wikimedia.org/wiki/File:UCF_Memory_Mall_(30395273585).jpg) of the UCF memory mall:
 
-#### Output:
-<video src="monarch.mp4" width ="739" controls></video>
+
 
 Use up your free attempts and try a range of prompts - there's no need to subscribe this time, unless you are interested in exploring this further as part of your own work. Generate 2-3 short videos to share with your peers, using either one tool, or a range. 
 
