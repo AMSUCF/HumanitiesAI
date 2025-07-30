@@ -70,12 +70,9 @@ module will be divided into three sections:
     schedule of required readings is listed in the syllabus: additional
     recommended readings will be provided in each module.
 -   **Generative Exercises.** Each week's generative exercise will
-    involve experimenting with a different tool for AI: guidance will be
-    provided on configuring and getting started with the tool, and
-    students will be required to purchases subscriptions to OpenAI for
-    some exercises.
+    involve experimenting with and reflecting upon generative AI tools in different contexts. Most will use the required Anthropic subscription, but some other free tools or trials will be recommended throughout.
 -   **Reflective Discussion.** A weekly online discussion will provide
-    the opportunity to share the process of making: the emphasis is not
+    the opportunity to share the process of each exercise: the emphasis is not
     on "success" or "failure," but on critiquing the process and
     products through a theoretical lens.
 
@@ -169,130 +166,101 @@ circumstances will require additional time!
 
 ### Week One: Textual - Histories (Monday, August 18)
 
-[**Tutorial: Eliza and Bots**](weekone.md)
-
 -   *The AI Con* - Chapter 1: An Introduction to AI Hype
 -   Berry, D. M. (2023). The Limits of Computation: Joseph Weizenbaum and the ELIZA Chatbot. *Weizenbaum Journal of the Digital Society*, 3(3). [https://doi.org/10.34669/WI.WJDS/3.3.2](https://ojs.weizenbaum-institut.de/index.php/wjds/article/view/106)
 -   **Due: Activity Verification (Friday August 22nd)**
--   **Generative Exercise One: Conversation**
+-   [**Exercise: Eliza and Bots**](weekone.md)
 
 ### Week Two: Textual - Generation (Monday, August 25)
-
-[**Tutorial: Interfaces**](weektwo.md)
 
 -   *The AI Con* - Chapter 2: It's Alive! The Hype of Thinking Machines
 -   [Emerson, Lori, 'Interfaced', in Matthew Rubery, and Leah Price (eds), Further Reading (2020; online edn, Oxford Academic, 5 Mar. 2020).](https://loriemerson.net/2020/02/07/interfaced/)
 -   [Underwood, Ted. "A more interesting upside of AI." July 2, 2025.](https://tedunderwood.com/2025/07/02/a-more-interesting-upside-of-ai/)
--   **Generative Exercise Two: Interface Critique**
+-   [**Exercise: Interfaces**](weektwo.md)
 
 ### Week Three: Textual - Sources (Monday, September 1)
-
-[**Tutorial: Research and Sources**](weekthree.md) 
 
 -   *Artificial Intelligence* - Part I: Background
 -   *The AI Con* - Chapter 3: Leisure for Me, Gig Work for Thee: AI Hype at Work
 -   [Kirschenbaum, Matthew. "Prepare for the Textpocalypse." *The Atlantic.* March 8, 2023.](https://www.theatlantic.com/technology/archive/2023/03/ai-chatgpt-writing-language-models/673318/)
--   **Generative Exercise Three: Research Mode**
+-   [**Exercise: Research and Sources**](weekthree.md)
 
 ### Week Four: Textual - Reading (Monday, September 8)
-
-[**Tutorial: Reading Across Texts**](weekfour.md)
 
 -   *Artificial Intelligence* - Part II: Looking and Seeing
 -   *The AI Con* - Chapter 4: If It Quacks Like a Doc: AI Hype and Social Services
 -   Underwood, Ted. "A Genealogy of Distant Reading." *DHQ: Digital Humanities Quarterly* 11.2 (2017). [http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html](http://digitalhumanities.org:8081/dhq/vol/11/2/000317/000317.html).
--   **Generative Exercise Four: Distant Read**
+-   [**Exercise: Reading Across Texts**](weekfour.md)
 
 ### Week Five: Visual - Aesthetics (Monday, September 15)
 
-[**Tutorial: Mash-ups and Remixes**](weekfive.md)
-
 -   *Artificial Intelligence* - Part III: Learning to Play
 -   *The AI Con* - Chapter 5: Artifice or Intelligence? AI Hype in Art, Journalism, and Science
--   **Generative Exercise Five: Playful Generation**
+-   [Demsky, Ian. "My Month with Midjourney." *Electronic Book Review.* April 2, 2023.](https://electronicbookreview.com/publications/my-month-with-midjourney/)
+-   [**Exercise: AI Image Generation**](weekfive.md)
 
 ### Week Six: Visual - Art and Creativity (Monday, September 22)
-
-[**Tutorial: Archival Images**](weeksix.md)
 
 -   *Artificial Intelligence* - Part IV: Artificial Intelligence Meets Natural Language
 -   *The AI Con* - Chapter 6: I'm Sorry, Dave, I'm Afraid I Can't Do That: AI Doomers, AI Boosters, and Why None of That Makes Sense
 -   [Jebb, Louis. "On process: Refik Anadol seeks to demystify AI art by showing how it is put together." *The Art Newspaper.* April 5, 2024](https://www.theartnewspaper.com/2024/04/05/on-process-refik-anadol-seeks-to-demystify-ai-art-by-showing-how-it-is-put-together)
--   [Nyce, Caroline Mimbs. "Why Does AI Art Look Like That?" *The Atlantic.* August 16, 2024.](https://www.theatlantic.com/technology/archive/2024/08/why-does-all-ai-art-look-same/679488/)
--   **Generative Exercise Six: Meaningful Images**
+-   [**Exercise: Archival Images**](weeksix.md)
 
 ### Week Seven: Visual - Photography and Realism (Monday, September 29)
 
-[**Tutorial: Video**](weekseven.md)
-
 -   *Artificial Intelligence* - Part V: The Barrier of Meaning
 -   *The AI Con* - Chapter 7: Do You Believe in Hope After Hype?
--   **Generative Exercise Seven: Expansive Imaginaries**
+-   [**Exercise: Video**](weekseven.md)
 
 ### Week Eight: Visual - Perceptions (Monday, October 6)
 
-[**Tutorial: Image Classification**](weekeight.md)
-
 -   *Code to Joy* - Telling Computers What to Do
 -   [Farrell, Henry. "After software eats the world, what comes out the other end?" October 3, 2024.](https://www.programmablemutter.com/p/after-software-eats-the-world-what)
--   **Generative Exercise Eight: Interactive Visualizations**
+-   [**Exercise: Image Classification**](weekeight.md)
 
 ### Week Nine: Procedural - Code and Rules (Monday, October 13)
-
-Tutorial: Code Interfaces
 
 -   *Code to Joy* - The What of Programming
 -   *Algorithms of Oppression* - The Power of Algorithms
 -   Evans, Julia. [*So you want to be a wizard.*](https://wizardzines.com/zines/wizard/) 
--   **Generative Exercise Nine: Tools**
+-   **Exercise: Code Interfaces**
 
 ### Week Ten: Procedural - Digital Humanities (Monday, October 20)
 
-[**Tutorial: Talking to Your Computer**](weekten.md)
-
 -   *Code to Joy* - Sequencing Commands
 -   *Algorithms of Oppression* - A Society; Searching
--   **Generative Exercise Ten: Recommendations from Data**
+-   [**Exercise: Talking to Your Computer**](weekten.md)
 
 ### Week Eleven: Procedural - Art and Play (Monday, October 27)
 
-[**Tutorial: Iteration and Design**](weekeleven.md)
-
 -   *Code to Joy* - Splitting on Conditionals
 -   *Algorithms of Oppression* - Searching for Black Girls
--   **Generative Exercise Eleven: Games**
+-   [**Exercise: Iteration and Design**](weekeleven.md)
 
 ### Week Twelve: Procedural - Hypertext (Monday, November 3)
-
-[**Tutorial: Working Across Interfaces**](weektwelve.md)
 
 -   *Code to Joy* - Storing in Variables
 -   *Algorithms of Oppression* - Searching for People and Communities
 -   [Martin, Meredith. "Command Lines for the Humanities." *PMLA/Publications of the Modern Language Association of America.* 2024;139(3):541-547. doi:10.1632/S0030812924000555](https://www.cambridge.org/core/journals/pmla/article/command-lines-for-the-humanities/097F959E6971063D05B085E698354BA2)
--   **Generative Exercise Twelve: Distant Reading the Web**
+-   [**Exercise: Working Across Interfaces**](weektwelve.md)
 
 ### Week Thirteen: Textual-Visual-Procedural (Monday, November 10)
 
-[**Tutorial: Multimodal Development**](weekthirteen.md)
-
 -   *Code to Joy* - Consolidating Into Loops
 -   *Algorithms of Oppression* - Searching for Protections
--   **Generative Exercise Thirteen: Portfolio of Experiments**
+-   [**Exercise: Multimodal Development**](weekthirteen.md)
 
 ### Week Fourteen: Applications: Art (Monday, November 17)
 
-[**Tutorial: Back to Bots**](weekfourteen.md)
-
 -   *Code to Joy* - Defining Functions
 -   *Algorithms of Oppression* - Future of Knowledge in Public
--   **Generative Exercise Fourteen: Experimental Interactive Bot**
+-   [**Exercise: Back to Bots**](weekfourteen.md)
 
 ### Week Fifteen: Applications: Humanities (Monday, November 24)
 
-[**Tutorial: Envisioning Complex Projects**](weekfifteen.md)
-
 -   *Code to Joy* - Combining Code and Data; Programmable World
 -   *Algorithms of Oppression* - Future of Information Culture; Conclusion
+-   [**Exercise: Envisioning Complex Projects**](weekfifteen.md)
 -   **Extra Credit Exercise: Public Humanities Prototype**
 
 ### Final Reflection (Due December 6)
