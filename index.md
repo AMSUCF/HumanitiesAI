@@ -235,7 +235,7 @@ circumstances will require additional time!
 
 -   *Code to Joy* - Splitting on Conditionals
 -   *Algorithms of Oppression* - Searching for Black Girls
--   [**Exercise: Iteration and Design**](weekeleven.md)
+-   [**Exercise: Deploying to GitHub Pages**](weekeleven.md)
 
 ### Week Twelve: Procedural - Hypertext (Monday, November 3)
 
@@ -260,8 +260,7 @@ circumstances will require additional time!
 
 -   *Code to Joy* - Combining Code and Data; Programmable World
 -   *Algorithms of Oppression* - Future of Information Culture; Conclusion
--   [**Exercise: Envisioning Complex Projects**](weekfifteen.md)
--   **Extra Credit Exercise: Public Humanities Prototype**
+-   [**Extra Credit Exercise: Envisioning Complex Projects**](weekfifteen.md)
 
 ### Final Reflection (Due December 6)
 

@@ -1,50 +1,95 @@
-## Tutorial: Iteration and Design
+---
+layout: page
+title: "Week Eleven: Deploying to GitHub Pages"
+hide_warning: true
+---
 
-This week, we're going to add on to our understanding of working with code to explore the concept of conditional statements and "ifs" that Littman covers in *Code to Joy.* Building from the examples he gives from interactive fiction, and this week's discussion of the persistent limitations of games and conversation systems (recalling our earlier interactions with Eliza), we will build a simple, one-room interactive experience. I've built out an extensive example of this week's approach in [AI Admin](https://anastasiasalter.net/AIAdmin/). Notice how this work becomes a metagame considering the potential role of generative AI tools in shaping interactive experiences for education and training. It's also built on very simple conditionals. The game's primary logic can all be described under the framework of "if / else" - players are given simple scenarios and a choice of answers, and each answer in turn changes the player's reputation on leading AI policy for their department.
+## Exercise: Deploying to GitHub Pages
 
-### Building for Interaction
+This week, you'll be taking the recommendation system you built in Week Nine and deploying it to GitHub Pages so that others can access and interact with it on the web. This process will introduce you to version control with Git, web hosting, and the development workflow that many programmers and digital humanists use for sharing their work online. This will set up our tools for the next stage so you have a chance to get familiar with the interfaces before we try something more complex.
 
-Instead of providing specific prompts this week, I've provided a process overview condensed from my example. These are technical directions - you'll need to think about how to get through and test each phase. In this week's course video, I cover the first several steps, and demonstrate how to deploy and test through GitHub Pages.
+### Setting Up Your Development Environment
 
-Your experience can address any content you feel works well under a similar "if / else" structure, with decisions based on the concept. Refer to this week's video and the example for ideas of how to address your specific goals.
+Before we can deploy your recommendation system, you'll need to set up the necessary tools for web development and version control. This part might be painful if you haven't worked with these environments before, but it's going to give you much more control of the code objects we're generating and playing with over the next few weeks.
 
-#### 1. Set Up the Canvas
-1. Build a single-page HTML game, using the P5.js library online
-2. Generate a 1000x1000 canvas for your game.
-3. Make sure the canvas is centered on the HTML page 
+#### Step 1: Get a GitHub Education Account
 
-#### 2. Load a Background Image
-1. Generate a background image for your room (e.g., a room with a desk, computer, phone, and book) and save it in your repository folder
-2. Use `loadImage()` in p5.js to load that image - make sure to use the right file name.
-3. Display this image on the canvas inside the `draw()` function.
+As a student, you can access GitHub's education benefits, which include free access to GitHub Pro and other developer tools:
 
-#### 3. Display Mouse Coordinates
-1. Write a `displayCoordinates()` function.
-2. Use `text()` to show the current `mouseX` and `mouseY` values on the canvas.
-3. Continuously display these coordinates in the bottom-left corner of the canvas - these coordinates will help define the right interactive zones.
+1. **Visit GitHub Education**: Go to [education.github.com](https://education.github.com/) and click "Get benefits"
+2. **Sign up or sign in**: Create a GitHub account if you don't have one, or sign in to your existing account
+3. **Verify your student status**: Upload documentation proving your student status (student ID, transcript, or enrollment verification)
+4. **Wait for approval**: GitHub will review your application, which usually takes a few days - it's OK, you don't need it for this first project!
+5. **Access your benefits**: Once approved, you'll have access to GitHub Copilot, which we'll be using for the next exercises
 
-#### 4. Define Mouseover Zones Using Coordinates
-1. Use the `displayCoordinates()` function to find the coordinates of the interactive objects in your background image.
-2. Define mouseover zones by checking if the mouse is within certain `mouseX` and `mouseY` ranges for each object.
-3. Change the cursor to a 'hand' icon when hovering over interactive areas using `cursor('pointer')`.
+#### Step 2: Install Visual Studio Code
 
-#### 5. Make Zones Clickable and Display Messages
-1. Make the defined interactive zones clickable using the `mousePressed()` function.
-2. When an object (e.g., computer, phone, book) is clicked, display a message on the canvas using `text()`.
-3. Example: When the player clicks the computer, show "The computer boots up slowly."
+Visual Studio Code is a free, widely-used code editor that will make it easier to manage your project files:
 
-#### 6. Build interactions
-1. Display choices when an object is clicked
-2. Each time the player clicks an interactive object, give a response or change the score.
-3. Display the score in the corner of the canvas using `text()`.
+1. **Download VS Code**: Visit [code.visualstudio.com](https://code.visualstudio.com/) and download the version for your operating system
+2. **Install the application**: Follow the installation instructions for your platform
+3. **Install useful extensions**: Once VS Code is running, consider installing these helpful extensions:
+   - Live Server (for local testing)
+   - GitHub Pull Requests and Issues
+   - HTML CSS Support
 
-#### 7. End the Game After All Interactions
-1. Keep track of how many objects the player has interacted with.
-2. When the player interacts with all objects, display an ending screen.
-3. Consider adjusting the ending based on player decisions.
+#### Step 3: Install GitHub Desktop
 
-Share the link to your live, GitHub Pages version of the game - the easiest way to do this is to include the project in the same repository you deployed last week using a different .html file name. Don't worry about bugs, weird mouseover zones, or broken interactions: focus on getting the core functionality in place through iteration.
+GitHub Desktop provides a user-friendly interface for managing Git repositories - that is to say, it helps us store and keep track of project versions, and provides a Dropbox-esque place to store things locally and in the cloud:
 
-### Reflecting on Process
+1. **Download GitHub Desktop**: Go to [desktop.github.com](https://desktop.github.com/) and download the application
+2. **Install and sign in**: Install the application and sign in with your GitHub account
+3. **Configure Git**: GitHub Desktop will help you configure Git with your name and email
 
-Consider the claims made in this week's readings regarding the future of games, particularly with regards to how interactions with characters and environments have typically been scripted as simple conditional statements. Does building this simple system give you a different perspective on that tradition of design? Think about the "modern" chatbots and interactive characters you've encountered thus far. Given some of Noble's critiques, what are the possibilities and challenges of bringing those types of characters into a game like this?
+### Deploying Your Recommendation System
+
+Now you'll convert your Claude artifact from Week Nine into a standalone website that can be hosted on GitHub Pages.
+
+#### Step 4: Get Your Simple Recommendation System Code
+
+1. **Access your Week Nine artifact**: Go back to your Claude conversation from Week Nine and find your recommendation system
+2. **Find the HTML code**: Click on the artifact and switch to code view. 
+
+#### Step 5: Create a GitHub Repository
+
+1. **Create a new repository**: Open GitHub Desktop and click "File > New Repository"
+2. **Fill in repository details**:
+   - Repository name: Choose something descriptive like "sci-fi-recommender" or "book-recommendation-system"
+   - Description: Brief description of your project
+   - Local path: Choose where to save the project on your computer
+   - Initialize with README: Check this box
+3. **Create the repository**: Click "Create Repository"
+
+#### Step 6: Set Up Your Project Files
+
+1. **Open in VS Code**: In GitHub Desktop, click "Open in Visual Studio Code"
+2. **Create index.html**: In VS Code, create a new file called `index.html` in your repository folder
+3. **Paste your code**: Copy your Claude artifact code into the `index.html` file
+4. **Create supporting files**: If your system uses separate JSON, CSS or JavaScript files, create those as well - by default, Claude usually puts everytihng into one HTML file
+5. **Test locally**: If you installed the Live Server extension, right-click on `index.html` and select "Open with Live Server" to test your site locally
+
+#### Step 7: Commit and Push Your Changes
+
+1. **Review changes**: Go back to GitHub Desktop, and you should see your new files listed
+2. **Write a commit message**: In the commit message field, write something descriptive like "Add recommendation system from Week Nine"
+3. **Commit to main**: Click "Commit to main"
+4. **Publish repository**: Click "Publish repository" to upload it to GitHub.com
+5. **Make it public**: Make sure to uncheck "Keep this code private" so others can access your site
+
+#### Step 8: Enable GitHub Pages
+
+1. **Go to your repository on GitHub.com**: Click "View on GitHub" in GitHub Desktop
+2. **Access Settings**: Click on the "Settings" tab in your repository
+3. **Find Pages section**: Scroll down to the "Pages" section in the left sidebar
+4. **Configure source**: 
+   - Source: Select "Deploy from a branch"
+   - Branch: Select "main" 
+   - Folder: Select "/ (root)"
+5. **Save settings**: Click "Save"
+6. **Get your URL**: In the side settings on your repository, select "Use GitHub Pages site" to get the URL of your page.
+
+Once your site is live, test it by loading 
+
+### Discussion
+
+Share the GitHub Pages URL of your deployed recommendation system (the GitHub pages link) along with any questions or challenges you ran into along the way. Speculate: how might these interfaces change in the near future given what you've experienced and read, particularly in *Code to Joy*?
