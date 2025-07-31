@@ -10,9 +10,11 @@ This week we'll be building on our previous coding experience to create AI-power
 
 ### Rebuilding Your Recommendation System
 
-Start with the same concept you developed next week - so for me, I stuck with science fiction, but didn't try to curate data at all. Here's the prompt I used to build [the sample AI-powered sci-fi recommender](https://claude.ai/public/artifacts/94e9b65f-36ee-4d40-b90e-6539878e6e44) for this week:
+Start with the same concept you developed next week - so for me, I stuck with science fiction, but didn't try to curate data at all. Here's the prompt I used to build [the sample AI-powered sci-fi recommender](https://claude.ai/public/artifacts/ec0218ea-f736-4881-bd33-dec7a287555a) for this week:
 
 **"Let's build an AI app to recommend science fiction books. It should take the user's thoughts on five random books as a couple of sentences, parse that, and then recommend a different book to try."**
+
+![Week Ten Sample](weekten.png)
 
 The keyword here is "AI app" - that indicates to Claude you want to use [the AI application development features](https://www.anthropic.com/news/claude-powered-artifacts) Anthropic has recently introduced. Basically, you'll be building a wrapper for Claude.
 

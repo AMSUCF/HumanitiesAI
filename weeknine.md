@@ -12,6 +12,8 @@ This week we'll be building on the *Code to Joy* discussions to think about what
 
 These are the prompts I used to build [the sample project for this week](https://claude.ai/public/artifacts/656622ac-8948-41d8-9f9a-5b9305e0ae65), which offers a very simple, Buzzfeed-esque, recommendation system based on user rankings of science fiction books. The exact prompts I used for every stage, broken down to show the different stages of design, are below.
 
+![Week Nine Sample](weeknine.png)
+
 The Claude artifact feature will make it easier to watch the HTML file evolve as you iterate through the prompts. Your process should produce a complete interactive recommendation system within Claude's artifact viewer, which you can then publish and share.
 
 1.  **Initial Dataset Creation**
