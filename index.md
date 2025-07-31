@@ -229,7 +229,7 @@ circumstances will require additional time!
 
 -   *Code to Joy* - Sequencing Commands
 -   *Algorithms of Oppression* - A Society; Searching
--   [**Exercise: Talking to Your Computer**](weekten.md)
+-   [**Exercise: Coding AI Interfaces**](weekten.md)
 
 ### Week Eleven: Procedural - Art and Play (Monday, October 27)
 
