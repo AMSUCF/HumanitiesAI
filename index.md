@@ -223,7 +223,7 @@ circumstances will require additional time!
 -   *Code to Joy* - The What of Programming
 -   *Algorithms of Oppression* - The Power of Algorithms
 -   Evans, Julia. [*So you want to be a wizard.*](https://wizardzines.com/zines/wizard/) 
--   **Exercise: Code Interfaces**
+-   [**Exercise: Distant Coding**](weeknine.md)
 
 ### Week Ten: Procedural - Digital Humanities (Monday, October 20)
 
