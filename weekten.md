@@ -8,6 +8,8 @@ hide_warning: true
 
 This week we'll be building on our previous coding experience to create AI-powered applications that use Claude's language processing capabilities within web interfaces. This gets to the heart of the current AI-hype cycle - AI is being added to everything - but it also lets us think about how this technology changes our interactions with web applications in fundamental ways. The key difference this week is that instead of building rule-based systems (like our previous recommendation engine that counted ratings), you'll be building applications that use AI to interpret user input and generate personalized responses. This hands over a lot of the control to the model - in this case, Claude.
 
+After this week, you won't need your Claude subscription, so feel free to cancel it to avoid an additional charge! However, you might find it useful while working on the remaining assignments, or if you run into trouble with your GitHub Copilot educational access.
+
 ### Rebuilding Your Recommendation System
 
 Start with the same concept you developed next week - so for me, I stuck with science fiction, but didn't try to curate data at all. Here's the prompt I used to build [the sample AI-powered sci-fi recommender](https://claude.ai/public/artifacts/ec0218ea-f736-4881-bd33-dec7a287555a) for this week:

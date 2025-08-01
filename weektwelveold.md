@@ -10,7 +10,7 @@ This week, we're going to revisit the distant reading we did earlier this semest
 
 You might find it helpful to look at documentation of these libraries, or even web scraping and distant reading tutorials in Python, for ideas of things to try. While you can install Python directly on your machine to complete these tasks, my demos will be using [Google Colab](https://colab.research.google.com/), a free service for deploying code in different environments - more extensive usage does require paying, but you should have no problems completing these tasks at the free usage level. 
 
-Create a new project for this exercise: we'll be working back and forth between generating and testing Python code. Do not ask ChatGPT to execute any of the code: you will be doing that directly, and in doing so you will be able to work at a much larger scale with access to libraries of existing code (as we started to explore last week).
+Create a new project for this exercise: we'll be working back and forth between generating and testing Python code. Do not ask Claude to execute any of the code: you will be doing that directly, and in doing so you will be able to work at a much larger scale with access to libraries of existing code.
 
 ![Colab interface](colab.png)
 
