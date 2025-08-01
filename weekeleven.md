@@ -41,10 +41,6 @@ GitHub Desktop provides a user-friendly interface for managing Git repositories 
 2. **Install and sign in**: Install the application and sign in with your GitHub account
 3. **Configure Git**: GitHub Desktop will help you configure Git with your name and email
 
-### Deploying Your Recommendation System
-
-Now you'll convert your Claude artifact from Week Nine into a standalone website that can be hosted on GitHub Pages.
-
 #### Step 4: Get Your Simple Recommendation System Code
 
 1. **Access your Week Nine artifact**: Go back to your Claude conversation from Week Nine and find your recommendation system
