@@ -1,28 +1,43 @@
-## Tutorial: Back to Bots
+---
+layout: page
+title: "Week Fourteen: Distant Reading with and for AI"
+hide_warning: true
+---
 
-As we're approaching the end of the semester, we're going to think about how generative AI will influence complex workflows. This week, we'll build a simple portfolio combining our experiments thus far, and in the process combine new approaches (such as music generation and code conversion) with the workflow we've developed over the last few weeks building interactive content for the web.
+## Exercise: Distant Reading with and for AI
 
-### Fine-Tuning a Model
+This week, we're going to revisit the distant reading we did earlier this semester, but now we'll be approaching the procedural aspects of the project more directly with agentic AI assistance. Instead of close reading individual texts, you'll use computational methods to analyze patterns across multiple novels, working with an agentic system that can help you explore and visualize literary data in new ways.
 
-Recall the Eliza Bot we "spoke" with at the beginning of the class: Eliza's code uses the same fundamental structures as you've been reading about over the last few weeks in *Code to Joy.* Her set of replies is thus fundamentally very limited to what is pre-scripted. We could easily build our own version of Eliza at this stage, but instead of working with an "old-school" bot, we're going to add on by using the skills you've gained with scraping and preparing datasets to fine-tune our own more responsive "bot." 
+### Working with Python and Colab
 
-Here's the prompt I started with, using the o1-preview reasoning model to get the initial code for every part of the problem. You'll need to work from a similar prompt iteratively, looping through each section of the task until you get results that enable you to move forward:
+We're returning to distant reading, but this time bringing Python scripts directly into play with the support of AI agents. We'll revisit collecting, processing, and analyzing a dataset of texts, but now we can work at a much larger scale with access to libraries of existing code. You'll potentially be making use of several Python libraries through the building on from the provided notebook:
 
-- *I want to fine tune a recent GPT model in Tensorflow to build a chatbot that responds based on dialogue extracted from a set of creative commons novels. I'd like to grab the public domain files from a single author on Project Gutenberg using a scraper, work from a set of text files, process them for this purpose, and test the chatbot in Google Colab. Can you help?*
+- [Pandas](https://pandas.pydata.org/) for data manipulation and analysis, used to manage CSV files and structured data
+- [Matplotlib](https://matplotlib.org/) for creating visualizations like graphs and charts
+- [NLTK](https://www.nltk.org/) as a natural language processing toolkit, used here to filter out stopwords during text preprocessing
 
-Here's the steps that ChatGPT o1 suggested to me, with some notes on how you might approach them:
+Working with these tools will enable you to analyze patterns that emerge across your chosen collection - and break it down into parts for potentially training a model (next week's optional final exercise). Before you start, choose at least five novels for your analysis and download them as .txt files from Project Gutenberg.
 
-- **Select and Download Texts from Project Gutenberg** - I suggest picking a single author for this, ideally someone with a lot of interesting dialogue. If you run into problems with the training process below, you might have tried to pull too many novels - go back and experiment and cut down to a single novel if needed.
-- **Process the Text Files to Extract Dialogues** - Remember, not all novels use "" to indicate dialogue. Take a look at how conversation is marked in the novels you've selected, and iterate through the extraction process until you get the material you are looking for.
-- **Prepare the Dataset for Training** - Dialogue has to be processed into input-output pairs to be usable by the bot: the Python code will try to pair sequential dialogue appropriately. Save the dataset as a JSON file to check over it before you train, and make sure it looks like you have something usable.
-- **Choose and Set Up a GPT Model in TensorFlow** - For this, we'll be using an open source model (so that we don't have to pay even more to fine-tune a model). This means the results won't be as impressive as if you were fine tuning the most recent model, but that's OK! GPT2 or similar works well enough to see this is in action.
-- **Fine-Tune the Model** - Expect the most errors and frustration at this stage - remember, fine-tuning is basically running a loop across all the data you've gathered over and over again and putting it into context with the model you've selected. If you find it takes too long or crashes the RAM on Colab, ask to simplify the training (fewer epochs, etc.)
-- **Test the Chatbot in Google Colab** - For this exercise, we're not going to deploy our model externally: that would require hosting it, like OpenAI does with ChatGPT. Instead, you can run the Chatbot through test prompts directly in Python on Colab. Screenshot results, and see how your interaction proceeds - expect to hit lots of limitations given the constraints of this minimal training, but hopefully you'll also get some emergent, playful results!
+You'll be using a pre-built Google Colab notebook that provides the foundation for your distant reading analysis. While you can install Python directly on your machine to complete these tasks, we'll be using [Google Colab](https://colab.research.google.com/), a free service for deploying code in different environments - more extensive usage does require paying, but you won't need to do that for these exercises.
 
-![Austen bot output](austenbot.png)
+**Starter Notebook Link**: [Distant Reading with AI](https://colab.research.google.com/drive/13WWZCpxqh1m9Kun8Z2uv2vxdqQxk-9kE?usp=sharing)
 
-When complete, your sample output will look something like this one from my AustenBot - you can try it for itself [using the Colab notebook](https://colab.research.google.com/drive/1QmCgdlzBdwmHtm964zUiS3UiotVyxK7l?usp=sharing). This bot is still fairly limited (we gave it a small dataset using GPT2, an older model) - however, it offers some insights into how you might build on a creative dataset towards an interactive experience. You can also use this notebook to help you build and debug your own bot.
+The interface is similar to that of Visual Studio Code: files will appear at the side as you work, and you can pull up those files to verify output at every stage. You'll be working back and forth between the provided code and generating new scripts with Gemini's assistance.
 
-### Reflecting on Chat
+### Extending with Gemini
 
-Compare this experience to the bot interactions we had at the start of the semester: how has your understanding of, and expectation of, these bots changes? Where do the limitations of the dataset and the model come out, and how can you understand that through the lens of the readings and experiments we've done across the semester?
+Once you've completed the basic workflow by running every cell, use Gemini (Google Colab's AI agent) to extend your analysis. There are lots of options for analyzing across your texts: you can try using sentiment analysis or topic modeling, or you can try to use this data towards a creative project. Ask for a new script every time to avoid duplicating your previous steps.
+
+Consider these analytical approaches:
+
+- **Concordance Analysis**: Create concordances for individual texts as well as the full dataset, combining them to identify the most frequent words across all books
+- **Additional Visualizations**: Ask Gemini to help you create new charts, graphs, or visual representations of your data - for example, visualizing the top most frequent words as a line graph
+- **Alternative Analysis Methods**: Explore different computational approaches like sentiment analysis across your collection
+- **Comparative Analysis**: Generate code to compare specific aspects across your novel collection
+- **Thematic Exploration**: Use AI to help identify and analyze recurring themes or motifs
+
+### Discussion
+
+As you work through the analysis, consider how the relationship with text in distant reading connects to the other ways we've been working with AI (both in text and code) throughout the semester. Share your most interesting findings from your distant reading analysis, including your documented visualizations. What did the computational approach reveal about your chosen novels? How did working with an AI agent change your analytical process compared to our earlier distant reading experiments? What are the benefits and limitations of using agentic AI for literary analysis?
+
+Refer back to this week's readings on algorithms and variables, and connect your experience to broader questions about digital humanities, the relationship between human and machine reading, and how AI tools are changing the perception of "reading."

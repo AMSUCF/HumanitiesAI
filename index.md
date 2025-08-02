@@ -30,9 +30,9 @@ title: Humanities in the Age of AI
   - [Week Ten: Procedural - Digital Humanities (Monday, October 20)](#week-ten-procedural---digital-humanities-monday-october-20)
   - [Week Eleven: Procedural - Art and Play (Monday, October 27)](#week-eleven-procedural---art-and-play-monday-october-27)
   - [Week Twelve: Procedural - Hypertext (Monday, November 3)](#week-twelve-procedural---hypertext-monday-november-3)
-  - [Week Thirteen: Textual-Visual-Procedural (Monday, November 10)](#week-thirteen-textual-visual-procedural-monday-november-10)
-  - [Week Fourteen: Applications: Art (Monday, November 17)](#week-fourteen-applications-art-monday-november-17)
-  - [Week Fifteen: Applications: Humanities (Monday, November 24)](#week-fifteen-applications-humanities-monday-november-24)
+  - [Week Thirteen: Local Futures (Monday, November 10)](#week-thirteen-local-futures-monday-november-10)
+  - [Week Fourteen: Customizing Bots (Monday, November 17)](#week-fourteen-customizing-bots-monday-november-17)
+  - [Week Fifteen: Agents and Beyond (Monday, November 24)](#week-fifteen-agents-and-beyond-monday-november-24)
   - [Final Reflection (Due December 6)](#final-reflection-due-december-6)
 
 ## Course Description
@@ -59,9 +59,8 @@ both creative examples and theoretical critiques of that usage:
     focusing on use cases for libraries, archives, museums, and artistic
     expression.
 
-The final weeks will focus on combinatorial practices of
-textual-visual-procedural generation that bring these methods together
-with human imagination towards arts and humanities problems. Each week,
+The final weeks will focus on looking towards the future impacts of these tools and the ways we might work
+with human imagination towards solving arts and humanities problems. Each week,
 plan on following the module for all asynchronous activities. Each
 module will be divided into three sections:
 
@@ -244,23 +243,23 @@ circumstances will require additional time!
 -   [Martin, Meredith. "Command Lines for the Humanities." *PMLA/Publications of the Modern Language Association of America.* 2024;139(3):541-547. doi:10.1632/S0030812924000555](https://www.cambridge.org/core/journals/pmla/article/command-lines-for-the-humanities/097F959E6971063D05B085E698354BA2)
 -   [**Exercise: Agentic Code**](weektwelve.md)
 
-### Week Thirteen: Textual-Visual-Procedural (Monday, November 10)
+### Week Thirteen: Local Futures (Monday, November 10)
 
 -   *Code to Joy* - Consolidating Into Loops
 -   *Algorithms of Oppression* - Searching for Protections
--   [**Exercise: Multimodal Development**](weekthirteen.md)
+-   [**Exercise: Local Models**](weekthirteen.md)
 
-### Week Fourteen: Applications: Art (Monday, November 17)
+### Week Fourteen: Customizing Bots (Monday, November 17)
 
 -   *Code to Joy* - Defining Functions
 -   *Algorithms of Oppression* - Future of Knowledge in Public
--   [**Exercise: Back to Bots**](weekfourteen.md)
+-   [**Exercise: Custom Bots**](weekfourteen.md)
 
-### Week Fifteen: Applications: Humanities (Monday, November 24)
+### Week Fifteen: Agents and Beyond (Monday, November 24)
 
 -   *Code to Joy* - Combining Code and Data; Programmable World
 -   *Algorithms of Oppression* - Future of Information Culture; Conclusion
--   [**Extra Credit Exercise: Envisioning Complex Projects**](weekfifteen.md)
+-   [**Extra Credit Exercise: Future Tools**](weekfifteen.md)
 
 ### Final Reflection (Due December 6)
 
