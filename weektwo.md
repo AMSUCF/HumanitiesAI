@@ -83,10 +83,10 @@ After completing our readings and exploring William Chamberlain's work, iterate 
 
 Refine the poem through at least ten iterations, working towards a final version that you find compelling. As you iterate, pay attention to how Claude's interface and responses differ from other AI tools you may have used. Document any frustrations and challenges as well as surprises along the way. How does Claude's text prompt interface aide or hinder your process compared to other platforms?
 
-For your final iteration(s), ask Claude to create an **artifact** that displays your poem in a formatted, web or print-ready version. This website should present your poem with thoughtful typography, spacing, and visual design that enhances the reading experience. Claude's website creation feature allows for rich formatting and can create beautiful presentations of creative work.
+For your final iteration(s), ask Claude to create an **artifact** that displays your poem in a formatted website, like this one:
 
 ![Claude Website Example](claude-artifact-example.png)
 
-Use Claude to build a web version of your poem and publish it using the publish button shown in Claude's interface (as demonstrated in the screenshot above). This will create a shareable web version of your creative work. For instance, here's this [terrible Blake poem](https://claude.ai/public/artifacts/03f77173-efbf-4b0c-90c3-cac5bafb3bbe). Include both the published website link and your reflection in your discussion post.
+Use the publish button in Claude's interface (as demonstrated in the screenshot above). This will create a shareable web version of your creative work. For instance, here's this [terrible fake Blake poem](https://claude.ai/public/artifacts/03f77173-efbf-4b0c-90c3-cac5bafb3bbe). Include both the published website link and your reflection in your discussion post.
 
 In your reflection, compare this process to how William Chamberlain described his book and the discussions of AI hype versus reality in this week's readings. Keep in mind Lori Emerson's discussion of the interface and think about how much control you have when working specifically with Claude. Consider how this act of interacting with Claude for creative purposes differs from the conversational chat you had last week, and how the website creation feature changes your relationship to the final creative product. 

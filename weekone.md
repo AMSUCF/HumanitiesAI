@@ -24,9 +24,9 @@ As you work with Claude, experiment with different models available in your subs
 
 Again, spend at least 15 minutes, ideally more, conversing with Claude before you go on to the third conversation experience. Screenshot any interesting or surprising moments, and try similar conversations to compare the results between Eliza and Claude. Notice how the level of repetition varies, and which words seem most associated with the responses that you get from each system.
 
-For your third encounter, talk to [**Future ELIZA**](WeekOne/), which was created by prompting Claude Sonnet 4 to build an ELIZA-style chatbot that would "respond like an AI from the future." This demonstration represents how current AI can be directed to speculate about future AI development while maintaining the therapeutic conversation patterns of the original ELIZA.
+For your third encounter, talk to [**Future ELIZA**](WeekOne/), which was created by prompting Claude Sonnet 4 to build an ELIZA-style chatbot that would "respond like an AI from the future." This demonstration (in the words of Claude Sonnet 4) "represents how current AI can be directed to speculate about future AI development while maintaining the therapeutic conversation patterns of the original ELIZA."
 
-Spend another short period conversing with Future ELIZA. As you interact with it, consider: how do you react to the information that this chatbot was generated with a few prompts? What does this resulting bot suggest to you about the future of these technologies?
+Spend another short period conversing with Future ELIZA. As you interact with it, consider: how do you react to the information that this chatbot was generated with a few prompts? What does this resulting bot suggest to you about the future of these technologies? (In this case, the process is more interesting than the output, which is fairly trite.)
 
 ### Discussion
 
