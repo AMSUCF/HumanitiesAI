@@ -68,7 +68,7 @@ module will be divided into three sections:
     secondary texts prior to starting the making exercise. The full
     schedule of required readings is listed in the syllabus: additional
     recommended readings will be provided in each module.
--   **Generative Exercises.** Each week's generative exercise will
+-   **Exercises.** Each week's exercise will
     involve experimenting with and reflecting upon generative AI tools in different contexts. Most will use the required Anthropic subscription, but some other free tools or trials will be recommended throughout.
 -   **Reflective Discussion.** A weekly online discussion will provide
     the opportunity to share the process of each exercise: the emphasis is not
@@ -114,7 +114,7 @@ Students will need to subscribe to [Anthropic's Claude](https://claude.ai/) for 
 | Points | Assignment Summary                                                                                                      | Due Date    |
 |--------|-------------------------------------------------------------------------------------------------------------------------|-------------|
 | 6      | **Activity Verification** - Complete the brief survey posted on Webcourses as soon as possible to confirm your enrollment in the course. As this is required by the university, please attend to it as soon as possible at the start of classes. | Friday, August 22nd |
-| 84    | **Generative Exercises** - Weekly discussions will consist of making, sharing, and reflecting on the process of exploring. We will work from tutorials and try a new form every week, with reflective questions connecting our process of making to the theoretical frameworks and provocations offered by our readings (14 exercises, 6 points each) | Weekly |
+| 84    | **Exercises** - Weekly discussions will consist of making, sharing, and reflecting on the process of exploring. We will work from tutorials and try a new form every week, with reflective questions connecting our process of making to the theoretical frameworks and provocations offered by our readings (14 exercises, 6 points each) | Weekly |
 | 10     | **Reflection** - During the final exam week, students will complete a reflective essay on their journey, with particular consideration to next steps and potential future applications of the making mechanisms introduced throughout the semester. This reflection should include AI-generated material alongside materials produced directly by the student. | Saturday, December 6th |
 
 
