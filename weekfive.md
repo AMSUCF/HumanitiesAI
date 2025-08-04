@@ -6,7 +6,7 @@ hide_warning: true
 
 ## Tutorial: AI Image Generation and Analysis
 
-For this week's exercise, you'll be following the example set by Ian Demsky's ["My Month with Midjourney"](https://electronicbookreview.com/publications/my-month-with-midjourney/) to explore AI image generation through systematic experimentation and critical reflection.  As this week's readings have discussed, generative imagery is particularly contentious, and the availability and ease of use of these tools has serious implications for work and communication broadly. While working through this process, keep in mind Melanie Mitchell's discussions of how the model relates to objects, and iterate your prompting to be as clear and specific as possible.
+For this week's exercise, you'll be following the example set by Ian Demsky's ["My Month with Midjourney"](https://electronicbookreview.com/publications/my-month-with-midjourney/) and the examples from the ELO panel “Worlds Remunged: The Pastiche and Parody of Generative AI” with projects by artist-scholars Mark C. Marino, Siobhan O’Flynn (screenshotted below), Alex Mitchell, and Rob Wittig to explore AI image generation through systematic experimentation and critical reflection.  As this week's readings have discussed, generative imagery is particularly contentious, and the availability and ease of use of these tools has serious implications for work and communication broadly. While working through this process, keep in mind Melanie Mitchell's discussions of how the model relates to objects, and iterate your prompting to be as clear and specific as possible.
 
 ### Text to Image Experimentation
 
