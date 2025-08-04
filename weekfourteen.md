@@ -6,33 +6,22 @@ hide_warning: true
 
 ## Exercise: Distant Reading with and for AI
 
-This week, we're going to revisit the distant reading we did earlier this semester, but now we'll be approaching the procedural aspects of the project more directly with agentic AI assistance. Instead of close reading individual texts, you'll use computational methods to analyze patterns across multiple novels, working with an agentic system that can help you explore and visualize literary data in new ways.
+This week, we're going to revisit the distant reading we did earlier this semester, but now we'll be approaching the procedural aspects of the project more directly with agentic AI assistance. We'll revisit collecting, processing, and analyzing a dataset of texts, but now we can work at a much larger scale with access to libraries of existing code.
 
-### Working with Python and Colab
+### Working with the Colab Notebook
 
-We're returning to distant reading, but this time bringing Python scripts directly into play with the support of AI agents. We'll revisit collecting, processing, and analyzing a dataset of texts, but now we can work at a much larger scale with access to libraries of existing code. You'll potentially be making use of several Python libraries through the building on from the provided notebook:
-
-- [Pandas](https://pandas.pydata.org/) for data manipulation and analysis, used to manage CSV files and structured data
-- [Matplotlib](https://matplotlib.org/) for creating visualizations like graphs and charts
-- [NLTK](https://www.nltk.org/) as a natural language processing toolkit, used here to filter out stopwords during text preprocessing
-
-Working with these tools will enable you to analyze patterns that emerge across your chosen collection - and break it down into parts for potentially training a model (next week's optional final exercise). Before you start, choose at least five novels for your analysis and download them as .txt files from Project Gutenberg.
-
-You'll be using a pre-built Google Colab notebook that provides the foundation for your distant reading analysis. While you can install Python directly on your machine to complete these tasks, we'll be using [Google Colab](https://colab.research.google.com/), a free service for deploying code in different environments - more extensive usage does require paying, but you won't need to do that for these exercises.
+You'll be using a pre-built Google Colab notebook and working with Python libraries like Pandas, Matplotlib, and NLTK. Before you start, choose at least five novels for your analysis and download them as .txt files from Project Gutenberg.
 
 **Starter Notebook Link**: [Distant Reading with AI](https://colab.research.google.com/drive/13WWZCpxqh1m9Kun8Z2uv2vxdqQxk-9kE?usp=sharing)
 
-The interface is similar to that of Visual Studio Code: files will appear at the side as you work, and you can pull up those files to verify output at every stage. You'll be working back and forth between the provided code and generating new scripts with Gemini's assistance.
+Run through every cell in the notebook to complete the basic workflow, then use Gemini (Google Colab's AI agent) to extend your analysis.
 
 ### Extending with Gemini
 
-Once you've completed the basic workflow by running every cell, use Gemini (Google Colab's AI agent) to extend your analysis. There are lots of options for analyzing across your texts: you can try using sentiment analysis or topic modeling, or you can try to use this data towards a creative project. Ask for a new script every time to avoid duplicating your previous steps.
+Once you've completed the basic workflow, ask Gemini to help you create additional analysis. Consider approaches like:
 
-Consider these analytical approaches:
-
-- **Concordance Analysis**: Create concordances for individual texts as well as the full dataset, combining them to identify the most frequent words across all books
-- **Additional Visualizations**: Ask Gemini to help you create new charts, graphs, or visual representations of your data - for example, visualizing the top most frequent words as a line graph
-- **Alternative Analysis Methods**: Explore different computational approaches like sentiment analysis across your collection
+- **Concordance Analysis**: Create concordances for individual texts and combine them to identify frequent words across all books
+- **Additional Visualizations**: Create new charts, graphs, or visual representations of your data
 - **Comparative Analysis**: Generate code to compare specific aspects across your novel collection
 - **Thematic Exploration**: Use AI to help identify and analyze recurring themes or motifs
 

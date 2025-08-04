@@ -137,18 +137,15 @@ through Webcourses and updated weekly.
 This course uses a fully asynchronous online format, and relies upon
 students to complete all readings, engage with both course lectures and
 other online videos, and join in on course discussions. All assignments
-are due at the close of their listed module, but will be accepted with
-no penalty through the next listed deadline. Once an assignment closes,
+are due the Sunday of their listed module, but will be accepted with
+no penalty for one week before closing. Once an assignment closes,
 late work will not be accepted unless an additional extension has
 already been approved by the instructor: please reach out early if
 circumstances will require additional time!
 
--   The course has no synchronous meeting requirements: however,
-    students are encouraged to engage in optional check-in meetings to
-    think through their process and growth. Optional synchronous
-    meetings will be scheduled based on the poll conducted in the first
-    week of class.
--   Office hour assistance is additionally available both through text
+-   The course has no synchronous meeting requirements and operates
+    entirely asynchronously.
+-   Office hour assistance is available both through text
     on Webcourses messages and via Zoom: Zoom is recommended for
     advanced technical problems, where screen-sharing might be helpful
     to resolving errors.
