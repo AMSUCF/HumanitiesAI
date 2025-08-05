@@ -28,13 +28,15 @@ Try both ways of working after selecting either a tool that you have access to t
 
 Now that you've explored the tools within some limitations, choose a generated video to analyze and critique, with particular attention to the tensions of perception, vision, and labor drawn out through this week's readings. Keep in mind the concerns raised in Brett Halperin's talk, ["Hollywood Film Workers Strike Against AI: Understanding Algorithmic Resistance to Generative Cinematography"](https://stars.library.ucf.edu/elo2024/algorithmsandimaginaries/schedule/3/), as well as the current news coverage around greater integration of AI into cinematic productions such as the recent [usage by Netflix](https://www.theguardian.com/media/2025/jul/18/netflix-uses-generative-ai-in-show-for-first-time-el-eternauta). If you have access to a Netflix subscription, I recommend watching the episode in question.
 
-Also explore coverage of commercial and artistic deployments of AI video:
+Also explore coverage of commercial and artistic deployments of AI video, as well as the concerns they've reaised about privacy and abuse:
+
 - [Microsoft Surface AI ads](https://www.theverge.com/news/656104/microsoft-surface-ad-generative-ai-copilot-intel)
 - [ILM Star Wars Field Guide](https://decrypt.co/320224/ilm-makes-star-wars-field-guide-short-film-using-generative-ai)
 - [AI generated music videos](https://sfstandard.com/2024/09/27/ai-generated-music-videos-hackathon/)
 - [Yelp creating AI videos about restaurants](https://www.theverge.com/news/714944/yelp-ai-stitched-videos)
+- [Grok’s ‘spicy’ video setting instantly made me Taylor Swift nude deepfakes](https://www.theverge.com/report/718975/xai-grok-imagine-taylor-swifty-deepfake-nudes)
 
-Contextualize the generation you've done in these larger debates: what does the video you've generated suggest about the future of misinformation? Environmental and disaster communication? Conspiracy theories? How are people in your field using, or refusing to use, these tools? If this is your first time using them, were you surprised by the results?
+Contextualize the generation you've done in these larger debates: what does the video you've generated suggest about the future of misinformation? Environmental and disaster communication? Conspiracy theories? Revenge pornography? How are people in your field using, or refusing to use, these tools? If this is your first time using them, were you surprised by the results?
 
 ### Discussion
 
