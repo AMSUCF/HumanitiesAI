@@ -31,8 +31,8 @@ title: Humanities in the Age of AI
   - [Week Eleven: Procedural - Art and Play (Monday, October 27)](#week-eleven-procedural---art-and-play-monday-october-27)
   - [Week Twelve: Procedural - Hypertext (Monday, November 3)](#week-twelve-procedural---hypertext-monday-november-3)
   - [Week Thirteen: Local Futures (Monday, November 10)](#week-thirteen-local-futures-monday-november-10)
-  - [Week Fourteen: Customizing Bots (Monday, November 17)](#week-fourteen-customizing-bots-monday-november-17)
-  - [Week Fifteen: Agents and Beyond (Monday, November 24)](#week-fifteen-agents-and-beyond-monday-november-24)
+  - [Week Fourteen: Revisiting Text (Monday, November 17)](#week-fourteen-revisiting-text-monday-november-17)
+  - [Week Fifteen: Custom Bots (Monday, November 24)](#week-fifteen-custom-bots-monday-november-24)
   - [Final Reflection (Due December 6)](#final-reflection-due-december-6)
 
 ## Course Description
@@ -246,17 +246,17 @@ circumstances will require additional time!
 -   *Algorithms of Oppression* - Searching for Protections
 -   [**Exercise: Local Models**](weekthirteen.md)
 
-### Week Fourteen: Customizing Bots (Monday, November 17)
+### Week Fourteen: Revisiting Text (Monday, November 17)
 
 -   *Code to Joy* - Defining Functions
 -   *Algorithms of Oppression* - Future of Knowledge in Public
--   [**Exercise: Custom Bots**](weekfourteen.md)
+-   [**Exercise: Distant Reading with and for AI**](weekfourteen.md)
 
-### Week Fifteen: Agents and Beyond (Monday, November 24)
+### Week Fifteen: Custom Bots (Monday, November 24)
 
 -   *Code to Joy* - Combining Code and Data; Programmable World
 -   *Algorithms of Oppression* - Future of Information Culture; Conclusion
--   [**Extra Credit Exercise: Future Tools**](weekfifteen.md)
+-   [**Extra Credit Exercise: Custom Bots**](weekfifteen.md)
 
 ### Final Reflection (Due December 6)
 
