@@ -199,10 +199,10 @@
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const themeText = document.getElementById('theme-text');
-    const body = document.body;
+    const body = document.documentElement; // Changed from document.body to document.documentElement
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    // Load saved theme - using same key as main site
+    const savedTheme = localStorage.getItem('theme-preference') || 'dark';
     if (savedTheme === 'light') {
       body.setAttribute('data-theme', 'light');
       themeIcon.textContent = '☀️';
@@ -213,15 +213,15 @@
       const currentTheme = body.getAttribute('data-theme');
       
       if (currentTheme === 'light') {
-        body.removeAttribute('data-theme');
+        body.setAttribute('data-theme', 'dark');
         themeIcon.textContent = '🌙';
         themeText.textContent = 'Light Mode';
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('theme-preference', 'dark');
       } else {
         body.setAttribute('data-theme', 'light');
         themeIcon.textContent = '☀️';
         themeText.textContent = 'Dark Mode';
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('theme-preference', 'light');
       }
     });
   </script>
