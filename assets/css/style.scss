@@ -53,6 +53,12 @@
   --white-text: #1e293b;
 }
 
+/* Debug: Test if theme attribute is working */
+html[data-theme="light"] body {
+  /* This should give us a bright red background temporarily to test if the selector works */
+  border-bottom: 5px solid red !important;
+}
+
 /* Theme toggle button */
 .theme-toggle {
   position: fixed;

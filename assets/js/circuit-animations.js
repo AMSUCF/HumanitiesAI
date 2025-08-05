@@ -506,13 +506,18 @@ function toggleTheme() {
 
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('Theme toggle script loaded'); // Debug log
+  
   const savedTheme = localStorage.getItem('theme-preference') || 'dark';
   const body = document.documentElement;
   const themeIcon = document.getElementById('theme-icon');
   const themeText = document.getElementById('theme-text');
   const themeToggle = document.getElementById('theme-toggle');
   
+  console.log('Theme elements found:', { themeIcon, themeText, themeToggle }); // Debug log
+  
   body.setAttribute('data-theme', savedTheme);
+  console.log('Applied theme:', savedTheme); // Debug log
   
   if (savedTheme === 'light') {
     themeIcon.textContent = '☀️';
@@ -524,9 +529,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add event listener for theme toggle
   if (themeToggle) {
+    console.log('Adding click listener to theme toggle'); // Debug log
     themeToggle.addEventListener('click', function() {
+      console.log('Theme toggle clicked'); // Debug log
+      
       const currentTheme = body.getAttribute('data-theme');
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      console.log('Switching from', currentTheme, 'to', newTheme); // Debug log
       
       body.setAttribute('data-theme', newTheme);
       
@@ -539,6 +549,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       localStorage.setItem('theme-preference', newTheme);
+      console.log('Theme saved to localStorage:', newTheme); // Debug log
     });
+  } else {
+    console.error('Theme toggle button not found!'); // Debug log
   }
 });
