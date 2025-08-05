@@ -37,23 +37,11 @@ This exercise uses two separate notebooks for the complete workflow:
 
 **Step 1 - Dataset Building**: [Build Training Dataset](https://colab.research.google.com/drive/1A992B26TZHyNbmeM2WCNWXj6gOIIg6oH?usp=sharing)
 
-This first notebook will take you through the prep:
-- Process your Project Gutenberg texts from Week Fourteen
-- Clean and format the text data for training
-- Create a structured dataset suitable for fine-tuning
-- Export the prepared dataset for use in training
-
-For reference, here's an example of a completed dataset based on Oz books: [Oz Fragments Dataset](https://huggingface.co/datasets/anasalter/oz-fragments). This shows you what your final processed dataset might look like when uploaded to Hugging Face.
+This first notebook will take you through the prep of uploading and processing a set of Project Gutenberg texts and breaking them into story-esque fragments for the dataset. You'll need the Hugging Face token to complete the upload and easily reference the dataset you create from your second notebook. For reference, here's an example of a completed dataset based on Oz books: [Oz Fragments Dataset](https://huggingface.co/datasets/anasalter/oz-fragments). This shows you what your final processed dataset might look like when uploaded to Hugging Face.
 
 **Step 2 - Model Training**: [Fine-Tune Custom Bot](https://colab.research.google.com/drive/1suRh2g6x78X-shCaaF3Im2ktoVSRxvbt?usp=sharing)
 
-This second notebook will fine tune the model:
-- Loading your prepared dataset
-- Setting up Hugging Face's transformers and Unsloth for efficient fine-tuning
-- Fine-tuning a language model on your literary collection
-- Testing your custom-trained model to see how it generates text in the style of your chosen works
-
-For reference, here's an example of a completed fine-tuned model based on the Oz dataset: [Oz Completion Model](https://huggingface.co/anasalter/oz-completion-model). This model is ready for use in Ollama and shows you what your final trained model might look like when completed. Here's my simple sample deployed with examples of unfinished sentence prompts and the response:
+This second notebook will fine tune the model: this is a notebook that I've lightly customized from [Unsloth](https://unsloth.ai/), a tool for lowering the time and GPU requirements for training. For reference, here's an example of a completed fine-tuned model based on the Oz dataset: [Oz Completion Model](https://huggingface.co/anasalter/oz-completion-model). This model is ready for use in Ollama and shows you what your final trained model might look like when completed. Here's my simple sample deployed with examples of unfinished sentence prompts and the response:
 
 ![Basic Oz model running on Ollama](oz.png)
 
