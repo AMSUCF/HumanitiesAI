@@ -67,6 +67,19 @@
   </div>
 
   <!-- JavaScript for animations -->
+  <script>
+    console.log('Inline script test - DOM ready');
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOMContentLoaded fired');
+      const themeToggle = document.getElementById('theme-toggle');
+      console.log('Theme toggle found:', themeToggle);
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+          console.log('INLINE TEST: Theme toggle clicked!');
+        });
+      }
+    });
+  </script>
   <script src="{{ '/assets/js/circuit-animations.js' | relative_url }}"></script>
 </body>
 </html>

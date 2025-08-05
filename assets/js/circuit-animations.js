@@ -2,6 +2,8 @@
 // HUMANITIES IN THE AGE OF AI - CIRCUIT BOARD ANIMATIONS
 // ============================================
 
+console.log('Circuit animations script loaded successfully!'); // Debug log
+
 // Circuit Board Animation Functions
 function initializeCircuitBoard() {
   const svg = document.querySelector('.circuit-svg');
