@@ -476,3 +476,69 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('resize', function() {
   initializeCircuitBoard();
 });
+
+// ============================================
+// THEME TOGGLE FUNCTIONALITY
+// ============================================
+
+function toggleTheme() {
+  const body = document.documentElement;
+  const themeIcon = document.getElementById('theme-icon');
+  const themeText = document.getElementById('theme-text');
+  
+  const currentTheme = body.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  
+  body.setAttribute('data-theme', newTheme);
+  
+  // Update button appearance
+  if (newTheme === 'light') {
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Dark Mode';
+  } else {
+    themeIcon.textContent = '🌙';
+    themeText.textContent = 'Light Mode';
+  }
+  
+  // Save preference to localStorage
+  localStorage.setItem('theme-preference', newTheme);
+}
+
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const savedTheme = localStorage.getItem('theme-preference') || 'dark';
+  const body = document.documentElement;
+  const themeIcon = document.getElementById('theme-icon');
+  const themeText = document.getElementById('theme-text');
+  const themeToggle = document.getElementById('theme-toggle');
+  
+  body.setAttribute('data-theme', savedTheme);
+  
+  if (savedTheme === 'light') {
+    themeIcon.textContent = '☀️';
+    themeText.textContent = 'Dark Mode';
+  } else {
+    themeIcon.textContent = '🌙';
+    themeText.textContent = 'Light Mode';
+  }
+  
+  // Add event listener for theme toggle
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      body.setAttribute('data-theme', newTheme);
+      
+      if (newTheme === 'light') {
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Dark Mode';
+      } else {
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Light Mode';
+      }
+      
+      localStorage.setItem('theme-preference', newTheme);
+    });
+  }
+});

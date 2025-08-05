@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Theme Toggle Test</title>
+  <style>
+    /* Import the main styles */
+    @import url('assets/css/style.scss');
+    
+    /* CSS Custom Properties - Dark Theme (default) */
+    :root {
+      --primary-bg: #0f172a;
+      --secondary-bg: #1e293b;
+      --accent-blue: #0ea5e9;
+      --accent-purple: #a855f7;
+      --accent-pink: #ec4899;
+      --circuit-green: #10b981;
+      --text-light: #f8fafc;
+      --text-dim: #94a3b8;
+      --pulse-color: #3b82f6;
+      --glow-intensity: 0 0 20px;
+      --content-bg: rgba(26, 26, 46, 0.8);
+      --border-color: rgba(0, 255, 255, 0.2);
+      --overlay-bg: rgba(0, 0, 0, 0.7);
+      --card-bg: rgba(0, 0, 0, 0.3);
+      --table-header-bg: rgba(0, 0, 0, 0.5);
+      --table-bg: rgba(0, 0, 0, 0.5);
+      --code-bg: rgba(0, 0, 0, 0.7);
+      --table-hover: rgba(0, 255, 255, 0.1);
+      --table-row-bg: rgba(0, 0, 0, 0.3);
+      --white-text: #fff;
+    }
+
+    /* Light Theme */
+    [data-theme="light"] {
+      --primary-bg: #f8fafc;
+      --secondary-bg: #e2e8f0;
+      --accent-blue: #0369a1;
+      --accent-purple: #7c3aed;
+      --accent-pink: #db2777;
+      --circuit-green: #059669;
+      --text-light: #1e293b;
+      --text-dim: #475569;
+      --pulse-color: #2563eb;
+      --glow-intensity: 0 0 10px;
+      --content-bg: rgba(255, 255, 255, 0.9);
+      --border-color: rgba(3, 105, 161, 0.2);
+      --overlay-bg: rgba(255, 255, 255, 0.8);
+      --card-bg: rgba(255, 255, 255, 0.6);
+      --table-header-bg: rgba(255, 255, 255, 0.7);
+      --table-bg: rgba(255, 255, 255, 0.9);
+      --code-bg: rgba(0, 0, 0, 0.05);
+      --table-hover: rgba(3, 105, 161, 0.1);
+      --table-row-bg: rgba(0, 0, 0, 0.03);
+      --white-text: #1e293b;
+    }
+
+    /* Basic layout styles for testing */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+      color: var(--text-light);
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--content-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent-blue);
+      color: var(--white-text);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 1000;
+    }
+
+    .theme-toggle:hover {
+      background: var(--accent-purple);
+      transform: scale(1.05);
+    }
+
+    h1 {
+      color: var(--accent-blue);
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: var(--table-bg);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--table-header-bg);
+      color: var(--text-light);
+    }
+
+    tr:hover {
+      background: var(--table-hover);
+    }
+
+    code {
+      background: var(--code-bg);
+      color: var(--circuit-green);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle between light and dark theme">
+    <span id="theme-icon">🌙</span>
+    <span id="theme-text">Light Mode</span>
+  </button>
+
+  <div class="container">
+    <h1>Theme Toggle Test - Humanities in the Age of AI</h1>
+    
+    <p>This is a test page to verify that the light/dark theme toggle works correctly. The page should switch between dark and light themes when you click the toggle button in the top-right corner.</p>
+
+    <div class="card">
+      <h3>Sample Content</h3>
+      <p>This card demonstrates how content areas adapt to the theme. Notice how the background, text color, and borders change with the theme.</p>
+      <p>Here's some <code>inline code</code> to test code styling in both themes.</p>
+    </div>
+
+    <h3>Sample Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Topic</th>
+          <th>Tools</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>13</td>
+          <td>Local Models</td>
+          <td>Ollama, DeepSeek</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Distant Reading</td>
+          <td>Colab, Gemini</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Custom Bots</td>
+          <td>Hugging Face, Unsloth</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>More Content</h3>
+    <p>Additional text to show how paragraphs look in both themes. The text should remain readable and properly contrasted against the background in both light and dark modes.</p>
+  </div>
+
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+    const body = document.body;
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      body.setAttribute('data-theme', 'light');
+      themeIcon.textContent = '☀️';
+      themeText.textContent = 'Dark Mode';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      
+      if (currentTheme === 'light') {
+        body.removeAttribute('data-theme');
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
