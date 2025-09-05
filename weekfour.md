@@ -16,16 +16,14 @@ Here's a guiding set of basic prompts to try - these are general, and it might r
 
 - I'd like to do some distant reading analysis of a novel. Can you help me through the process?
 - I've attached the Project Gutenberg version of our text. Let's start by pre-processing it for analysis.
-- Can you provide me the pre-processed text as a file to confirm?
-- Can you generate a bag of words for our next steps?
-- Many of these are common words, can you apply a basic stopwords to remove things like I, the, do, is, our, etc?
-- Can you visualize the top 30 words as a word cloud?
+- Can you generate a bag of words?
+- Many of these are common words, can you apply a basic stopwords to remove things like I, the, do, is, our, etc? (more likely to need this for Sonnet)
+- Can you visualize the top words as a word cloud?
 - Using the bag of words and the cleaned text, could you make some determinations about the genre of this work and the themes?
 - Can you visualize the network of character relationships in this text?
-- Can you pull the most frequently recurring phrases?
 - Can you visualize the most frequent phrases?
 
-These basic steps will result in errors, but they can also provide some useful rapid visualizations and data. Here's a few examples from my output - you'll notice that the charts in some cases mention they are corrected because I had to ask for several iterations:
+This is an area where we can see significant improvement in the visualizations themselves over different models of generative AI. Here's a few examples from my output running this last year, with ChatGPT, to compare:
 
 ![phrases](phrases.png)
 *Figure 1. Frequent bigrams and trigrams*
@@ -35,6 +33,16 @@ These basic steps will result in errors, but they can also provide some useful r
 
 ![character network](network.png)
 *Figure 3. Character network, weighting for significance*
+
+And here's the output from Claude Opus 4.1, embedded as artifacts:
+
+<iframe src="https://claude.site/public/artifacts/16c6479e-19e5-41fd-9cdf-a1a9562a4fda/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
+
+*Figure 1. Word cloud*
+
+<iframe src="https://claude.site/public/artifacts/3341474e-aea1-4f7b-8b1a-1fa1e6a57fdf/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
+
+*Figure 2. Character network visualization*
 
 Use Ted Underwood's article on distant reading from this week's readings to guide your process and question development. You might find it easiest to analyze a text that's in an area that you're familiar with, or that is in an area of interest to you, so that you will have a better capacity to check and verify the output. Critique the quality of results you're getting, particularly in terms of their potential usefulness for this type of research.
 
