@@ -34,15 +34,10 @@ This is an area where we can see significant improvement in the visualizations t
 ![character network](network.png)
 *Figure 3. Character network, weighting for significance*
 
-And here's the output from Claude Opus 4.1, embedded as artifacts:
+And here's the output from Claude Opus 4.1, linked as artifacts:
 
-<iframe src="https://claude.site/public/artifacts/16c6479e-19e5-41fd-9cdf-a1a9562a4fda/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
-
-*Figure 1. Word cloud*
-
-<iframe src="https://claude.site/public/artifacts/3341474e-aea1-4f7b-8b1a-1fa1e6a57fdf/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
-
-*Figure 2. Character network visualization*
+- [Word Cloud](https://claude.ai/public/artifacts/16c6479e-19e5-41fd-9cdf-a1a9562a4fda)
+- [Character Network Visualization](https://claude.ai/public/artifacts/3341474e-aea1-4f7b-8b1a-1fa1e6a57fdf)
 
 Use Ted Underwood's article on distant reading from this week's readings to guide your process and question development. You might find it easiest to analyze a text that's in an area that you're familiar with, or that is in an area of interest to you, so that you will have a better capacity to check and verify the output. Critique the quality of results you're getting, particularly in terms of their potential usefulness for this type of research.
 
@@ -50,4 +45,4 @@ If you'd like to venture further, you can also do some comparative analysis of t
 
 ### Discussion
 
-After completing our readings, iterate on a distant read of your selected text from Project Gutenberg using your Claude.AI subscription. Consider the examples I provided in the tutorial to get started and experiment with other approaches to textual analysis using your original prompts. Share the results of your textual analysis in the discussion post, with citations to this week's readings to ground your decisions and critique. 
+After completing our readings, iterate on a distant read of your selected text from Project Gutenberg using your Claude.AI subscription. Consider the examples I provided in the tutorial to get started and experiment with other approaches to textual analysis using your original prompts. Share the results of your textual analysis in the discussion post, with citations to this week's readings and links to your artifacts or screenshots of the vizualizations to ground your decisions and critique. 
