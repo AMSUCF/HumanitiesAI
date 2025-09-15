@@ -17,13 +17,10 @@ Here's a few examples of questions to ask about single sets and images to prompt
 - **Describe what you see in this image.** Follow up about material elements and specific details in the image. If there's an art or craft depicted, ask about the process or construction.
 - **Write alt-text for this image.** Keep in mind accessibility standards. To work more broadly, ask it to extrapolate and provide introductory descriptory text for the set of images.
 - **Pull out and describe key features.** Start with a single image, and work up to a larger set. See if it can assist in drawing out or recognizing patterns of details, composition, etc that might be of interest.
-- **Generate similar images.** This is unlikely to get good results without a lot of specificity: focus on elements that the image to text translation has recognized, and provide specific prompts on what you want the generated images to follow. 
-- **Visualize the set.** Ask it to use the file names of the images, and put them into a meaningful relationship: you could ask for a visualization positioning them in relationship to one another based on key characteristics, as shown here with a simple set of media images pulled from the Internet Archive.
-
-![Visualization of media images by themes](visualization.png)
+- **Visualize the set.** Ask it to use the file names of the images, and put them into a meaningful relationship: you could ask for a visualization positioning them in relationship to one another based on key characteristics. For my demonstration, I worked across a set of [comic covers](https://www.coverbrowser.com/covers/punisher). The [outputted artifact visualizing those covers is here](https://claude.ai/public/artifacts/5daa035e-6fab-4f9c-b8aa-e9b0a60f4cdb). Try building similar artifacts or asking for something more complex.
 
 As you work, think about how this might change your approach to text to image prompting (like we did last week). Consider what other uses this might have for investigating material culture, and where the weaknesses are in the translations.
 
 ### Discussion
 
-Take screenshots of highlights (particularly visualizations and other analysis) to share out in the discussion. You should be able to submit a large number of images at once using your Claude.AI subscription, so try to push the limits and see what type of results you can get working towards analysis at scale. While it will be easier to analyze the accuracy of the results with images you are familiar with, consider branching out as you experiment to see how useful you find the translations provided.
+Take screenshots of highlights (particularly visualizations and other analysis) or links to artifacts generated to share out in the discussion. You should be able to submit a large number of images at once using your Claude.AI subscription, so try to push the limits and see what type of results you can get working towards analysis at scale. While it will be easier to analyze the accuracy of the results with images you are familiar with, consider branching out as you experiment to see how useful you find the translations provided.
