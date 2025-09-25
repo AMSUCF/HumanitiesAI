@@ -22,7 +22,7 @@ Here's the Sora output from the exact same prompt and source image:
 
 <video src="Sora.mp4" controls></video>
 
-Try both ways of working after selecting either a tool that you have access to through an existing account (usually with Google or OpenAI) or from this [comprehensive list of video tools](https://www.whytryai.com/p/free-ai-image-to-video-tools-tested) that includes samples of output and free options, and the [Tom's Guide to generative video](https://www.tomsguide.com/features/5-best-ai-video-generators-tested-and-compared). Generate 2-3 short videos to share with your peers, using either one tool, or a range. 
+For this exercise, I recommend taking advantage of Google's current [free year of Gemini for students](https://gemini.google/students/?utm_source=gemini&utm_medium=paid-media&utm_campaign=students_sem_bts-sem_generic__text) offer: this is currently open through October 6th, so it is perfectly timed for us and will also give you access to their advanced tools for some of our later experiments with code. If you don't have a Google account or don't want to use their trial, you can consider this [list of video tools](https://www.whytryai.com/p/free-ai-image-to-video-tools-tested) that includes samples of output and free options, and the [Tom's Guide to generative video](https://www.tomsguide.com/features/5-best-ai-video-generators-tested-and-compared). Generate 2-3 short videos to share with your peers, using either one tool, or a range. 
 
 ### Critiquing Generated Video
 
