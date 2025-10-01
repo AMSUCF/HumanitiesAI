@@ -31,6 +31,8 @@ Next, spend time exploring your chosen topic across various social media platfor
 
 As you browse, look for images that strike you as potentially AI-generated. Images are not as obvious as they used to be, so consider how AI might be specifically used (or misused) in your chosen community. Are people using AI to create inspiration images? To fake completed projects? To generate tutorial content? To create product mockups? Document at least three images that either clearly appear to be AI-generated or are sparking debate among viewers about their authenticity. 
 
+Try using Claude Sonnet 4.5 (the latest release discussed in this week's video) to analyze the images, asking specifically if it is AI-generated: this imitates the functionality of the AI "detection" tools currently beeing widely marketed.
+
 ### Discussion
 
-Your discussion post should include your three flagged images along with your analysis of each one. Provide context about the community you investigated, what drew you to suspect these images were AI-generated, and any community responses you observed. Connect your findings to this week's readings about visual perception and the broader implications of AI imagery in authentic community spaces. Consider how your investigation reveals the changing relationship between human creativity, digital tools, and online trust.
+Your discussion post should include your three flagged images along with your analysis of each one. Provide context about the community you investigated, what drew you to suspect these images were AI-generated, and any community responses you observed. Connect your findings to this week's readings from the news about current examples of AI usage raising concerns. Consider how your investigation reveals the changing relationship between human creativity, digital tools, and online trust.
