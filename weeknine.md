@@ -14,7 +14,7 @@ These are the prompts I used to build [the sample project for this week](https:/
 
 ![Week Nine Sample](weeknine.png)
 
-The Claude artifact feature will make it easier to watch the HTML file evolve as you iterate through the prompts. Your process should produce a complete interactive recommendation system within Claude's artifact viewer, which you can then publish and share.
+The Claude artifact feature will make it easier to watch the HTML file evolve as you iterate through the prompts. Your process should produce a complete interactive recommendation or similear system within Claude's artifact viewer, which you can then publish and share.
 
 1.  **Initial Dataset Creation**
 
@@ -54,7 +54,7 @@ The Claude artifact feature will make it easier to watch the HTML file evolve as
 
     -   *Suggested Modifications*: Instead of just displaying the top
         three genres, visualize the genre preferences using a bar chart
-        or pie chart to make it more engaging. Try for a more sophisticated method than this initial rating system.
+        or pie chart. Try for a more sophisticated method than this initial rating system.
 
 5.  **Setting Display and Style Updates**
 
@@ -68,7 +68,9 @@ The Claude artifact feature will make it easier to watch the HTML file evolve as
 
 ### Publishing Your Artifact
 
-Once you've completed your recommendation system in Claude's artifact viewer, you'll need to publish it so others can interact with it. Claude artifacts can be shared directly through the platform's sharing feature (like in my link above).
+Feel free to expand on or iterate away from the simple recommendation system modeled here: as I discuss in this week's demo, our goal is to explore the process of iterating by combining real data and new interface elements to build interactivity through Claude. If you do something that breaks everything, you can always go back to the previous version of the artifact, so it is OK to experiment.
+
+Once you've completed your recommendation system in Claude's artifact viewer, you'll need to publish it so others can interact with it. Share your Claude artifact as we've done before with the mostly static pages.
 
 ### Discussion
 
