@@ -30,12 +30,12 @@ Envision a public-facing website that could serve an educational purpose, functi
 
 **Step 1: Request a Project Plan**
 
-Start by asking Claude Code to develop a project plan for your vision. For example:
+Start by asking Claude Code to develop a project plan for your vision. Start your prompt with "Enter plan mode. Do not exit plan mode until I confirm the plan is ready. Ask clarifying questions until you understand the plan." then follow it with your initial description. For example:
 - "I want to create an educational website about [your field of interest] that includes interactive demonstrations, animations, and user engagement features. Please create a project plan and initial file structure."
 - "Help me plan a personal portfolio site that showcases my AI experiments with dynamic, interactive elements that demonstrate the capabilities of different AI tools."
 - "Design a public humanities project website that makes [specific topic] accessible through interactive storytelling and multimedia presentations."
 
-Claude Code will propose a structure, suggest technologies, and may create initial files. Review the plan and discuss any modifications you'd like before proceeding.
+Claude Code should ask a set of questions. When you feel the project is sufficiently described, reply "
 
 **Step 2: Develop the Core Website**
 
