@@ -6,7 +6,7 @@ hide_warning: true
 
 ## Exercise: Agentic Code
 
-Building on the experience you've gotten with generative code, we're now moving to engage agentic AI systems that can plan, execute, and iterate on complex coding projects. Instead of prompting for individual pieces of code and working in the artificial environment of an AI chatbot interface, you'll be working with Claude Code for the web, which has full access to the files of a GitHub repository and can make changes directly. For this exercise, you'll use Claude Code to build a complete public-facing website from scratch.
+Building on the experience you've gotten with generative code, we're now moving to use agentic AI systems that can plan, execute, and iterate on complex coding projects with your own larger project in mind. You'll be building more experience working with Claude Code for the web, which has full access to the files of a GitHub repository and can make changes directly - and this time, you can add content such as images and video for Claude Code to integrate. For this exercise, you can build any type of website - consider building a simple web game, educational resource, or something related to your own work.
 
 ### Setting Up Your Project
 
@@ -19,17 +19,14 @@ Start by creating a new repository on GitHub.com (just like you did in Week Elev
    - No need to add .gitignore or license yet
 
 2. **Open Claude Code for the web** at [code.claude.ai](https://code.claude.ai)
-   - Sign in with your Anthropic account (the same one you've been using for Claude)
-   - You'll see an interface similar to the regular Claude chat, but with code-specific features
-
-3. **Connect your repository** by typing `/init` in Claude Code
-   - Follow the prompts to connect to your new GitHub repository
-   - Claude Code will clone the repository and set up the development environment
-   - You now have an agentic AI assistant with full access to your project files
+   - Open Claude Code through the sidebar
+   - Select your new repository from the list
+   - In the big box, type /init
+   - Start the project - this will initialize Claude Code's tracking and project structure (we'll do more with [slash commands](https://docs.claude.com/en/docs/claude-code/slash-commands) later, but here's a guide if you are interested!)
 
 ### Building Your Public-Facing Website
 
-Envision a public-facing website that could serve an educational purpose, function as a personal portfolio, or present a humanities project. Be ambitious - the point here is not to succeed at everything you try, the goal is to better understand what agentic systems are currently capable of producing (and where it fails). Claude Code will commit changes to your repository, so you can always revert if the agent moves in a direction you don't want.
+Envision a public-facing website that could serve an educational purpose, function as a personal portfolio, present a humanities project, or otherwise related to your own work. Be ambitious - the point here is not to succeed at everything you try, the goal is to better understand what agentic systems are currently capable of producing (and where it fails). Claude Code will commit changes to your repository in a separate branch, so you can always revert if the agent moves in a direction you don't want.
 
 **Step 1: Request a Project Plan**
 
@@ -62,8 +59,8 @@ Just like in Week Eleven, you'll deploy your site using GitHub Pages:
 
 Test your site, note what works and what needs refinement, and continue iterating with Claude Code to improve it.
 
-The design of this entire course site is an example of this type of workflow - all the content is mine, but the layouts, header animation on the main page, and interactive features were all generated using agentic AI assistance. Claude Code brings this capability directly into the web browser, making it more accessible than ever.
+The design of this entire course site is an example of this type of workflow - all the content is mine, but the layouts, header animation on the main page, and interactive features were all generated using agentic AI assistance (Copilot and Claude Code). I also used Claude Code to do the first pass of updating this text to describe the new web interface instead of the previous tools we were going to use (Github Copilot) - it did OK, though I had to rewrite several steps, which you can see if you look at the repository history.
 
 ### Discussion
 
-Share your deployed website link along with reflection on the agentic development process. How did you feel about your level of control? Where were the points of frustration? Would you make use of this for prototyping or managing digital projects in the future? Connect your experience to our broader course themes about AI tools, creativity, and the changing landscape of human-computer collaboration in creative and intellectual work.
+Share your deployed website link along with reflection on the agentic development process. How did you feel about your level of control? Where were the points of frustration? Would you make use of this for prototyping or managing digital projects in the future? Connect your experience to our broader course themes about AI tools, creativity, and the changing landscape of human-computer collaboration in creative and intellectual work. Cite at least one of our readings.
