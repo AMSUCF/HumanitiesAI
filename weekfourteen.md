@@ -4,34 +4,42 @@ title: "Week Fourteen: Distant Reading with and for AI"
 hide_warning: true
 ---
 
-## Exercise: Distant Reading with and for AI
+## Exercise: Distant Reading with AI
 
-This week, we're going to revisit the distant reading we did earlier this semester, but now we'll be approaching the procedural aspects of the project more directly with agentic AI assistance. We'll revisit collecting, processing, and analyzing a dataset of texts, but now we can work at a much larger scale with access to libraries of existing code. We'll primarily be making use of a few Python libraries: 
+This week, we're going to revisit the distant reading we did earlier this semester, but now we'll be approaching the procedural aspects of the project more directly with agentic AI assistance. We'll revisit collecting, processing, and analyzing a dataset of texts, but now we can work at a much larger scale with access to libraries of existing code. We'll primarily be making use of a few Python libraries:
 
-- [Pandas](https://pandas.pydata.org/) is a library for data manipulation and analysis, used to manage CSV files and structured data.
-- [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/) is a library for parsing HTML and XML, useful for extracting content during web scraping.
-- [Requests](https://requests.readthedocs.io/en/latest/) is a library for making HTTP requests in Python, used for downloading data from the web.
-- [Matplotlib](https://matplotlib.org/) is a library for creating visualizations like graphs and charts.
-- [NLTK](https://www.nltk.org/) is a natural language processing toolkit, used here to filter out stopwords during text preprocessing.
+- [NLTK](https://www.nltk.org/) is a natural language processing toolkit, used for text processing, tokenization, lemmatization, and stopword filtering.
+- [vaderSentiment](https://github.com/cjhutto/vaderSentiment) is a library for sentiment analysis, providing compound scores and polarity classification.
+- [scikit-learn](https://scikit-learn.org/) is a machine learning library, used here for topic modeling with Latent Dirichlet Allocation.
+- [NumPy](https://numpy.org/) is a library for numerical computations and array operations.
+- [Bootstrap 5](https://getbootstrap.com/) is a CSS framework for creating responsive web interfaces.
+- [D3.js](https://d3js.org/) is a JavaScript library for creating interactive data visualizations.
 
-You might find it helpful to look at documentation of these libraries, or even web scraping and distant reading tutorials in Python, for ideas of things to try. While you can install Python directly on your machine to complete these tasks, my demos will be using [Google Colab](https://colab.research.google.com/), a free service for deploying code in different environments - more extensive usage does require paying, but you should have no problems completing these tasks at the free usage level. 
+You might find it helpful to look at documentation of these libraries, or even web scraping and distant reading tutorials in Python, for ideas of things to try. For this exercise, you'll be using [Claude Code Web](https://claude.ai/code) to develop your analysis system through a conversational interface with Claude. 
 
-### Working with the Colab Notebook
+### Option One: Building Your Distant Reading System with Claude Code Web
 
-You'll be using a pre-built Google Colab notebook and working with Python libraries like Pandas, Matplotlib, and NLTK. Before you start, choose at least five novels for your analysis and download them as .txt files from Project Gutenberg.
+Before you start, choose five to ten related texts for your analysis and download them as .txt files from [Project Gutenberg](https://www.gutenberg.org/). We're downloading them individually because Project Gutenberg has [rules about robots](https://www.gutenberg.org/policy/robot_access.html). Consider selecting texts that share a common theme, genre, author, or time period to make your comparative analysis more meaningful.
 
-**Starter Notebook Link**: [Distant Reading](https://colab.research.google.com/drive/13WWZCpxqh1m9Kun8Z2uv2vxdqQxk-9kE?usp=sharing)
+Once you have your texts:
 
-Run through every cell in the notebook to complete the basic workflow, then use Gemini (Google Colab's AI agent) to extend your analysis. Once you've completed the basic workflow, ask Gemini to help you create additional analysis. Consider approaches like:
+1. **Create a new GitHub repository** for your distant reading project.
 
-- **Concordance Analysis**: Create concordances for individual texts and combine them to identify frequent words across all books
-- **Additional Visualizations**: Create new charts, graphs, or visual representations of your data
-- **Comparative Analysis**: Generate code to compare specific aspects across your novel collection
+2. **Upload your Project Gutenberg texts** to the repository.
 
-These visualizations can either work with one specific novel or text (as shown in the last cell of the demo, the character network, which will vary in quality depending on how your text is structured) or across all of them.
+3. **Open Claude Code Web** at [claude.ai/code](https://claude.ai/code) and connect it to your new GitHub repository.
+
+4. **Enter planning mode**  by asking Claude to create a plan, just as you did in previous weeks. Work conversationally with Claude through a similar series of prompts and clarifying questions to develop:
+   - A Python analysis script that processes your texts
+   - An interactive web interface for visualizing the results
+
+You can reference the [complete development process](https://github.com/AMSUCF/claude-distant-reading/blob/main/PROCESS.md) used in the demo to see one possible plan and resulting outputs, including the analytical methods (text processing, sentiment analysis, topic modeling, style metrics) and visualization approaches (word clouds, sentiment charts, comparative metrics).
+
+### Option Two: Working Locally with Claude Code for Desktop
+
+In this week's demo, I will show you how to work locally with [Claude Code for your desktop](https://docs.claude.com/en/docs/claude-code/installation) to accomplish this same task. Installing Claude Code is not required, but it is recommended for students interested in exploring computational work or the type of subagents described in some of this week's readings. There will be an option to continue with subagents in next week's bonus exercise.
 
 ### Discussion
 
-As you work through the analysis, consider how the relationship with text in distant reading connects to the other ways we've been working with AI (both in text and code) throughout the semester. Share your most interesting findings from your distant reading analysis, including your documented visualizations. What did the computational approach reveal about your chosen novels? How did working with an AI agent change your analytical process compared to our earlier distant reading experiments? What are the benefits and limitations of using agentic AI for literary analysis?
+As you work through the analysis, consider how the relationship with text in distant reading connects to the other ways we've been working with AI (both in text and code) throughout the semester. Try to push for visualizations that are meaningful to you. What did the computational approach reveal about your chosen novels? How did working with an AI agent change your process compared to our earlier distant reading experiments? After these multiple explorations with Claude Code, how do you feel about the use of agents in the larger context of labor - particularly given the tensions reflected in this week's readings?
 
-Refer back to this week's readings on algorithms and variables, and connect your experience to broader questions about digital humanities, the relationship between human and machine reading, and how AI tools are changing the perception of "reading."
