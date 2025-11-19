@@ -8,7 +8,7 @@ hide_warning: true
 
 As we're approaching the end of the semester, this exercise is optional, and there are three options of increasing complexity: I recommend watching through the demo videos first, and deciding which appeals.
 
-### Option One: Claude Skills (Extra Credit up to 5 points)
+### Option One: Claude Skills (Extra Credit up to 6 points)
 
 For this option, you will be working through the main Claude chatbot interface. First, go to settings and make sure you've enabled "skill-creator" under Cababilities->Skills. 
 
@@ -18,7 +18,7 @@ As with your previous work with Claude, make sure to be as precise as possible. 
 
 Once Claude creates the skill, it will provide the file as a .zip. Save that and return to the settings page: select "Upload Skill" under settings, and upload your file. Make sure the skill is activated, and return to the chatbot. Prompt your own skill tool using the name listed in "skills," and test some outputs. Did it change the defaults you typically get from Claude? Was your intention realized?
 
-### Option Two: Claude Subagents (Extra Credit up to 5 points)
+### Option Two: Claude Subagents (Extra Credit up to 6 points)
 
 This option requires Claude Code to be installed on your computer: unfortunately, it takes advantage of capabilities that the web version doesn't have, as the agents and their instructions are stored on your own harddrive. For this exercise, first open your terminal or command line and navigate to an empty folder, then type "claude" to start.
 
