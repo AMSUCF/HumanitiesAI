@@ -57,11 +57,11 @@ This token allows the notebook to access Hugging Face's model hub and optionally
 
 This exercise uses two separate notebooks for the complete workflow - these notebooks are on Google Colab, and in my video I walk through each step:
 
-**Step 1 - Dataset Building**: [Build Training Dataset](https://colab.research.google.com/drive/1A992B26TZHyNbmeM2WCNWXj6gOIIg6oH?usp=sharing)
+**Step 1 - Dataset Building**: [Build Training Dataset](https://colab.research.google.com/drive/1YHkYvyiAGDygPCY2Vdz4PTqcS8s3ZVxL?usp=sharing)
 
 This first notebook will take you through the prep of uploading and processing a set of Project Gutenberg texts and breaking them into story-esque fragments for the dataset. You'll need the Hugging Face token to complete the upload and easily reference the dataset you create from your second notebook. For reference, here's an example of a completed dataset based on Oz books: [Oz Fragments Dataset](https://huggingface.co/datasets/anasalter/oz-fragments). This shows you what your final processed dataset might look like when uploaded to Hugging Face.
 
-**Step 2 - Model Training**: [Fine-Tune Custom Bot](https://colab.research.google.com/drive/1suRh2g6x78X-shCaaF3Im2ktoVSRxvbt?usp=sharing)
+**Step 2 - Model Training**: [Fine-Tune Custom Bot](https://colab.research.google.com/drive/1-13FhqtVw2ZUB79cL-SQ59Y-i3QZGfGL?usp=sharing)
 
 This second notebook will fine tune the model: this is a notebook that I've lightly customized from [Unsloth](https://unsloth.ai/), a tool for lowering the time and GPU requirements for training. For reference, here's an example of a completed fine-tuned model based on the Oz dataset: [Oz Completion Model](https://huggingface.co/anasalter/oz-completion-model). This model is ready for use in Ollama and shows you what your final trained model might look like when completed. Here's my simple sample deployed with examples of unfinished sentence prompts and the response:
 
