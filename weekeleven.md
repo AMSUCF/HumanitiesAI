@@ -24,7 +24,7 @@ Building on the experience you've gotten with generative code, we're now moving 
 
 ### Setting Up Your Project
 
-If you haven't already connected Claude Code to GitHub, follow the setup walkthrough from [Week Ten](weekten.md) — creating a GitHub repository, connecting Claude Code for the web at [code.claude.ai](https://code.claude.ai), and generating a fine-grained personal access token. Once your new repository is created and connected:
+The mechanics here are the same as last week — [Week Ten](weekten.md) has the full walkthrough for connecting Claude Code for the web to GitHub, including how to generate a fine-grained personal access token, so refer back to it for any step you need in detail. For this week's project:
 
 1. **Create a new GitHub repository** at [github.com](https://github.com/new) for this project (a fresh one, separate from last week's recommender)
    - Give it a descriptive name for your project
@@ -32,7 +32,7 @@ If you haven't already connected Claude Code to GitHub, follow the setup walkthr
    - Initialize with a README if you'd like
 
 2. **Open Claude Code for the web** at [code.claude.ai](https://code.claude.ai)
-   - Select your new repository from the list
+   - Select your new repository from the list (this is where your personal access token from Week Ten comes in — but since that token was scoped to "Only select repositories," you'll need to either edit its repository list on GitHub to add this new repo, or generate a fresh fine-grained token scoped to it, following Week Ten's steps)
    - In the big box, type `/init`
    - Start the project — this initializes Claude Code's tracking and project structure (more on [slash commands](https://docs.claude.com/en/docs/claude-code/slash-commands) if you're curious)
 
