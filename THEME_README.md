@@ -73,7 +73,10 @@ particles) has been replaced by a subtler motif:
 - **Data stream** (`.data-stream` / `.data-stream-svg` / `.data-glyph-col`):
   a sparse grid of vertical glyph columns (`0 1 ø λ Ω § ∆ ¶`), placed by
   `assets/js/circuit-animations.js` and rendered in `var(--accent)` at low
-  opacity (~0.22) over a `var(--bg-alt)` backdrop. Roughly a third of grid
+  opacity (0.22) over a translucent `var(--bg-alt)` tint (applied as a
+  `color-mix` background on the `.data-stream` wrapper — deliberately *not*
+  as wrapper `opacity`, which would multiply into the children and crush
+  their visibility). Roughly a third of grid
   positions are skipped at random so the effect stays sparse rather than
   filling the header. It appears on both the full header
   (`#header-container`, `_layouts/default.html`) and the compact per-page
@@ -81,12 +84,12 @@ particles) has been replaced by a subtler motif:
   densities.
 - **Ghost-silhouette reveal** (`.ghost-silhouette` and its `-head` /
   `-shoulders` children, full header only): a plain CSS bust shape, colored
-  with `var(--text)` at very low opacity. Because `--text` is dark in light
-  mode and light in dark mode, the silhouette always reads as a faint,
-  correctly-contrasted presence against the header background in *either*
-  theme, with no separate dark-mode override needed. `initializeGhostReveal()`
-  adds an `.is-revealed` class (raising the opacity slightly) once the reader
-  scrolls past the header.
+  with `var(--text)` at very low opacity (0.07 resting). Because `--text` is
+  dark in light mode and light in dark mode, the silhouette always reads as a
+  faint, correctly-contrasted presence against the header background in
+  *either* theme, with no separate dark-mode override needed.
+  `initializeGhostReveal()` adds an `.is-revealed` class (raising the opacity
+  to 0.22) once the reader scrolls past the header.
 - Both effects use CSS custom properties exclusively — no hardcoded colors —
   so they repaint correctly the instant the theme is toggled.
 
