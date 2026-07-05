@@ -935,7 +935,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   outline: none;
   border-color: var(--accent-2);
   box-shadow: 0 0 15px color-mix(in srgb, var(--accent-2) 30%, transparent);
-  background: color-mix(in srgb, var(--bg-alt) 90%, black 10%);
+  background: color-mix(in srgb, var(--bg-alt) 90%, var(--text) 10%);
 }
 
 /* Blockquotes with circuit styling */
@@ -1060,8 +1060,8 @@ h1::before, h2::before {
 
 /* Warning banner for tutorial pages */
 .tutorial-warning-banner {
-  background: linear-gradient(135deg, var(--accent-2), color-mix(in srgb, var(--accent-2) 70%, black));
-  border: 2px solid color-mix(in srgb, var(--accent-2) 60%, black);
+  background: linear-gradient(135deg, var(--accent-2), color-mix(in srgb, var(--accent-2) 70%, var(--text)));
+  border: 2px solid color-mix(in srgb, var(--accent-2) 60%, var(--text));
   border-radius: 10px;
   padding: 1rem 1.5rem;
   margin: -1rem -1rem 2rem -1rem;
@@ -1083,7 +1083,7 @@ h1::before, h2::before {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px color-mix(in srgb, black 30%, transparent);
+  text-shadow: 0 2px 4px color-mix(in srgb, var(--text) 30%, transparent);
 }
 
 .tutorial-warning-banner p {
@@ -1091,7 +1091,7 @@ h1::before, h2::before {
   margin: 0;
   font-size: 0.9rem;
   opacity: 0.9;
-  text-shadow: 0 1px 2px color-mix(in srgb, black 20%, transparent);
+  text-shadow: 0 1px 2px color-mix(in srgb, var(--text) 20%, transparent);
 }
 
 @keyframes warningPulse {
