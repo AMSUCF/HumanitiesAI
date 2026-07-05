@@ -187,7 +187,7 @@ circumstances will require additional time!
 
 ## Weekly Schedule
 
-Classes run from **Monday, August 24, 2026 through Thursday, December 3, 2026**. Weekly modules open on Mondays and close the following Sunday.
+Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with the final exam period running **December 4 - 10**. Weekly modules open on Mondays and close the following Sunday: because this course is asynchronous with Sunday deadlines, the last module's work (Week Fourteen, extra credit) is due **Sunday, December 6**, and the Final Reflection is due during the exam period on **Thursday, December 10**.
 
 ### Week One: Ghosts - Histories (Monday, August 24 - Sunday, August 30)
 
