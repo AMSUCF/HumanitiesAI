@@ -15,7 +15,7 @@ Legend: **PICK** = recommended selection; **Alt** = surfaced alternate. Every li
 ### Week 1 (Ghosts — Histories): GitS 30th-anniversary critical essay to ADD
 Keep: Berry on Weizenbaum/ELIZA (unchanged).
 
-- **PICK — Osgood/*SFRA Review*, "Thirty Years Later: Sacred Scripture, *Ghost in the Shell*, and Our Lady of Perpetual Cyberpunk" (Jan 22, 2025).** https://sfrareview.org/2025/01/22/thirty-years-later-sacred-scripture-ghost-in-the-shell-and-our-lady-of-perpetual-cyberpunk/
+- **PICK — Brian DeLoach and Savannah Welch, "Thirty Years Later: Sacred Scripture, *Ghost in the Shell*, and Our Lady of Perpetual Cyberpunk," *SFRA Review* (Jan 22, 2025).** https://sfrareview.org/2025/01/22/thirty-years-later-sacred-scripture-ghost-in-the-shell-and-our-lady-of-perpetual-cyberpunk/
   *Rationale:* Open-access, scholarly (Science Fiction Research Association), 30th-anniversary reflection tying the film's theology/identity themes to cyberpunk — ideal graduate-seminar anchor for the presiding frame.
 - Alt — Papadoniou, "*Ghost in the Shell* (1995) • 30 Years Later," *Frame Rated* (Medium). https://medium.com/framerated/ghost-in-the-shell-1995-a-cinematic-philosophical-parable-like-no-other-52a4a2a66b6f — accessible long-form criticism.
 - Alt — "Mamoru Oshii Takes Your Questions to Mark *Ghost in the Shell*'s 30th Anniversary," *Anime News Network* (Nov 18, 2025). https://www.animenewsnetwork.com/interest/2025-11-18/mamoru-oshii-takes-your-questions-to-mark-ghost-in-the-shell-30th-anniversary/.231162 — primary-source director Q&A.
@@ -46,9 +46,10 @@ Keep: Demsky "My Month with Midjourney." Add (per §4 design, not a ⚠ item): H
   *Rationale:* Sharper critical counterweight (training-data extraction, museological bias) if a theory anchor is wanted; flagged optional because Springer is paywalled.
 
 ### Week 7 (Shells — Video): 2 current generative-video pieces (state + labor)
-- **PICK 1 (state of the model) — OpenAI, "Sora 2 is here" (2025).** https://openai.com/index/sora-2/
-  *Rationale:* Official announcement of the current-generation model (synchronized dialogue/audio, improved physical realism) — replaces the 2025 page's Veo 3/Sora framing.
-  Companion (Google side): Google DeepMind, "Veo 3.1." https://deepmind.google/models/veo/ (Veo 3.1 announced Oct 14, 2025; native audio, up to 60s 1080p).
+*Currency re-check, July 2026:* **Sora has been discontinued** — OpenAI announced the shutdown March 24, 2026; the app/web experience ended April 26, 2026, and the API sunsets September 24, 2026 (reports cite ~$1M/day compute costs). Verified: https://en.wikipedia.org/wiki/Sora_(text-to-video_model). **Veo 3.1 remains Google's current released video model** — no Veo 4 has been officially announced as of July 2026 (only speculation).
+
+- **PICK 1 (state of the field) — Google DeepMind, "Veo 3.1."** https://deepmind.google/models/veo/ (announced Oct 14, 2025; native audio, up to 60s 1080p)
+  *Rationale:* The current, still-live consumer video model — the working tool for the exercise. Pair in the tutorial/discussion with the **Sora shutdown** (OpenAI's "Sora 2 is here," https://openai.com/index/sora-2/, now reads as a historical artifact of the boom): the Sept-2025-launch-to-March-2026-shutdown arc is a ready-made hype-cycle case study that lands squarely on *The AI Con* ch. 7 ("Do You Believe in Hope After Hype?").
 - **PICK 2 (labor response) — "AI & the Film Industry: Production," Tech Policy @ Duke Sanford.** https://techpolicy.sanford.duke.edu/blog/ai-the-film-industry-production/
   *Rationale:* Credible academic-policy treatment of AI's production-labor impact; frame with the 2026 SAG-AFTRA synthetic-performer terms in discussion. Replaces the now-dated 2025 *El Eternauta* Guardian link.
 
@@ -115,7 +116,7 @@ Each row: `2025 location | old reference → July-2026-current wording`. "Unchan
 | `2025/weekeight.md:34` | "Claude Sonnet 4.5 (the latest release discussed in this week's video)" | "Claude Sonnet 5 (the current release)" |
 | `2025/weekeight.md:15` | "OpenAI's GPT Image 1 model" | "OpenAI's GPT Image 2 (`gpt-image-2`), released April 21, 2026" — replaced GPT Image 1 and the interim 1.5. Source: https://openai.com/index/introducing-chatgpt-images-2-0/ |
 | `2025/weekseven.md:13` | "Google Gemini Veo 3" | "Google Veo 3.1" (announced Oct 14, 2025; native audio, up to 60s 1080p). Source: https://deepmind.google/models/veo/ |
-| `2025/weekseven.md:21–23` | "Sora output" | "Sora 2" (current OpenAI video model). Source: https://openai.com/index/sora-2/ |
+| `2025/weekseven.md:21–23` | "Sora output" (Sora.mp4 comparison sample) | **Sora discontinued** (announced Mar 24, 2026; app closed Apr 26, 2026; API ends Sep 24, 2026). Reframe the Sora sample historically ("generated with the since-discontinued Sora") or drop the comparison; do not instruct students to use Sora. Source: https://en.wikipedia.org/wiki/Sora_(text-to-video_model) |
 | `2025/weekseven.md:25` | "Google's current free **year** of Gemini for students … open through October 6th" | **EXPIRED.** The 12-month free Google AI Pro student offer ended (US: expired early 2026). Current: a **1-month free trial** of Google AI Pro for students, **US-only**, requires SheerID student verification; otherwise a discounted student rate. Reframe as a short trial, not a free year, and add a "verify current terms" note. Source: https://support.google.com/gemini/answer/16417758 |
 | `2025/weekthirteen.md:18,25` | "DeepSeek-R1" (local Ollama reasoning model demo) | **Unchanged as a valid local pick** — DeepSeek-R1 (and its distilled 1.5B–70B variants) remains MIT-licensed and Ollama-compatible for local use. Optionally note the newer DeepSeek line (V3.2 / V4 Preview, Apr 2026) as the moved-on frontier. Model card: https://huggingface.co/deepseek-ai/DeepSeek-R1 |
 | `2025/weekeleven.md:25` | "GitHub Copilot" via Student Developer Pack | **Unchanged** — Copilot remains a Student Developer Pack benefit |
@@ -134,7 +135,7 @@ Each row: `2025 location | old reference → July-2026-current wording`. "Unchan
 | Text | Author / translation | Gutenberg ID | Status | Notes |
 |---|---|---|---|---|
 | *Frankenstein; or, The Modern Prometheus* | Mary Shelley (1818 first edition) | **41445** | PD-USA ✓ | Same edition used in 2025 W4. (1831 edition = #42324.) |
-| *R.U.R. (Rossum's Universal Robots)* | Karel Čapek, trans. Paul Selver & Nigel Playfair (1920) | **59112** | PD-USA ✓ | English acting version; coined "robot." |
+| *R.U.R. (Rossum's Universal Robots)* | Karel Čapek, trans. Nigel Playfair and Paul Selver (1920) | **59112** | PD-USA ✓ | English acting version; coined "robot." |
 | *Metropolis* | Thea von Harbou (English translation of the 1925/26 novel) | **73727** | PD-USA ✓ | Gutenberg explicitly marks PD-USA; translator uncredited. Minor caveat: it is a 20th-century translation — Gutenberg vouches for US public-domain status, so it is safe to use, but note this in case a reviewer asks. |
 | "Moxon's Master" | Ambrose Bierce | in **4366** (*Can Such Things Be?*) | PD-USA ✓ | No standalone Gutenberg edition; the story lives in the *Can Such Things Be?* collection. Extract the single story for the corpus. |
 | "The Sand-Man" | E.T.A. Hoffmann, trans. J.T. Bealby | in **31377** (*Weird Tales, Vol. 1 of 2*) | PD-USA ✓ | English "Sand-Man" is the opening story of Bealby's *Weird Tales* Vol. 1; extract it. (No clean standalone English edition exists.) |
