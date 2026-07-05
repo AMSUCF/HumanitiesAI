@@ -482,78 +482,10 @@ window.addEventListener('resize', function() {
 // ============================================
 // THEME TOGGLE FUNCTIONALITY
 // ============================================
-
-function toggleTheme() {
-  const body = document.documentElement;
-  const themeIcon = document.getElementById('theme-icon');
-  const themeText = document.getElementById('theme-text');
-  
-  const currentTheme = body.getAttribute('data-theme');
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-  
-  body.setAttribute('data-theme', newTheme);
-  
-  // Update button appearance
-  if (newTheme === 'light') {
-    themeIcon.textContent = '☀️';
-    themeText.textContent = 'Dark Mode';
-  } else {
-    themeIcon.textContent = '🌙';
-    themeText.textContent = 'Light Mode';
-  }
-  
-  // Save preference to localStorage
-  localStorage.setItem('theme-preference', newTheme);
-}
-
-// Initialize theme on page load
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Theme toggle script loaded'); // Debug log
-  
-  const savedTheme = localStorage.getItem('theme-preference') || 'dark';
-  const body = document.documentElement;
-  const themeIcon = document.getElementById('theme-icon');
-  const themeText = document.getElementById('theme-text');
-  const themeToggle = document.getElementById('theme-toggle');
-  
-  console.log('Theme elements found:', { themeIcon, themeText, themeToggle }); // Debug log
-  
-  body.setAttribute('data-theme', savedTheme);
-  console.log('Applied theme:', savedTheme); // Debug log
-  
-  if (savedTheme === 'light') {
-    themeIcon.textContent = '☀️';
-    themeText.textContent = 'Dark Mode';
-  } else {
-    themeIcon.textContent = '🌙';
-    themeText.textContent = 'Light Mode';
-  }
-  
-  // Add event listener for theme toggle
-  if (themeToggle) {
-    console.log('Adding click listener to theme toggle'); // Debug log
-    themeToggle.addEventListener('click', function() {
-      console.log('Theme toggle clicked'); // Debug log
-      
-      const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
-      console.log('Switching from', currentTheme, 'to', newTheme); // Debug log
-      
-      body.setAttribute('data-theme', newTheme);
-      
-      if (newTheme === 'light') {
-        themeIcon.textContent = '☀️';
-        themeText.textContent = 'Dark Mode';
-      } else {
-        themeIcon.textContent = '🌙';
-        themeText.textContent = 'Light Mode';
-      }
-      
-      localStorage.setItem('theme-preference', newTheme);
-      console.log('Theme saved to localStorage:', newTheme); // Debug log
-    });
-  } else {
-    console.error('Theme toggle button not found!'); // Debug log
-  }
-});
+// Theme init/toggle now lives in assets/js/theme-toggle.js (loaded in <head>,
+// sets data-theme + window.toggleTheme before body renders). The old
+// duplicate implementation that lived here read a different localStorage
+// key ('theme-preference'), defaulted to dark, and targeted button/span
+// ids ('theme-toggle', 'theme-icon', 'theme-text') that no longer exist in
+// the layouts -- keeping it would silently overwrite the light-first theme
+// on every page load. Removed.
