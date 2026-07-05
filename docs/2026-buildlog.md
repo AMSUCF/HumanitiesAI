@@ -93,7 +93,7 @@ TOC (verified): Introduction · Ch 1 "I Believe the Children Are Our Future" (ed
 | 13 | Epilogue |
 | 14 (coda) | No new chapter — reflective reread of Introduction/Epilogue alongside ELIZA/Puppet-Master callbacks |
 
-*Flag for sign-off:* Because the book has only four chapters, week 14 carries no new *AI for Good* reading. If the professor prefers strict one-unit-per-week (Introduction → W9 … Epilogue → W14), that also works and gives W14 a dedicated unit.
+**DECIDED (professor sign-off, July 5, 2026):** front-loaded mapping above is confirmed — W9 = Introduction + Ch 1; W14 carries no new *AI for Good* chapter. All other build-log picks (readings, Sora-shutdown reframe, model naming, optional Menotti add) approved as recorded.
 
 ### Viewing availability (re-verified July 2026; syllabus carries a "check current availability" caveat)
 - **GitS (1995):** free with ads on **Tubi** (https://tubitv.com/movies/289816/ghost-in-the-shell) and **Plex** (https://watch.plex.tv/movie/ghost-in-the-shell), plus Hoopla (library card); streaming on **Prime Video** (https://www.primevideo.com/detail/Ghost-in-the-Shell/0OJWSCHA0CIJMLUTEBIHLT9ASK), **Netflix** (https://www.netflix.com/title/540533), and **Hulu**; rentable on Apple TV / Amazon. (Cross-checked via JustWatch: https://www.justwatch.com/us/movie/ghost-in-the-shell)
@@ -145,10 +145,7 @@ Each row: `2025 location | old reference → July-2026-current wording`. "Unchan
 
 **Decision: DROP the English *Tomorrow's Eve* from the required PD corpus.** Rationale: no legal PD English text is available; the artificial-woman / uncanny-automaton theme it would have supplied is already covered by Hoffmann's "The Sand-Man" (Olimpia) and von Harbou's *Metropolis* (the robot Maria). The five texts above stand as a coherent, fully-PD, all-English corpus.
 
-**Options for restoring a sixth text (professor's choice at sign-off):**
-1. *(recommended)* **Add a verified PD substitute:** Edward S. Ellis, *The Huge Hunter; or, The Steam Man of the Prairies* (1868 proto-robot dime novel), Gutenberg ID **7506**, English, PD-USA ✓ (verified). Clean standalone, strongly on-theme (mechanical man).
-2. **Offer *L'Ève future* (French, ID 26681) as an optional/advanced text** for French readers — keeps the Villiers connection without a copyright issue, but breaks the all-English coherence.
-3. **Keep the corpus at five texts** (no substitute needed for the theme to hold).
+**DECIDED (professor sign-off, July 5, 2026): sixth text added.** Edward S. Ellis, *The Huge Hunter; or, The Steam Man of the Prairies* (1868 proto-robot dime novel), Gutenberg ID **7506**, English, PD-USA ✓ (verified). The Week 14 corpus is therefore six texts: Frankenstein (#41445), R.U.R. (#59112), Metropolis (#73727), "Moxon's Master" (in #4366), "The Sand-Man" (in #31377), Steam Man of the Prairies (#7506).
 
 ---
 
