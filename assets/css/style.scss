@@ -69,8 +69,14 @@ body {
 }
 
 /* ============================================
-   CIRCUIT BOARD HEADER
-   ============================================ */
+   FALLING-DATA HEADER ART (thermoptic shimmer)
+   ============================================
+   Replaces the old circuit-board motif: a sparse, slow column-drift of
+   glyphs plus a faint ghost-silhouette that grows more visible on scroll.
+   Columns/glyphs are placed by assets/js/circuit-animations.js; all
+   *motion* lives in the prefers-reduced-motion: no-preference blocks below,
+   so disabling motion simply freezes everything at its placed position
+   (the required static first frame) with no JS branching needed. */
 
 #header-container {
   position: relative;
@@ -80,16 +86,17 @@ body {
   border-bottom: 2px solid var(--accent);
 }
 
-.circuit-background {
+.data-stream {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  background: var(--bg-alt);
+  opacity: 0.55;
 }
 
-.circuit-svg {
+.data-stream-svg {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -97,134 +104,63 @@ body {
   left: 0;
 }
 
-.circuit-path {
-  stroke: var(--accent);
-  stroke-width: 2;
-  fill: none;
-  opacity: 0.7;
-}
-
-.circuit-node {
+.data-glyph-col text {
   fill: var(--accent);
+  font-family: 'Roboto Mono', monospace;
+  opacity: 0.22;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .circuit-path {
-    animation: circuitPulse 3s ease-in-out infinite;
-  }
-
-  .circuit-node {
-    animation: nodePulse 2s ease-in-out infinite;
+  .data-glyph-col {
+    animation-name: dataDrift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 }
 
-@keyframes circuitPulse {
-  0%, 100% { opacity: 0.3; stroke-width: 2; }
-  50% { opacity: 1; stroke-width: 3; }
+@keyframes dataDrift {
+  from { transform: translateY(-35%); }
+  to { transform: translateY(35%); }
 }
 
-@keyframes nodePulse {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
-
-/* Floating Nodes */
-.floating-nodes {
+/* Ghost-silhouette scroll reveal: a plain CSS bust shape colored with
+   var(--text), which is dark in light mode and light in dark mode -- so it
+   always reads as a faint, correctly-contrasted silhouette against
+   var(--bg)/var(--bg-alt) without any hardcoded color. */
+.ghost-silhouette {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: -10%;
+  left: 50%;
+  width: 160px;
+  height: 240px;
+  transform: translateX(-50%);
+  opacity: 0.05;
   pointer-events: none;
 }
 
-.floating-node {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: var(--link);
+.ghost-silhouette-head {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
   border-radius: 50%;
-  box-shadow: 0 0 15px var(--link), 0 0 30px var(--link);
-  filter: blur(0.5px);
+  background: var(--text);
+}
+
+.ghost-silhouette-shoulders {
+  width: 160px;
+  height: 170px;
+  margin-top: -8px;
+  background: var(--text);
+  clip-path: polygon(10% 100%, 90% 100%, 100% 40%, 50% 0%, 0% 40%);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .floating-node {
-    animation: float 6s ease-in-out infinite;
+  .ghost-silhouette {
+    transition: opacity 1.4s ease;
   }
 
-  .floating-node:nth-child(2n) {
-    animation: floatReverse 8s ease-in-out infinite;
-    filter: blur(1px);
-  }
-
-  .floating-node:nth-child(3n) {
-    animation: floatDiagonal 7s ease-in-out infinite;
-    filter: blur(0.8px);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px) rotate(0deg);
-    opacity: 0.7;
-    filter: blur(0.5px);
-  }
-  25% {
-    transform: translateY(-15px) translateX(10px) rotate(90deg);
-    opacity: 1;
-    filter: blur(1px);
-  }
-  50% {
-    transform: translateY(-20px) translateX(-5px) rotate(180deg);
-    opacity: 0.8;
-    filter: blur(1.5px);
-  }
-  75% {
-    transform: translateY(-10px) translateX(-15px) rotate(270deg);
-    opacity: 1;
-    filter: blur(0.8px);
-  }
-}
-
-@keyframes floatReverse {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px) rotate(360deg);
-    opacity: 0.6;
-    filter: blur(1px);
-  }
-  25% {
-    transform: translateY(15px) translateX(-10px) rotate(270deg);
-    opacity: 1;
-    filter: blur(1.5px);
-  }
-  50% {
-    transform: translateY(25px) translateX(8px) rotate(180deg);
-    opacity: 0.9;
-    filter: blur(2px);
-  }
-  75% {
-    transform: translateY(5px) translateX(12px) rotate(90deg);
-    opacity: 0.8;
-    filter: blur(1.2px);
-  }
-}
-
-@keyframes floatDiagonal {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
-    opacity: 0.8;
-    filter: blur(0.8px);
-  }
-  33% {
-    transform: translateY(-18px) translateX(18px) rotate(120deg) scale(1.2);
-    opacity: 1;
-    filter: blur(1.3px);
-  }
-  66% {
-    transform: translateY(12px) translateX(-20px) rotate(240deg) scale(0.8);
-    opacity: 0.7;
-    filter: blur(1.8px);
+  .ghost-silhouette.is-revealed {
+    opacity: 0.16;
   }
 }
 
@@ -328,51 +264,6 @@ body {
 @keyframes subtitlePulse {
   0%, 100% { box-shadow: 0 0 5px var(--accent); }
   50% { box-shadow: 0 0 15px var(--accent), inset 0 0 10px color-mix(in srgb, var(--accent) 10%, transparent); }
-}
-
-/* Neural Pulse Effect */
-.neural-pulse {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  border: 2px solid var(--link);
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.neural-pulse::before,
-.neural-pulse::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 2px solid var(--link);
-  border-radius: 50%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .neural-pulse {
-    animation: neuralPulse 4s ease-out infinite;
-  }
-
-  .neural-pulse::before,
-  .neural-pulse::after {
-    animation: neuralPulse 4s ease-out infinite;
-  }
-
-  .neural-pulse::before { animation-delay: 1s; }
-  .neural-pulse::after { animation-delay: 2s; }
-}
-
-@keyframes neuralPulse {
-  0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5); }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
 }
 
 /* ============================================
@@ -757,62 +648,9 @@ iframe, embed, object, video {
   overflow: hidden;
 }
 
-.compact-circuit-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-}
-
-.mini-nodes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.mini-nodes::before,
-.mini-nodes::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 50%;
-}
-
-.mini-nodes::before {
-  top: 20px;
-  left: 10%;
-}
-
-.mini-nodes::after {
-  top: 60px;
-  right: 10%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .mini-nodes::before,
-  .mini-nodes::after {
-    animation: miniNodePulse 2s ease-in-out infinite;
-  }
-
-  .mini-nodes::before {
-    animation-delay: 0s;
-  }
-
-  .mini-nodes::after {
-    animation-delay: 1s;
-  }
-}
-
-@keyframes miniNodePulse {
-  0%, 100% { opacity: 0.5; box-shadow: 0 0 5px var(--accent); }
-  50% { opacity: 1; box-shadow: 0 0 15px var(--accent); }
-}
+/* .data-stream / .data-stream-svg / .data-glyph-col (defined in the
+   FALLING-DATA HEADER ART section above) are reused here unchanged --
+   #compact-header only needs its own box sizing. */
 
 .page-nav {
   position: relative;
@@ -1132,3 +970,13 @@ h1::before, h2::before {
 .unit-badge--shells { background: #b45309; }
 .unit-badge--puppetmasters { background: #365314; }
 .unit-badge--coda { background: #475569; }
+
+/* ============================================
+   FOOTER TAGLINE
+   ============================================ */
+
+.footer-tagline {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

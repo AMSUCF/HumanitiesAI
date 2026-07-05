@@ -1,125 +1,94 @@
 // ============================================
-// HUMANITIES IN THE AGE OF AI - CIRCUIT BOARD ANIMATIONS
+// HUMANITIES IN THE AGE OF AI - HEADER ART + PAGE INTERACTIONS
 // ============================================
+// The old circuit-board header animation has been repurposed into a
+// falling-data / thermoptic-shimmer motif (see THEME_README.md at the repo
+// root for the full writeup). Everything below `initializeDataStream` /
+// `initializeGhostReveal` is unrelated general-site behavior kept as-is.
 
-console.log('Circuit animations script loaded successfully!'); // Debug log
+// ---- Falling-data column drift --------------------------------------------
+// Places a sparse set of vertical glyph columns inside a `.data-stream-svg`.
+// Placement (position/content/timing offsets) happens here in JS, but all
+// *movement* is driven purely by the `dataDrift` CSS keyframe, which only
+// exists inside `@media (prefers-reduced-motion: no-preference)` in
+// style.scss. That means under reduced motion the columns simply render at
+// the position placed here -- the required static "first frame" -- with no
+// extra branching needed in this file.
+const DATA_GLYPHS = ['0', '1', 'ø', 'λ', 'Ω', '§', '∆', '¶'];
 
-// Circuit Board Animation Functions
-function initializeCircuitBoard() {
-  const svg = document.querySelector('.circuit-svg');
-  if (!svg) return;
-  
-  // Clear existing content
-  svg.innerHTML = '';
-  
-  // Create circuit paths
-  createCircuitPaths(svg);
-  
-  // Create circuit nodes
-  createCircuitNodes(svg);
-}
-
-function createCircuitPaths(svg) {
-  const paths = [
-    // Horizontal lines
-    { x1: 50, y1: 100, x2: 300, y2: 100 },
-    { x1: 400, y1: 150, x2: 700, y2: 150 },
-    { x1: 800, y1: 200, x2: 1100, y2: 200 },
-    { x1: 100, y1: 250, x2: 500, y2: 250 },
-    { x1: 600, y1: 300, x2: 1000, y2: 300 },
-    
-    // Vertical lines
-    { x1: 200, y1: 50, x2: 200, y2: 350 },
-    { x1: 500, y1: 100, x2: 500, y2: 300 },
-    { x1: 800, y1: 75, x2: 800, y2: 325 },
-    { x1: 1000, y1: 125, x2: 1000, y2: 275 },
-    
-    // Diagonal connections
-    { x1: 300, y1: 100, x2: 400, y2: 150 },
-    { x1: 700, y1: 150, x2: 800, y2: 200 },
-    { x1: 500, y1: 250, x2: 600, y2: 300 },
-    { x1: 200, y1: 100, x2: 300, y2: 200 },
-  ];
-  
-  paths.forEach((path, index) => {
-    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('x1', path.x1);
-    line.setAttribute('y1', path.y1);
-    line.setAttribute('x2', path.x2);
-    line.setAttribute('y2', path.y2);
-    line.setAttribute('class', 'circuit-path');
-    line.style.animationDelay = `${index * 0.2}s`;
-    svg.appendChild(line);
-  });
-}
-
-function createCircuitNodes(svg) {
-  const nodes = [
-    { x: 200, y: 100, r: 4 },
-    { x: 500, y: 150, r: 6 },
-    { x: 800, y: 200, r: 5 },
-    { x: 300, y: 250, r: 4 },
-    { x: 700, y: 300, r: 5 },
-    { x: 400, y: 100, r: 3 },
-    { x: 600, y: 200, r: 4 },
-    { x: 900, y: 250, r: 6 },
-    { x: 150, y: 175, r: 3 },
-    { x: 750, y: 125, r: 4 },
-  ];
-  
-  nodes.forEach((node, index) => {
-    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    circle.setAttribute('cx', node.x);
-    circle.setAttribute('cy', node.y);
-    circle.setAttribute('r', node.r);
-    circle.setAttribute('class', 'circuit-node');
-    circle.style.animationDelay = `${index * 0.3}s`;
-    svg.appendChild(circle);
-  });
-}
-
-// Floating Nodes Animation
-function initializeFloatingNodes() {
-  const container = document.querySelector('.floating-nodes');
-  if (!container) return;
-  
-  // Create floating nodes with varied properties
-  for (let i = 0; i < 20; i++) {
-    const node = document.createElement('div');
-    node.className = 'floating-node';
-    
-    // Random positioning
-    node.style.left = Math.random() * 100 + '%';
-    node.style.top = Math.random() * 100 + '%';
-    
-    // Random animation delay and duration
-    node.style.animationDelay = Math.random() * 6 + 's';
-    node.style.animationDuration = (Math.random() * 4 + 4) + 's';
-    
-    // Random sizes for variety
-    const size = Math.random() * 6 + 4; // 4-10px
-    node.style.width = size + 'px';
-    node.style.height = size + 'px';
-    
-    // Random colors with different intensities
-    const colors = ['#00ffff', '#a855f7', '#ec4899', '#10b981', '#3b82f6'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    node.style.background = randomColor;
-    
-    // Enhanced glow with motion blur effect
-    const glowIntensity = Math.random() * 20 + 10;
-    node.style.boxShadow = `0 0 ${glowIntensity}px ${randomColor}, 0 0 ${glowIntensity * 2}px ${randomColor}`;
-    
-    // Add different animation classes for variety
-    const animationTypes = ['', 'nth-child(2n)', 'nth-child(3n)'];
-    if (i % 3 === 1) {
-      node.style.animationName = 'floatReverse';
-    } else if (i % 3 === 2) {
-      node.style.animationName = 'floatDiagonal';
-    }
-    
-    container.appendChild(node);
+function randomGlyphString(length) {
+  let out = '';
+  for (let i = 0; i < length; i++) {
+    out += DATA_GLYPHS[Math.floor(Math.random() * DATA_GLYPHS.length)];
   }
+  return out;
+}
+
+function buildDataStream(svg, { columns, rows, viewWidth, viewHeight }) {
+  if (!svg) return;
+
+  svg.innerHTML = '';
+
+  const spacing = viewWidth / columns;
+
+  for (let c = 0; c < columns; c++) {
+    // Sparse: skip roughly a third of the grid at random so the header
+    // stays subtle instead of filling with glyphs edge-to-edge.
+    if (Math.random() < 0.35) continue;
+
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'data-glyph-col');
+    const x = Math.round(c * spacing + spacing / 2);
+    g.setAttribute('transform', `translate(${x}, 0)`);
+
+    // Slow, staggered drift (8-18s) with a negative delay so columns start
+    // mid-cycle instead of all animating in lockstep.
+    const duration = 8 + Math.random() * 10;
+    const delay = Math.random() * duration;
+    g.style.animationDuration = `${duration}s`;
+    g.style.animationDelay = `-${delay}s`;
+
+    const glyphs = randomGlyphString(rows);
+    for (let r = 0; r < rows; r++) {
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('x', 0);
+      text.setAttribute('y', Math.round((r / rows) * viewHeight * 2));
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute('font-size', 16);
+      text.textContent = glyphs[r];
+      g.appendChild(text);
+    }
+    svg.appendChild(g);
+  }
+}
+
+function initializeDataStream() {
+  const mainSvg = document.querySelector('#header-container .data-stream-svg');
+  buildDataStream(mainSvg, { columns: 16, rows: 10, viewWidth: 1200, viewHeight: 400 });
+
+  const compactSvg = document.querySelector('#compact-header .data-stream-svg');
+  buildDataStream(compactSvg, { columns: 12, rows: 4, viewWidth: 1200, viewHeight: 120 });
+}
+
+// ---- Ghost-silhouette scroll reveal ----------------------------------------
+// The silhouette (pure CSS shapes colored with var(--text) in style.scss,
+// so it always contrasts correctly against the header background in both
+// themes) grows slightly more visible once the reader scrolls past the
+// header. Under reduced motion we skip the scroll listener entirely and
+// leave the silhouette at its CSS resting opacity -- that resting state IS
+// the static first frame required by the brief.
+function initializeGhostReveal() {
+  const silhouette = document.querySelector('.ghost-silhouette');
+  if (!silhouette) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const reveal = () => {
+    silhouette.classList.toggle('is-revealed', window.pageYOffset > 60);
+  };
+
+  window.addEventListener('scroll', reveal, { passive: true });
+  reveal();
 }
 
 // Text Effects
@@ -162,144 +131,6 @@ function initializeTextEffects() {
     }
   `;
   document.head.appendChild(style);
-}
-
-// Neural Pulse Animation
-function initializeNeuralPulse() {
-  const pulse = document.querySelector('.neural-pulse');
-  if (!pulse) return;
-  
-  // Add click interaction
-  document.addEventListener('click', function(e) {
-    // Create temporary pulse at click location
-    const tempPulse = document.createElement('div');
-    tempPulse.style.position = 'fixed';
-    tempPulse.style.left = e.clientX + 'px';
-    tempPulse.style.top = e.clientY + 'px';
-    tempPulse.style.width = '10px';
-    tempPulse.style.height = '10px';
-    tempPulse.style.border = '2px solid #00ffff';
-    tempPulse.style.borderRadius = '50%';
-    tempPulse.style.pointerEvents = 'none';
-    tempPulse.style.zIndex = '9999';
-    tempPulse.style.transform = 'translate(-50%, -50%)';
-    tempPulse.style.animation = 'clickPulse 0.6s ease-out forwards';
-    
-    document.body.appendChild(tempPulse);
-    
-    setTimeout(() => {
-      tempPulse.remove();
-    }, 600);
-  });
-  
-  // Add click pulse animation
-  const clickStyle = document.createElement('style');
-  clickStyle.textContent = `
-    @keyframes clickPulse {
-      0% { 
-        opacity: 1; 
-        transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.4);
-      }
-      100% { 
-        opacity: 0; 
-        transform: translate(-50%, -50%) scale(4);
-        box-shadow: 0 0 0 20px rgba(0, 255, 255, 0);
-      }
-    }
-  `;
-  document.head.appendChild(clickStyle);
-}
-
-// Parallax scrolling effect for circuit board
-function initializeParallax() {
-  window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.circuit-background');
-    
-    parallaxElements.forEach(element => {
-      const speed = 0.5;
-      element.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-  });
-}
-
-// Interactive hover effects
-function initializeInteractiveEffects() {
-  // Add hover effects to circuit elements
-  document.addEventListener('mousemove', function(e) {
-    const nodes = document.querySelectorAll('.circuit-node');
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    
-    nodes.forEach(node => {
-      const rect = node.getBoundingClientRect();
-      const nodeX = rect.left + rect.width / 2;
-      const nodeY = rect.top + rect.height / 2;
-      
-      const distance = Math.sqrt(
-        Math.pow(mouseX - nodeX, 2) + Math.pow(mouseY - nodeY, 2)
-      );
-      
-      if (distance < 100) {
-        const intensity = (100 - distance) / 100;
-        node.style.opacity = 0.5 + (intensity * 0.5);
-        node.style.transform = `scale(${1 + intensity * 0.5})`;
-      } else {
-        node.style.opacity = '';
-        node.style.transform = '';
-      }
-    });
-  });
-}
-
-// Matrix rain effect (optional enhancement)
-function createMatrixRain() {
-  const canvas = document.createElement('canvas');
-  canvas.style.position = 'fixed';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.width = '100%';
-  canvas.style.height = '100%';
-  canvas.style.pointerEvents = 'none';
-  canvas.style.zIndex = '1';
-  canvas.style.opacity = '0.1';
-  
-  document.body.appendChild(canvas);
-  
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  
-  const chars = '01';
-  const charArray = chars.split('');
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-  const drops = [];
-  
-  for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
-  }
-  
-  function draw() {
-    ctx.fillStyle = 'rgba(10, 10, 15, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    ctx.fillStyle = '#00ffff';
-    ctx.font = fontSize + 'px monospace';
-    
-    for (let i = 0; i < drops.length; i++) {
-      const text = charArray[Math.floor(Math.random() * charArray.length)];
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-      drops[i]++;
-    }
-  }
-  
-  setInterval(draw, 100);
 }
 
 // Enhanced scroll animations
@@ -347,51 +178,6 @@ function initializePageLoader() {
   window.addEventListener('load', () => {
     loader.classList.remove('active');
   });
-}
-
-// Dynamic background particles
-function createBackgroundParticles() {
-  const particleContainer = document.createElement('div');
-  particleContainer.style.position = 'fixed';
-  particleContainer.style.top = '0';
-  particleContainer.style.left = '0';
-  particleContainer.style.width = '100%';
-  particleContainer.style.height = '100%';
-  particleContainer.style.pointerEvents = 'none';
-  particleContainer.style.zIndex = '-1';
-  particleContainer.style.opacity = '0.1';
-  
-  document.body.appendChild(particleContainer);
-  
-  for (let i = 0; i < 20; i++) {
-    const particle = document.createElement('div');
-    particle.style.position = 'absolute';
-    particle.style.width = '2px';
-    particle.style.height = '2px';
-    particle.style.background = '#00ffff';
-    particle.style.borderRadius = '50%';
-    
-    // Random starting position
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.top = Math.random() * 100 + '%';
-    
-    // Random animation
-    particle.style.animation = `backgroundFloat ${Math.random() * 20 + 10}s linear infinite`;
-    
-    particleContainer.appendChild(particle);
-  }
-  
-  // Add animation styles
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes backgroundFloat {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-    }
-  `;
-  document.head.appendChild(style);
 }
 
 // Enhanced keyboard shortcuts
@@ -456,28 +242,18 @@ function initializeTableEnhancements() {
 
 // Initialize all animations when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  initializeCircuitBoard();
-  initializeFloatingNodes();
+  initializeDataStream();
+  initializeGhostReveal();
   initializeTextEffects();
-  initializeNeuralPulse();
-  initializeParallax();
-  initializeInteractiveEffects();
   initializeScrollAnimations();
   initializePageLoader();
   initializeKeyboardShortcuts();
   initializeTableEnhancements();
-  
-  // Initialize background particles after a delay
-  setTimeout(createBackgroundParticles, 1000);
-  
-  // Optional: Uncomment to add matrix rain effect
-  // createMatrixRain();
 });
 
-// Handle window resize
-window.addEventListener('resize', function() {
-  initializeCircuitBoard();
-});
+// Note: no window "resize" rebuild here -- the data-stream SVGs use
+// viewBox + preserveAspectRatio, so they already scale responsively without
+// needing regeneration (keeps the header art subtle and cheap, per brief).
 
 // ============================================
 // THEME TOGGLE FUNCTIONALITY
