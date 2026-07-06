@@ -2,31 +2,58 @@
 
 This Jekyll site's theme takes its visual and structural cues from *Ghost in
 the Shell* (1995): a light-first interface with a dark "net-dive" mode, a
-falling-data header motif standing in for the old circuit-board look, and
-unit badges that map the course's four units onto the film's vocabulary.
-This document is the current (Fall 2026) theme reference. The Fall 2025
-theme writeup for the prior circuit-board design is kept locally in the untracked `2025/` folder and describes
-the older, dark-only circuit-board version — it is not updated for this
-theme and should be left as a historical record.
+cinematic dark title band (styled after the film's title card) on every
+page's header, a falling-data header motif standing in for the old
+circuit-board look, and unit badges that map the course's four units onto
+the film's vocabulary. This document is the current (Fall 2026) theme
+reference. The Fall 2025 theme writeup for the prior circuit-board design is
+kept locally in the untracked `2025/` folder and describes the older,
+dark-only circuit-board version — it is not updated for this theme and
+should be left as a historical record.
 
 ## Token table
 
-All color is expressed as CSS custom properties on `:root[data-theme="light"]`
-and `:root[data-theme="dark"]`, defined in `assets/css/style.scss`. Every
-themed rule in the stylesheet reads from these tokens (via `var(--token)` or
-`color-mix(in srgb, var(--token) X%, ...)`) rather than hardcoding colors, so
-the entire site repaints correctly when the theme flips.
+Page-body color is expressed as CSS custom properties on
+`:root[data-theme="light"]` and `:root[data-theme="dark"]`, defined in
+`assets/css/style.scss`. Every themed rule in the stylesheet reads from these
+tokens (via `var(--token)` or `color-mix(in srgb, var(--token) X%, ...)`)
+rather than hardcoding colors, so the entire site repaints correctly when the
+theme flips.
 
 | Token           | Light      | Dark       | Used for |
 |-----------------|------------|------------|----------|
 | `--bg`          | `#f6f8f7`  | `#0c1210`  | Page background |
 | `--bg-alt`      | `#e8efec`  | `#14201c`  | Panels, header art backdrop, code/table backgrounds |
-| `--text`        | `#1a2b27`  | `#d7e5e0`  | Body text; also the ghost-silhouette fill (see below) |
+| `--text`        | `#1a2b27`  | `#d7e5e0`  | Body text |
 | `--text-muted`  | `#4a5f59`  | `#8aa39b`  | Secondary text, captions, footer tagline |
-| `--accent`      | `#0f766e`  | `#2dd4bf`  | Headings, primary highlight, data-stream glyphs |
+| `--accent`      | `#0f766e`  | `#2dd4bf`  | Headings, primary highlight, list markers, header-band bottom edge |
 | `--accent-2`    | `#b45309`  | `#f59e0b`  | Secondary highlight, warning banner |
 | `--link`        | `#0e7490`  | `#67e8f9`  | Links, gradients |
 | `--border`      | `#c6d4cf`  | `#23332e`  | Borders, table rules |
+
+### Header-band tokens (theme-independent)
+
+The header/title band is a fixed dark cinematic strip in **both** themes —
+it does not repaint on toggle. Its colors are plain `:root` variables (not
+scoped under `[data-theme]`) so they stay constant regardless of the page
+theme:
+
+| Token           | Value      | Used for |
+|-----------------|------------|----------|
+| `--band-bg`     | `#0c1210`  | Header/title band background |
+| `--band-bg-alt` | `#14201c`  | Header band gradient stop, data-stream tint |
+| `--band-text`   | `#d7e5e0`  | Band title text, ghost-silhouette fill, page-title text |
+| `--band-accent` | `#2dd4bf`  | Band emphasis text (e.g. "AI"), data-stream glyphs, nav-home link |
+| `--band-muted`  | `#8aa39b`  | Dossier line, site description under the hero |
+
+Contrast of `--band-text` (`#d7e5e0`) on `--band-bg` (`#0c1210`) is
+**~14.6:1**, well past WCAG AAA (7:1) for normal text.
+
+The one deliberate exception: the header band's bottom-edge rule
+(`border-bottom` on `#header-container` / `#compact-header`) uses the
+theme-reactive `var(--accent)`, not a band token — a quiet 3px cue of which
+theme is active, sitting right at the seam where the fixed-dark band meets
+the theme-controlled page body.
 
 Translucent surfaces (button backgrounds, panel overlays, hover highlights,
 focus rings) are built with `color-mix(in srgb, var(--token) X%, transparent)`
@@ -65,16 +92,40 @@ the light/dark toggle (they're brand chips, not theme-reactive surfaces):
 | `.unit-badge--puppetmasters`   | `#365314` |
 | `.unit-badge--coda`            | `#475569` |
 
+## Header: cinematic title band
+
+Both headers (`#header-container` in `_layouts/default.html`, `#compact-header`
+in `_layouts/page.html`) render as a fixed dark title-card band — the film's
+opening credits look — using the `--band-*` tokens described above, so the
+band's look never changes when the reader toggles light/dark. Only the page
+body underneath repaints with the theme.
+
+- **`default.html` hero**: an uppercase, letterspaced (`0.22em`) site title
+  in Rajdhani (`.site-title`), with the "AI" span picked out in
+  `var(--band-accent)`. Beneath it, a mono "dossier line"
+  (`.dossier-line`, IBM Plex Mono, `var(--band-muted)`, uppercase) renders the
+  literal text `[ ENG 6806 // FALL 2026 ]`. If `site.description` is set, it
+  renders quietly beneath that in IBM Plex Sans.
+- **`page.html` compact band**: the same treatment at a smaller scale — the
+  per-page title (`.page-title h1`) in uppercase letterspaced Rajdhani, with
+  its own `.dossier-line` underneath. The back-to-home `.nav-home` link uses
+  `var(--band-accent)`, brightening to `var(--band-text)` on hover.
+- The floating `.theme-toggle` button is styled with `--band-*` tokens too
+  (not the theme tokens), since it sits fixed over the dark band on every
+  page and must stay legible there regardless of which theme is active.
+
 ## Header art: falling-data / thermoptic shimmer
 
 The old animated circuit-board header (SVG traces, pulsing nodes, floating
-particles) has been replaced by a subtler motif:
+particles) has been replaced by a subtler motif, now retuned to the
+header-band tokens so it reads correctly against the band's fixed dark
+background in both themes:
 
 - **Data stream** (`.data-stream` / `.data-stream-svg` / `.data-glyph-col`):
   a sparse grid of vertical glyph columns (`0 1 ø λ Ω § ∆ ¶`), placed by
-  `assets/js/circuit-animations.js` and rendered in `var(--accent)` at low
-  opacity (0.22) over a translucent `var(--bg-alt)` tint (applied as a
-  `color-mix` background on the `.data-stream` wrapper — deliberately *not*
+  `assets/js/circuit-animations.js` and rendered in `var(--band-accent)` at
+  low opacity (0.22) over a translucent `var(--band-bg-alt)` tint (applied as
+  a `color-mix` background on the `.data-stream` wrapper — deliberately *not*
   as wrapper `opacity`, which would multiply into the children and crush
   their visibility). Roughly a third of grid
   positions are skipped at random so the effect stays sparse rather than
@@ -84,14 +135,50 @@ particles) has been replaced by a subtler motif:
   densities.
 - **Ghost-silhouette reveal** (`.ghost-silhouette` and its `-head` /
   `-shoulders` children, full header only): a plain CSS bust shape, colored
-  with `var(--text)` at very low opacity (0.07 resting). Because `--text` is
-  dark in light mode and light in dark mode, the silhouette always reads as a
-  faint, correctly-contrasted presence against the header background in
-  *either* theme, with no separate dark-mode override needed.
+  with `var(--band-text)` at very low opacity (0.07 resting). Because the
+  band is always dark, tying the silhouette to the fixed `--band-text` token
+  (rather than the theme-reactive `--text`) keeps it a correctly-contrasted
+  faint presence regardless of which theme the reader has selected.
   `initializeGhostReveal()` adds an `.is-revealed` class (raising the opacity
   to 0.22) once the reader scrolls past the header.
 - Both effects use CSS custom properties exclusively — no hardcoded colors —
-  so they repaint correctly the instant the theme is toggled.
+  so they repaint correctly the instant the theme is toggled (in the case of
+  the band tokens, that means: they don't repaint at all, by design).
+
+## Fonts
+
+Three Google Fonts, loaded via a single `<link>` in both layouts' `<head>`
+(Rajdhani 500/700, IBM Plex Sans 400/400italic/600/700, IBM Plex Mono
+400/600). The former Chakra Petch + Roboto Mono pairing has been removed
+entirely (no remaining references anywhere in `assets/` or `_layouts/`):
+
+- **Rajdhani** — all headings (`h1`–`h6`), `.site-title`, page/band titles,
+  and nav-ish chrome (`.nav-home`, buttons, the tutorial warning banner's
+  `<strong>`). `h1`/`h2` and the band titles are uppercase with wide letter
+  spacing (0.2em+ on the hero title); `h3`–`h6` stay Rajdhani but keep normal
+  case.
+- **IBM Plex Sans** — body copy (`body`), at `line-height: 1.65` for
+  proportional-face readability, and the optional `.site-description` line.
+- **IBM Plex Mono** — code/`pre`, table `th`, `.unit-badge`, the
+  `.dossier-line` caption, form inputs, and other label-ish chrome.
+
+## List markers (HUD style)
+
+Content lists in the main article area use custom markers instead of
+default bullets/numbers:
+
+- **Top-level `ul li`**: `list-style: none` with a `❯` marker in
+  `var(--accent)`, implemented via `li::before` plus the
+  `text-indent: -1.5em` / `padding-left: 1.5em` hanging-indent pair (the
+  `::before`'s own fixed width keeps wrapped lines aligned under the first,
+  rather than sagging back to the left margin) — this matters for the
+  syllabus's longer reading-list entries.
+- **Nested `ul ul li`**: a quieter `▸` marker in `var(--text-muted)`.
+- **`ol`**: keeps native browser numbering (so `start=`, nesting, etc. all
+  keep working) but recolors the number itself via `ol li::marker` to
+  `var(--accent)` in IBM Plex Mono.
+- `li` spacing is `margin-block: 0.35em` for easier scanning of dense
+  reading lists and the table of contents.
 
 ## Reduced-motion handling
 
