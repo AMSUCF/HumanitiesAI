@@ -14,9 +14,9 @@ canvas:
 
 <span class="unit-badge unit-badge--shells">Shells</span>
 
-> For an instant the light bends wrong around her — a seam in the air where a woman should be standing — and then even the seam is gone, street traffic and pedestrians passing through the space she just occupied as though it had only ever been pavement and a doorway. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
+> “What we see now is like a dim image in a mirror.” — the Puppet Master, echoing 1 Corinthians, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
-Thermoptic camouflage doesn't paint a false image over the Major; it erases the true one, letting whatever's behind her show through until she simply isn't there to see. Generative video is doing something adjacent, at a much larger and stranger scale: it isn't erasing anything, but it is manufacturing a moving image with no camera, no set, and no event behind it — footage of nothing, increasingly hard to tell apart from footage of something that happened. This week we generate some of that footage ourselves, then turn a critical eye on a field that just watched one of its flagship tools disappear in under a year.
+The film borrows that line from scripture for a world where seeing is never direct. Generative video makes the mirror stranger still: it manufactures a moving image with no camera, no set, and no event behind it — footage of nothing, increasingly hard to tell apart from footage of something that happened. This week we generate some of that footage ourselves, then turn a critical eye on a field that just watched one of its flagship tools disappear in under a year.
 
 ## Tutorial: Video and Realism
 
@@ -56,4 +56,4 @@ Your discussion post should combine your knowledge (and samples) from your own e
 
 If you're looking for more material to draw on: Science SARU's new *The Ghost in the Shell* series (dir. Mokochan, script EnJoe Toh) premieres July 7, 2026 on Prime Video and airs new episodes through the semester — fair game as supplemental viewing and discussion material if you're following along.
 
-Finally, connect this back to the epigraph. Thermoptic camouflage hides the Major by erasing her from the frame, in plain sight, with nothing added; the Sora arc suggests generative video works differently — it doesn't erase anything, it adds a plausible frame where there was no event at all, and for six months a lot of people found that convincing before the tool itself vanished. Is synthetic video "hiding in plain sight" the way the Major does, or is its bluff easier to call than thermoptic camouflage's? And what does a hype cycle that ran from launch to shutdown in under seven months suggest about the gap between what these tools are claimed to do and what they can actually sustain?
+Finally: the Sora arc added plausible frames where no event existed, and for six months a lot of people found that convincing before the tool itself vanished. What does a hype cycle that ran from launch to shutdown in under seven months suggest about the gap between what these tools are claimed to do and what they can actually sustain?

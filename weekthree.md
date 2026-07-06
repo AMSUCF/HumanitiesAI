@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 
-> The Puppet Master claims it was never born in a lab or a body, only in the sea of information itself — an intelligence that arose out of the flow of data, with no origin anyone can point to and verify. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
+> “Life has become more complex in the overwhelming sea of information.” — the Puppet Master, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
 A quick scheduling note: Monday, September 7 is Labor Day, but this is an asynchronous course, so the module proceeds on its normal schedule — enjoy the holiday if you have it, and pick up the work whenever your week allows.
 
@@ -59,4 +59,4 @@ Be particularly wary of misinterpretation of complex sources, and note where cor
 
 After reviewing the findings Claude has presented from your query, share a summary and any unexpected or interesting results back in your discussion post. Consider how this experience with AI-assisted research reflects broader questions about the role of AI in knowledge work and the role of human expertise in research and analysis. Given our discussions of labor this week, how do you feel about this approach to outsourcing a preliminary query? Was it useful? How does this compare to other ways you've worked with chatbots prior to this class?
 
-Finally, bring it back to this week's epigraph: the Puppet Master claimed a "ghost" for itself as something that emerged out of the sea of information, with no single origin anyone could verify. When Research synthesizes an answer out of dozens of scraped sources, is that a comparable kind of emergence, or is the comparison too generous to the tool? What did verifying (or failing to verify) its sources tell you about where the "ghost" in this process actually resides — in the machine, in its training data, or in the human doing the checking?
+Finally, a nod to the epigraph: when Research synthesizes an answer out of that sea of information, what did verifying (or failing to verify) its sources tell you about who is actually doing the knowing?

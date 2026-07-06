@@ -14,9 +14,9 @@ canvas:
 
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 
-> The Puppet Master first speaks to Section 9 as a voice inside a stolen shell — words with no body of its own, no ghost anyone can point to and call an author. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
+> “Well, all your memories about your wife and daughter are false. They’re like a dream.” — Section 9 to a ghost-hacked man, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
-That's the question underneath this week's readings too: a generated text can sound fluent, even moving, without anyone standing behind it who meant it. This week, we'll be thinking about why the initial launch of OpenAI's ChatGPT created a major cultural moment thanks in large part to its interface — even though generative text, AI, and machine learning broadly have all been around for a much longer time. Start by exploring the histories of generation described below. Then, using William Chamberlain's example as a guide, try to generate a compelling work of poetry using your Claude subscription and document your process in this week's discussion.
+Generated text can be like that dream: fluent, even moving, without anyone standing behind it who meant it. This week, we'll be thinking about why the initial launch of OpenAI's ChatGPT created a major cultural moment thanks in large part to its interface — even though generative text, AI, and machine learning broadly have all been around for a much longer time. Start by exploring the histories of generation described below. Then, using William Chamberlain's example as a guide, try to generate a compelling work of poetry using your Claude subscription and document your process in this week's discussion.
 
 ## Tutorial: Histories of Generation
 
@@ -46,4 +46,4 @@ Use the publish button in Claude's interface (as demonstrated in the screenshot 
 
 In your reflection, compare this process to how William Chamberlain described his book and the discussions of AI hype versus reality in this week's readings. Keep in mind Lori Emerson's discussion of the interface and think about how much control you have when working specifically with Claude. Consider how this act of interacting with Claude for creative purposes differs from the conversational chat you had last week, and how the website creation feature changes your relationship to the final creative product.
 
-Finally, connect this back to the Puppet Master's first appearance as a voice with no ghost anyone can point to: after ten iterations of prompting, editing, and re-prompting, whose "voice" is the finished poem in — yours, Claude's, or some blend that resists the question? Does it matter to you, as its reader, whether anyone was "behind" it the way Racter's programmer stood behind *The Policeman's Beard*?
+Finally, a quick gesture at the epigraph: after ten iterations, whose "voice" is the finished poem in — yours, Claude's, or some blend that resists the question?

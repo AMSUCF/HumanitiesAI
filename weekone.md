@@ -16,7 +16,7 @@ canvas:
 
 > "And can you offer me proof of your existence? How can you, when neither modern science nor philosophy can explain what life is?" — the Puppet Master, [*Ghost in the Shell* (1995)](https://en.wikiquote.org/wiki/Ghost_in_the_Shell_(film))
 
-The Puppet Master throws that challenge at its human interrogators, but it hangs over every text-generating system we'll meet this semester, starting with the oldest one: when you talk to ELIZA, or to the assistant on your screen right now, is there anyone behind the words, or only a shell that talks like there is? (A note on our epigraphs, here and in the weeks ahead: when one is a real, verbatim line, it links to a source page where you can check it — and when it's a paraphrase, it says "after" and links to the work instead. Hold your own citations, and your AI tools' citations, to the same standard.)
+The Puppet Master throws that challenge at its human interrogators, but it hangs over every text-generating system we'll meet this semester, starting with the oldest one: when you talk to ELIZA, or to the assistant on your screen right now, is there anyone behind the words, or only a shell that talks like there is? (A note on our epigraphs, here and in the weeks ahead: each is a verbatim line, linked to the fan-maintained script transcript or quote archive it was checked against, so you can verify the wording yourself. Hold your own citations, and your AI tools' citations, to the same standard.)
 
 ## Tutorial: ELIZA and Ghosts
 

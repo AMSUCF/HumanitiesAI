@@ -135,9 +135,8 @@ Students will need to subscribe to [Anthropic's Claude](https://claude.ai/) for 
 | Points | Assignment Summary                                                                                                      | Due Date    |
 |--------|-------------------------------------------------------------------------------------------------------------------------|-------------|
 | 6      | **Activity Verification** - Complete the brief survey posted on Webcourses as soon as possible to confirm your enrollment in the course. As this is required by the university, please attend to it as soon as possible at the start of classes. | Friday, August 28 |
-| 72     | **Exercises** - Weekly discussions will consist of making, sharing, and reflecting on the process of exploring. We will work from tutorials and try a new form every week, with reflective questions connecting our process of making to the theoretical frameworks and provocations offered by our readings (12 exercises, 6 points each). | Weekly |
-| 12     | **Week 10 Merged Exercise: Building and Deploying** - Week 10 combines two Puppet Masters modules into a single double-length project (building and deploying an AI-assisted tool), worth double the standard exercise credit. | Sunday, November 1 |
-| 10     | **Final Reflection** - During the final exam period, students will share a final 750 - 1000 word reflective blog post on their journey, with particular consideration to next steps and the future of the technologies explored throughout the semester. | Thursday, December 10 |
+| 78     | **Exercises** - Weekly discussions will consist of making, sharing, and reflecting on the process of exploring. We will work from tutorials and try a new form every week, with reflective questions connecting our process of making to the theoretical frameworks and provocations offered by our readings (13 exercises, 6 points each). | Weekly |
+| 16     | **Final Reflection** - During the final exam period, students will share a final 750 - 1000 word reflective blog post on their journey, with particular consideration to next steps and the future of the technologies explored throughout the semester. | Thursday, December 10 |
 
 Students can access their grades and feedback at any time using the
 Grade Book function of Webcourses. All assignments will be submitted
@@ -266,8 +265,6 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [**Exercise: Distant Coding**](weeknine.md)
 
 ### Week Ten: Puppet Masters - Building and Deploying (Monday, October 26 - Sunday, November 1)
-
-**Merged double week (12 points).**
 
 -   *AI for Good* - Chapter 2: "Physician Heal Thyself"
 -   [Willison, Simon. "Vibe engineering." October 7, 2025.](https://simonwillison.net/2025/Oct/7/vibe-engineering/) *(Willison flags "agentic engineering" as the settling term for this concept -- we'll discuss both.)*

@@ -5,7 +5,7 @@ canvas:
   module: "Finals Week: Final Reflection"
   week_start: 2026-12-04
   due: 2026-12-10
-  points: 10
+  points: 16
   discussion: true
   extra_credit: false
   unit: coda

@@ -14,9 +14,9 @@ canvas:
 
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 
-> Section 9 traces the Puppet Master back through the network not as a body to arrest but as a pattern of reading — a ghost that has moved through archive after archive, leaving no fingerprints, only the shape of what it lingered on. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
+> “…memory cannot be defined. But it defines mankind.” — the Puppet Master, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
-This week we turn from generating text to reading it at scale, using Claude not as a conversational partner but as a research assistant that can process an entire text file at once and surface patterns close reading alone wouldn't catch. Keep the epigraph in mind as you work: whatever "ghost" a model traces back through a corpus is really the shape of what it has read before — and, just as tellingly, what it hasn't.
+This week we turn from generating text to reading it at scale, using Claude not as a conversational partner but as a research assistant that can process an entire text file at once and surface patterns close reading alone wouldn't catch. Keep the epigraph in mind as you work: a model's reading of a text is a kind of memory — the shape of everything it has read before, and, just as tellingly, what it hasn't.
 
 ## Tutorial: Reading Across Texts
 
@@ -65,4 +65,4 @@ After completing our readings, iterate on a distant read of your selected text f
 
 Bring the Bamman, Underwood, and Smith piece directly into your reflection: where, if anywhere, did you notice your model's assumptions skewing toward a narrower literary canon than the text you actually chose deserved? Did that skew show up in the bag of words, the character network, the genre guess — or did you not notice it until you went looking?
 
-Finally, connect this back to the epigraph. If a "ghost" in this exercise is really a pattern of reading — the shape of everything a model has lingered on before — then the distant read you produced this week is itself a kind of ghost story: partly your text, partly every other text the model read to get there. Whose reading is in the room when you look at your word cloud or your character network — yours, the author's, or the model's canon, quietly shaping what it noticed and what it skipped?
+Finally, one glance back at the epigraph: whose memory is in the room when you look at your word cloud or character network — yours, the author's, or the model's?
