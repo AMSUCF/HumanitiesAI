@@ -13,6 +13,14 @@ def build_package(index_md: Path, out_dir: Path, site_base: str) -> Path:
     parts = re.split(r"^## +(.+)$", post.content, flags=re.MULTILINE)
     # parts = [preamble, title1, body1, title2, body2, ...]
     sections = []
+    preamble = parts[0].strip()
+    if preamble:
+        # Instructor block (name, office hours, course number, email) lives
+        # above the first ## heading and would otherwise be dropped.
+        sections.append(
+            '<section data-component="Instructor Information">\n'
+            "<h2>Instructor Information</h2>\n"
+            f"{render_html(preamble, site_base)}\n</section>\n<hr>")
     for i in range(1, len(parts), 2):
         title, body = parts[i].strip(), parts[i + 1]
         sections.append(
