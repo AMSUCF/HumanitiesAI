@@ -72,3 +72,18 @@ def test_apply_canvas_style_bands_and_badges():
     assert "border-top: 6px solid #b45309" in out
     assert ">Shells</span>" in out
     assert out.endswith("<p>x</p>")
+
+
+def test_unlock_at_utc_monday_midnight():
+    # Monday Aug 24 2026 00:00 ET (EDT, UTC-4) -> 04:00Z
+    assert due_at_utc.__module__ == "converter"
+    from converter import unlock_at_utc
+    assert unlock_at_utc(date(2026, 8, 24)) == "2026-08-24T04:00:00Z"
+
+
+def test_lock_at_utc_one_week_grace():
+    from converter import lock_at_utc
+    # due Sun Aug 30 -> locks Sun Sep 6 23:59 EDT -> Sep 7 03:59Z
+    assert lock_at_utc(date(2026, 8, 30)) == "2026-09-07T03:59:00Z"
+    # DST edge: due Sun Nov 1 (fallback day) -> locks Nov 8 23:59 EST -> Nov 9 04:59Z
+    assert lock_at_utc(date(2026, 11, 1)) == "2026-11-09T04:59:00Z"

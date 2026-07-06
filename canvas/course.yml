@@ -7,4 +7,4 @@ syllabus_file: index.md
 weeks: [weekone, weektwo, weekthree, weekfour, weekfive, weeksix, weekseven,
         weekeight, weeknine, weekten, weekeleven, weektwelve, weekthirteen, weekfourteen]
 extra: [finalreflection]
-activity_verification: {name: "Activity Verification", points: 6, due: 2026-08-28}
+activity_verification: {name: "Activity Verification", points: 6, open: 2026-08-24, due: 2026-08-28}

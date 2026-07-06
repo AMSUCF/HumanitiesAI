@@ -29,11 +29,14 @@ class CanvasClient:
         r.raise_for_status()
         return r.json()
 
-    def upsert_module(self, name: str) -> int:
+    def upsert_module(self, name: str, unlock_at: str | None = None) -> int:
+        payload = {"module": {"name": name}}
+        if unlock_at is not None:
+            payload["module"]["unlock_at"] = unlock_at
         for m in self._get_all(f"{self.course}/modules"):
             if m["name"] == name:
-                return m["id"]
-        return self._post(f"{self.course}/modules", {"module": {"name": name}})["id"]
+                return self._put(f"{self.course}/modules/{m['id']}", payload)["id"]
+        return self._post(f"{self.course}/modules", payload)["id"]
 
     def upsert_page(self, title: str, body: str, published: bool = False) -> str:
         payload = {"wiki_page": {"title": title, "body": body, "published": published}}
@@ -51,11 +54,18 @@ class CanvasClient:
     def upsert_discussion(self, title: str, message: str, points: int,
                           due_at: str | None, assignment_group_id: int,
                           published: bool = False,
-                          known_id: int | None = None) -> int:
+                          known_id: int | None = None,
+                          unlock_at: str | None = None,
+                          lock_at: str | None = None) -> int:
+        assignment = {"points_possible": points, "due_at": due_at,
+                      "assignment_group_id": assignment_group_id}
+        if unlock_at is not None:
+            assignment["unlock_at"] = unlock_at
+        if lock_at is not None:
+            assignment["lock_at"] = lock_at
         payload = {
             "title": title, "message": message, "published": published,
-            "assignment": {"points_possible": points, "due_at": due_at,
-                           "assignment_group_id": assignment_group_id},
+            "assignment": assignment,
         }
         if known_id is None:
             for d in self._get_all(f"{self.course}/discussion_topics"):
@@ -70,7 +80,9 @@ class CanvasClient:
                           assignment_group_id: int,
                           submission_types: list[str],
                           published: bool = False,
-                          known_id: int | None = None) -> int:
+                          known_id: int | None = None,
+                          unlock_at: str | None = None,
+                          lock_at: str | None = None) -> int:
         payload = {
             "assignment": {
                 "name": name, "points_possible": points, "due_at": due_at,
@@ -78,6 +90,10 @@ class CanvasClient:
                 "submission_types": submission_types, "published": published,
             }
         }
+        if unlock_at is not None:
+            payload["assignment"]["unlock_at"] = unlock_at
+        if lock_at is not None:
+            payload["assignment"]["lock_at"] = lock_at
         if known_id is None:
             for a in self._get_all(f"{self.course}/assignments"):
                 if a["name"] == name:

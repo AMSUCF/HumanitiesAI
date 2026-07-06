@@ -9,6 +9,7 @@ def client():
 @responses.activate
 def test_upsert_module_finds_existing():
     responses.get(f"{BASE}/modules", json=[{"id": 7, "name": "Week One"}])
+    responses.put(f"{BASE}/modules/7", json={"id": 7})
     assert client().upsert_module("Week One") == 7
 
 @responses.activate
@@ -59,3 +60,25 @@ def test_upsert_assignment_creates_when_missing():
     assert sent["assignment"]["assignment_group_id"] == 5
     assert sent["assignment"]["submission_types"] == ["online_url", "online_text_entry"]
     assert sent["assignment"]["published"] is False
+
+
+@responses.activate
+def test_upsert_module_updates_existing_with_unlock():
+    responses.get(f"{BASE}/modules", json=[{"id": 7, "name": "Week One"}])
+    rsp = responses.put(f"{BASE}/modules/7", json={"id": 7})
+    assert client().upsert_module("Week One", unlock_at="2026-08-24T04:00:00Z") == 7
+    import json as j
+    sent = j.loads(rsp.calls[0].request.body)
+    assert sent["module"]["unlock_at"] == "2026-08-24T04:00:00Z"
+
+
+@responses.activate
+def test_upsert_discussion_sends_availability_window():
+    responses.put(f"{BASE}/discussion_topics/42", json={"id": 42})
+    client().upsert_discussion("T", "<p>m</p>", 6, "2026-08-31T03:59:00Z", 5,
+                               known_id=42, unlock_at="2026-08-24T04:00:00Z",
+                               lock_at="2026-09-07T03:59:00Z")
+    import json as j
+    sent = j.loads(responses.calls[0].request.body)
+    assert sent["assignment"]["unlock_at"] == "2026-08-24T04:00:00Z"
+    assert sent["assignment"]["lock_at"] == "2026-09-07T03:59:00Z"

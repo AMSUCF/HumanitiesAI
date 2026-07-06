@@ -10,8 +10,9 @@ import frontmatter
 import yaml
 from dotenv import load_dotenv
 
-from converter import (UNIT_COLORS, apply_canvas_style, due_at_utc, load_week,
-                       render_html, split_discussion)
+from converter import (UNIT_COLORS, apply_canvas_style, due_at_utc,
+                       load_week, lock_at_utc, render_html, split_discussion,
+                       unlock_at_utc)
 
 STATE_FILE = Path(".state.json")
 
@@ -22,12 +23,20 @@ def plan_week(path: Path, site_base: str) -> dict:
     if c["unit"] not in UNIT_COLORS:
         raise ValueError(f"{path}: unknown unit '{c['unit']}'")
     page_md, disc_md = split_discussion(doc.body)
+    week_label = c["module"].split(":")[0].strip()
+    lecture_html = apply_canvas_style(
+        f"<p><em>The {week_label} video lecture will be posted here at the "
+        f"start of the week.</em></p>", c["unit"])
     return {
         "stem": path.stem,
         "module": c["module"],
         "points": int(c["points"]),
         "extra_credit": bool(c.get("extra_credit", False)),
         "due_at": due_at_utc(c["due"]),
+        "unlock_at": unlock_at_utc(c["week_start"]),
+        "lock_at": due_at_utc(c["due"]) if c.get("hard_close") else lock_at_utc(c["due"]),
+        "lecture_title": f"{week_label} Video Lecture",
+        "lecture_html": lecture_html,
         "has_discussion": bool(c["discussion"]) and bool(disc_md),
         "page_html": apply_canvas_style(render_html(page_md, site_base), c["unit"]),
         "discussion_html": apply_canvas_style(render_html(disc_md, site_base), c["unit"])
@@ -75,13 +84,16 @@ def main(argv=None) -> int:
     if args.dry_run:
         prev = Path("preview")
         prev.mkdir(exist_ok=True)
+        lecture_stems = set(cfg["weeks"])
         for p in plans:
             (prev / f"{p['stem']}.html").write_text(p["page_html"], encoding="utf-8")
             if p["has_discussion"]:
                 (prev / f"{p['stem']}-discussion.html").write_text(
                     p["discussion_html"], encoding="utf-8")
-            print(f"[dry-run] module '{p['module']}' | page | "
-                  f"discussion {p['points']}pts due {p['due_at']}"
+            lecture = " + lecture placeholder" if p["stem"] in lecture_stems else ""
+            print(f"[dry-run] module '{p['module']}' | opens {p['unlock_at']} | "
+                  f"page{lecture} | discussion {p['points']}pts "
+                  f"due {p['due_at']} locks {p['lock_at']}"
                   + (" [extra credit]" if p["extra_credit"] else ""))
         return 0
 
@@ -93,21 +105,28 @@ def main(argv=None) -> int:
                           os.environ["CANVAS_COURSE_ID"])
     state = _load_state()
     group_id = client.upsert_assignment_group(cfg["assignment_groups"]["exercises"])
+    lecture_stems = set(cfg["weeks"])
     try:
         for p in plans:
             try:
                 st = state.setdefault(p["stem"], {})
-                module_id = client.upsert_module(p["module"])
+                module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"])
                 page_url = client.upsert_page(p["module"], p["page_html"], args.publish)
                 client.add_to_module(module_id, "Page", page_url)
                 st.update(module_id=module_id, page_url=page_url)
+                if p["stem"] in lecture_stems:
+                    lecture_url = client.upsert_page(
+                        p["lecture_title"], p["lecture_html"], args.publish)
+                    client.add_to_module(module_id, "Page", lecture_url)
+                    st["lecture_url"] = lecture_url
                 if p["has_discussion"]:
                     title = f"Exercise Discussion: {p['module']}"
                     disc_id = client.upsert_discussion(
                         title, p["discussion_html"],
                         0 if p["extra_credit"] else p["points"],
                         p["due_at"], group_id, args.publish,
-                        known_id=st.get("discussion_id"))
+                        known_id=st.get("discussion_id"),
+                        unlock_at=p["unlock_at"], lock_at=p["lock_at"])
                     client.add_to_module(module_id, "Discussion", disc_id)
                     st["discussion_id"] = disc_id
                 print(f"deployed: {p['module']}")
@@ -124,7 +143,9 @@ def main(argv=None) -> int:
             av_id = client.upsert_assignment(
                 av["name"], av["points"], due_at_utc(av["due"]), other_group_id,
                 ["online_url", "online_text_entry"], args.publish,
-                known_id=state.get("activity_verification_id"))
+                known_id=state.get("activity_verification_id"),
+                unlock_at=unlock_at_utc(av["open"]) if av.get("open") else None,
+                lock_at=lock_at_utc(av["due"]))
             state["activity_verification_id"] = av_id
             print("deployed: Syllabus page, Activity Verification")
     finally:

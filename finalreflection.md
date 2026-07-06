@@ -9,6 +9,7 @@ canvas:
   discussion: true
   extra_credit: false
   unit: coda
+  hard_close: true
 hide_warning: true
 ---
 

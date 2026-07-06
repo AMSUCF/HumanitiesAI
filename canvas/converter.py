@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from datetime import datetime, time
+from datetime import datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -70,6 +70,18 @@ def split_discussion(md_text: str) -> tuple[str, str]:
 
 def due_at_utc(due_date) -> str:
     dt = datetime.combine(due_date, time(23, 59), tzinfo=TZ)
+    return dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def unlock_at_utc(start_date) -> str:
+    """Module/assignment opens at midnight ET on its start date."""
+    dt = datetime.combine(start_date, time(0, 0), tzinfo=TZ)
+    return dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def lock_at_utc(due_date, grace_days: int = 7) -> str:
+    """Hard close: one week of no-penalty late submissions after the due date."""
+    dt = datetime.combine(due_date + timedelta(days=grace_days), time(23, 59), tzinfo=TZ)
     return dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
