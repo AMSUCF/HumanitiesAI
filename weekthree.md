@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 
-> The Puppet Master claims it was never born in a lab or a body, only in the sea of information itself — an intelligence that arose out of the flow of data, with no origin anyone can point to and verify. — after *Ghost in the Shell* (1995)
+> The Puppet Master claims it was never born in a lab or a body, only in the sea of information itself — an intelligence that arose out of the flow of data, with no origin anyone can point to and verify. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
 
 A quick scheduling note: Monday, September 7 is Labor Day, but this is an asynchronous course, so the module proceeds on its normal schedule — enjoy the holiday if you have it, and pick up the work whenever your week allows.
 

@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--puppetmasters">Puppet Masters</span>
 
-> A phenomenon in which isolated actors, with no coordination and no original to imitate, produce behavior that looks like a single, unified pattern — a copycat effect with no first copy. — after *Ghost in the Shell: Stand Alone Complex* (2002)
+> A phenomenon in which isolated actors, with no coordination and no original to imitate, produce behavior that looks like a single, unified pattern — a copycat effect with no first copy. — after [*Ghost in the Shell: Stand Alone Complex* (2002)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex)
 
 Stand Alone Complex names something stranger than a conspiracy: coordinated-looking action with nobody actually coordinating it, and no originator you can point to and say "it started there." That's a useful, slightly unsettling frame for what an agentic coding tool does when you set it loose. Simon Willison's ["Designing agentic loops"](https://simonwillison.net/2025/Sep/30/designing-agentic-loops/) describes giving an agent a goal, a set of tools, and permission to plan, act, and check its own results across many steps without a human approving each one — the opposite of typing every line yourself, and also the opposite of a single click that does one thing. What comes out the other end is a real sequence of decisions that produced a working (or broken) result, but no one moment where you can say "I did that." This week's exercise puts you inside that loop directly: you'll hand Claude Code an open-ended brief and watch it plan, build, and iterate on a public website of your own design.
 

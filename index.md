@@ -4,7 +4,7 @@ title: Humanities in the Age of AI
 ---
 
 -   **Instructor:** Dr. Anastasia Salter
--   **Office Hours:** Tuesdays 2 - 5PM, TCH 236 and/or Zoom
+-   **Office Hours:** Wednesdays 11AM - 1:30PM, TCH 236 and/or Zoom
 -   **Course Number:** ENG 6806
 -   **Email:** anastasia at ucf
 
@@ -126,8 +126,6 @@ guide the week's making experiments. Relevant recent articles will be integrated
 
 -   Science SARU's [*The Ghost in the Shell*](https://www.aboutamazon.com/news/entertainment/ghost-in-the-shell-anime-prime-video) (2026), streaming on Prime Video, with new episodes airing during the semester. This new adaptation is not required, but offers a running point of comparison to the 1995 film throughout the term.
 
-The [Fall 2025 version of this course](2025/index.md) remains available for reference.
-
 ## Required Subscriptions
 
 Students will need to subscribe to [Anthropic's Claude](https://claude.ai/) for hands-on exercises throughout the semester. A paid subscription is required to access the full functionality needed for course assignments.
@@ -240,7 +238,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *The AI Con* - Chapter 6: I'm Sorry, Dave, I'm Afraid I Can't Do That: AI Doomers, AI Boosters, and Why None of That Makes Sense
 -   *Algorithms of Oppression* - Searching for Black Girls
 -   [Jebb, Louis. "On process: Refik Anadol seeks to demystify AI art by showing how it is put together." *The Art Newspaper.* April 5, 2024.](https://www.theartnewspaper.com/2024/04/05/on-process-refik-anadol-seeks-to-demystify-ai-art-by-showing-how-it-is-put-together)
--   *Recommended (optional; may require UCF Library access):* [Menotti, Gabriel. "The model is the museum: generative AI and the expropriation of cultural heritage." *AI & Society* (2025).](https://link.springer.com/article/10.1007/s00146-025-02290-1)
+-   *Recommended (optional; PDF in Webcourses):* [Menotti, Gabriel. "The model is the museum: generative AI and the expropriation of cultural heritage." *AI & Society* (2025).](https://link.springer.com/article/10.1007/s00146-025-02290-1)
 -   [**Exercise: Archival Images**](weeksix.md)
 
 ### Week Seven: Shells - Video and Realism (Monday, October 5 - Sunday, October 11)

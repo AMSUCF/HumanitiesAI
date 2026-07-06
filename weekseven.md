@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--shells">Shells</span>
 
-> For an instant the light bends wrong around her — a seam in the air where a woman should be standing — and then even the seam is gone, street traffic and pedestrians passing through the space she just occupied as though it had only ever been pavement and a doorway. — after *Ghost in the Shell* (1995)
+> For an instant the light bends wrong around her — a seam in the air where a woman should be standing — and then even the seam is gone, street traffic and pedestrians passing through the space she just occupied as though it had only ever been pavement and a doorway. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
 
 Thermoptic camouflage doesn't paint a false image over the Major; it erases the true one, letting whatever's behind her show through until she simply isn't there to see. Generative video is doing something adjacent, at a much larger and stranger scale: it isn't erasing anything, but it is manufacturing a moving image with no camera, no set, and no event behind it — footage of nothing, increasingly hard to tell apart from footage of something that happened. This week we generate some of that footage ourselves, then turn a critical eye on a field that just watched one of its flagship tools disappear in under a year.
 

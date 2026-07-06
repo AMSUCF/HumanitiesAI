@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--shells">Shells</span>
 
-> Before she speaks a word, before Section 9 has even given her a name, the opening credits build her from the inside out — spine, muscle fiber, synthetic skin drawn taut over a chassis — a body assembled like a product on a line, finished off with a face turned toward the camera. — after *Ghost in the Shell* (1995)
+> Before she speaks a word, before Section 9 has even given her a name, the opening credits build her from the inside out — spine, muscle fiber, synthetic skin drawn taut over a chassis — a body assembled like a product on a line, finished off with a face turned toward the camera. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
 
 For four weeks we've been asking what a ghost is: the mind, the voice, the sense that someone is home behind a run of generated text. This week turns the question inside out. If a ghost can be generated, a shell can be too, and the sequence above is really the whole unit in miniature: a body built as image, muscle and surface layered on like paint, offered up to be looked at before it's ever asked to think or feel anything at all. For the next four weeks we're in Shells territory — bodies, surfaces, and the pictures that stand in for them, most of it now produced by systems that can manufacture a face or a figure about as easily as they produce a sentence.
 

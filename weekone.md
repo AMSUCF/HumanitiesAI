@@ -14,9 +14,9 @@ canvas:
 
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 
-> "There is no program called 'me'." — the Puppet Master, *Ghost in the Shell* (1995)
+> "And can you offer me proof of your existence? How can you, when neither modern science nor philosophy can explain what life is?" — the Puppet Master, [*Ghost in the Shell* (1995)](https://en.wikiquote.org/wiki/Ghost_in_the_Shell_(film))
 
-The Puppet Master makes that claim about itself, but it is really a question about every text-generating system we'll meet this semester, starting with the oldest one: when you talk to ELIZA, or to the assistant on your screen right now, is there anyone behind the words, or only a shell that talks like there is?
+The Puppet Master throws that challenge at its human interrogators, but it hangs over every text-generating system we'll meet this semester, starting with the oldest one: when you talk to ELIZA, or to the assistant on your screen right now, is there anyone behind the words, or only a shell that talks like there is? (A note on our epigraphs, here and in the weeks ahead: when one is a real, verbatim line, it links to a source page where you can check it — and when it's a paraphrase, it says "after" and links to the work instead. Hold your own citations, and your AI tools' citations, to the same standard.)
 
 ## Tutorial: ELIZA and Ghosts
 
@@ -35,7 +35,7 @@ Before you begin the exercise, watch Mamoru Oshii's *Ghost in the Shell* (1995) 
 - Streaming on [Prime Video](https://www.primevideo.com/detail/Ghost-in-the-Shell/0OJWSCHA0CIJMLUTEBIHLT9ASK), Hulu, and [Netflix](https://www.netflix.com/title/540533)
 - Available for rental on Apple TV and Amazon
 
-**What to watch for:** the film gives us a whole vocabulary we'll be reusing all semester — **ghosts** (the mind, the voice, the sense of an "I" behind a body or a text) and **shells** (the bodies, interfaces, and media that carry it). Pay attention to how casually the film's world treats cyborg bodies as replaceable shells, and then watch how that casualness breaks down once the Puppet Master — an entity "born in a sea of information" with no human body at all — starts claiming a ghost of its own. Ask yourself, as you watch: what would have to be true for you to believe it?
+**What to watch for:** the film gives us a whole vocabulary we'll be reusing all semester — **ghosts** (the mind, the voice, the sense of an "I" behind a body or a text) and **shells** (the bodies, interfaces, and media that carry it). Pay attention to how casually the film's world treats cyborg bodies as replaceable shells, and then watch how that casualness breaks down once the Puppet Master — self-described as "a living, thinking entity that was created in the sea of information," with no human body at all — starts claiming a ghost of its own. Ask yourself, as you watch: what would have to be true for you to believe it?
 
 **Recommended ongoing viewing:** Science SARU's [*The Ghost in the Shell*](https://www.aboutamazon.com/news/entertainment/ghost-in-the-shell-anime-prime-video) (2026), streaming on Prime Video, is not required, but makes a good running companion throughout the term — new episodes air during the semester, offering an ongoing point of comparison to the 1995 film as we move through the units.
 
@@ -55,7 +55,7 @@ As you work with Claude, experiment with different models available in your subs
 
 Again, spend at least 15 minutes, ideally more, conversing with Claude before you go on to the third conversation experience. Screenshot any interesting or surprising moments, and try similar conversations to compare the results between ELIZA and Claude. Notice how the level of repetition varies, and which words seem most associated with the responses that you get from each system.
 
-For your third encounter, talk to [**Future ELIZA**](2025/WeekOne/), which was created by prompting Claude Sonnet 4 (the then-current model) to build an ELIZA-style chatbot that would "respond like an AI from the future." This demonstration represents how current AI can be directed to speculate about future AI development while maintaining the therapeutic conversation patterns of the original ELIZA.
+For your third encounter, talk to [**Future ELIZA**](demos/WeekOne/), which was created by prompting Claude Sonnet 4 (the then-current model) to build an ELIZA-style chatbot that would "respond like an AI from the future." This demonstration represents how current AI can be directed to speculate about future AI development while maintaining the therapeutic conversation patterns of the original ELIZA.
 
 Spend another short period conversing with Future ELIZA. As you interact with it, consider: how do you react to the information that this chatbot was generated with a few prompts? What does this resulting bot suggest to you about the future of these technologies? (In this case, the process is more interesting than the output, which is fairly trite.)
 

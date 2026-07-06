@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--coda">The Net Is Vast and Infinite</span>
 
-> "And where does the newborn go from here? The net is vast and infinite." — the merged Kusanagi/Puppet Master entity, closing line of *Ghost in the Shell* (1995)
+> "And where does the newborn go from here? The net is vast and infinite." — the merged Kusanagi/Puppet Master entity, closing line of [*Ghost in the Shell* (1995)](https://en.wikiquote.org/wiki/Ghost_in_the_Shell_(film))
 
 Kusanagi spent the whole film asking whether there was "a program called 'me.'" By the closing line she isn't asking anymore — she's answered the question by becoming something neither Kusanagi nor the Puppet Master was on its own, and all that's left to wonder is where that newborn thing goes from here. This coda asks the same question of the bots you've built and talked to all semester. We opened in Week One with ELIZA, a scripted ghost running Weizenbaum's old pattern-matching script, mouthing sympathy it didn't have. We're closing with you building your own: a Skill, a subagent, or a small fine-tuned model trained on texts you choose — something that, like the Puppet Master, might exceed the instructions you gave it.
 

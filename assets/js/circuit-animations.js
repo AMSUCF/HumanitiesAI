@@ -163,19 +163,30 @@ function initializePageLoader() {
   loader.innerHTML = '<div class="loader-circuit"></div>';
   document.body.appendChild(loader);
   
-  // Show loader on page navigation (exclude anchor links)
+  // Show loader on page navigation (exclude anchor links, new-tab/modified
+  // clicks, and downloads — none of those navigate this page, so the loader
+  // would never get a chance to hide)
   document.addEventListener('click', function(e) {
+    if (e.defaultPrevented || e.button !== 0 ||
+        e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+      return;
+    }
     const link = e.target.closest('a');
-    if (link && link.href && 
-        !link.href.includes('#') && 
+    if (link && link.href &&
+        !link.href.includes('#') &&
         link.hostname === window.location.hostname &&
+        link.target !== '_blank' &&
+        !link.hasAttribute('download') &&
         !link.classList.contains('anchor-link')) {
       loader.classList.add('active');
     }
   });
-  
-  // Hide loader when page loads
-  window.addEventListener('load', () => {
+
+  // Hide loader on pageshow, not load: when the browser restores a page from
+  // the back/forward cache (bfcache), 'load' does not re-fire — the page comes
+  // back exactly as it was, loader still active, which made the back button
+  // appear broken. 'pageshow' fires on both normal loads and bfcache restores.
+  window.addEventListener('pageshow', () => {
     loader.classList.remove('active');
   });
 }

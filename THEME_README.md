@@ -5,7 +5,7 @@ the Shell* (1995): a light-first interface with a dark "net-dive" mode, a
 falling-data header motif standing in for the old circuit-board look, and
 unit badges that map the course's four units onto the film's vocabulary.
 This document is the current (Fall 2026) theme reference. The Fall 2025
-theme writeup is archived separately at `2025/THEME_README.md` and describes
+theme writeup for the prior circuit-board design is kept locally in the untracked `2025/` folder and describes
 the older, dark-only circuit-board version — it is not updated for this
 theme and should be left as a historical record.
 
@@ -124,7 +124,6 @@ falling-data/ghost-silhouette scene, permanently.
 | `_layouts/default.html` | Full-width header (`#header-container`) with the data-stream + ghost-silhouette header art; used for top-level pages. |
 | `_layouts/page.html` | Compact header (`#compact-header`) with the data-stream header art only; used for individual week/lesson pages, including the archived 2025 content. |
 | `THEME_README.md` (this file) | Current theme documentation, repo root. |
-| `2025/THEME_README.md` | Archived documentation for the Fall 2025 circuit-board theme — left untouched. |
 
 ## Footer tagline
 

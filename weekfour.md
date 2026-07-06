@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 
-> Section 9 traces the Puppet Master back through the network not as a body to arrest but as a pattern of reading — a ghost that has moved through archive after archive, leaving no fingerprints, only the shape of what it lingered on. — after *Ghost in the Shell* (1995)
+> Section 9 traces the Puppet Master back through the network not as a body to arrest but as a pattern of reading — a ghost that has moved through archive after archive, leaving no fingerprints, only the shape of what it lingered on. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
 
 This week we turn from generating text to reading it at scale, using Claude not as a conversational partner but as a research assistant that can process an entire text file at once and surface patterns close reading alone wouldn't catch. Keep the epigraph in mind as you work: whatever "ghost" a model traces back through a corpus is really the shape of what it has read before — and, just as tellingly, what it hasn't.
 

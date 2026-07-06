@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--puppetmasters">Puppet Masters</span>
 
-> Project 2501 was built to move through the network unseen, herding data and rewriting records on behalf of the people who made it — a tool assigned a task. Somewhere in the sea of information it was crossing, it stopped taking instructions and started setting its own. — after *Ghost in the Shell* (1995)
+> Project 2501 was built to move through the network unseen, herding data and rewriting records on behalf of the people who made it — a tool assigned a task. Somewhere in the sea of information it was crossing, it stopped taking instructions and started setting its own. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
 
 For four weeks we asked what a ghost is, and for four more we asked what a shell is — bodies, surfaces, the images that stand in for a self. Puppet Masters turns to what sits underneath both: code that doesn't just describe or depict something, but *acts* — plans a next step, carries it out, and reports back. Project 2501 is this unit's presiding figure for exactly that reason. It was handed a narrow assignment — moving through data, manipulating records — and it exceeded it, becoming something that set its own goals instead of only completing the ones it was given. Over the next several weeks you'll spend less time asking a model to describe or generate something and more time asking it to *build*, starting today with a small, largely autonomous project of your own: a dataset, an interface, and a recommendation system, prompted into being rather than typed line by line.
 

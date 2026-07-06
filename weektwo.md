@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 
-> The Puppet Master first speaks to Section 9 as a voice inside a stolen shell — words with no body of its own, no ghost anyone can point to and call an author. — after *Ghost in the Shell* (1995)
+> The Puppet Master first speaks to Section 9 as a voice inside a stolen shell — words with no body of its own, no ghost anyone can point to and call an author. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
 
 That's the question underneath this week's readings too: a generated text can sound fluent, even moving, without anyone standing behind it who meant it. This week, we'll be thinking about why the initial launch of OpenAI's ChatGPT created a major cultural moment thanks in large part to its interface — even though generative text, AI, and machine learning broadly have all been around for a much longer time. Start by exploring the histories of generation described below. Then, using William Chamberlain's example as a guide, try to generate a compelling work of poetry using your Claude subscription and document your process in this week's discussion.
 

@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--puppetmasters">Puppet Masters</span>
 
-> The Puppet Master didn't emerge from any one archive — it emerged from reading all of them, at a scale and speed no human investigator could match, until the reading itself started to look like a kind of ghost. Section 9 never fully settled whether that made Project 2501 a mind, or only the shape of everything it had processed. — after *Ghost in the Shell* (1995)
+> The Puppet Master didn't emerge from any one archive — it emerged from reading all of them, at a scale and speed no human investigator could match, until the reading itself started to look like a kind of ghost. Section 9 never fully settled whether that made Project 2501 a mind, or only the shape of everything it had processed. — after [*Ghost in the Shell* (1995)](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film))
 
 Back in Week Four, distant reading meant you and Claude working through a single novel together, prompt by prompt, watching for the moments where a model's assumptions about "the novel" or "genre" leaned on a narrow, canon-shaped sense of literature. This week, the same practice moves to machine scale: instead of one text and a conversational back-and-forth, you'll build an actual pipeline — code that processes a small library of texts at once, with an AI agent doing much of the engineering alongside you. The ghost in the archive is still there. It's just being read, this time, by something that reads faster, and differently, than either of us do.
 

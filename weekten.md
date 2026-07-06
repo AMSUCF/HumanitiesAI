@@ -14,7 +14,7 @@ canvas:
 
 <span class="unit-badge unit-badge--puppetmasters">Puppet Masters</span>
 
-> "A unification. A complete commingling and fusion of our separate beings to create a new and unique entity." — the Puppet Master, proposing to merge with Major Kusanagi, *Ghost in the Shell* (1995)
+> "A complete commingling and fusion of our separate beings to create a new and unique entity." — the Puppet Master, proposing a unification with Major Kusanagi, [*Ghost in the Shell* (1995)](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
 The Puppet Master doesn't ask Kusanagi to be absorbed or overwritten; it proposes something stranger — two systems, each incomplete on its own, becoming a third thing that is neither. That's the shape of this double week. You spent last week prompting a dataset and a recommendation site into being inside Claude's artifact viewer, fully contained, fully hers-or-his. This week that project leaves the sandbox: you rebuild it as an application that reasons over what a user actually types rather than what they click, and then you push it out through Git, GitHub, and Claude Code for the web until it's a page anyone can load. Simon Willison calls this general mode of working "vibe engineering" — not "vibe coding," where you never look at the code, but a real engineering practice built on delegating implementation to an agent while you stay responsible for what ships. Two weeks of the old syllabus have been merged into this one because the two halves are really one motion: build the thing, then let it out into the world. Twelve points, one continuous exercise, in two parts.
 
