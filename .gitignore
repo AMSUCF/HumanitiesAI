@@ -1,0 +1,5 @@
+canvas/.env
+canvas/preview/
+canvas/.state.json
+__pycache__/
+.venv/
