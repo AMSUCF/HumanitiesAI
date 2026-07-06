@@ -3,7 +3,7 @@ timezone: America/New_York
 assignment_groups:
   exercises: Exercises
   other: Course Requirements
-syllabus_file: ../index.md
+syllabus_file: index.md
 weeks: [weekone, weektwo, weekthree, weekfour, weekfive, weeksix, weekseven,
         weekeight, weeknine, weekten, weekeleven, weektwelve, weekthirteen, weekfourteen]
 extra: [finalreflection]

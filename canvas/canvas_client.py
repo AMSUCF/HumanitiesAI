@@ -66,6 +66,27 @@ class CanvasClient:
             return self._put(f"{self.course}/discussion_topics/{known_id}", payload)["id"]
         return self._post(f"{self.course}/discussion_topics", payload)["id"]
 
+    def upsert_assignment(self, name: str, points: int, due_at: str | None,
+                          assignment_group_id: int,
+                          submission_types: list[str],
+                          published: bool = False,
+                          known_id: int | None = None) -> int:
+        payload = {
+            "assignment": {
+                "name": name, "points_possible": points, "due_at": due_at,
+                "assignment_group_id": assignment_group_id,
+                "submission_types": submission_types, "published": published,
+            }
+        }
+        if known_id is None:
+            for a in self._get_all(f"{self.course}/assignments"):
+                if a["name"] == name:
+                    known_id = a["id"]
+                    break
+        if known_id is not None:
+            return self._put(f"{self.course}/assignments/{known_id}", payload)["id"]
+        return self._post(f"{self.course}/assignments", payload)["id"]
+
     def add_to_module(self, module_id: int, item_type: str, ref) -> None:
         items = self._get_all(f"{self.course}/modules/{module_id}/items")
         if item_type == "Page":

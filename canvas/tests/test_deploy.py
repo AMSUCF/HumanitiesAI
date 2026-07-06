@@ -33,6 +33,19 @@ def test_dry_run_writes_previews_and_no_network(tmp_path, monkeypatch, capsys):
     out = capsys.readouterr().out
     assert "[dry-run]" in out and "M1" in out
 
+def test_simple_syllabus_cli_writes_preview(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / "course.yml").write_text(
+        "site_base: https://x.y\ntimezone: America/New_York\n"
+        "assignment_groups: {exercises: Exercises, other: Course Requirements}\n"
+        "syllabus_file: index.md\nweeks: [weekone]\nextra: []\n", encoding="utf-8")
+    (tmp_path / "index.md").write_text(
+        "---\ntitle: X\n---\nintro\n\n## Course Description\n\nBody A\n",
+        encoding="utf-8")
+    (tmp_path / "weekone.md").write_text("---\ntitle: T\n---\nBody\n", encoding="utf-8")
+    assert deploy.main(["--simple-syllabus"]) == 0
+    assert (tmp_path / "preview" / "simple_syllabus.html").exists()
+
 def test_plan_week_rejects_unknown_unit(tmp_path):
     wk = tmp_path / "weekbad.md"
     wk.write_text(

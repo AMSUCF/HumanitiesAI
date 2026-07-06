@@ -35,3 +35,27 @@ def test_upsert_discussion_creates_graded():
     assert sent["assignment"]["points_possible"] == 6
     assert sent["assignment"]["assignment_group_id"] == 5
     assert sent["published"] is False
+
+@responses.activate
+def test_upsert_assignment_updates_known_id():
+    responses.put(f"{BASE}/assignments/42", json={"id": 42})
+    got = client().upsert_assignment("Activity Verification", 6,
+                                     "2026-08-31T03:59:00Z", 5,
+                                     ["online_url", "online_text_entry"],
+                                     known_id=42)
+    assert got == 42
+
+@responses.activate
+def test_upsert_assignment_creates_when_missing():
+    responses.get(f"{BASE}/assignments", json=[])
+    rsp = responses.post(f"{BASE}/assignments", json={"id": 44})
+    assert client().upsert_assignment("Activity Verification", 6,
+                                      "2026-08-31T03:59:00Z", 5,
+                                      ["online_url", "online_text_entry"]) == 44
+    import json as j
+    sent = j.loads(rsp.calls[0].request.body)
+    assert sent["assignment"]["name"] == "Activity Verification"
+    assert sent["assignment"]["points_possible"] == 6
+    assert sent["assignment"]["assignment_group_id"] == 5
+    assert sent["assignment"]["submission_types"] == ["online_url", "online_text_entry"]
+    assert sent["assignment"]["published"] is False

@@ -6,6 +6,7 @@ import os
 import sys
 from pathlib import Path
 
+import frontmatter
 import yaml
 from dotenv import load_dotenv
 
@@ -58,15 +59,16 @@ def main(argv=None) -> int:
 
     cfg = yaml.safe_load(Path("course.yml").read_text(encoding="utf-8"))
     root = _course_root(cfg)
-    stems = cfg["weeks"] + cfg.get("extra", []) if args.all else [args.week]
-    if not stems or stems == [None]:
-        ap.error("pass --all or --week NAME")
 
     if args.simple_syllabus:
         from simple_syllabus import build_package
         out = build_package(root / cfg["syllabus_file"], Path("preview"))
         print(f"simple syllabus package: {out}")
         return 0
+
+    stems = cfg["weeks"] + cfg.get("extra", []) if args.all else [args.week]
+    if not stems or stems == [None]:
+        ap.error("pass --all or --week NAME")
 
     plans = [plan_week(root / f"{s}.md", cfg["site_base"]) for s in stems]
 
@@ -106,6 +108,21 @@ def main(argv=None) -> int:
             client.add_to_module(module_id, "Discussion", disc_id)
             st["discussion_id"] = disc_id
         print(f"deployed: {p['module']}")
+
+    if args.all:
+        syllabus_post = frontmatter.load(str(root / cfg["syllabus_file"]))
+        syllabus_html = render_html(syllabus_post.content, cfg["site_base"])
+        client.upsert_page("Syllabus", syllabus_html, args.publish)
+
+        other_group_id = client.upsert_assignment_group(cfg["assignment_groups"]["other"])
+        av = cfg["activity_verification"]
+        av_id = client.upsert_assignment(
+            av["name"], av["points"], due_at_utc(av["due"]), other_group_id,
+            ["online_url", "online_text_entry"], args.publish,
+            known_id=state.get("activity_verification_id"))
+        state["activity_verification_id"] = av_id
+        print("deployed: Syllabus page, Activity Verification")
+
     STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
     return 0
 
