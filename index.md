@@ -126,6 +126,8 @@ guide the week's making experiments. Relevant recent articles will be integrated
 
 -   Science SARU's [*The Ghost in the Shell*](https://www.aboutamazon.com/news/entertainment/ghost-in-the-shell-anime-prime-video) (2026), streaming on Prime Video, with new episodes airing during the semester. This new adaptation is not required, but offers a running point of comparison to the 1995 film throughout the term.
 
+The [Fall 2025 version of this course](2025/index.md) remains available for reference.
+
 ## Required Subscriptions
 
 Students will need to subscribe to [Anthropic's Claude](https://claude.ai/) for hands-on exercises throughout the semester. A paid subscription is required to access the full functionality needed for course assignments.
@@ -204,7 +206,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *The AI Con* - Chapter 2: It's Alive! The Hype of Thinking Machines
 -   [Emerson, Lori, 'Interfaced', in Matthew Rubery, and Leah Price (eds), Further Reading (2020; online edn, Oxford Academic, 5 Mar. 2020).](https://loriemerson.net/2020/02/07/interfaced/)
 -   [Underwood, Ted. "A more interesting upside of AI." July 2, 2025.](https://tedunderwood.com/2025/07/02/a-more-interesting-upside-of-ai/)
--   [**Exercise: Interfaces**](weektwo.md)
+-   [**Exercise: Generation and Interfaces**](weektwo.md)
 
 ### Week Three: Ghosts - Sources (Monday, September 7 - Sunday, September 13)
 

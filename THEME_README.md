@@ -55,7 +55,7 @@ the light/dark toggle (they're brand chips, not theme-reactive surfaces):
 <span class="unit-badge unit-badge--ghosts">Ghosts</span>
 <span class="unit-badge unit-badge--shells">Shells</span>
 <span class="unit-badge unit-badge--puppetmasters">Puppet Masters</span>
-<span class="unit-badge unit-badge--coda">Coda</span>
+<span class="unit-badge unit-badge--coda">The Net Is Vast and Infinite</span>
 ```
 
 | Class                          | Color     |

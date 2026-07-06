@@ -215,7 +215,7 @@ function initializeTableEnhancements() {
     const rows = table.querySelectorAll('tr');
     rows.forEach(row => {
       row.addEventListener('mouseenter', function() {
-        this.style.background = 'rgba(0, 255, 255, 0.1)';
+        this.style.background = 'color-mix(in srgb, var(--accent) 10%, transparent)';
         this.style.transform = 'scale(1.01)';
       });
       
@@ -231,7 +231,7 @@ function initializeTableEnhancements() {
       header.style.cursor = 'pointer';
       header.addEventListener('click', function() {
         // Simple visual feedback for clicking headers
-        this.style.background = 'rgba(168, 85, 247, 0.3)';
+        this.style.background = 'color-mix(in srgb, var(--accent-2) 30%, transparent)';
         setTimeout(() => {
           this.style.background = '';
         }, 200);

@@ -31,7 +31,7 @@ The mechanics here are the same as last week — [Week Ten](weekten.md) has the 
    - Make it public (required for GitHub Pages)
    - Initialize with a README if you'd like
 
-2. **Open Claude Code for the web** at [code.claude.ai](https://code.claude.ai)
+2. **Open Claude Code for the web** at [claude.ai/code](https://claude.ai/code)
    - Select your new repository from the list (this is where your personal access token from Week Ten comes in — but since that token was scoped to "Only select repositories," you'll need to either edit its repository list on GitHub to add this new repo, or generate a fresh fine-grained token scoped to it, following Week Ten's steps)
    - In the big box, type `/init`
    - Start the project — this initializes Claude Code's tracking and project structure (more on [slash commands](https://docs.claude.com/en/docs/claude-code/slash-commands) if you're curious)

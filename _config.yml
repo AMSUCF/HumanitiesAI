@@ -4,3 +4,9 @@ plugins:
 
 title: Humanities in the Age of AI
 description: Fall 2026 - Anastasia Salter
+
+exclude:
+  - canvas/
+  - docs/
+  - .superpowers/
+  - "2025/*old.md"
