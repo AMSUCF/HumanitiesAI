@@ -40,11 +40,13 @@ def test_simple_syllabus_cli_writes_preview(tmp_path, monkeypatch):
         "assignment_groups: {exercises: Exercises, other: Course Requirements}\n"
         "syllabus_file: index.md\nweeks: [weekone]\nextra: []\n", encoding="utf-8")
     (tmp_path / "index.md").write_text(
-        "---\ntitle: X\n---\nintro\n\n## Course Description\n\nBody A\n",
+        "---\ntitle: X\n---\nintro\n\n## Course Description\n\nBody A [wk](weekone.md)\n",
         encoding="utf-8")
     (tmp_path / "weekone.md").write_text("---\ntitle: T\n---\nBody\n", encoding="utf-8")
     assert deploy.main(["--simple-syllabus"]) == 0
-    assert (tmp_path / "preview" / "simple_syllabus.html").exists()
+    out = (tmp_path / "preview" / "simple_syllabus.html")
+    assert out.exists()
+    assert 'href="https://x.y/weekone.html"' in out.read_text(encoding="utf-8")
 
 def test_plan_week_rejects_unknown_unit(tmp_path):
     wk = tmp_path / "weekbad.md"

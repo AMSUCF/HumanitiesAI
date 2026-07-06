@@ -62,7 +62,7 @@ def main(argv=None) -> int:
 
     if args.simple_syllabus:
         from simple_syllabus import build_package
-        out = build_package(root / cfg["syllabus_file"], Path("preview"))
+        out = build_package(root / cfg["syllabus_file"], Path("preview"), cfg["site_base"])
         print(f"simple syllabus package: {out}")
         return 0
 
@@ -86,44 +86,50 @@ def main(argv=None) -> int:
         return 0
 
     load_dotenv()
+    import requests
     from canvas_client import CanvasClient
     client = CanvasClient(os.environ["CANVAS_API_URL"],
                           os.environ["CANVAS_API_TOKEN"],
                           os.environ["CANVAS_COURSE_ID"])
     state = _load_state()
     group_id = client.upsert_assignment_group(cfg["assignment_groups"]["exercises"])
-    for p in plans:
-        st = state.setdefault(p["stem"], {})
-        module_id = client.upsert_module(p["module"])
-        page_url = client.upsert_page(p["module"], p["page_html"], args.publish)
-        client.add_to_module(module_id, "Page", page_url)
-        st.update(module_id=module_id, page_url=page_url)
-        if p["has_discussion"]:
-            title = f"Exercise Discussion: {p['module']}"
-            disc_id = client.upsert_discussion(
-                title, p["discussion_html"],
-                0 if p["extra_credit"] else p["points"],
-                p["due_at"], group_id, args.publish,
-                known_id=st.get("discussion_id"))
-            client.add_to_module(module_id, "Discussion", disc_id)
-            st["discussion_id"] = disc_id
-        print(f"deployed: {p['module']}")
+    try:
+        for p in plans:
+            try:
+                st = state.setdefault(p["stem"], {})
+                module_id = client.upsert_module(p["module"])
+                page_url = client.upsert_page(p["module"], p["page_html"], args.publish)
+                client.add_to_module(module_id, "Page", page_url)
+                st.update(module_id=module_id, page_url=page_url)
+                if p["has_discussion"]:
+                    title = f"Exercise Discussion: {p['module']}"
+                    disc_id = client.upsert_discussion(
+                        title, p["discussion_html"],
+                        0 if p["extra_credit"] else p["points"],
+                        p["due_at"], group_id, args.publish,
+                        known_id=st.get("discussion_id"))
+                    client.add_to_module(module_id, "Discussion", disc_id)
+                    st["discussion_id"] = disc_id
+                print(f"deployed: {p['module']}")
+            except requests.HTTPError as e:
+                raise SystemExit(f"deploy failed at '{p['module']}': {e}")
 
-    if args.all:
-        syllabus_post = frontmatter.load(str(root / cfg["syllabus_file"]))
-        syllabus_html = render_html(syllabus_post.content, cfg["site_base"])
-        client.upsert_page("Syllabus", syllabus_html, args.publish)
+        if args.all:
+            syllabus_post = frontmatter.load(str(root / cfg["syllabus_file"]))
+            syllabus_html = render_html(syllabus_post.content, cfg["site_base"])
+            client.upsert_page("Syllabus", syllabus_html, args.publish)
 
-        other_group_id = client.upsert_assignment_group(cfg["assignment_groups"]["other"])
-        av = cfg["activity_verification"]
-        av_id = client.upsert_assignment(
-            av["name"], av["points"], due_at_utc(av["due"]), other_group_id,
-            ["online_url", "online_text_entry"], args.publish,
-            known_id=state.get("activity_verification_id"))
-        state["activity_verification_id"] = av_id
-        print("deployed: Syllabus page, Activity Verification")
+            other_group_id = client.upsert_assignment_group(cfg["assignment_groups"]["other"])
+            av = cfg["activity_verification"]
+            av_id = client.upsert_assignment(
+                av["name"], av["points"], due_at_utc(av["due"]), other_group_id,
+                ["online_url", "online_text_entry"], args.publish,
+                known_id=state.get("activity_verification_id"))
+            state["activity_verification_id"] = av_id
+            print("deployed: Syllabus page, Activity Verification")
+    finally:
+        STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
 
-    STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
     return 0
 
 
