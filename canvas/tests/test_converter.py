@@ -40,3 +40,11 @@ def test_render_leaves_absolute_and_anchor_links():
     html = render_html("[a](https://claude.ai) [b](#discussion)", "https://x.y")
     assert 'href="https://claude.ai"' in html
     assert 'href="#discussion"' in html
+
+def test_render_strips_dot_slash_prefix_only():
+    html = render_html("![x](./images/x.png)", "https://x.y")
+    assert 'src="https://x.y/images/x.png"' in html
+
+def test_render_preserves_parent_traversal():
+    html = render_html("[up](../other/page.md)", "https://x.y")
+    assert 'href="https://x.y/../other/page.html"' in html

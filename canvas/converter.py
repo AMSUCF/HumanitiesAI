@@ -45,7 +45,8 @@ def _rewrite(html: str, site_base: str) -> str:
         if re.match(r"^(https?:|mailto:|#|data:|//)", url):
             return m.group(0)
         url = re.sub(r"\.md(?=(#|$))", ".html", url)
-        return f'{attr}="{base}/{url.lstrip("./")}"'
+        url = re.sub(r"^(\./)+", "", url)
+        return f'{attr}="{base}/{url}"'
 
     return re.sub(r'(href|src)="([^"]+)"', fix, html)
 
