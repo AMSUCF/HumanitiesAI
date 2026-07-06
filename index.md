@@ -62,7 +62,7 @@ critiques of AI's use in the arts and humanities:
     perspectives on artists and creativity.
 -   **Puppet Masters.** In this procedural-agentic unit, we dive into
     the layer of code and the rise of the AI agent: a figure, like the
-    Puppet Master of the film, "born in a sea of information," acting
+    Puppet Master of the film, born in a sea of information, acting
     with increasing autonomy across our systems. With attention to the
     history of generative practices in both electronic literature and
     digital humanities usage, students will co-author code and
