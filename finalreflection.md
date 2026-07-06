@@ -9,6 +9,7 @@ canvas:
   discussion: true
   extra_credit: false
   unit: coda
+hide_warning: true
 ---
 
 ## Final Reflection
