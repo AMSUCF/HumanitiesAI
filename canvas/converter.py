@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from datetime import datetime, time
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import frontmatter
 from markdown_it import MarkdownIt
@@ -53,3 +55,31 @@ def _rewrite(html: str, site_base: str) -> str:
 
 def render_html(md_text: str, site_base: str) -> str:
     return _rewrite(_md.render(md_text), site_base)
+
+
+TZ = ZoneInfo("America/New_York")
+_DISCUSSION_RE = re.compile(r"^### Discussion[ \t]*$", re.MULTILINE)
+
+
+def split_discussion(md_text: str) -> tuple[str, str]:
+    m = _DISCUSSION_RE.search(md_text)
+    if not m:
+        return md_text.strip(), ""
+    return md_text[: m.start()].strip(), md_text[m.end():].strip()
+
+
+def due_at_utc(due_date) -> str:
+    dt = datetime.combine(due_date, time(23, 59), tzinfo=TZ)
+    return dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def apply_canvas_style(html: str, unit: str) -> str:
+    color, label = UNIT_COLORS[unit], UNIT_LABELS[unit]
+    band = (
+        f'<div style="border-top: 6px solid {color}; padding: 12px 0 4px 0; '
+        f'margin-bottom: 16px;"><span style="display: inline-block; '
+        f'padding: 2px 10px; border-radius: 9999px; background: {color}; '
+        f'color: #ffffff; font-size: 12px; letter-spacing: 1px; '
+        f'text-transform: uppercase;">{label}</span></div>'
+    )
+    return band + html
