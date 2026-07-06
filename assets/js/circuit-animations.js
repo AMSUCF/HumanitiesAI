@@ -36,10 +36,16 @@ function buildDataStream(svg, { columns, rows, viewWidth, viewHeight }) {
     // stays subtle instead of filling with glyphs edge-to-edge.
     if (Math.random() < 0.35) continue;
 
+    // Two nested groups because CSS transforms OVERRIDE the SVG transform
+    // attribute: the drift animation sets a CSS transform on the inner
+    // group, so horizontal placement must live on a separate outer group
+    // or every column collapses to x=0 at the left edge.
+    const pos = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const x = Math.round(c * spacing + spacing / 2);
+    pos.setAttribute('transform', `translate(${x}, 0)`);
+
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     g.setAttribute('class', 'data-glyph-col');
-    const x = Math.round(c * spacing + spacing / 2);
-    g.setAttribute('transform', `translate(${x}, 0)`);
 
     // Slow, staggered drift (8-18s) with a negative delay so columns start
     // mid-cycle instead of all animating in lockstep.
@@ -58,7 +64,8 @@ function buildDataStream(svg, { columns, rows, viewWidth, viewHeight }) {
       text.textContent = glyphs[r];
       g.appendChild(text);
     }
-    svg.appendChild(g);
+    pos.appendChild(g);
+    svg.appendChild(pos);
   }
 }
 
