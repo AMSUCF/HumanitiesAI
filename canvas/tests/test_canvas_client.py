@@ -1,0 +1,37 @@
+import responses
+from canvas_client import CanvasClient
+
+BASE = "https://webcourses.ucf.edu/api/v1/courses/123"
+
+def client():
+    return CanvasClient("https://webcourses.ucf.edu", "tok", "123")
+
+@responses.activate
+def test_upsert_module_finds_existing():
+    responses.get(f"{BASE}/modules", json=[{"id": 7, "name": "Week One"}])
+    assert client().upsert_module("Week One") == 7
+
+@responses.activate
+def test_upsert_module_creates_when_missing():
+    responses.get(f"{BASE}/modules", json=[])
+    responses.post(f"{BASE}/modules", json={"id": 9, "name": "Week Two"})
+    assert client().upsert_module("Week Two") == 9
+
+@responses.activate
+def test_upsert_discussion_updates_known_id():
+    responses.put(f"{BASE}/discussion_topics/42", json={"id": 42})
+    got = client().upsert_discussion("T", "<p>m</p>", 6,
+                                     "2026-08-31T03:59:00Z", 5, known_id=42)
+    assert got == 42
+
+@responses.activate
+def test_upsert_discussion_creates_graded():
+    responses.get(f"{BASE}/discussion_topics", json=[])
+    rsp = responses.post(f"{BASE}/discussion_topics", json={"id": 43})
+    assert client().upsert_discussion("T", "<p>m</p>", 6,
+                                      "2026-08-31T03:59:00Z", 5) == 43
+    import json as j
+    sent = j.loads(rsp.calls[0].request.body)
+    assert sent["assignment"]["points_possible"] == 6
+    assert sent["assignment"]["assignment_group_id"] == 5
+    assert sent["published"] is False
