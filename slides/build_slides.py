@@ -183,7 +183,7 @@ def slide_html(rec, draft: bool) -> str:
     if full:
         if rec["title"]:
             parts.append(f"<h2 class=\"sr-only\">{html.escape(rec['title'])}</h2>")
-        wide = " multi" if len(imgs) > 1 else ""
+        wide = f" multi multi-{min(len(imgs), 4)}" if len(imgs) > 1 else ""
         parts.append(f'<div class="bleed-wrap{wide}">' + "".join(
             f'<img class="bleed" data-src="media/{n}" alt="">' for n in imgs)
             + "</div>")
@@ -257,6 +257,7 @@ def deck_page(week_num: int, stem: str, meta: dict, sections: list[str],
 <script src="../assets/reveal/plugin/notes/notes.js"></script>
 <script>
 Reveal.initialize({{ hash: true, slideNumber: 'c/t',
+  width: 1280, height: 720, margin: 0.05,
   plugins: [ RevealNotes ] }});
 </script>
 </body>

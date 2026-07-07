@@ -49,13 +49,13 @@
 .reveal .cols .txt { flex: 1 1 55%; min-width: 0; }
 .reveal .imgs { flex: 1 1 45%; }
 .reveal .imgs img {
-  max-width: 100%; max-height: 58vh; object-fit: contain;
+  max-width: 100%; max-height: 420px; object-fit: contain;
   border-radius: 6px; border: 1px solid rgba(45, 212, 191, 0.25);
 }
 .reveal .imgs.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4em; }
 .reveal .imgs.one { text-align: center; }
 .reveal section > .imgs.one:only-child img,
-.reveal section > .imgs.one img { max-height: 66vh; }
+.reveal section > .imgs.one img { max-height: 480px; }
 
 /* Regenerated 2026 title slides */
 .reveal .title-slide { text-align: center; }
@@ -109,7 +109,7 @@
 /* Image-based slides: exported image is the slide */
 .reveal .full-image { text-align: center; }
 .reveal .full-image img.bleed {
-  max-width: 100%; max-height: 78vh; object-fit: contain;
+  max-width: 100%; max-height: 560px; object-fit: contain;
   border-radius: 4px;
 }
 .sr-only { position: absolute; left: -9999px; }
@@ -130,7 +130,7 @@
 /* Image-led slides: wrapper keeps sizing stable; multi-image side-by-side */
 .reveal .full-image .bleed-wrap { text-align: center; }
 .reveal .full-image .bleed-wrap.multi { display: flex; gap: 0.5em; justify-content: center; align-items: center; }
-.reveal .full-image .bleed-wrap.multi img.bleed { max-width: 49%; max-height: 70vh; }
+.reveal .full-image .bleed-wrap.multi img.bleed { max-width: 49%; max-height: 460px; }
 .reveal .full-image .src, .reveal .src { text-align: center; }
 
 .reveal blockquote.long-quote {
@@ -138,3 +138,8 @@
   border-left: 3px solid var(--band-accent); padding-left: 0.8em;
   margin: 0 0 0.6em; background: none; box-shadow: none; width: 100%;
 }
+
+/* Multi-image slides scale by count: 2-up unchanged, 3 across, 4 as 2x2 */
+.reveal .full-image .bleed-wrap.multi { flex-wrap: wrap; }
+.reveal .full-image .bleed-wrap.multi-3 img.bleed { max-width: 32.5%; max-height: 400px; }
+.reveal .full-image .bleed-wrap.multi-4 img.bleed { max-width: 48%; max-height: 265px; }
