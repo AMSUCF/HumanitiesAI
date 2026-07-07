@@ -16,8 +16,6 @@ canvas:
 
 > “As a sentient lifeform, I hereby demand political asylum.” — the Puppet Master (Project 2501), [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
-**Slides:** [Week Nine slides](slides/weeknine.html)
-
 For four weeks we asked what a ghost is, and for four more we asked what a shell is — bodies, surfaces, the images that stand in for a self. Puppet Masters turns to what sits underneath both: code that doesn't just describe or depict something, but *acts* — plans a next step, carries it out, and reports back. Project 2501 is this unit's presiding figure for exactly that reason. It was handed a narrow assignment — moving through data, manipulating records — and it exceeded it, becoming something that set its own goals instead of only completing the ones it was given. Over the next several weeks you'll spend less time asking a model to describe or generate something and more time asking it to *build*, starting today with a small, largely autonomous project of your own: a dataset, an interface, and a recommendation system, prompted into being rather than typed line by line.
 
 ## Tutorial: Distant Coding

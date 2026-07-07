@@ -190,6 +190,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week One: Ghosts - Histories (Monday, August 24 - Sunday, August 30)
 
+-   [**Slides: Week One**](slides/weekone.html)
+
 -   *Artificial Intelligence* - Part I: Background
 -   *The AI Con* - Chapter 1: An Introduction to AI Hype
 -   Berry, D. M. (2023). The Limits of Computation: Joseph Weizenbaum and the ELIZA Chatbot. *Weizenbaum Journal of the Digital Society*, 3(3). [https://doi.org/10.34669/WI.WJDS/3.3.2](https://ojs.weizenbaum-institut.de/index.php/wjds/article/view/106)
@@ -199,6 +201,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week Two: Ghosts - Generation (Monday, August 31 - Sunday, September 6)
 
+-   [**Slides: Week Two**](slides/weektwo.html)
+
 -   *Artificial Intelligence* - Part II: Looking and Seeing
 -   *The AI Con* - Chapter 2: It's Alive! The Hype of Thinking Machines
 -   [Emerson, Lori, 'Interfaced', in Matthew Rubery, and Leah Price (eds), Further Reading (2020; online edn, Oxford Academic, 5 Mar. 2020).](https://loriemerson.net/2020/02/07/interfaced/)
@@ -206,6 +210,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [**Exercise: Generation and Interfaces**](weektwo.md)
 
 ### Week Three: Ghosts - Sources (Monday, September 7 - Sunday, September 13)
+
+-   [**Slides: Week Three**](slides/weekthree.html)
 
 -   *Artificial Intelligence* - Part III: Learning to Play
 -   *The AI Con* - Chapter 3: Leisure for Me, Gig Work for Thee: AI Hype at Work
@@ -216,6 +222,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week Four: Ghosts - Reading (Monday, September 14 - Sunday, September 20)
 
+-   [**Slides: Week Four**](slides/weekfour.html)
+
 -   *Artificial Intelligence* - Part IV: Artificial Intelligence Meets Natural Language
 -   *The AI Con* - Chapter 4: If It Quacks Like a Doc: AI Hype and Social Services
 -   *Algorithms of Oppression* - The Power of Algorithms
@@ -224,6 +232,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [**Exercise: Reading Across Texts**](weekfour.md)
 
 ### Week Five: Shells - Aesthetics (Monday, September 21 - Sunday, September 27)
+
+-   [**Slides: Week Five**](slides/weekfive.html)
 
 -   *Artificial Intelligence* - Part V: The Barrier of Meaning
 -   *The AI Con* - Chapter 5: Artifice or Intelligence? AI Hype in Art, Journalism, and Science
@@ -234,6 +244,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week Six: Shells - Art and Creativity (Monday, September 28 - Sunday, October 4)
 
+-   [**Slides: Week Six**](slides/weeksix.html)
+
 -   *The AI Con* - Chapter 6: I'm Sorry, Dave, I'm Afraid I Can't Do That: AI Doomers, AI Boosters, and Why None of That Makes Sense
 -   *Algorithms of Oppression* - Searching for Black Girls
 -   [Jebb, Louis. "On process: Refik Anadol seeks to demystify AI art by showing how it is put together." *The Art Newspaper.* April 5, 2024.](https://www.theartnewspaper.com/2024/04/05/on-process-refik-anadol-seeks-to-demystify-ai-art-by-showing-how-it-is-put-together)
@@ -241,6 +253,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [**Exercise: Archival Images**](weeksix.md)
 
 ### Week Seven: Shells - Video and Realism (Monday, October 5 - Sunday, October 11)
+
+-   [**Slides: Week Seven**](slides/weekseven.html)
 
 -   *The AI Con* - Chapter 7: Do You Believe in Hope After Hype?
 -   *Algorithms of Oppression* - Future of Knowledge in Public
@@ -251,6 +265,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week Eight: Shells - Perceptions (Monday, October 12 - Sunday, October 18)
 
+-   [**Slides: Week Eight**](slides/weekeight.html)
+
 -   *Algorithms of Oppression* - Future of Information Culture; Conclusion
 -   [Farrell, Henry. "After software eats the world, what comes out the other end?" October 3, 2024.](https://www.programmablemutter.com/p/after-software-eats-the-world-what)
 -   [404 Media. "Pinterest Is Drowning in a Sea of AI Slop and Auto-Moderation." February 2026.](https://www.404media.co/pinterest-is-drowning-in-a-sea-of-ai-slop-and-auto-moderation/)
@@ -259,6 +275,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week Nine: Puppet Masters - Distant Coding (Monday, October 19 - Sunday, October 25)
 
+-   [**Slides: Week Nine**](slides/weeknine.html)
+
 -   *AI for Good* - Introduction and Chapter 1: "I Believe the Children Are Our Future"
 -   Evans, Julia. [*So you want to be a wizard.*](https://wizardzines.com/zines/wizard/)
 -   [Willison, Simon. "Here's how I use LLMs to help me write code." March 11, 2025.](https://simonwillison.net/2025/Mar/11/using-llms-for-code/)
@@ -266,11 +284,15 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week Ten: Puppet Masters - Building and Deploying (Monday, October 26 - Sunday, November 1)
 
+-   [**Slides: Week Ten**](slides/weekten.html)
+
 -   *AI for Good* - Chapter 2: "Physician Heal Thyself"
 -   [Willison, Simon. "Vibe engineering." October 7, 2025.](https://simonwillison.net/2025/Oct/7/vibe-engineering/) *(Willison flags "agentic engineering" as the settling term for this concept -- we'll discuss both.)*
 -   [**Exercise: Building and Deploying**](weekten.md)
 
 ### Week Eleven: Puppet Masters - Agentic Code (Monday, November 2 - Sunday, November 8)
+
+-   [**Slides: Week Eleven**](slides/weekeleven.html)
 
 -   *AI for Good* - Chapter 3: "A Republic If You Can Optimize"
 -   [Willison, Simon. "Designing agentic loops." September 30, 2025.](https://simonwillison.net/2025/Sep/30/designing-agentic-loops/)
@@ -279,12 +301,16 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 ### Week Twelve: Puppet Masters - Local Ghosts (Monday, November 9 - Sunday, November 15)
 
+-   [**Slides: Week Twelve**](slides/weektwelve.html)
+
 -   *AI for Good* - Chapter 4: "Only Connect"
 -   [Willison, Simon. "The lethal trifecta for AI agents: private data, untrusted content, and external communication." June 16, 2025.](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/)
 -   [DeepSeek-R1 model card.](https://huggingface.co/deepseek-ai/DeepSeek-R1)
 -   [**Exercise: Local Models**](weektwelve.md)
 
 ### Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, November 22)
+
+-   [**Slides: Week Thirteen**](slides/weekthirteen.html)
 
 -   *AI for Good* - Epilogue
 -   ["Generative AI & Fictionality: How Novels Power Large Language Models." arXiv:2603.01220 (2026).](https://arxiv.org/pdf/2603.01220)
@@ -297,6 +323,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 No module this week -- enjoy the Thanksgiving break! There is no new reading, exercise, or discussion due during this week.
 
 ### Week Fourteen: The Net Is Vast and Infinite - Custom Bots (Extra Credit, Monday, November 30 - Sunday, December 6)
+
+-   [**Slides: Week Fourteen**](slides/weekfourteen.html)
 
 This coda module is **extra credit only** and carries no new *AI for Good* chapter -- instead, revisit the Introduction and Epilogue alongside our ELIZA and Puppet Master callbacks from earlier in the semester, working with the "Ghosts Before the Shell" public-domain corpus: Mary Shelley's *Frankenstein* ([Gutenberg #41445](https://www.gutenberg.org/ebooks/41445)), Karel Čapek's *R.U.R.* ([Gutenberg #59112](https://www.gutenberg.org/ebooks/59112)), Thea von Harbou's *Metropolis* ([Gutenberg #73727](https://www.gutenberg.org/ebooks/73727)), Ambrose Bierce's "Moxon's Master" (in [*Can Such Things Be?*, Gutenberg #4366](https://www.gutenberg.org/ebooks/4366)), E.T.A. Hoffmann's "The Sand-Man" (in [*Weird Tales, Vol. 1*, Gutenberg #31377](https://www.gutenberg.org/ebooks/31377)), and Edward S. Ellis's *The Huge Hunter; or, The Steam Man of the Prairies* ([Gutenberg #7506](https://www.gutenberg.org/ebooks/7506)).
 

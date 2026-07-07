@@ -16,8 +16,6 @@ canvas:
 
 > “…DNA is nothing more than a program designed to preserve itself.” — the Puppet Master, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
-**Slides:** [Week Five slides](slides/weekfive.html)
-
 For four weeks we've been asking what a ghost is: the mind, the voice, the sense that someone is home behind a run of generated text. This week turns the question inside out. If a ghost can be generated, a shell can be too — and if the epigraph can shrug off the line between a body and a program, then the images that stand in for bodies are fair game for generation all the way down. For the next four weeks we're in Shells territory — bodies, surfaces, and the pictures that stand in for them, most of it now produced by systems that can manufacture a face or a figure about as easily as they produce a sentence.
 
 This week's readings add Donna Haraway's "A Cyborg Manifesto" (excerpt) as the theoretical anchor for the whole unit. Haraway's cyborg — "a creature in a post-gender world," unconcerned with clean lines between organism and machine, human and animal, physical and non-physical — gives us sharper language for the shelling sequence than "special effects" does: a manufactured body is not a lesser body, and the boundary-panic the film's world feels about cyborg shells is close to the boundary-panic Haraway argues we would do well to live without. Keep her framework in mind as you generate images this week. Every AI-generated face or figure you produce is its own small shelling sequence: a surface built from data, offered up to be looked at, with no one required to ask whether it deserves a body before it's allowed to look like one.

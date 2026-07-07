@@ -16,8 +16,6 @@ canvas:
 
 > “Overspecialize and you breed in weakness. It’s slow death.” — Major Kusanagi, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
-**Slides:** [Week Twelve slides](slides/weektwelve.html)
-
 Kusanagi's warning about overspecialization is also an argument about infrastructure: a monoculture — one network, one provider, one way of running a mind — breeds in weakness. This week's exercise asks what a ghost looks like when it refuses that condition entirely: a language model running on your own machine, answerable to no one, sending nothing out. Simon Willison's ["The lethal trifecta for AI agents"](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) names a more mundane version of the same worry that animates the film's ghost-hacking plot: an agent that can read private data, process untrusted content, and communicate externally has, in combination, everything it needs to leak what it shouldn't — no cyberbrain hacking required, just three ordinary capabilities meeting inside one system. Local models and careful agent design are two different answers to that worry. One keeps the ghost off the network altogether; the other tries to keep the trifecta's three legs from ever lining up inside a single agent. This week, choose one of two options to explore that territory hands-on.
 
 ## Exercise: Local Models or Agentic Applications
