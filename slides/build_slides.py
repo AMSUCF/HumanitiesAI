@@ -144,35 +144,60 @@ def extract() -> tuple[list[dict], dict]:
     return records, cache
 
 
+URL_RE = re.compile(r"https?://[^\s<>\"]+")
+
+
+def linkify(text: str) -> str:
+    """Any http(s) URL in slide text becomes a live link."""
+    escaped = html.escape(text)
+    return URL_RE.sub(lambda m: f'<a href="{m.group(0)}">{m.group(0)}</a>', escaped)
+
+
+def is_url_para(text: str) -> bool:
+    return bool(re.fullmatch(r"https?://\S+", text.strip()))
+
+
 def para_html(paras) -> str:
     out = []
     for level, text in paras:
-        cls = f' class="lvl{level}"' if level else ""
-        out.append(f"<p{cls}>{html.escape(text)}</p>")
+        if is_url_para(text):
+            url = html.escape(text.strip())
+            out.append(f'<p class="src"><a href="{url}">{url}</a></p>')
+        else:
+            cls = f' class="lvl{level}"' if level else ""
+            out.append(f"<p{cls}>{linkify(text)}</p>")
     return "\n".join(out)
 
 
 def slide_html(rec, draft: bool) -> str:
-    body = para_html(rec["paras"])
     imgs = rec["images"]
-    text_len = sum(len(p) for _, p in rec["paras"]) + len(rec["title"] or "")
-    full = len(imgs) == 1 and text_len < 60
+    url_paras = [(l, p) for l, p in rec["paras"] if is_url_para(p)]
+    text_paras = [(l, p) for l, p in rec["paras"] if not is_url_para(p)]
+    text_len = sum(len(p) for _, p in text_paras) + len(rec["title"] or "")
+    # image-led slide: the exported image(s) ARE the slide; bare-URL
+    # paragraphs render as live source links beneath them. Images use
+    # reveal's data-src lazy loading — native loading="lazy" breaks
+    # reveal's vertical centering (slides measured before images load).
+    full = bool(imgs) and text_len < 60
     parts = ['<section class="full-image">' if full else "<section>"]
     if full:
-        # image-based slide: the exported image IS the slide
         if rec["title"]:
             parts.append(f"<h2 class=\"sr-only\">{html.escape(rec['title'])}</h2>")
-        parts.append(f'<img class="bleed" src="media/{imgs[0]}" alt="" loading="lazy">')
-        if body:
-            parts.append(body)
+        wide = " multi" if len(imgs) > 1 else ""
+        parts.append(f'<div class="bleed-wrap{wide}">' + "".join(
+            f'<img class="bleed" data-src="media/{n}" alt="">' for n in imgs)
+            + "</div>")
+        if url_paras or text_paras:
+            parts.append(para_html(url_paras + text_paras))
     else:
         if rec["title"]:
             parts.append(f"<h2>{html.escape(rec['title'])}</h2>")
+        body = para_html(rec["paras"])
         img_html = ""
         if imgs:
             cls = "one" if len(imgs) == 1 else "grid"
             img_html = f'<div class="imgs {cls}">' + "".join(
-                f'<img src="media/{n}" alt="" loading="lazy">' for n in imgs) + "</div>"
+                f'<img data-src="media/{n}" alt="">' for n in imgs) + "</div>"
         if body and img_html:
             parts.append(f'<div class="cols"><div class="txt">{body}</div>{img_html}</div>')
         else:

@@ -126,3 +126,15 @@
   background: rgba(12, 18, 16, 0.74);
   backdrop-filter: blur(2px);
 }
+
+/* Image-led slides: wrapper keeps sizing stable; multi-image side-by-side */
+.reveal .full-image .bleed-wrap { text-align: center; }
+.reveal .full-image .bleed-wrap.multi { display: flex; gap: 0.5em; justify-content: center; align-items: center; }
+.reveal .full-image .bleed-wrap.multi img.bleed { max-width: 49%; max-height: 70vh; }
+.reveal .full-image .src, .reveal .src { text-align: center; }
+
+.reveal blockquote.long-quote {
+  font-size: 0.85em; line-height: 1.5; font-style: italic;
+  border-left: 3px solid var(--band-accent); padding-left: 0.8em;
+  margin: 0 0 0.6em; background: none; box-shadow: none; width: 100%;
+}

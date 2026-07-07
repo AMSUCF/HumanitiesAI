@@ -18,17 +18,17 @@
   {
    "op": "replace",
    "at": 6,
-   "html": "<section>\n<h2>What is generative AI?</h2>\n<div class=\"cols\"><div class=\"txt\">\n<p>Generative AI (per the MLA-CCCC task force) “refers to computer systems that can produce, or generate, various forms of traditionally human expression, in the form of digital content including language, images, video, and music.”</p>\n<p><a href=\"https://aiandwriting.hcommons.org/working-paper-1/\">MLA-CCCC Joint Task Force on Writing and AI — Working Paper 1</a></p>\n</div><div class=\"imgs one\"><img src=\"media/e5486d6cd13a.png\" alt=\"\" loading=\"lazy\"></div></div>\n</section>"
+   "html": "<section>\n<h2>What is generative AI?</h2>\n<div class=\"cols\"><div class=\"txt\">\n<p>Generative AI (per the MLA-CCCC task force) “refers to computer systems that can produce, or generate, various forms of traditionally human expression, in the form of digital content including language, images, video, and music.”</p>\n<p><a href=\"https://aiandwriting.hcommons.org/working-paper-1/\">MLA-CCCC Joint Task Force on Writing and AI — Working Paper 1</a></p>\n</div><div class=\"imgs one\"><img data-src=\"media/e5486d6cd13a.png\" alt=\"\"></div></div>\n</section>"
   },
   {
    "op": "replace",
    "at": 7,
-   "html": "<section class=\"full-image\">\n<img class=\"bleed\" src=\"media/720b34f3affc.png\" alt=\"Diagram comparing generative AI, agentic AI, and AI agents\" loading=\"lazy\">\n<p class=\"src\"><a href=\"https://pub.towardsai.net/generative-ai-vs-agentic-ai-vs-ai-agents-what-everyone-needs-to-know-dc42fd13e745\">Source: Towards AI, “Generative AI vs Agentic AI vs AI Agents”</a></p>\n</section>"
+   "html": "<section class=\"full-image\">\n<img class=\"bleed\" data-src=\"media/720b34f3affc.png\" alt=\"Diagram comparing generative AI, agentic AI, and AI agents\">\n<p class=\"src\"><a href=\"https://pub.towardsai.net/generative-ai-vs-agentic-ai-vs-ai-agents-what-everyone-needs-to-know-dc42fd13e745\">Source: Towards AI, “Generative AI vs Agentic AI vs AI Agents”</a></p>\n</section>"
   },
   {
    "op": "replace",
    "at": 13,
-   "html": "<section class=\"full-image\">\n<img class=\"bleed\" src=\"media/49b22a2e01d1.jpg\" alt=\"Current Claude interface screenshot\" loading=\"lazy\">\n</section>"
+   "html": "<section class=\"full-image\">\n<img class=\"bleed\" data-src=\"media/49b22a2e01d1.jpg\" alt=\"Current Claude interface screenshot\">\n</section>"
   },
   {
    "op": "replace",
@@ -39,6 +39,31 @@
    "op": "replace",
    "at": 15,
    "html": "<section>\n<h2>Claude Pro</h2>\n<p>This course requires a paid <a href=\"https://claude.com/pricing\">Claude subscription</a> — the <strong>Pro plan ($20/month, or $17/month billed annually)</strong> covers everything we do this semester.</p>\n<p class=\"lvl1\">Includes the full model lineup, Research mode, artifacts, and Claude Code — all of which we'll use, from week-one conversations through the agentic unit</p>\n<p class=\"lvl1\">Sign up at <a href=\"https://claude.ai/\">claude.ai</a>; check <a href=\"https://claude.com/pricing\">claude.com/pricing</a> for current rates before subscribing</p>\n</section>"
+  },
+  {
+   "op": "replace",
+   "at": 19,
+   "html": "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/3b9140f31d95.jpg\" alt=\"Current course tool screenshot\"></div>\n</section>"
+  },
+  {
+   "op": "replace",
+   "at": 20,
+   "html": "<section>\n<h2>Evaluation &amp; Grading</h2>\n<p class=\"lvl1\"><strong>6</strong> — Activity Verification (due Friday, August 28)</p>\n<p class=\"lvl1\"><strong>78</strong> — Weekly exercises (13 exercises, 6 points each, due Sundays)</p>\n<p class=\"lvl1\"><strong>16</strong> — Final Reflection (750–1000 words, due Thursday, December 10)</p>\n<p>Out of 100, standard letter scale. All work submits through Webcourses.</p>\n</section>"
+  },
+  {
+   "op": "replace",
+   "at": 21,
+   "html": "<section>\n<h2>Late Work &amp; Extra Credit</h2>\n<p class=\"lvl1\">Every assignment stays open <strong>one week past its due date</strong>, no penalty — after that it closes for good unless we've already talked</p>\n<p class=\"lvl1\">Grades and feedback live in the Webcourses Grade Book, updated weekly</p>\n<p class=\"lvl1\"><strong>Extra credit:</strong> Week 14 (“The Net Is Vast and Infinite” — Custom Bots): up to 6 points for a Claude Skill, up to 6 for a subagent workflow, up to 10 for fine-tuning on our public-domain corpus</p>\n<p class=\"lvl1\">Emergencies and medical challenges: reach out early — flexibility is available</p>\n</section>"
+  },
+  {
+   "op": "replace",
+   "at": 22,
+   "html": "<section>\n<h2>How This Course Runs</h2>\n<p class=\"lvl1\">Fully asynchronous — no meetings, ever; modules open Mondays at midnight and work is due Sundays at 11:59PM</p>\n<p class=\"lvl1\">Each week: readings &rarr; making exercise &rarr; reflective discussion</p>\n<p class=\"lvl1\">Office hours Wednesdays 11AM–1:30PM (TCH 236 / Zoom); Webcourses messages any time — Zoom best for technical troubleshooting</p>\n<p class=\"lvl1\">You'll need a reliable computer with admin access for AI tool installs</p>\n</section>"
+  },
+  {
+   "op": "replace",
+   "at": 32,
+   "html": "<section>\n<blockquote class=\"long-quote\">“Despite its grave limitations, computer scientists used ELIZA to celebrate how thoroughly computers could replace human labor and heralded the entry into the artificial intelligence age. A shocked Weizenbaum spent the rest of his life as a critic of AI, noting that humans were not meat machines, while Minsky went on to found MIT’s AI laboratory and rake in funding from the Pentagon unhindered.”</blockquote>\n<p class=\"src\"><a href=\"https://thecon.ai/\">Bender and Hanna, <em>The AI Con</em> – pg 13</a></p>\n</section>"
   }
  ]
 }
