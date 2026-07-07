@@ -153,21 +153,21 @@ def para_html(paras) -> str:
 
 
 def slide_html(rec, draft: bool) -> str:
-    parts = ["<section>"]
-    if rec["title"]:
-        parts.append(f"<h2>{html.escape(rec['title'])}</h2>")
     body = para_html(rec["paras"])
     imgs = rec["images"]
     text_len = sum(len(p) for _, p in rec["paras"]) + len(rec["title"] or "")
-    if len(imgs) == 1 and text_len < 60:
+    full = len(imgs) == 1 and text_len < 60
+    parts = ['<section class="full-image">' if full else "<section>"]
+    if full:
         # image-based slide: the exported image IS the slide
-        parts[-1] = "<section class=\"full-image\">"
         if rec["title"]:
             parts.append(f"<h2 class=\"sr-only\">{html.escape(rec['title'])}</h2>")
         parts.append(f'<img class="bleed" src="media/{imgs[0]}" alt="" loading="lazy">')
         if body:
             parts.append(body)
     else:
+        if rec["title"]:
+            parts.append(f"<h2>{html.escape(rec['title'])}</h2>")
         img_html = ""
         if imgs:
             cls = "one" if len(imgs) == 1 else "grid"
@@ -239,15 +239,20 @@ Reveal.initialize({{ hash: true, slideNumber: 'c/t',
 
 
 OVERRIDES: dict = {}
+PATCHES: dict = {}
 
 
 def main() -> int:
-    global OVERRIDES
+    global OVERRIDES, PATCHES
     here = Path(__file__).resolve().parent
     ov_path = here / "overrides.json"
     if ov_path.exists():
         OVERRIDES = json.loads(ov_path.read_text(encoding="utf-8"))
         print(f"loaded {len(OVERRIDES)} vision overrides")
+    p_path = here / "patches.json"
+    if p_path.exists():
+        PATCHES = json.loads(p_path.read_text(encoding="utf-8"))
+        print(f"loaded patches for {len(PATCHES)} decks")
     decks_yml = here / "decks.yml"
     if decks_yml.exists():
         flags = yaml.safe_load(decks_yml.read_text(encoding="utf-8"))
@@ -293,6 +298,14 @@ def main() -> int:
         if moved:
             sections.append(section_slide("Readings: moved into this week for 2026"))
             sections += [slide_html(r, draft) for r in moved]
+
+        for op in PATCHES.get(stem, []):
+            if op["op"] == "replace":
+                sections[op["at"] - 1] = op["html"]
+            elif op["op"] == "replace_range":
+                sections[op["from"] - 1:op["to"]] = op["html"]
+            elif op["op"] == "drop":
+                del sections[op["at"] - 1]
 
         (here / f"{stem}.html").write_text(
             deck_page(week_num, stem, meta, sections, draft), encoding="utf-8")

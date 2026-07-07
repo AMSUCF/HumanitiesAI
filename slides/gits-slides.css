@@ -113,3 +113,9 @@
   border-radius: 4px;
 }
 .sr-only { position: absolute; left: -9999px; }
+
+/* Source-attribution line under full-image slides */
+.reveal .full-image .src {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.5em;
+  margin-top: 0.5em;
+}
