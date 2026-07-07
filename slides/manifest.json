@@ -1,0 +1,7169 @@
+[
+ {
+  "deck": 1,
+  "index": 0,
+  "title": "Textual - Histories",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI: Week One"
+   ],
+   [
+    0,
+    "https://anastasiasalter.net/HumanitiesAI/"
+   ]
+  ],
+  "images": [
+   "40f88b6cc942.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 1,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fe54b938f530.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "66e2a32e5087.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2e1d9d7ed415.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 4,
+  "title": "\u201cAI\u201d is a marketing term. It doesn\u2019t refer to a coherent set of technologies. Instead, the phrase \u201cartificial intelligence\u201d is deployed when the people building or selling a particular set of technologies will profit from getting others to believe that their technology is similar to humans, able to do things that, in fact. Intrinsically require human judgment, perception, or creativity.",
+  "paras": [
+   [
+    0,
+    "Bender and Hanna, The AI Con \u2013 pg 5"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 5,
+  "title": "What is generative AI?",
+  "paras": [
+   [
+    0,
+    "Generative AI (per the MLA-CCCC task force) \u201crefers to computer systems that can produce, or generate, various forms of traditionally human expression, in the form of digital content including language, images, video, and music.\u201d"
+   ],
+   [
+    0,
+    "MLA-CCCC Task force report:"
+   ],
+   [
+    0,
+    "https://aiandwriting.hcommons.org/working-paper-1/"
+   ]
+  ],
+  "images": [
+   "e5486d6cd13a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 6,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://pub.towardsai.net/generative-ai-vs-agentic-ai-vs-ai-agents-what-everyone-needs-to-know-dc42fd13e745"
+   ]
+  ],
+  "images": [
+   "720b34f3affc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 7,
+  "title": "When selling rosy scenarios, AI hype promises us a life of ease: jobs deemed menial like data entry, writing ad copy, and making basic graphics will become a thing of the past. AI \u2018companions\u2019 will take notes for you in online meetings, or even better, become your stand in while you address more pressing matters.\u201d",
+  "paras": [
+   [
+    0,
+    "Bender and Hanna, The AI Con \u2013 pg 10"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2547194a5094.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 9,
+  "title": "But AI hype also depends on promulgating worst case scenarios. Here, AI hype invokes visions of robots that disobey Issac Asimov\u2019s First Law of Robotics: \u201cA robot may not injure a human being or, through inaction, allow a human being to come to harm.\u201d",
+  "paras": [
+   [
+    0,
+    "Bender and Hanna, The AI Con \u2013 pg 10"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "89d144ad9f05.jpg",
+   "e5341483d62f.jpg",
+   "dde2702588f5.jpg",
+   "4ed588f37048.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1d7b63d93603.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "baf561d0d9da.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d1fe4030492c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 14,
+  "title": "Claude Pro subscription for 3 months: $60",
+  "paras": [],
+  "images": [
+   "1c4b87af36c7.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7f736abafa8b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e86d65d3f7ef.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "053f75c5becc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a9dcd56a5497.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c6c2dcd6cd5e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ec6ce698533c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7bb14ca890b4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e16f6f0643bf.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5a9725a9b6a4.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "889642592cdb.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9f494db4f284.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4e992494dbff.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "be837a014f67.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d2712a4f1b08.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 29,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.livemint.com/technology/tech-news/sam-altman-warns-some-chatgpt-users-are-using-ai-in-self-destructive-ways-after-gpt-5-backlash-11754874304153.html"
+   ]
+  ],
+  "images": [
+   "2fa93fca571a.png",
+   "240a05bc6322.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "10606af48493.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 31,
+  "title": "Despite its grave limitations, computer scientists used ELIZA to celebrate how thoroughly computers could replace human labor and heralded the entry into the artificial intelligence age. A shocked Weizenbaum spent the rest of his life as a critic of AI, noting that humans were not meat machines, while Minsky went on to found MIT\u2019s AI laboratory and rake in funding from the Pentagon unhindered.",
+  "paras": [
+   [
+    0,
+    "Bender and Hanna, The AI Con \u2013 pg 13"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 32,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.theguardian.com/australia-news/2025/aug/08/openai-chatgpt-5-struggled-with-spelling-and-geography"
+   ]
+  ],
+  "images": [
+   "2c7d053502ff.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 33,
+  "title": "In this book, we are trying to do the same thing Weizenbaum tried to do: educate people about how these systems work, dispel the notion that they are thinking machines with a semblance of human understanding, and provide a model of how to think about them instead.",
+  "paras": [
+   [
+    0,
+    "Bender and Hanna, The AI Con \u2013 pg 17"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 34,
+  "title": "",
+  "paras": [],
+  "images": [
+   "798d92eeb9e5.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 35,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0251c5640bd1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 36,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e900bdcbe118.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 1,
+  "index": 37,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fd8f92fff3bc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 1,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 0,
+  "title": "Textual - Generation",
+  "paras": [
+   [
+    0,
+    "Week Two"
+   ]
+  ],
+  "images": [
+   "411e3f64dbcf.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 2,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "51be15366f10.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "135cad26f339.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "03944d57f6a4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "514eebe73545.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "86102f45e21a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3f835ed8d2ca.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "06d06cb5edd0.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d6a05703b5a1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "523b89b593bf.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d6c12d9852aa.png",
+   "0f8dd9eb67e0.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0dc4229e8b2c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f7611a31043d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 16,
+  "title": "In order to explain how large language models like ChatGPT work, we can star with earlier, simpler language models. This technology goes back to the 1940s, when Claude Shannon, building on even earlier work by Andrey Markov, proposed the first \u201cn-gram\u201d language models (\u201cn\u201d here stands for a number and \u201cgram\u201d is a word)\u2026These simple n-gram language models already have uses. For example, they were a key component of the T9 system for texting on early cell phones\u2026simple n-gram models were also used to rank possible corrections in simple spell-check algorithms and served as a component of automatic transcription and machine translation systems.",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 pg 24"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7128dee9c4f8.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "95cb96179c3e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b5e9075e4517.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 20,
+  "title": "A neural net is \u201ctrained\u201d by giving it some (usually random) initial set of weights on the connections between the perceptrons and then repeatedly comparing its output to the labels given in the training data. Each time the system is wrong, the weights in the network are adjusted slightly to make it closer to right\u2026The next step towards creating ChatGPT and similar language model-driven chatbots involved taking technology designed for classification and turning it inside out: rather than classifying different strings as more or less likely, a generative language model is designed to pick a likely word given some input, take the initial input plus that word as the next input, pick another next likely word, and so on.",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 pg 26-27"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c3dbf9e06289.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 22,
+  "title": "Though the most basic and fundamental use of language is in face-to-face communication, once we have acquired a linguistic system, we can use it to understand linguistic artifacts even in the absence of co-situatedness, at a distance of space and even time. But we still apply the same techniques of imagining the mind behind the text, constructing model of common ground with the author, and seeking to guess what the author might have been using the words to get their audience to understand.Language models, problematically, have no subjectivity with which to perform intersubjectivity\u2026there is no mind there, and we need to be conscientious to let go of that imaginary mind that we have constructed.",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 pg 30"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2c33388c3fa0.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 24,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://web.archive.org/web/20070225121341/http://www.robotwisdom.com/ai/racterfaq.html"
+   ]
+  ],
+  "images": [
+   "be4f6c6d120e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 25,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.atariarchives.org/deli/write_about_itself.php"
+   ]
+  ],
+  "images": [
+   "04f53e771694.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 26,
+  "title": "General intelligence is not something that can be measured, but the force of such a promise has been used to justify racial, gender, and class inequality for more than a century. The paradigm of describing \u201cAI\u201d systems as having \u201chumanlike intelligence\u201d or achieving greater-than-human \u201csuperintelligence\u201d rests on this same conception of \u201cintelligence\u201d as a measurable quantity by which people (and machines) can be ranked.",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 pg 36"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "905932568629.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e19474c95860.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "893f332632f4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "70ff92bab59b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 31,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 32,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d675b860e1f0.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 33,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b5495256d08d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 34,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2d02d0b4cef8.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 35,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0d8a24c7403b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 36,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 37,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3e0961206ba8.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 38,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 39,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c1d0e2793283.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 40,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9c76752dd94a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 41,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d1713d3944ca.png",
+   "943030a639b3.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 2,
+  "index": 42,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a50cb0a93854.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 2,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 0,
+  "title": "TeXT \u2013 SOURCES - ORIGINS",
+  "paras": [
+   [
+    0,
+    "Humanities AI \u2013 Week Three"
+   ]
+  ],
+  "images": [
+   "c61ed2c03d3b.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 3,
+  "index": 1,
+  "title": "\u2026the field of as is in turmoil. Either a huge amount of progress has been made, or almost none at all\u2026ai will solve all our problems, put us out of a job, destroy the human race, or cheapen our humanity.",
+  "paras": [
+   [
+    0,
+    "Mitchell 13"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "move",
+  "target": 1,
+  "reason": "Mitchell part now assigned in Week 1",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 2,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.nytimes.com/2025/08/26/technology/chatgpt-openai-suicide.html?unlocked_article_code=1.hE8.T-3v.bPoDlWD8z5vo&smid=url-share"
+   ]
+  ],
+  "images": [
+   "074defa49fa9.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "adb6ed7a9a67.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 4,
+  "title": "AI is a field that includes a broad set of approaches, with the goal of creating machines with intelligence. Deep learning is only one such approach\u2026one method among many in the field of machine learning, a subfield of AI in which machines \u201cLearn\u201d from data or from their own \u201cexperiences.\u201d",
+  "paras": [
+   [
+    0,
+    "Mitchell 21"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "move",
+  "target": 1,
+  "reason": "Mitchell part now assigned in Week 1",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b14d03f7d58d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "08e2fa834b87.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 7,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://towardsdatascience.com/symbolic-vs-subsymbolic-ai-paradigms-for-ai-explainability-6e3982c6948a"
+   ]
+  ],
+  "images": [
+   "f46dec90588a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 8,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://towardsdatascience.com/symbolic-vs-subsymbolic-ai-paradigms-for-ai-explainability-6e3982c6948a"
+   ]
+  ],
+  "images": [
+   "c8fc8c1cfeab.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 9,
+  "title": "Inspired by statistic and probability theory, ai researchers developed numerous algorithms that enable computers to learn from data, and the field of machine learning became its own independent subdiscipline of ai.",
+  "paras": [
+   [
+    0,
+    "Mitchell 41"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "move",
+  "target": 1,
+  "reason": "Mitchell part now assigned in Week 1",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 10,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://ceralytics.com/3-types-of-machine-learning/"
+   ]
+  ],
+  "images": [
+   "acd45d34e5b4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 11,
+  "title": "Training neural networks and similar methods...often didn\u2019t work very well, given the limited amount of data and computer power available at the time. But more data and computing power were coming shortly. The explosive growth of the internet would see to that.",
+  "paras": [
+   [
+    0,
+    "Mitchell 42"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "move",
+  "target": 1,
+  "reason": "Mitchell part now assigned in Week 1",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 12,
+  "title": "Turing suggested the following: \u201cthe question, \u2018Can machines think?\u2019 should be relaced by \u2018are there imaginable digital computers which would do well in the imitation game?\u2019",
+  "paras": [
+   [
+    0,
+    "Mitchell 49-50"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "move",
+  "target": 1,
+  "reason": "Mitchell part now assigned in Week 1",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fe5635c204a5.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "46da5c1d11c9.jpg",
+   "b338a0348632.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 15,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.chalkbeat.org/2025/07/08/openai-microsoft-teachers-union-ai-training-partnership/"
+   ]
+  ],
+  "images": [
+   "f06942676f5e.png",
+   "12bb5e1fd585.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 16,
+  "title": "From the start of the industrial revolution, workers have had to contend with displacement via automation and have resisted it for just as long. One of the hallmarks of the beginning of this age was the concomitant rise of innovative technologies advertised to make work easier and simpler, and to increase productivity. Like modern AI boosters, those selling new technologies promised that they would usher in a rising tide that lifted up workers and business owners alike.",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 Page 43"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 17,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.theatlantic.com/technology/archive/2023/03/ai-chatgpt-writing-language-models/673318/"
+   ]
+  ],
+  "images": [
+   "1f15826ba109.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3505230e64d8.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4cb437a460b1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c0c3035d1a34.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 21,
+  "title": "Luddites were not against technology. Some Luddites, weavers in particular, were into technologies that helped evaluate the quality of their work, for instance, being able to count the number of threads per inch, such that they could fetch a higher price at the market. Luddites were instead against technologies of control and coercion, and concerned about the loss of jobs, health, and community.",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 Page 45"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 22,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.economist.com/business/2025/07/14/ai-is-killing-the-web-can-anything-save-it"
+   ]
+  ],
+  "images": [
+   "b81e9efbbfb1.png",
+   "04aa68204e33.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "35970c99836c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 24,
+  "title": "In the early 2000s, replacing hand-curated indexes like Lycos and Yahoo! seemed like a large boon for those struggling to navigate the unstructured web\u2026but now Google Search itself structures the web, and not in a way that benefits the broader public: Google is first and foremost in the business of selling ads, not providing helpful access to information\u2026Google\u2019s advertising model has let to an inferior product, what author and technology critic Cory Doctorow has called \u201censhittification.\u201d",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 Page 51"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 25,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://arstechnica.com/tech-policy/2025/08/authors-celebrate-historic-settlement-coming-soon-in-anthropic-class-action/"
+   ]
+  ],
+  "images": [
+   "59f51ac539c4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 26,
+  "title": "Most AI tools require a huge amount of hidden labor to make them work at all. This massive effort goes beyond the labor of minding systems operating in real time, to the work of creating the data used to train the systems\u2026Time reported that OpenAI had subcontracted Kenyan workers making less than two dollars a day to filter out gore, hate speech, child sexual abuse material, and pornographic images from ChatGPT and OpenAI\u2019s image generation tool DALL-E.",
+  "paras": [
+   [
+    0,
+    "The AI Con \u2013 Page 59"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 27,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://archive.ph/XALqd"
+   ]
+  ],
+  "images": [
+   "f40e47311bb2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "724cba9f3830.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c6ff51f4bdac.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 3,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8cd03fc252be.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 3,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 0,
+  "title": "textual \u2013 reading",
+  "paras": [
+   [
+    0,
+    "Humanities AI \u2013 Week Four"
+   ]
+  ],
+  "images": [
+   "6778e76d3f6f.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 4,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5f3278868121.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ab1fb2e94f64.jpg",
+   "7c1213fd4cde.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3a25e5915809.png",
+   "5ce79ddc2245.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 4,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://fortune.com/2025/09/03/eudia-legal-tech-ai-startup-killing-billable-hour/"
+   ]
+  ],
+  "images": [
+   "220e0a9e9856.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "362505ff4191.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 6,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.bloomberg.com/opinion/articles/2025-09-02/will-ai-make-lawyers-richer-or-put-them-out-of-work"
+   ]
+  ],
+  "images": [
+   "c8728b0cecaa.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "6ca8804eb630.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 8,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.reuters.com/legal/legalindustry/artificial-intelligence-is-now-an-law-student-study-finds-2025-06-05/"
+   ]
+  ],
+  "images": [
+   "8f8d18fefd49.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "cc6c230539ab.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 10,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.rollingstone.com/culture/culture-features/ai-chatbot-medical-advice-study-1235399973/"
+   ]
+  ],
+  "images": [
+   "c3dba32c2881.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "89edf4e9a1be.png",
+   "70474fc807da.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d7e14b29da7a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 13,
+  "title": "I\u2019m saving the image discussions for next week, and focusing on the ethics section this week",
+  "paras": [],
+  "images": [
+   "e449a4920774.jpg"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 2,
+  "reason": "Mitchell part now assigned in Week 2 [vision: Cover of Melanie Mitchell's AI: A Guide for Thinking Humans]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "35da31e60111.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 2,
+  "reason": "Mitchell part now assigned in Week 2 [vision: Quote on trustworthy decision makers, machine learning ethics]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "59387de2cc73.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 2,
+  "reason": "Mitchell part now assigned in Week 2 [vision: Quote referencing superintelligence discussion in 'final chapter']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "39df6a032b58.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "24bc3c4fbc7a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "21011e453b9c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a776427f500d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1815d57f6744.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7ef665741961.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7af15b83176f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fdc634574fd1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 24,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://futurism.com/openai-use-cheating-homework"
+   ]
+  ],
+  "images": [
+   "868aee03dd98.png",
+   "c15059ea2741.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f33519f7a882.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9d9e49d36042.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "155e75f00cef.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "85d234ec144d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f08881e2fb77.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "bc3ce03c4e83.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 31,
+  "title": "",
+  "paras": [],
+  "images": [
+   "022226f334af.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 4,
+  "index": 32,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7512ded64c39.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 4,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 0,
+  "title": "Images",
+  "paras": [
+   [
+    0,
+    "Humanities AI"
+   ],
+   [
+    0,
+    "Week Five"
+   ]
+  ],
+  "images": [
+   "6c266bab2086.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 5,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "15fff58dc722.png",
+   "0b709606abbe.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9a7664c83a4c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "44bc2d4fda30.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b29e151b66d1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8b9fdf22da79.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e200c55f3edc.png",
+   "b4aaba3392a4.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "bfd8793991e0.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "63d9d22a96bb.png",
+   "47016df60b1a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a9ebc4e53d29.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "62d3e1fe8495.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "6c104346bb83.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "80adf5803ce1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8750108534a8.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8e714b593b8d.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "730a3e41086b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "47b561135848.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4a944ac449a2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5e099e74b118.png",
+   "7ad7e160df83.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'Chapter 4: Who, What, When, Where, Why' title + soldier/dog figure 6]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "34f43ccc3f43.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'Easy Things Are Hard (Especially in Vision)': Minsky/Papert Summer Vision]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "67644d0cbe25.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: Google captcha screenshot illustrating image-recognition training in her chapter]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b73c8e0fa1d3.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text: Fei-Fei Li, WordNet, ImageNet, discovering Mechanical Turk]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f2783b76c3cc.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: Amazon Mechanical Turk website screenshot, referenced in her ImageNet passage]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b2e4f20a7d39.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text on ImageNet competition results and Yann LeCun ConvNets quote]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7b981017d0aa.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: ConvNet architecture diagram (cat image) illustrating her chapter]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "72d20fa489d8.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text: 'deep learning requires big data', ImageNet, Facebook, captchas]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "90956c33481d.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'What Did My Network Learn?' first-person Will Landecker anecdote]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "6caa957e3556.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fd0f60bbd0b7.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 5,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "34f2cceb0efa.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text on AI training-data biases, continuing her face-recognition section]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 5,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f444e481b38f.png",
+   "e97c8286c0cc.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'The Ethics of Face Recognition' text + Clearview/ICE news screenshot]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 0,
+  "title": "Visual \u2013 Art and Creativity",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI \u2013 Week Six"
+   ],
+   [
+    0,
+    "https://www.economist.com/culture/2024/02/20/refik-anadols-use-of-ai-has-made-him-the-artist-of-the-moment"
+   ]
+  ],
+  "images": [
+   "3600af231103.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 6,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "05df68905c44.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 6 title, doomers/boosters, p(doom) Schumer forum text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1a2e55b1471f.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: Bostrom paperclip maximizer, HAL 9000 misalignment discussion]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 3,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.decisionproblem.com/paperclips/"
+   ]
+  ],
+  "images": [
+   "f3c0f75c9fcc.png",
+   "1feb05aa8d13.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d4a10e32f269.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 text: 'AI Safety and Alignment', Doomer/Booster research field named]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 5,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.anthropic.com/news/anthropic-is-endorsing-sb-53"
+   ]
+  ],
+  "images": [
+   "523b19f37007.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "00224260e969.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "153318a17749.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d9f02a00379a.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: Asilomar AI Principles, defining human values critique]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9581dec0de4b.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: accelerationist 'screed' quotes, AI as alchemy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ae015dd356c8.png",
+   "a098d73fef25.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: TESCREAL acronym, Gebru and Torres discussion]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9c2d1756b96c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b529b97a33d1.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 conclusion: real harms vs Doomer/Booster dystopian/utopian visions]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4bf2b1b1594e.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Melanie Mitchell Substack 'Magical Thinking on AI', response to Friedman]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "949f7d2fcde7.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Mitchell post continues: Claude red-teaming, Shanahan on LLM roleplay]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5fa11e331056.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Mitchell post continues: moral reasoning, magical thinking conclusion]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 16,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.science.org/doi/10.1126/science.aeb0393"
+   ]
+  ],
+  "images": [
+   "922d3a2362d9.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ec653e4e1cfd.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9e0b0ccb335c.png",
+   "dbc6e14d3a7c.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Sony Aibo Figure 22 and 'Chapter 8: Rewards for Robots' title]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f362878a4894.png",
+   "2082ca765a71.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.8 Figure 25 diagrams: robot dog reinforcement-learning iterations]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3726d6d9300e.png",
+   "3326d97ec20d.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: 'Chapter 9: Game On' title, Figure 27 Atari Breakout illustration]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fb7d8535b182.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.9 text: transfer learning limits, Hofstadter quote on 'state']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a15d09ba5532.png",
+   "824dd5908429.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: 'Chapter 11: Words, and the Company They Keep' title, NLP intro]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c2209ec87844.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.11 continues: rule-based vs statistical vs deep-learning NLP history]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "57e6019109ff.png",
+   "4d667c8373bd.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.11: sentiment classification, 'Temple of Doom' review examples]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "48ea3820ba26.png",
+   "416d3611288e.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.11 Figure 35 word2vec diagram and 'company it keeps' text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "66734a9842d1.png",
+   "81f79f210f9c.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: 'Chapter 12: Translation as Encoding and Decoding' title, Google Translate anecdote]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "dd6a31e00120.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.12 Figures 39-40: Google image-captioning system, sample captions]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 28,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "2018 GAN examples"
+   ],
+   [
+    0,
+    "https://jonathan-hui.medium.com/gan-some-cool-applications-of-gans-4c9ecca35900"
+   ]
+  ],
+  "images": [
+   "2867d8d193cb.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "acd5bc31b4af.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "80ee8267bc3b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 6,
+  "index": 31,
+  "title": "",
+  "paras": [],
+  "images": [
+   "59cb4a43976f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 6,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 0,
+  "title": "The Desert of the Real",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI \u2013 Week Seven"
+   ]
+  ],
+  "images": [
+   "aa2bcd1798c4.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 7,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "935ea40e2b90.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3b402ff50e65.png",
+   "f88bef00edfd.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2b16196f1136.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "El Eternauta reading removed [vision: Verge article: Netflix used AI for building-collapse scene in The Eternaut]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "729c1617cb06.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Ch.13 'Ask Me Anything', Star Trek Data quote on humor/QA systems]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "61ba615bae5f.jpg",
+   "0f8f58b84a65.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Star Trek 'Hello Computer' meme + text on Siri/Alexa understanding limits]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "00f251b374c3.png",
+   "8a29ed845429.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Watson/Jeopardy Ken Jennings 'human loser' quote and answer clues]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a8d18d4ace13.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Ch.14 'On Understanding', Hofstadter 'barrier of meaning' quote]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "75fd837ff98f.png",
+   "5f712cff90c1.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Common sense/Allen Institute passage; also unrelated DeepSeek-R1 Nature article]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9d8cfa149cdf.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Ch.16 'Questions, Answers, and Speculations', Hofstadter GEB reference]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "bdd374d644d7.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Book Q&A: 'Will AI result in massive unemployment for humans?']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9566e991a201.png",
+   "a3119e36ab82.jpg",
+   "8d96ea11b28b.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5ee2428cacc7.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Book Q&A: 'How terrified should we be about AI?', cites Hofstadter/Kurzweil]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "302b02fc67f6.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "700bb1998e8b.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Book Q&A: 'unsolved AI problems', closes 'as a thinking human']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "909ba0c19d32.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b9fb9604fcdc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "88d477257395.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f0413cc7ca54.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9427de6356bc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2ca98626f754.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4a2cda00a8ad.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a8ba5199f6b7.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ba1e0a4b9883.png",
+   "b789253b95cd.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e537c13d38d2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "08d31756f14e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "faa05a0816bb.png",
+   "a046efeb2760.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "85bb5ba8ccda.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 29,
+  "title": "matrix, code, hacking, cyberpunk, data, digital, futuristic, neon, digital art, high tech, virtual reality, cyberspace, glitch, technology, sci fi, computer, programming, dark, binary, encryption, AI, network, security",
+  "paras": [
+   [
+    0,
+    "OpenJourney and neuralframes"
+   ]
+  ],
+  "images": [
+   "9cd66dd5b7c6.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 31,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5c11a60f288b.jpg",
+   "0e47ddeee60e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 32,
+  "title": "",
+  "paras": [],
+  "images": [
+   "624e89b00b66.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 33,
+  "title": "",
+  "paras": [],
+  "images": [
+   "549c0c9d496f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 34,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0721832e836d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 7,
+  "index": 35,
+  "title": "",
+  "paras": [],
+  "images": [
+   "700ea91fbd67.png",
+   "e496693df127.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 7,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 0,
+  "title": "Visual \u2013 Perception",
+  "paras": [
+   [
+    0,
+    "Humanities AI \u2013 Week Eight"
+   ]
+  ],
+  "images": [
+   "c050e05a1c69.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 8,
+  "index": 1,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://gizmodo.com/andrew-cuomo-ai-campaign-ad-zohran-mamdani-2000666355"
+   ]
+  ],
+  "images": [
+   "1b49d3d339d3.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a1dd1acde3f7.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ff2af4a37b2b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a00614883221.jpg",
+   "035a20283e94.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e7bb7fb8b2ec.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a28732dc9d6b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "948327332cf7.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "30ecea55d2f5.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b967299d378b.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 1 title page: 'Telling Computers What to Do']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "bc0ad7410ded.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text: 'We all need to become programmers']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "6f135c600ccd.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on programming as conveying tasks to machines]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "dcb20bbd6ab4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "59be47e60b74.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text defining 'telling the machine what to do']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "145599bfaed9.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text: reasons computers work on our behalf]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f8d4be42e302.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0a1e5c7ff913.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c61a2679f82b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e3c624381ebc.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on NASA Mars rover explicit instructions example]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0ea4ecee2314.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Figure 1.2 rover planning image, DALL-E 2 credit, book text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "35b4737d7afc.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on incentives vs instructions for rover behavior]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5840b2e551b2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 8,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "17bcb40d98f2.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on conveying instructions vs incentives to rover]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 8,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2834c39ee710.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text: 'how we should convey tasks to machines']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 0,
+  "title": "Procedural \u2013 Code and Rules",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI \u2013 Week Nine"
+   ]
+  ],
+  "images": [
+   "92e2bf202408.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 9,
+  "index": 1,
+  "title": "the road so far",
+  "paras": [
+   [
+    0,
+    "(look, no hurricanes! *knocks wood*)"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 2,
+  "title": "textual",
+  "paras": [
+   [
+    0,
+    "Conversation as interface"
+   ],
+   [
+    0,
+    "prompting as writing"
+   ],
+   [
+    0,
+    "outputs as code"
+   ],
+   [
+    0,
+    "generative text"
+   ],
+   [
+    0,
+    "distant reading"
+   ]
+  ],
+  "images": [
+   "a1399a06fe2f.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 3,
+  "title": "visual",
+  "paras": [
+   [
+    0,
+    "computational imagination"
+   ],
+   [
+    0,
+    "post-human photography"
+   ],
+   [
+    0,
+    "translation of image to text"
+   ],
+   [
+    0,
+    "moving pictures"
+   ],
+   [
+    0,
+    "images as data"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 4,
+  "title": "procedural",
+  "paras": [
+   [
+    0,
+    "talking to computers"
+   ],
+   [
+    0,
+    "algorithmic influence"
+   ],
+   [
+    0,
+    "software interfaces"
+   ],
+   [
+    0,
+    "creative coding"
+   ]
+  ],
+  "images": [
+   "3ba49171a5f7.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 5,
+  "title": "what we\u2019re building towards",
+  "paras": [
+   [
+    0,
+    "AI as computational interface"
+   ],
+   [
+    0,
+    "understanding agents"
+   ],
+   [
+    0,
+    "applications across disciplines"
+   ]
+  ],
+  "images": [
+   "958a4da76528.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 6,
+  "title": "the final books",
+  "paras": [],
+  "images": [
+   "7961c50733f1.jpg",
+   "da3060b4ab56.jpg"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Shows both book covers: Code to Joy and Algorithms of Oppression]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4a354bf61672.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 2 title page 'The What of Programming' from Littman's book]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2f8fe4aa0990.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "71bd7632825f.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote: programming as 'delegation of the will', Littman's voice]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1c6e54470431.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "65a67263d72a.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote on 'collaborative filtering' from Code to Joy discussion]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "88060d9745fe.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote about GroupLens recommendation system from the book]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2b116e832d50.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote on 'revealed preferences' and tracked clicks, book text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "dca2e825e21b.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "076f414bbdf1.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote on mathematical prediction models and recommendations, book text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "02bbbddf39ee.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c9967bccc6d2.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote comparing coding to learning an alien language, book text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5ad4a2bae574.jpg"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Quote card citing 'Algorithms of Oppression', algorithms as arbiters]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8b9fa16a121d.png",
+   "fc93be26ac1c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9b904ea0b8a0.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text: AI as human rights issue, algorithmic decision making]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e838c0eab94a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "dfb4b4e460fd.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "03f5938f9a2b.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text on Bitch magazine article, Google Panda algorithm]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 24,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.washingtonpost.com/technology/interactive/2023/ai-generated-images-bias-racism-sexism-stereotypes/?itid=lk_interstitial_manual_32"
+   ]
+  ],
+  "images": [
+   "6711518c0784.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ebced8ef1df0.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text on racism/sexism in tech, Black women and girls]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d5d5ab81b816.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text: 'algorithmic oppression... fundamental to the web']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e57145c2be98.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f7c3b9b7f4ba.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text on missing social/human context in algorithms]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 9,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b5f83ef74e98.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 9,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 0,
+  "title": "Procedural \u2013 Digital Humanities",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI Week Ten"
+   ]
+  ],
+  "images": [
+   "72ff1594f5a8.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 10,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a66f0556026e.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Describes UN Women 'genuine Google searches' campaign discussed in Noble's book intro]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "79bbcbbe5017.jpg",
+   "780d2b63d09d.jpg"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: UN Women 'women shouldn't/cannot' Google autocomplete ad photos from Noble's discussion]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "339e072df24b.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Chapter title page 'A Society, Searching' from Algorithms of Oppression]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c0b6b0e51b26.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Book page 24 quote and Figure 1.9 caption from Algorithms of Oppression]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d21fcf4933d2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "33e24e34a4f2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "72d48e712bcc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "aacb03ba0335.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Quotes Alex Halavais on search engines as 'object of faith', from Noble's book]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "df60be46ca07.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Quotes Cathy O'Neil/Weapons of Math Destruction as told in Noble's book]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 10,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://mathbabe.org/"
+   ]
+  ],
+  "images": [
+   "954b368e4cf2.png",
+   "f4e71fb0c5dc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "856b557515f8.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Book quote: 'In the ensuing chapters, I continue to probe...' Noble's intro]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c3cfc6276bf1.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Book section 'The Importance of Google' text from Algorithms of Oppression]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 13,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.engadget.com/google-is-making-search-ads-more-and-less-avoidable-215658127.html"
+   ]
+  ],
+  "images": [
+   "f9a3edb6852f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "932449599fcd.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "73a8a296f143.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Sora discontinued; tool references removed [vision: Article headline about OpenAI's Sora deepfakes of dead historical figures]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d1fabe9b9739.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Sora discontinued; tool references removed [vision: Text on Sora deepfakes of Robin Williams, MLK, Carlin, Hawking]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0c03d3f58723.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 3 title page 'Sequencing Commands' from Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f813e6af63bc.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Macro May I?' section comparing Mars rover control to square dancing]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7a7f67872319.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Discusses commands, parameters, sequence concepts from Code to Joy chapter]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "189cfe9a56f9.png",
+   "719d08e49014.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Loss function/optimizer and teaching-computer-to-code passages from Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "80c632499327.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "27cdb3fd89f0.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3ea3f00155af.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fe960c6fe5fc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 10,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "22af2677ca25.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 0,
+  "title": "procedural art & play",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI \u2013 Week Eleven"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 11,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "28c76446277a.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 4 title 'Splitting on Conditionals' opening quote]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "97fa1a8e1ee7.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Batman if-then-else example from Code to Joy ch.4]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fd75b98f3b99.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Choose-your-own-adventure conditionals example, book text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5875f248cb3b.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "32979b683523.png",
+   "40eb4b004a6a.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Book text on AND/OR/NOT logical operators]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fb91ee6fc414.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c7474888de66.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Book text referencing ch.3 machine learning components, conditionals]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4859f9036228.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d5764244da27.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Book text on decision trees, Occam's razor]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 10,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.xda-developers.com/tasks-ive-automated-with-comet/"
+   ]
+  ],
+  "images": [
+   "ee495dcc8c02.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 11,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://openai.com/index/introducing-chatgpt-atlas/"
+   ]
+  ],
+  "images": [
+   "8c1e7b4328a0.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "bbeef6eb38f2.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote 'Who Is Responsible for the Results?' Black girls search]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 13,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.forbes.com/sites/johnkoetsier/2025/10/15/ai-porn-is-coming-to-chatgpt-in-december/"
+   ]
+  ],
+  "images": [
+   "d4dd6be2b50f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2261329e19ae.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote on search engines perpetuating narratives, girls marginalized]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c00c85035880.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Peter Morville keyword/long-tail quote used in Noble's book]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 16,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.ft.com/content/8a3da2aa-bfc1-4847-862d-978ff1ba24c9"
+   ]
+  ],
+  "images": [
+   "1a6656c0bf5c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "dec1443099c4.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote: 'Intent is not particularly important... outcomes']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8b5d795350ed.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5de5435c2558.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote on Google 'pull eyeballs' AdWords bias]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e906283f7f58.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2e47b19f8636.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 22,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://automaton-media.com/en/news/over-50-of-japanese-game-companies-use-ai-in-development-according-to-tokyo-game-show-organizer/"
+   ]
+  ],
+  "images": [
+   "2e6ad048b124.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 23,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.npr.org/2025/10/21/nx-s1-5506141/ai-code-software-productivity-claims"
+   ]
+  ],
+  "images": [
+   "750c9741cec4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "de9c59b10012.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 25,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.techradar.com/pro/claude-code-comes-to-the-masses-and-its-a-game-changer"
+   ]
+  ],
+  "images": [
+   "09cc37f69be2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 11,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "16523977de1b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 10,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 0,
+  "title": "Procedural: Hypertext & the Web",
+  "paras": [
+   [
+    0,
+    "AI \u2013 Week Twelve"
+   ]
+  ],
+  "images": [
+   "335ae25de96f.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 12,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ec3c03d00c57.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 5 title page 'Storing in Variables', Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 2,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.geeksforgeeks.org/javascript/variables-datatypes-javascript/"
+   ]
+  ],
+  "images": [
+   "1e75acc63824.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "afc982f8efd7.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Snow White/Dwarfs variables example, Code to Joy ch.5]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e07aaf67469e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7bdbd4713039.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Continues Snow White dwarf-count variables example]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f42db378c37f.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "69dfb59ad4ac.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'You Can't Escape Spam' section on variable names, Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 8,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://matheducators.stackexchange.com/questions/26255/how-to-give-exercises-when-students-can-use-chatgpt"
+   ]
+  ],
+  "images": [
+   "df3f44220815.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "72dd169ad49c.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Broadly in Scope' Luhn algorithm example, Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "da920bf445eb.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Sheets Happen' spreadsheets-as-variables section, Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 11,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://venturebeat.com/ai/anthropic-rolls-out-claude-ai-for-finance-integrates-with-excel-to-rival"
+   ]
+  ],
+  "images": [
+   "2258d4e52456.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8ab67f2fbf16.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Aw, they're just like us!' ML/neural network humor, Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "791a9654876d.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Classifiers/personality quiz discussion, Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "edf81defe507.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "75c1fb095c91.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Neural network history, Tony Stark joke, Code to Joy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "efa124cc498b.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: Chapter 3 title 'Searching for People and Communities', Noble]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "6abe23b46467.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: Search engines shaping culture, 'throughout this book', Noble]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "be91381d68e3.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e4998447f050.png",
+   "4bf62d5d0dea.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: Dylann Roof/ranking algorithms passage, Algorithms of Oppression]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1e12057327ee.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "db28a09564af.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "576c9115eeab.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3c43b20d30cd.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "17046ed6b7b8.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "cf31e74bd786.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "75c26ee8e775.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0e8657f5399d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e0b827a31d13.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 12,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1f7eccffb089.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 11,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 0,
+  "title": "Local Futures",
+  "paras": [
+   [
+    0,
+    "Humanities AI: Week Thirteen"
+   ]
+  ],
+  "images": [
+   "823208265461.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 13,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ad98e10c4e64.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Loop definition, gym pushup example, book prose style]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9f494db4f284.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0df9a931beea.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: \"Groundhog Day\" loops passage, calendar/appointment example]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "75fff42bb10e.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "39efc5e9f2f6.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Lemon-picking loop pseudocode, robot shopper humor, book text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7db2b85fcc09.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1c541bd447f7.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: \"do forever\" loop passage, hardware loop explanation, book text]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3508cc700c4d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0d04dc2d9041.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: \"as I have discussed throughout this book\" implicit bias/search quote]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2e8641b30e3e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "970681ee6e35.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1c1be7005166.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "84a7b9e63e0f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5d4dbf45e31f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7cd3f7cece51.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "559ce99cc029.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a222e1efc4e1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d785caf34efd.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "67f1ebc9b9e9.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "bbec6e49f4cc.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f016d23ec151.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "069064921471.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "de7838afed10.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5bfceab8b390.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "139a78f380cb.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1a763a3f3a3b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "03d71814c2c1.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1217448c9204.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3667d346536e.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "14bae4753ea2.png",
+   "76c220291bc7.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 13,
+  "index": 31,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d9403fae9787.png",
+   "301f6278f2b8.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 12,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 0,
+  "title": "Revisiting Text (and Labor)",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI: Week Fourteen"
+   ]
+  ],
+  "images": [
+   "ff4dd7b95e38.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 14,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f2c204c98aa9.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "153b0e7c5238.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 3,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.tomshardware.com/tech-industry/sam-altman-says-ai-could-eliminate-jobs-that-arent-real-work"
+   ]
+  ],
+  "images": [
+   "8b3d5aa4756a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 4,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://davidgraeber.org/articles/i-had-to-guard-an-empty-room/"
+   ]
+  ],
+  "images": [
+   "cbd3cfab21fb.jpg",
+   "725008209612.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 5,
+  "title": "",
+  "paras": [],
+  "images": [
+   "05e232d365dd.png",
+   "178d4ad5a7e6.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "227cd49df4bb.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "bcc3dc977755.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c7c3b08304e3.png",
+   "116c169e8c45.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 9,
+  "title": "",
+  "paras": [],
+  "images": [
+   "dcb101c5cda3.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 10,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e636b3cacefa.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "43521ce59f62.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5eda1277ed0f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 13,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c3b50bb2b1b8.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2f7054d2498f.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5d4c00c44304.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "82cb6ac07249.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4ee1185f4812.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter title page: '7 Defining Functions: Call Me by Your Name']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b31fae2ab86d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "e4ce52f729b4.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Make It Count' section with 'define the function get word count' pseudocode]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "3d3103f74a74.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4f042cc0c246.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Talking About Talking About Recursion' section on functions and recursion]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 22,
+  "title": "",
+  "paras": [],
+  "images": [
+   "cfb8f972cadf.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ef5c15299217.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "fd166667ae9d.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Quotes Hope Olson's research on bounded search discourses and Venn diagram]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d54590924e43.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Text on citation-analysis practices, indexing, and Library of Congress classification]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "6f567d57eef1.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Artstor screenshot, Figure 5.5 caption on Damali Ayo's 'Rent-A-Negro']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "cc435df634e2.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Chapter page header 'The Future of Knowledge in the Public', page 149, on search/AI]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7cc2c9224881.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Text on 'universe of human knowledge', identity-based searches, search engine bias]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "1f42f683f80c.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2521ec7a255b.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 14,
+  "index": 31,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2e12cb8f7bdd.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 13,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 0,
+  "title": "Closing Thoughts",
+  "paras": [
+   [
+    0,
+    "Humanities in the Age of AI: Week Fifteen"
+   ]
+  ],
+  "images": [],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": true
+ },
+ {
+  "deck": 15,
+  "index": 1,
+  "title": "",
+  "paras": [],
+  "images": [
+   "60ce74c340ba.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 2,
+  "title": "",
+  "paras": [],
+  "images": [
+   "35a5e19a43fb.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 3,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a163399b288a.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 4,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a24b4d515ac7.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 5,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://simonwillison.net/2025/Nov/18/gemini-3/"
+   ]
+  ],
+  "images": [
+   "30a2388004c4.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 6,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7a3381a614e5.jpg",
+   "ed16a3c39229.jpg",
+   "649797333603.jpg",
+   "7961c50733f1.jpg"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Book covers: Mitchell's Artificial Intelligence and Noble's Algorithms of Oppression (plus AI Con)]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 7,
+  "title": "",
+  "paras": [],
+  "images": [
+   "5ede423c2638.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Chapter heading 'The Future of Information Culture' from Noble's book]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 8,
+  "title": "",
+  "paras": [],
+  "images": [
+   "ea518c21e8ed.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 9,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.inc.com/ava-levinson/heres-what-googles-ceo-is-saying-about-an-ai-bubble/91267782"
+   ]
+  ],
+  "images": [
+   "ac75b0c12fbe.png",
+   "a02dd863c7f3.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 10,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.cpomagazine.com/data-privacy/lawsuit-accuses-google-ai-assistant-of-surreptitiously-accessing-gmail-and-messaging-files/#google_vignette"
+   ]
+  ],
+  "images": [
+   "9417b3d18d00.png",
+   "89350b78329d.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 11,
+  "title": "",
+  "paras": [],
+  "images": [
+   "f36d5d5737d3.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Noble-style quote on big-data optimism, wake-up call]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 12,
+  "title": "",
+  "paras": [],
+  "images": [
+   "9542661813cc.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Explicit 'Conclusion' heading, subtitle 'Algorithms of Oppression']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 13,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://www.pcmag.com/explainers/give-us-your-face-or-lose-your-account-ai-age-verification-is-here-and"
+   ]
+  ],
+  "images": [
+   "9b3a11add2fb.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 14,
+  "title": "",
+  "paras": [],
+  "images": [
+   "340d8407de89.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Text on public noncommercial search, Google Search critique]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 15,
+  "title": "",
+  "paras": [],
+  "images": [
+   "a7af00a50bd2.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 16,
+  "title": "",
+  "paras": [],
+  "images": [
+   "20a209ad6c43.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 17,
+  "title": "",
+  "paras": [],
+  "images": [
+   "8fec3807aca2.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Quote on default search settings shaping perceived 'normal']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 18,
+  "title": "",
+  "paras": [],
+  "images": [
+   "0fe8ad5df758.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 19,
+  "title": "",
+  "paras": [],
+  "images": [
+   "161e03ffa02c.png"
+  ],
+  "notes": "",
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Quote urging public policy against unregulated, unethical AI]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 20,
+  "title": "",
+  "paras": [],
+  "images": [
+   "7b00d0750000.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 8 title page 'Combining Code and Data']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 21,
+  "title": "",
+  "paras": [],
+  "images": [
+   "4273646452bc.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on combining code and data to generate code]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 22,
+  "title": "",
+  "paras": [
+   [
+    0,
+    "https://techcrunch.com/2025/11/18/stack-overflow-is-remaking-itself-into-an-ai-data-provider/"
+   ]
+  ],
+  "images": [
+   "a2bc7c4dc025.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 23,
+  "title": "",
+  "paras": [],
+  "images": [
+   "d4d92b6374f2.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman on Copilot as 'Coding Machines', jazz-musician analogy]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 24,
+  "title": "",
+  "paras": [],
+  "images": [
+   "65f291d35138.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 25,
+  "title": "",
+  "paras": [],
+  "images": [
+   "2680b0addbb3.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman quote 'you are still the captain', 'build a pro-gram' heading]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 26,
+  "title": "",
+  "paras": [],
+  "images": [
+   "aa900c0d07f7.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 9 title page 'Programmable World / As You Wish']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 27,
+  "title": "",
+  "paras": [],
+  "images": [
+   "b2f092704d95.png"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 28,
+  "title": "",
+  "paras": [],
+  "images": [
+   "747d786daee9.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman text: 'relationship to computers has become codependent']",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 29,
+  "title": "",
+  "paras": [],
+  "images": [
+   "c867723b0856.png"
+  ],
+  "notes": "",
+  "action": "cut",
+  "target": null,
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman text on user control vs. programming ease]",
+  "is_deck_title": false
+ },
+ {
+  "deck": 15,
+  "index": 30,
+  "title": "",
+  "paras": [],
+  "images": [
+   "623f76be20d1.jpg"
+  ],
+  "notes": "",
+  "action": "keep",
+  "target": 14,
+  "reason": "base mapping",
+  "is_deck_title": false
+ }
+]

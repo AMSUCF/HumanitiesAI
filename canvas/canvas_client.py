@@ -29,10 +29,13 @@ class CanvasClient:
         r.raise_for_status()
         return r.json()
 
-    def upsert_module(self, name: str, unlock_at: str | None = None) -> int:
+    def upsert_module(self, name: str, unlock_at: str | None = None,
+                      published: bool | None = None) -> int:
         payload = {"module": {"name": name}}
         if unlock_at is not None:
             payload["module"]["unlock_at"] = unlock_at
+        if published is not None:
+            payload["module"]["published"] = published
         for m in self._get_all(f"{self.course}/modules"):
             if m["name"] == name:
                 return self._put(f"{self.course}/modules/{m['id']}", payload)["id"]

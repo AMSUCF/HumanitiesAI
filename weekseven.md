@@ -16,6 +16,8 @@ canvas:
 
 > “What we see now is like a dim image in a mirror.” — the Puppet Master, echoing 1 Corinthians, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
+**Slides:** [Week Seven slides](slides/weekseven.html)
+
 The film borrows that line from scripture for a world where seeing is never direct. Generative video makes the mirror stranger still: it manufactures a moving image with no camera, no set, and no event behind it — footage of nothing, increasingly hard to tell apart from footage of something that happened. This week we generate some of that footage ourselves, then turn a critical eye on a field that just watched one of its flagship tools disappear in under a year.
 
 ## Tutorial: Video and Realism

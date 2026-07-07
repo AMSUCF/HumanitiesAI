@@ -16,6 +16,8 @@ canvas:
 
 > "A complete commingling and fusion of our separate beings to create a new and unique entity." — the Puppet Master, proposing a unification with Major Kusanagi, [*Ghost in the Shell* (1995)](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
+**Slides:** [Week Ten slides](slides/weekten.html)
+
 The Puppet Master doesn't ask Kusanagi to be absorbed or overwritten; it proposes something stranger — two systems, each incomplete on its own, becoming a third thing that is neither. That's the shape of this week. You spent last week prompting a dataset and a recommendation site into being inside Claude's artifact viewer, fully contained. This week that project leaves the sandbox: you push it out through Git, GitHub, and Claude Code for the web until it's a page anyone can load. Simon Willison calls this general mode of working "vibe engineering" — not "vibe coding," where you never look at the code, but a real engineering practice built on delegating implementation to an agent while you stay responsible for what ships. The exercise this week is that second move: taking the thing you built and letting it out into the world.
 
 ## Exercise: Building and Deploying an AI Recommender

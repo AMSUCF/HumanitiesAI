@@ -16,6 +16,8 @@ canvas:
 
 > “…memory cannot be defined. But it defines mankind.” — the Puppet Master, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
+**Slides:** [Week Four slides](slides/weekfour.html)
+
 This week we turn from generating text to reading it at scale, using Claude not as a conversational partner but as a research assistant that can process an entire text file at once and surface patterns close reading alone wouldn't catch. Keep the epigraph in mind as you work: a model's reading of a text is a kind of memory — the shape of everything it has read before, and, just as tellingly, what it hasn't.
 
 ## Tutorial: Reading Across Texts

@@ -16,6 +16,8 @@ canvas:
 
 > “I collect information to use in my own way.” — Major Kusanagi, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
+**Slides:** [Week Six slides](slides/weeksix.html)
+
 Last week we generated shells; this week we go looking for the ones already sitting in archives, waiting to be described. Kusanagi collects information to use in her own way; so does every archive — and so, in its own opaque way, does the model we're about to turn loose on one. *The AI Con*'s chapter on doomers and boosters and Noble's chapter on searching are both, in their way, about who gets to decide what an image "shows" and whose interests that framing serves — worth keeping close as you ask an LLM to describe, caption, and visualize a set of images it has never seen before and has no stake in getting right.
 
 ## Tutorial: Archival Images

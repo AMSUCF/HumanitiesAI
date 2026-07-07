@@ -16,6 +16,8 @@ canvas:
 
 > “Well, all your memories about your wife and daughter are false. They’re like a dream.” — Section 9 to a ghost-hacked man, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
+**Slides:** [Week Two slides](slides/weektwo.html)
+
 Generated text can be like that dream: fluent, even moving, without anyone standing behind it who meant it. This week, we'll be thinking about why the initial launch of OpenAI's ChatGPT created a major cultural moment thanks in large part to its interface — even though generative text, AI, and machine learning broadly have all been around for a much longer time. Start by exploring the histories of generation described below. Then, using William Chamberlain's example as a guide, try to generate a compelling work of poetry using your Claude subscription and document your process in this week's discussion.
 
 ## Tutorial: Histories of Generation

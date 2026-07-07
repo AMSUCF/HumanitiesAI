@@ -82,3 +82,15 @@ def test_plan_week_hard_close_locks_at_due(tmp_path):
         "  hard_close: true\n---\nBody\n\n### Discussion\n\nQ?\n", encoding="utf-8")
     plan = deploy.plan_week(wk, site_base="https://x.y")
     assert plan["lock_at"] == plan["due_at"] == "2026-12-11T04:59:00Z"
+
+
+def test_plan_week_lecture_embeds_slides(tmp_path):
+    wk = tmp_path / "weekone.md"
+    wk.write_text(
+        "---\ntitle: T\ncanvas:\n  module: \"Week One: Ghosts — Histories\"\n"
+        "  week_start: 2026-08-24\n  due: 2026-08-30\n  points: 6\n"
+        "  discussion: true\n  extra_credit: false\n  unit: ghosts\n---\n"
+        "Body\n\n### Discussion\n\nQ?\n", encoding="utf-8")
+    plan = deploy.plan_week(wk, site_base="https://x.y")
+    assert 'iframe src="https://x.y/slides/weekone.html"' in plan["lecture_html"]
+    assert "video lecture will be posted" in plan["lecture_html"]

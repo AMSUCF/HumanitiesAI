@@ -16,6 +16,8 @@ canvas:
 
 > "Your effort to remain what you are is what limits you." — the Puppet Master, [*Ghost in the Shell* (1995)](https://en.wikiquote.org/wiki/Ghost_in_the_Shell_(film))
 
+**Slides:** [Week Eight slides](slides/weekeight.html)
+
 The Puppet Master says this to Kusanagi as a challenge to hold onto a fixed self in a world where bodies, voices, and identities can all be manufactured — but the line works just as well turned outward, toward the communities we're about to go looking through. Every hobby group, fandom, and marketplace that polices what counts as a "real" photo, a "real" handmade object, a "real" review, is doing its own version of that same effort: drawing a line around what it is, and bracing against a flood of generated content that doesn't respect the line. This week we go looking for the shells already circulating in the wild — the AI-generated images already moving through the communities you belong to — and ask what it costs a community to keep insisting on what's real.
 
 ## Tutorial: Images as Information

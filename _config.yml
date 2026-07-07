@@ -1,12 +1,18 @@
 remote_theme: pages-themes/slate@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-
+- jekyll-remote-theme
 title: Humanities in the Age of AI
 description: Fall 2026 - Anastasia Salter
-
 exclude:
-  - canvas/
-  - docs/
-  - .superpowers/
-  - "2025/*old.md"
+- .superpowers/
+- 2025/*old.md
+- canvas/
+- docs/
+- slides/REPORT.md
+- slides/__pycache__/
+- slides/build_slides.py
+- slides/classify.py
+- slides/decks.yml
+- slides/manifest.json
+- slides/overrides.json
+- slides/test_classify.py

@@ -1,0 +1,115 @@
+/* Course slide theme — built from the site's design tokens. */
+:root {
+  --band-bg: #0c1210;
+  --band-bg-alt: #14201c;
+  --band-text: #d7e5e0;
+  --band-muted: #8aa39b;
+  --band-accent: #2dd4bf;
+  --accent-2: #f59e0b;
+}
+
+.reveal-viewport {
+  background: linear-gradient(135deg, var(--band-bg) 0%, var(--band-bg-alt) 55%, var(--band-bg) 100%);
+}
+
+.reveal {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 30px;
+  color: var(--band-text);
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: "Rajdhani", sans-serif;
+  color: var(--band-text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+}
+
+.reveal h2 {
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--band-accent);
+  display: inline-block;
+  padding-bottom: 0.15em;
+  margin-bottom: 0.6em;
+}
+
+.reveal section {
+  text-align: left;
+}
+
+.reveal p { margin: 0.35em 0; }
+.reveal .lvl1 { margin-left: 1.2em; font-size: 0.92em; color: var(--band-muted); }
+.reveal .lvl2 { margin-left: 2.2em; font-size: 0.86em; color: var(--band-muted); }
+
+.reveal a { color: var(--band-accent); }
+.reveal a:hover { color: var(--accent-2); }
+
+.reveal .cols { display: flex; gap: 0.8em; align-items: flex-start; }
+.reveal .cols .txt { flex: 1 1 55%; min-width: 0; }
+.reveal .imgs { flex: 1 1 45%; }
+.reveal .imgs img {
+  max-width: 100%; max-height: 58vh; object-fit: contain;
+  border-radius: 6px; border: 1px solid rgba(45, 212, 191, 0.25);
+}
+.reveal .imgs.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4em; }
+.reveal .imgs.one { text-align: center; }
+.reveal section > .imgs.one:only-child img,
+.reveal section > .imgs.one img { max-height: 66vh; }
+
+/* Regenerated 2026 title slides */
+.reveal .title-slide { text-align: center; }
+.reveal .title-slide h1 {
+  font-size: 1.9em; letter-spacing: 0.14em; margin: 0.5em 0 0.4em;
+}
+.reveal .title-slide .badge {
+  display: inline-block; padding: 3px 14px; border-radius: 9999px;
+  color: #fff; font-family: "IBM Plex Mono", monospace; font-size: 0.5em;
+  letter-spacing: 2px; text-transform: uppercase;
+}
+.reveal .title-slide .dossier {
+  font-family: "IBM Plex Mono", monospace; color: var(--band-muted);
+  font-size: 0.55em; letter-spacing: 0.14em;
+}
+
+.reveal .section-slide { text-align: center; }
+.reveal .section-slide h2 { border-bottom-color: var(--accent-2); }
+
+/* Sora historical caption */
+.reveal .hist-note {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.55em;
+  color: var(--accent-2); border-left: 3px solid var(--accent-2);
+  padding-left: 0.7em; margin-top: 0.8em;
+}
+
+/* Draft-mode provenance footnote */
+.reveal .prov {
+  position: absolute; bottom: 0.4em; left: 0; right: 0;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.45em;
+  color: var(--band-muted); opacity: 0.85;
+}
+
+/* Draft ribbon */
+.draft-ribbon {
+  position: fixed; top: 18px; right: -44px; z-index: 100;
+  transform: rotate(35deg);
+  background: var(--accent-2); color: #1a1206;
+  font-family: "Rajdhani", sans-serif; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 6px 48px; font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.reveal .slide-number {
+  font-family: "IBM Plex Mono", monospace;
+  background: transparent; color: var(--band-muted);
+}
+
+/* Image-based slides: exported image is the slide */
+.reveal .full-image { text-align: center; }
+.reveal .full-image img.bleed {
+  max-width: 100%; max-height: 78vh; object-fit: contain;
+  border-radius: 4px;
+}
+.sr-only { position: absolute; left: -9999px; }

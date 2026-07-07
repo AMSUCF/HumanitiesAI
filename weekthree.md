@@ -16,6 +16,8 @@ canvas:
 
 > “Life has become more complex in the overwhelming sea of information.” — the Puppet Master, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
+**Slides:** [Week Three slides](slides/weekthree.html)
+
 A quick scheduling note: Monday, September 7 is Labor Day, but this is an asynchronous course, so the module proceeds on its normal schedule — enjoy the holiday if you have it, and pick up the work whenever your week allows.
 
 ## Tutorial: Research and Sources

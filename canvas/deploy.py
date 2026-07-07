@@ -24,9 +24,18 @@ def plan_week(path: Path, site_base: str) -> dict:
         raise ValueError(f"{path}: unknown unit '{c['unit']}'")
     page_md, disc_md = split_discussion(doc.body)
     week_label = c["module"].split(":")[0].strip()
+    slides_url = f"{site_base}/slides/{path.stem}.html"
     lecture_html = apply_canvas_style(
         f"<p><em>The {week_label} video lecture will be posted here at the "
-        f"start of the week.</em></p>", c["unit"])
+        f"start of the week.</em></p>"
+        f'<p><strong>Slides:</strong> <a href="{slides_url}">open the '
+        f"{week_label} slides in a new tab</a></p>"
+        f'<div style="position: relative; width: 100%; padding-bottom: 56.25%; '
+        f'height: 0; overflow: hidden;">'
+        f'<iframe src="{slides_url}" title="{week_label} slides" '
+        f'style="position: absolute; top: 0; left: 0; width: 100%; '
+        f'height: 100%; border: 1px solid #c6d4cf; border-radius: 6px;" '
+        f'allowfullscreen></iframe></div>', c["unit"])
     return {
         "stem": path.stem,
         "module": c["module"],
@@ -110,7 +119,8 @@ def main(argv=None) -> int:
         for p in plans:
             try:
                 st = state.setdefault(p["stem"], {})
-                module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"])
+                module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"],
+                                                 published=args.publish or None)
                 page_url = client.upsert_page(p["module"], p["page_html"], args.publish)
                 client.add_to_module(module_id, "Page", page_url)
                 st.update(module_id=module_id, page_url=page_url)

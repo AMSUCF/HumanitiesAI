@@ -16,6 +16,8 @@ canvas:
 
 > “…a new system of memory and thought parallel to your own.” — the Puppet Master, [*Ghost in the Shell* (1995) script](https://scrapsfromtheloft.com/movies/ghost-in-the-shell-1995-transcript/)
 
+**Slides:** [Week Thirteen slides](slides/weekthirteen.html)
+
 Back in Week Four, distant reading meant you and Claude working through a single novel together, prompt by prompt, watching for the moments where a model's assumptions about "the novel" or "genre" leaned on a narrow, canon-shaped sense of literature. This week, the same practice moves to machine scale: instead of one text and a conversational back-and-forth, you'll build an actual pipeline — code that processes a small library of texts at once, with an AI agent doing much of the engineering alongside you. The ghost in the archive is still there. It's just being read, this time, by something that reads faster, and differently, than either of us do.
 
 **This module's work is due Sunday, November 22 — before Thanksgiving break.** You'll then have a full week off, November 23–27: no new module, no readings, and no discussion post during break week. Week Fourteen — an extra-credit-only coda — doesn't open until Monday, November 30. Plan your pipeline work accordingly; there's no catching up on this module during the break itself.

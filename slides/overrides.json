@@ -1,0 +1,602 @@
+{
+ "10:1": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Describes UN Women 'genuine Google searches' campaign discussed in Noble's book intro]"
+ },
+ "10:2": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: UN Women 'women shouldn't/cannot' Google autocomplete ad photos from Noble's discussion]"
+ },
+ "10:3": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Chapter title page 'A Society, Searching' from Algorithms of Oppression]"
+ },
+ "10:4": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Book page 24 quote and Figure 1.9 caption from Algorithms of Oppression]"
+ },
+ "10:8": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Quotes Alex Halavais on search engines as 'object of faith', from Noble's book]"
+ },
+ "10:9": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Quotes Cathy O'Neil/Weapons of Math Destruction as told in Noble's book]"
+ },
+ "10:11": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Book quote: 'In the ensuing chapters, I continue to probe...' Noble's intro]"
+ },
+ "10:12": {
+  "action": "move",
+  "target": 5,
+  "reason": "Noble chapter now assigned in Week 5 [vision: Book section 'The Importance of Google' text from Algorithms of Oppression]"
+ },
+ "10:15": {
+  "action": "cut",
+  "reason": "Sora discontinued; tool references removed [vision: Article headline about OpenAI's Sora deepfakes of dead historical figures]"
+ },
+ "10:16": {
+  "action": "cut",
+  "reason": "Sora discontinued; tool references removed [vision: Text on Sora deepfakes of Robin Williams, MLK, Carlin, Hawking]"
+ },
+ "10:18": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 3 title page 'Sequencing Commands' from Code to Joy]"
+ },
+ "10:19": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Macro May I?' section comparing Mars rover control to square dancing]"
+ },
+ "10:20": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Discusses commands, parameters, sequence concepts from Code to Joy chapter]"
+ },
+ "10:21": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Loss function/optimizer and teaching-computer-to-code passages from Code to Joy]"
+ },
+ "11:1": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 4 title 'Splitting on Conditionals' opening quote]"
+ },
+ "11:2": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Batman if-then-else example from Code to Joy ch.4]"
+ },
+ "11:3": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Choose-your-own-adventure conditionals example, book text]"
+ },
+ "11:5": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Book text on AND/OR/NOT logical operators]"
+ },
+ "11:7": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Book text referencing ch.3 machine learning components, conditionals]"
+ },
+ "11:9": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Book text on decision trees, Occam's razor]"
+ },
+ "11:12": {
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote 'Who Is Responsible for the Results?' Black girls search]"
+ },
+ "11:14": {
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote on search engines perpetuating narratives, girls marginalized]"
+ },
+ "11:15": {
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Peter Morville keyword/long-tail quote used in Noble's book]"
+ },
+ "11:17": {
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote: 'Intent is not particularly important... outcomes']"
+ },
+ "11:19": {
+  "action": "move",
+  "target": 6,
+  "reason": "Noble chapter now assigned in Week 6 [vision: Noble quote on Google 'pull eyeballs' AdWords bias]"
+ },
+ "12:1": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 5 title page 'Storing in Variables', Code to Joy]"
+ },
+ "12:3": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Snow White/Dwarfs variables example, Code to Joy ch.5]"
+ },
+ "12:5": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Continues Snow White dwarf-count variables example]"
+ },
+ "12:7": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'You Can't Escape Spam' section on variable names, Code to Joy]"
+ },
+ "12:9": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Broadly in Scope' Luhn algorithm example, Code to Joy]"
+ },
+ "12:10": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Sheets Happen' spreadsheets-as-variables section, Code to Joy]"
+ },
+ "12:12": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Aw, they're just like us!' ML/neural network humor, Code to Joy]"
+ },
+ "12:13": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Classifiers/personality quiz discussion, Code to Joy]"
+ },
+ "12:15": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Neural network history, Tony Stark joke, Code to Joy]"
+ },
+ "12:16": {
+  "action": "cut",
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: Chapter 3 title 'Searching for People and Communities', Noble]"
+ },
+ "12:17": {
+  "action": "cut",
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: Search engines shaping culture, 'throughout this book', Noble]"
+ },
+ "12:19": {
+  "action": "cut",
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: Dylann Roof/ranking algorithms passage, Algorithms of Oppression]"
+ },
+ "13:1": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Loop definition, gym pushup example, book prose style]"
+ },
+ "13:3": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: \"Groundhog Day\" loops passage, calendar/appointment example]"
+ },
+ "13:5": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Lemon-picking loop pseudocode, robot shopper humor, book text]"
+ },
+ "13:7": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: \"do forever\" loop passage, hardware loop explanation, book text]"
+ },
+ "13:9": {
+  "action": "cut",
+  "reason": "Noble chapter dropped from the 2026 sequence [vision: \"as I have discussed throughout this book\" implicit bias/search quote]"
+ },
+ "14:17": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter title page: '7 Defining Functions: Call Me by Your Name']"
+ },
+ "14:19": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Make It Count' section with 'define the function get word count' pseudocode]"
+ },
+ "14:21": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: 'Talking About Talking About Recursion' section on functions and recursion]"
+ },
+ "14:24": {
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Quotes Hope Olson's research on bounded search discourses and Venn diagram]"
+ },
+ "14:25": {
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Text on citation-analysis practices, indexing, and Library of Congress classification]"
+ },
+ "14:26": {
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Artstor screenshot, Figure 5.5 caption on Damali Ayo's 'Rent-A-Negro']"
+ },
+ "14:27": {
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Chapter page header 'The Future of Knowledge in the Public', page 149, on search/AI]"
+ },
+ "14:28": {
+  "action": "move",
+  "target": 7,
+  "reason": "Noble chapter now assigned in Week 7 [vision: Text on 'universe of human knowledge', identity-based searches, search engine bias]"
+ },
+ "15:6": {
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Book covers: Mitchell's Artificial Intelligence and Noble's Algorithms of Oppression (plus AI Con)]"
+ },
+ "15:7": {
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Chapter heading 'The Future of Information Culture' from Noble's book]"
+ },
+ "15:11": {
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Noble-style quote on big-data optimism, wake-up call]"
+ },
+ "15:12": {
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Explicit 'Conclusion' heading, subtitle 'Algorithms of Oppression']"
+ },
+ "15:14": {
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Text on public noncommercial search, Google Search critique]"
+ },
+ "15:17": {
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Quote on default search settings shaping perceived 'normal']"
+ },
+ "15:19": {
+  "action": "move",
+  "target": 8,
+  "reason": "Noble chapter now assigned in Week 8 [vision: Quote urging public policy against unregulated, unethical AI]"
+ },
+ "15:20": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 8 title page 'Combining Code and Data']"
+ },
+ "15:21": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on combining code and data to generate code]"
+ },
+ "15:23": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman on Copilot as 'Coding Machines', jazz-musician analogy]"
+ },
+ "15:25": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman quote 'you are still the captain', 'build a pro-gram' heading]"
+ },
+ "15:26": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 9 title page 'Programmable World / As You Wish']"
+ },
+ "15:28": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman text: 'relationship to computers has become codependent']"
+ },
+ "15:29": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Littman text on user control vs. programming ease]"
+ },
+ "3:12": {
+  "action": "move",
+  "target": 1,
+  "reason": "Mitchell part now assigned in Week 1 [vision: Turing imitation-game quote cited 'Mitchell 49-50']"
+ },
+ "4:13": {
+  "action": "move",
+  "target": 2,
+  "reason": "Mitchell part now assigned in Week 2 [vision: Cover of Melanie Mitchell's AI: A Guide for Thinking Humans]"
+ },
+ "4:14": {
+  "action": "move",
+  "target": 2,
+  "reason": "Mitchell part now assigned in Week 2 [vision: Quote on trustworthy decision makers, machine learning ethics]"
+ },
+ "4:15": {
+  "action": "move",
+  "target": 2,
+  "reason": "Mitchell part now assigned in Week 2 [vision: Quote referencing superintelligence discussion in 'final chapter']"
+ },
+ "5:18": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'Chapter 4: Who, What, When, Where, Why' title + soldier/dog figure 6]"
+ },
+ "5:19": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'Easy Things Are Hard (Especially in Vision)': Minsky/Papert Summer Vision]"
+ },
+ "5:20": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: Google captcha screenshot illustrating image-recognition training in her chapter]"
+ },
+ "5:21": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text: Fei-Fei Li, WordNet, ImageNet, discovering Mechanical Turk]"
+ },
+ "5:22": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: Amazon Mechanical Turk website screenshot, referenced in her ImageNet passage]"
+ },
+ "5:23": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text on ImageNet competition results and Yann LeCun ConvNets quote]"
+ },
+ "5:24": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: ConvNet architecture diagram (cat image) illustrating her chapter]"
+ },
+ "5:25": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text: 'deep learning requires big data', ImageNet, Facebook, captchas]"
+ },
+ "5:26": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'What Did My Network Learn?' first-person Will Landecker anecdote]"
+ },
+ "5:29": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: text on AI training-data biases, continuing her face-recognition section]"
+ },
+ "5:30": {
+  "action": "move",
+  "target": 3,
+  "reason": "Mitchell part now assigned in Week 3 [vision: 'The Ethics of Face Recognition' text + Clearview/ICE news screenshot]"
+ },
+ "6:1": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 6 title, doomers/boosters, p(doom) Schumer forum text]"
+ },
+ "6:2": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: Bostrom paperclip maximizer, HAL 9000 misalignment discussion]"
+ },
+ "6:4": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 text: 'AI Safety and Alignment', Doomer/Booster research field named]"
+ },
+ "6:8": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: Asilomar AI Principles, defining human values critique]"
+ },
+ "6:9": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: accelerationist 'screed' quotes, AI as alchemy]"
+ },
+ "6:10": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 continues: TESCREAL acronym, Gebru and Torres discussion]"
+ },
+ "6:12": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Ch.6 conclusion: real harms vs Doomer/Booster dystopian/utopian visions]"
+ },
+ "6:13": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Melanie Mitchell Substack 'Magical Thinking on AI', response to Friedman]"
+ },
+ "6:14": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Mitchell post continues: Claude red-teaming, Shanahan on LLM roleplay]"
+ },
+ "6:15": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Mitchell post continues: moral reasoning, magical thinking conclusion]"
+ },
+ "6:18": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Sony Aibo Figure 22 and 'Chapter 8: Rewards for Robots' title]"
+ },
+ "6:19": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.8 Figure 25 diagrams: robot dog reinforcement-learning iterations]"
+ },
+ "6:20": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: 'Chapter 9: Game On' title, Figure 27 Atari Breakout illustration]"
+ },
+ "6:21": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.9 text: transfer learning limits, Hofstadter quote on 'state']"
+ },
+ "6:22": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: 'Chapter 11: Words, and the Company They Keep' title, NLP intro]"
+ },
+ "6:23": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.11 continues: rule-based vs statistical vs deep-learning NLP history]"
+ },
+ "6:24": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.11: sentiment classification, 'Temple of Doom' review examples]"
+ },
+ "6:25": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.11 Figure 35 word2vec diagram and 'company it keeps' text]"
+ },
+ "6:26": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: 'Chapter 12: Translation as Encoding and Decoding' title, Google Translate anecdote]"
+ },
+ "6:27": {
+  "action": "move",
+  "target": 4,
+  "reason": "Mitchell part now assigned in Week 4 [vision: Ch.12 Figures 39-40: Google image-captioning system, sample captions]"
+ },
+ "7:3": {
+  "action": "cut",
+  "reason": "El Eternauta reading removed [vision: Verge article: Netflix used AI for building-collapse scene in The Eternaut]"
+ },
+ "7:4": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Ch.13 'Ask Me Anything', Star Trek Data quote on humor/QA systems]"
+ },
+ "7:5": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Star Trek 'Hello Computer' meme + text on Siri/Alexa understanding limits]"
+ },
+ "7:6": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Watson/Jeopardy Ken Jennings 'human loser' quote and answer clues]"
+ },
+ "7:8": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Ch.14 'On Understanding', Hofstadter 'barrier of meaning' quote]"
+ },
+ "7:9": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Common sense/Allen Institute passage; also unrelated DeepSeek-R1 Nature article]"
+ },
+ "7:10": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Ch.16 'Questions, Answers, and Speculations', Hofstadter GEB reference]"
+ },
+ "7:11": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Book Q&A: 'Will AI result in massive unemployment for humans?']"
+ },
+ "7:13": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Book Q&A: 'How terrified should we be about AI?', cites Hofstadter/Kurzweil]"
+ },
+ "7:15": {
+  "action": "move",
+  "target": 5,
+  "reason": "Mitchell part now assigned in Week 5 [vision: Book Q&A: 'unsolved AI problems', closes 'as a thinking human']"
+ },
+ "8:9": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 1 title page: 'Telling Computers What to Do']"
+ },
+ "8:10": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text: 'We all need to become programmers']"
+ },
+ "8:11": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on programming as conveying tasks to machines]"
+ },
+ "8:13": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text defining 'telling the machine what to do']"
+ },
+ "8:14": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text: reasons computers work on our behalf]"
+ },
+ "8:18": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on NASA Mars rover explicit instructions example]"
+ },
+ "8:19": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Figure 1.2 rover planning image, DALL-E 2 credit, book text]"
+ },
+ "8:20": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on incentives vs instructions for rover behavior]"
+ },
+ "8:22": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text on conveying instructions vs incentives to rover]"
+ },
+ "8:23": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Text: 'how we should convey tasks to machines']"
+ },
+ "9:6": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Shows both book covers: Code to Joy and Algorithms of Oppression]"
+ },
+ "9:7": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Chapter 2 title page 'The What of Programming' from Littman's book]"
+ },
+ "9:9": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote: programming as 'delegation of the will', Littman's voice]"
+ },
+ "9:11": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote on 'collaborative filtering' from Code to Joy discussion]"
+ },
+ "9:12": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote about GroupLens recommendation system from the book]"
+ },
+ "9:13": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote on 'revealed preferences' and tracked clicks, book text]"
+ },
+ "9:15": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote on mathematical prediction models and recommendations, book text]"
+ },
+ "9:17": {
+  "action": "cut",
+  "reason": "Code to Joy (Littman) removed from the course [vision: Quote comparing coding to learning an alien language, book text]"
+ },
+ "9:18": {
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Quote card citing 'Algorithms of Oppression', algorithms as arbiters]"
+ },
+ "9:20": {
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text: AI as human rights issue, algorithmic decision making]"
+ },
+ "9:23": {
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text on Bitch magazine article, Google Panda algorithm]"
+ },
+ "9:25": {
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text on racism/sexism in tech, Black women and girls]"
+ },
+ "9:26": {
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text: 'algorithmic oppression... fundamental to the web']"
+ },
+ "9:28": {
+  "action": "move",
+  "target": 4,
+  "reason": "Noble chapter now assigned in Week 4 [vision: Noble book text on missing social/human context in algorithms]"
+ }
+}
