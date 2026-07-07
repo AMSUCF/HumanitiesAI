@@ -119,3 +119,10 @@
   font-family: "IBM Plex Mono", monospace; font-size: 0.5em;
   margin-top: 0.5em;
 }
+
+/* Splash title slides: scrim panel for legibility over background stills */
+.reveal .title-slide .scrim {
+  display: inline-block; padding: 0.9em 1.4em; border-radius: 10px;
+  background: rgba(12, 18, 16, 0.74);
+  backdrop-filter: blur(2px);
+}
