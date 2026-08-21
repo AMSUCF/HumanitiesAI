@@ -4,7 +4,7 @@ title: Humanities in the Age of AI
 ---
 
 -   **Instructor:** Dr. Anastasia Salter
--   **Office Hours:** Wednesdays 11AM - 1:30PM, TCH 236 and/or Zoom
+-   **Office Hours:** Wednesdays 11AM - 1:30PM via Zoom
 -   **Course Number:** ENG 6806
 -   **Email:** anastasia at ucf
 
@@ -194,7 +194,6 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *Artificial Intelligence* - Part I: Background
 -   *The AI Con* - Chapter 1: An Introduction to AI Hype
 -   Berry, D. M. (2023). The Limits of Computation: Joseph Weizenbaum and the ELIZA Chatbot. *Weizenbaum Journal of the Digital Society*, 3(3). [https://doi.org/10.34669/WI.WJDS/3.3.2](https://ojs.weizenbaum-institut.de/index.php/wjds/article/view/106)
--   [DeLoach, Brian, and Savannah Welch. "Thirty Years Later: Sacred Scripture, *Ghost in the Shell*, and Our Lady of Perpetual Cyberpunk." *SFRA Review* (January 22, 2025).](https://sfrareview.org/2025/01/22/thirty-years-later-sacred-scripture-ghost-in-the-shell-and-our-lady-of-perpetual-cyberpunk/)
 -   **Due: Activity Verification (Friday, August 28)**
 -   [**Exercise: ELIZA and Ghosts**](weekone.md)
 

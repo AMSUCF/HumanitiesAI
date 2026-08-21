@@ -1,69 +1,54 @@
 {
  "weekone": [
   {
-   "op": "replace",
-   "at": 1,
-   "html": "<section class=\"title-slide has-splash\" data-background-image=\"media/872269b9dbc0.jpg\" data-background-size=\"cover\" data-background-opacity=\"0.4\">\n<div class=\"scrim\">\n<span class=\"badge\" style=\"background:#0f766e\">Ghosts</span>\n<h1>Week One: Ghosts — Histories</h1>\n<p class=\"dossier\">[ ENG 6806 // FALL 2026 // WEEK OF AUGUST 24, 2026 ]</p>\n</div>\n</section>"
-  },
-  {
    "op": "replace_range",
-   "from": 2,
-   "to": 4,
+   "from": 1,
+   "to": 44,
    "html": [
-    "<section>\n<h2>This Course</h2>\n<p>The theory and practice of artificial intelligence in textual, visual, and procedural arts and humanities work — framed through Mamoru Oshii's <em>Ghost in the Shell</em> (1995).</p>\n<p>One tension, all semester: the <strong>ghost</strong> (the mind, the voice, the claim to authorship) versus the <strong>shell</strong> (the body, the medium, the interface that carries it).</p>\n</section>",
+    "<section class=\"title-slide has-splash\" data-background-image=\"media/872269b9dbc0.jpg\" data-background-size=\"cover\" data-background-opacity=\"0.4\">\n<div class=\"scrim\">\n<span class=\"badge\" style=\"background:#0f766e\">Ghosts</span>\n<h1>Week One: Ghosts — Histories</h1>\n<p class=\"dossier\">[ ENG 6806 // FALL 2026 // WEEK OF AUGUST 24, 2026 ]</p>\n</div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/1d7b63d93603.png\" alt=\"\"></div>\n</section>",
     "<section>\n<h2>Three Units + a Coda</h2>\n<p><strong>Ghosts</strong> (Weeks 1–4): textual generation and analysis — is there anyone behind the words?</p>\n<p><strong>Shells</strong> (Weeks 5–8): visual generation — bodies, surfaces, and the images that stand in for them.</p>\n<p><strong>Puppet Masters</strong> (Weeks 9–13): the agentic turn — code that plans, acts, and iterates.</p>\n<p><strong>The Net Is Vast and Infinite</strong> (Week 14 + finals): custom bots, fine-tuning, and where the ghost goes next.</p>\n</section>",
-    "<section>\n<h2>What You'll Be Able To Do</h2>\n<p class=\"lvl1\">Build critical and creative projects probing the pitfalls and potentials of LLMs in visual, textual, and procedural work</p>\n<p class=\"lvl1\">Trace the history of computer-augmentation across the arts and humanities</p>\n<p class=\"lvl1\">Connect contemporary AI policy debates to past technology panics and promises</p>\n<p class=\"lvl1\">Use large datasets on arts and humanities problems — and critique those methods</p>\n<p class=\"lvl1\">Apply and analyze generative methods for text, image, and code</p>\n<p class=\"lvl1\">Critique AI policies and uses across communities and contexts</p>\n</section>"
+    "<section>\n<h2>What You'll Be Able To Do</h2>\n<p class=\"lvl1\">Build critical and creative projects probing the pitfalls and potentials of LLMs in visual, textual, and procedural work</p>\n<p class=\"lvl1\">Trace the history of computer-augmentation across the arts and humanities</p>\n<p class=\"lvl1\">Connect contemporary AI policy debates to past technology panics and promises</p>\n<p class=\"lvl1\">Use large datasets on arts and humanities problems — and critique those methods</p>\n<p class=\"lvl1\">Apply and analyze generative methods for text, image, and code</p>\n<p class=\"lvl1\">Critique AI policies and uses across communities and contexts</p>\n</section>",
+    "<section>\n<h2>“AI” is a marketing term. It doesn’t refer to a coherent set of technologies. Instead, the phrase “artificial intelligence” is deployed when the people building or selling a particular set of technologies will profit from getting others to believe that their technology is similar to humans, able to do things that, in fact. Intrinsically require human judgment, perception, or creativity.</h2>\n<p>Bender and Hanna, The AI Con – pg 5</p>\n</section>",
+    "<section>\n<h2>What is generative AI?</h2>\n<div class=\"cols\"><div class=\"txt\">\n<p>Generative AI (per the MLA-CCCC task force) “refers to computer systems that can produce, or generate, various forms of traditionally human expression, in the form of digital content including language, images, video, and music.”</p>\n<p><a href=\"https://aiandwriting.hcommons.org/working-paper-1/\">MLA-CCCC Joint Task Force on Writing and AI — Working Paper 1</a></p>\n</div><div class=\"imgs one\"><img data-src=\"media/e5486d6cd13a.png\" alt=\"\"></div></div>\n</section>",
+    "<section class=\"full-image\">\n<img class=\"bleed\" data-src=\"media/720b34f3affc.png\" alt=\"Diagram comparing generative AI, agentic AI, and AI agents\">\n<p class=\"src\"><a href=\"https://pub.towardsai.net/generative-ai-vs-agentic-ai-vs-ai-agents-what-everyone-needs-to-know-dc42fd13e745\">Source: Towards AI, “Generative AI vs Agentic AI vs AI Agents”</a></p>\n</section>",
+    "<section>\n<h2>When selling rosy scenarios, AI hype promises us a life of ease: jobs deemed menial like data entry, writing ad copy, and making basic graphics will become a thing of the past. AI ‘companions’ will take notes for you in online meetings, or even better, become your stand in while you address more pressing matters.”</h2>\n<p>Bender and Hanna, The AI Con – pg 10</p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/2547194a5094.jpg\" alt=\"\"></div>\n</section>",
+    "<section>\n<h2>But AI hype also depends on promulgating worst case scenarios. Here, AI hype invokes visions of robots that disobey Issac Asimov’s First Law of Robotics: “A robot may not injure a human being or, through inaction, allow a human being to come to harm.”</h2>\n<p>Bender and Hanna, The AI Con – pg 10</p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap multi multi-4\"><img class=\"bleed\" data-src=\"media/89d144ad9f05.jpg\" alt=\"\"><img class=\"bleed\" data-src=\"media/e5341483d62f.jpg\" alt=\"\"><img class=\"bleed\" data-src=\"media/dde2702588f5.jpg\" alt=\"\"><img class=\"bleed\" data-src=\"media/4ed588f37048.jpg\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<img class=\"bleed\" data-src=\"media/49b22a2e01d1.jpg\" alt=\"Current Claude interface screenshot\">\n</section>",
+    "<section>\n<h2>Materials &amp; Subscriptions</h2>\n<p class=\"lvl1\">Melanie Mitchell, <em>Artificial Intelligence: A Guide for Thinking Humans</em> (2019) — on reserve, UCF Library</p>\n<p class=\"lvl1\">Safiya Noble, <em>Algorithms of Oppression</em> (2018) — unlimited ebook via UCF Library</p>\n<p class=\"lvl1\">Emily Bender &amp; Alex Hanna, <em>The AI Con</em> (2024)</p>\n<p class=\"lvl1\">Josh Tyrangiel, <em>AI for Good</em> (2026)</p>\n<p class=\"lvl1\"><strong>Required viewing:</strong> <em>Ghost in the Shell</em> (1995) — free with ads on Tubi, Plex, and Hoopla</p>\n<p class=\"lvl1\"><strong>Recommended:</strong> Science SARU's <em>The Ghost in the Shell</em> (2026), airing on Prime Video all semester</p>\n<p class=\"lvl1\">Additional cyberpunk viewing will be recommended throughout the semester, but is not required</p>\n<p class=\"lvl1\"><strong>Required subscription:</strong> Anthropic's Claude (next slide)</p>\n</section>",
+    "<section>\n<h2>Claude Pro</h2>\n<p>This course requires a paid <a href=\"https://claude.com/pricing\">Claude subscription</a> — the <strong>Pro plan ($20/month, or $17/month billed annually)</strong> covers everything we do this semester.</p>\n<p class=\"lvl1\">Includes the full model lineup, Research mode, artifacts, and Claude Code — all of which we'll use, from week-one conversations through the agentic unit</p>\n<p class=\"lvl1\">Sign up at <a href=\"https://claude.ai/\">claude.ai</a>; check <a href=\"https://claude.com/pricing\">claude.com/pricing</a> for current rates before subscribing</p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/7f736abafa8b.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/e86d65d3f7ef.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/053f75c5becc.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/3b9140f31d95.jpg\" alt=\"Current course tool screenshot\"></div>\n</section>",
+    "<section>\n<h2>Evaluation &amp; Grading</h2>\n<p class=\"lvl1\"><strong>6</strong> — Activity Verification (due Friday, August 28)</p>\n<p class=\"lvl1\"><strong>78</strong> — Weekly exercises (13 exercises, 6 points each, due Sundays)</p>\n<p class=\"lvl1\"><strong>16</strong> — Final Reflection (750–1000 words, due Thursday, December 10)</p>\n<p>Out of 100, standard letter scale. All work submits through Webcourses.</p>\n</section>",
+    "<section>\n<h2>Late Work &amp; Extra Credit</h2>\n<p class=\"lvl1\">Every assignment stays open <strong>one week past its due date</strong>, no penalty — after that it closes for good unless we've already talked</p>\n<p class=\"lvl1\">Grades and feedback live in the Webcourses Grade Book, updated weekly</p>\n<p class=\"lvl1\"><strong>Extra credit:</strong> Week 14 (“The Net Is Vast and Infinite” — Custom Bots): up to 6 points for a Claude Skill, up to 6 for a subagent workflow, up to 10 for fine-tuning on our public-domain corpus</p>\n<p class=\"lvl1\">Emergencies and medical challenges: reach out early — flexibility is available</p>\n</section>",
+    "<section>\n<h2>How This Course Runs</h2>\n<p class=\"lvl1\">Fully asynchronous — no meetings, ever; modules open Mondays at midnight and work is due Sundays at 11:59PM</p>\n<p class=\"lvl1\">Each week: readings &rarr; making exercise &rarr; reflective discussion</p>\n<p class=\"lvl1\">Office hours Wednesdays 11AM–1:30PM via Zoom; Webcourses messages any time — Zoom best for technical troubleshooting</p>\n<p class=\"lvl1\">You'll need a reliable computer with admin access for AI tool installs</p>\n</section>",
+    "<section>\n<h2>…the field of AI is in turmoil. Either a huge amount of progress has been made, or almost none at all…ai will solve all our problems, put us out of a job, destroy the human race, or cheapen our humanity.</h2>\n<p>Mitchell 13</p>\n</section>",
+    "<section>\n<h2>AI is a field that includes a broad set of approaches, with the goal of creating machines with intelligence. Deep learning is only one such approach…one method among many in the field of machine learning, a subfield of AI in which machines “Learn” from data or from their own “experiences.”</h2>\n<p>Mitchell 21</p>\n</section>",
+    "<section>\n<h2>Inspired by statistic and probability theory, ai researchers developed numerous algorithms that enable computers to learn from data, and the field of machine learning became its own independent subdiscipline of ai.</h2>\n<p>Mitchell 41</p>\n</section>",
+    "<section>\n<h2>Training neural networks and similar methods...often didn’t work very well, given the limited amount of data and computer power available at the time. But more data and computing power were coming shortly. The explosive growth of the internet would see to that.</h2>\n<p>Mitchell 42</p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/e16f6f0643bf.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/5a9725a9b6a4.jpg\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/889642592cdb.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/9f494db4f284.jpg\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/4e992494dbff.png\" alt=\"\"></div>\n</section>",
+    "<section>\n<h2>Turing suggested the following: “the question, ‘Can machines think?’ should be replaced by ‘are there imaginable digital computers which would do well in the imitation game?’</h2>\n<p>Mitchell 49-50</p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/be837a014f67.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/d2712a4f1b08.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap multi multi-2\"><img class=\"bleed\" data-src=\"media/2fa93fca571a.png\" alt=\"\"><img class=\"bleed\" data-src=\"media/240a05bc6322.png\" alt=\"\"></div>\n<p class=\"src\"><a href=\"https://www.livemint.com/technology/tech-news/sam-altman-warns-some-chatgpt-users-are-using-ai-in-self-destructive-ways-after-gpt-5-backlash-11754874304153.html\">https://www.livemint.com/technology/tech-news/sam-altman-warns-some-chatgpt-users-are-using-ai-in-self-destructive-ways-after-gpt-5-backlash-11754874304153.html</a></p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/10606af48493.png\" alt=\"\"></div>\n</section>",
+    "<section>\n<blockquote class=\"long-quote\">“Despite its grave limitations, computer scientists used ELIZA to celebrate how thoroughly computers could replace human labor and heralded the entry into the artificial intelligence age. A shocked Weizenbaum spent the rest of his life as a critic of AI, noting that humans were not meat machines, while Minsky went on to found MIT’s AI laboratory and rake in funding from the Pentagon unhindered.”</blockquote>\n<p class=\"src\"><a href=\"https://thecon.ai/\">Bender and Hanna, <em>The AI Con</em> – pg 13</a></p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/2c7d053502ff.png\" alt=\"\"></div>\n<p class=\"src\"><a href=\"https://www.theguardian.com/australia-news/2025/aug/08/openai-chatgpt-5-struggled-with-spelling-and-geography\">https://www.theguardian.com/australia-news/2025/aug/08/openai-chatgpt-5-struggled-with-spelling-and-geography</a></p>\n</section>",
+    "<section>\n<h2>In this book, we are trying to do the same thing Weizenbaum tried to do: educate people about how these systems work, dispel the notion that they are thinking machines with a semblance of human understanding, and provide a model of how to think about them instead.</h2>\n<p>Bender and Hanna, The AI Con – pg 17</p>\n</section>",
+    "<section>\n<h2>Exercise: ELIZA and Ghosts</h2>\n<p class=\"lvl1\">Watch <em>Ghost in the Shell</em> (1995) first — it frames the whole semester</p>\n<p class=\"lvl1\">Then hold three conversations across eras: Landsteiner's <a href=\"https://www.masswerk.at/eliza/\">E.L.I.Z.A. Talking</a> (15+ minutes), then Claude prompted as a Rogerian therapist — compare Sonnet 5 with Opus 4.8</p>\n<p class=\"lvl1\">Finish with the speculative pair: <strong>Future ELIZA</strong> (2025, generated by Claude Sonnet 4) and <strong>Future ELIZA 2501</strong> (2026, the same prompt to Claude Fable 5)</p>\n<p class=\"lvl1\">Discussion: introduce yourself, then weigh in — does ELIZA have anything resembling a ghost, or just a shell that talks like there's one behind it?</p>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/0251c5640bd1.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/2724404abf62.png\" alt=\"Current claude.ai interface with model picker\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/fd8f92fff3bc.png\" alt=\"\"></div>\n</section>",
+    "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/1ebed473050e.jpg\" alt=\"Future ELIZA 2501, a Ghost in the Shell-inflected rebuild of the Future ELIZA demo\"></div>\n<p class=\"src\"><a href=\"https://anastasiasalter.net/HumanitiesAI/demos/WeekOne/ghost.html\">Future ELIZA 2501 (2026) — the same prompt, one model generation later</a></p>\n</section>"
    ]
-  },
-  {
-   "op": "replace",
-   "at": 6,
-   "html": "<section>\n<h2>What is generative AI?</h2>\n<div class=\"cols\"><div class=\"txt\">\n<p>Generative AI (per the MLA-CCCC task force) “refers to computer systems that can produce, or generate, various forms of traditionally human expression, in the form of digital content including language, images, video, and music.”</p>\n<p><a href=\"https://aiandwriting.hcommons.org/working-paper-1/\">MLA-CCCC Joint Task Force on Writing and AI — Working Paper 1</a></p>\n</div><div class=\"imgs one\"><img data-src=\"media/e5486d6cd13a.png\" alt=\"\"></div></div>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 7,
-   "html": "<section class=\"full-image\">\n<img class=\"bleed\" data-src=\"media/720b34f3affc.png\" alt=\"Diagram comparing generative AI, agentic AI, and AI agents\">\n<p class=\"src\"><a href=\"https://pub.towardsai.net/generative-ai-vs-agentic-ai-vs-ai-agents-what-everyone-needs-to-know-dc42fd13e745\">Source: Towards AI, “Generative AI vs Agentic AI vs AI Agents”</a></p>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 13,
-   "html": "<section class=\"full-image\">\n<img class=\"bleed\" data-src=\"media/49b22a2e01d1.jpg\" alt=\"Current Claude interface screenshot\">\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 14,
-   "html": "<section>\n<h2>Materials &amp; Subscriptions</h2>\n<p class=\"lvl1\">Melanie Mitchell, <em>Artificial Intelligence: A Guide for Thinking Humans</em> (2019) — on reserve, UCF Library</p>\n<p class=\"lvl1\">Safiya Noble, <em>Algorithms of Oppression</em> (2018) — unlimited ebook via UCF Library</p>\n<p class=\"lvl1\">Emily Bender &amp; Alex Hanna, <em>The AI Con</em> (2024)</p>\n<p class=\"lvl1\">Josh Tyrangiel, <em>AI for Good</em> (2026)</p>\n<p class=\"lvl1\"><strong>Required viewing:</strong> <em>Ghost in the Shell</em> (1995) — free with ads on Tubi, Plex, and Hoopla</p>\n<p class=\"lvl1\"><strong>Recommended:</strong> Science SARU's <em>The Ghost in the Shell</em> (2026), airing on Prime Video all semester</p>\n<p class=\"lvl1\"><strong>Required subscription:</strong> Anthropic's Claude (next slide)</p>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 15,
-   "html": "<section>\n<h2>Claude Pro</h2>\n<p>This course requires a paid <a href=\"https://claude.com/pricing\">Claude subscription</a> — the <strong>Pro plan ($20/month, or $17/month billed annually)</strong> covers everything we do this semester.</p>\n<p class=\"lvl1\">Includes the full model lineup, Research mode, artifacts, and Claude Code — all of which we'll use, from week-one conversations through the agentic unit</p>\n<p class=\"lvl1\">Sign up at <a href=\"https://claude.ai/\">claude.ai</a>; check <a href=\"https://claude.com/pricing\">claude.com/pricing</a> for current rates before subscribing</p>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 19,
-   "html": "<section class=\"full-image\">\n<div class=\"bleed-wrap\"><img class=\"bleed\" data-src=\"media/3b9140f31d95.jpg\" alt=\"Current course tool screenshot\"></div>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 20,
-   "html": "<section>\n<h2>Evaluation &amp; Grading</h2>\n<p class=\"lvl1\"><strong>6</strong> — Activity Verification (due Friday, August 28)</p>\n<p class=\"lvl1\"><strong>78</strong> — Weekly exercises (13 exercises, 6 points each, due Sundays)</p>\n<p class=\"lvl1\"><strong>16</strong> — Final Reflection (750–1000 words, due Thursday, December 10)</p>\n<p>Out of 100, standard letter scale. All work submits through Webcourses.</p>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 21,
-   "html": "<section>\n<h2>Late Work &amp; Extra Credit</h2>\n<p class=\"lvl1\">Every assignment stays open <strong>one week past its due date</strong>, no penalty — after that it closes for good unless we've already talked</p>\n<p class=\"lvl1\">Grades and feedback live in the Webcourses Grade Book, updated weekly</p>\n<p class=\"lvl1\"><strong>Extra credit:</strong> Week 14 (“The Net Is Vast and Infinite” — Custom Bots): up to 6 points for a Claude Skill, up to 6 for a subagent workflow, up to 10 for fine-tuning on our public-domain corpus</p>\n<p class=\"lvl1\">Emergencies and medical challenges: reach out early — flexibility is available</p>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 22,
-   "html": "<section>\n<h2>How This Course Runs</h2>\n<p class=\"lvl1\">Fully asynchronous — no meetings, ever; modules open Mondays at midnight and work is due Sundays at 11:59PM</p>\n<p class=\"lvl1\">Each week: readings &rarr; making exercise &rarr; reflective discussion</p>\n<p class=\"lvl1\">Office hours Wednesdays 11AM–1:30PM (TCH 236 / Zoom); Webcourses messages any time — Zoom best for technical troubleshooting</p>\n<p class=\"lvl1\">You'll need a reliable computer with admin access for AI tool installs</p>\n</section>"
-  },
-  {
-   "op": "replace",
-   "at": 32,
-   "html": "<section>\n<blockquote class=\"long-quote\">“Despite its grave limitations, computer scientists used ELIZA to celebrate how thoroughly computers could replace human labor and heralded the entry into the artificial intelligence age. A shocked Weizenbaum spent the rest of his life as a critic of AI, noting that humans were not meat machines, while Minsky went on to found MIT’s AI laboratory and rake in funding from the Pentagon unhindered.”</blockquote>\n<p class=\"src\"><a href=\"https://thecon.ai/\">Bender and Hanna, <em>The AI Con</em> – pg 13</a></p>\n</section>"
   }
  ]
 }

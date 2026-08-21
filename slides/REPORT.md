@@ -3,7 +3,7 @@
 Every cut and relocation below is machine-made and awaiting instructor review. Draft ribbons stay on until each deck's flag in `slides/decks.yml` is set to `false` and the decks are regenerated.
 
 ## Week 1 — Week One: Ghosts — Histories
-- slides: 44 total (37 native, 5 moved in, 0 cut from source deck(s), draft=yes)
+- slides: 43 total (37 native, 5 moved in, 0 cut from source deck(s), draft=no)
   - MOVED from 2025 deck 3 slide 2: "…the field of as is in turmoil. Either a huge amount of prog" — Mitchell part now assigned in Week 1
   - MOVED from 2025 deck 3 slide 5: "AI is a field that includes a broad set of approaches, with " — Mitchell part now assigned in Week 1
   - MOVED from 2025 deck 3 slide 10: "Inspired by statistic and probability theory, ai researchers" — Mitchell part now assigned in Week 1
