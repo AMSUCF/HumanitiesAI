@@ -69,7 +69,7 @@ def test_plan_week_includes_availability_and_lecture(tmp_path):
     plan = deploy.plan_week(wk, site_base="https://x.y")
     assert plan["unlock_at"] == "2026-08-24T04:00:00Z"
     assert plan["lock_at"] == "2026-09-07T03:59:00Z"
-    assert plan["lecture_title"] == "Week One Video Lecture"
+    assert plan["lecture_title"] == "Week One Readings + Lecture"
     assert "video lecture" in plan["lecture_html"].lower()
 
 
@@ -94,3 +94,59 @@ def test_plan_week_lecture_embeds_slides(tmp_path):
     plan = deploy.plan_week(wk, site_base="https://x.y")
     assert 'iframe src="https://x.y/slides/weekone.html"' in plan["lecture_html"]
     assert "video lecture will be posted" in plan["lecture_html"]
+
+
+SYLLABUS = (
+    "## Weekly Schedule\n\n"
+    "### Week One: Ghosts - Histories (Monday, August 24 - Sunday, August 30)\n\n"
+    "-   [**Slides: Week One**](slides/weekone.html)\n"
+    "-   *Artificial Intelligence* - Part I: Background\n"
+    "-   Berry, D. M. (2023). The Limits of Computation. [link](https://doi.org/x)\n"
+    "-   **Due: Activity Verification (Friday, August 28)**\n"
+    "-   [**Exercise: ELIZA and Ghosts**](weekone.md)\n\n"
+    "### Week Two: Ghosts - Generation (Monday, August 31 - Sunday, September 6)\n\n"
+    "-   [**Slides: Week Two**](slides/weektwo.html)\n"
+    "-   *The AI Con* - Chapter 2\n"
+    "-   [**Exercise: Generation and Interfaces**](weektwo.md)\n"
+)
+
+
+def _week_md(module="Week One: Ghosts — Histories"):
+    return ("---\ntitle: T\ncanvas:\n"
+            f"  module: \"{module}\"\n"
+            "  week_start: 2026-08-24\n  due: 2026-08-30\n  points: 6\n"
+            "  discussion: true\n  extra_credit: false\n  unit: ghosts\n---\n"
+            "Body\n\n### Discussion\n\nQ?\n")
+
+
+def test_plan_week_lecture_lists_readings_before_video(tmp_path):
+    wk = tmp_path / "weekone.md"
+    wk.write_text(_week_md(), encoding="utf-8")
+    plan = deploy.plan_week(wk, site_base="https://x.y", syllabus_md=SYLLABUS)
+    html = plan["lecture_html"]
+    assert plan["lecture_title"] == "Week One Readings + Lecture"
+    assert "<h2>Readings</h2>" in html and "<h2>Lecture</h2>" in html
+    assert html.index("Readings") < html.index("Lecture")
+    assert "Part I: Background" in html
+    assert html.index("Part I: Background") < html.index("video lecture will be posted")
+    # slides and exercise bullets are dropped from the readings list
+    assert "Slides: Week One" not in html
+    assert "Exercise: ELIZA" not in html
+    # only week one's readings, not week two's
+    assert "Chapter 2" not in html
+
+
+def test_extract_readings_missing_week_returns_empty():
+    from converter import extract_readings
+    assert extract_readings(SYLLABUS, "Week Nine") == ""
+
+
+def test_video_embed_regex_matches_canvas_media_iframe():
+    live = ('<div>band</div><p><iframe style="width: 480px;" '
+            'title="HumanitiesAI_One.mp4" data-media-type="video" '
+            'src="https://webcourses.ucf.edu/media_attachments_iframe/1?x=1" '
+            'allowfullscreen="allowfullscreen"></iframe></p><p>rest</p>')
+    m = deploy.VIDEO_EMBED_RE.search(live)
+    assert m and m.group(0).startswith("<p><iframe")
+    assert m.group(0).endswith("</iframe></p>")
+    assert "rest" not in m.group(0)

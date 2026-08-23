@@ -41,12 +41,22 @@ class CanvasClient:
                 return self._put(f"{self.course}/modules/{m['id']}", payload)["id"]
         return self._post(f"{self.course}/modules", payload)["id"]
 
-    def upsert_page(self, title: str, body: str, published: bool = False) -> str:
+    def upsert_page(self, title: str, body: str, published: bool = False,
+                    known_url: str | None = None) -> str:
         payload = {"wiki_page": {"title": title, "body": body, "published": published}}
+        if known_url is not None:
+            return self._put(f"{self.course}/pages/{known_url}", payload)["url"]
         for p in self._get_all(f"{self.course}/pages", search_term=title):
             if p["title"] == title:
                 return self._put(f"{self.course}/pages/{p['url']}", payload)["url"]
         return self._post(f"{self.course}/pages", payload)["url"]
+
+    def get_page_body(self, url: str) -> str | None:
+        r = self.s.get(f"{self.course}/pages/{url}")
+        if r.status_code == 404:
+            return None
+        r.raise_for_status()
+        return r.json().get("body") or ""
 
     def upsert_assignment_group(self, name: str) -> int:
         for g in self._get_all(f"{self.course}/assignment_groups"):
@@ -106,14 +116,21 @@ class CanvasClient:
             return self._put(f"{self.course}/assignments/{known_id}", payload)["id"]
         return self._post(f"{self.course}/assignments", payload)["id"]
 
-    def add_to_module(self, module_id: int, item_type: str, ref) -> None:
+    def add_to_module(self, module_id: int, item_type: str, ref,
+                      position: int | None = None) -> None:
         items = self._get_all(f"{self.course}/modules/{module_id}/items")
         if item_type == "Page":
-            if any(i.get("page_url") == ref for i in items):
-                return
+            found = next((i for i in items if i.get("page_url") == ref), None)
             item = {"type": "Page", "page_url": ref}
         else:
-            if any(i.get("content_id") == ref and i["type"] == item_type for i in items):
-                return
+            found = next((i for i in items
+                          if i.get("content_id") == ref and i["type"] == item_type), None)
             item = {"type": item_type, "content_id": ref}
+        if found is not None:
+            if position is not None and found.get("position") != position:
+                self._put(f"{self.course}/modules/{module_id}/items/{found['id']}",
+                          {"module_item": {"position": position}})
+            return
+        if position is not None:
+            item["position"] = position
         self._post(f"{self.course}/modules/{module_id}/items", {"module_item": item})

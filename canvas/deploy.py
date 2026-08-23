@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -11,13 +12,18 @@ import yaml
 from dotenv import load_dotenv
 
 from converter import (UNIT_COLORS, apply_canvas_style, due_at_utc,
-                       load_week, lock_at_utc, render_html, split_discussion,
-                       unlock_at_utc)
+                       extract_readings, load_week, lock_at_utc, render_html,
+                       split_discussion, unlock_at_utc)
 
 STATE_FILE = Path(".state.json")
 
+# an uploaded Canvas video embed, hand-placed on a live lecture page —
+# deploys keep it in place of the placeholder paragraph
+VIDEO_EMBED_RE = re.compile(
+    r'<p><iframe[^>]*data-media-type="video".*?</iframe></p>', re.DOTALL)
 
-def plan_week(path: Path, site_base: str) -> dict:
+
+def plan_week(path: Path, site_base: str, syllabus_md: str = "") -> dict:
     doc = load_week(path)
     c = doc.canvas
     if c["unit"] not in UNIT_COLORS:
@@ -25,10 +31,16 @@ def plan_week(path: Path, site_base: str) -> dict:
     page_md, disc_md = split_discussion(doc.body)
     week_label = c["module"].split(":")[0].strip()
     slides_url = f"{site_base}/slides/{path.stem}.html"
+    readings_md = extract_readings(syllabus_md, week_label) if syllabus_md else ""
+    readings_html = (render_html(f"## Readings\n\n{readings_md}", site_base)
+                     if readings_md else "")
+    placeholder = (f"<p><em>The {week_label} video lecture will be posted "
+                   f"here at the start of the week.</em></p>")
     lecture_html = apply_canvas_style(
-        f"<p><em>The {week_label} video lecture will be posted here at the "
-        f"start of the week.</em></p>"
-        f'<p><strong>Slides:</strong> <a href="{slides_url}">open the '
+        readings_html
+        + "<h2>Lecture</h2>"
+        + placeholder
+        + f'<p><strong>Slides:</strong> <a href="{slides_url}">open the '
         f"{week_label} slides in a new tab</a></p>"
         f'<div style="position: relative; width: 100%; padding-bottom: 56.25%; '
         f'height: 0; overflow: hidden;">'
@@ -44,8 +56,9 @@ def plan_week(path: Path, site_base: str) -> dict:
         "due_at": due_at_utc(c["due"]),
         "unlock_at": unlock_at_utc(c["week_start"]),
         "lock_at": due_at_utc(c["due"]) if c.get("hard_close") else lock_at_utc(c["due"]),
-        "lecture_title": f"{week_label} Video Lecture",
+        "lecture_title": f"{week_label} Readings + Lecture",
         "lecture_html": lecture_html,
+        "lecture_placeholder": placeholder,
         "has_discussion": bool(c["discussion"]) and bool(disc_md),
         "page_html": apply_canvas_style(render_html(page_md, site_base), c["unit"]),
         "discussion_html": apply_canvas_style(render_html(disc_md, site_base), c["unit"])
@@ -88,7 +101,10 @@ def main(argv=None) -> int:
     if not stems or stems == [None]:
         ap.error("pass --all or --week NAME")
 
-    plans = [plan_week(root / f"{s}.md", cfg["site_base"]) for s in stems]
+    syl_path = root / cfg["syllabus_file"]
+    syllabus_md = frontmatter.load(str(syl_path)).content if syl_path.exists() else ""
+    plans = [plan_week(root / f"{s}.md", cfg["site_base"], syllabus_md)
+             for s in stems]
 
     if args.dry_run:
         prev = Path("preview")
@@ -99,7 +115,11 @@ def main(argv=None) -> int:
             if p["has_discussion"]:
                 (prev / f"{p['stem']}-discussion.html").write_text(
                     p["discussion_html"], encoding="utf-8")
-            lecture = " + lecture placeholder" if p["stem"] in lecture_stems else ""
+            lecture = ""
+            if p["stem"] in lecture_stems:
+                (prev / f"{p['stem']}-lecture.html").write_text(
+                    p["lecture_html"], encoding="utf-8")
+                lecture = " + readings/lecture"
             print(f"[dry-run] module '{p['module']}' | opens {p['unlock_at']} | "
                   f"page{lecture} | discussion {p['points']}pts "
                   f"due {p['due_at']} locks {p['lock_at']}"
@@ -121,14 +141,26 @@ def main(argv=None) -> int:
                 st = state.setdefault(p["stem"], {})
                 module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"],
                                                  published=args.publish or None)
-                page_url = client.upsert_page(p["module"], p["page_html"], args.publish)
-                client.add_to_module(module_id, "Page", page_url)
-                st.update(module_id=module_id, page_url=page_url)
+                pos = 1
                 if p["stem"] in lecture_stems:
+                    lecture_html = p["lecture_html"]
+                    live = (client.get_page_body(st["lecture_url"])
+                            if st.get("lecture_url") else None)
+                    video = VIDEO_EMBED_RE.search(live) if live else None
+                    if video:
+                        lecture_html = lecture_html.replace(
+                            p["lecture_placeholder"], video.group(0))
                     lecture_url = client.upsert_page(
-                        p["lecture_title"], p["lecture_html"], args.publish)
-                    client.add_to_module(module_id, "Page", lecture_url)
+                        p["lecture_title"], lecture_html, args.publish,
+                        known_url=st.get("lecture_url"))
+                    client.add_to_module(module_id, "Page", lecture_url, position=pos)
                     st["lecture_url"] = lecture_url
+                    pos += 1
+                page_url = client.upsert_page(p["module"], p["page_html"], args.publish,
+                                              known_url=st.get("page_url"))
+                client.add_to_module(module_id, "Page", page_url, position=pos)
+                st.update(module_id=module_id, page_url=page_url)
+                pos += 1
                 if p["has_discussion"]:
                     title = f"Exercise Discussion: {p['module']}"
                     disc_id = client.upsert_discussion(
@@ -137,7 +169,7 @@ def main(argv=None) -> int:
                         p["due_at"], group_id, args.publish,
                         known_id=st.get("discussion_id"),
                         unlock_at=p["unlock_at"], lock_at=p["lock_at"])
-                    client.add_to_module(module_id, "Discussion", disc_id)
+                    client.add_to_module(module_id, "Discussion", disc_id, position=pos)
                     st["discussion_id"] = disc_id
                 print(f"deployed: {p['module']}")
             except requests.HTTPError as e:

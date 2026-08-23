@@ -59,6 +59,34 @@ def render_html(md_text: str, site_base: str) -> str:
 
 TZ = ZoneInfo("America/New_York")
 _DISCUSSION_RE = re.compile(r"^### Discussion[ \t]*$", re.MULTILINE)
+_SKIP_BULLET_RE = re.compile(r"^-\s+\[?\*\*(Slides|(Extra Credit )?Exercise)")
+
+
+def extract_readings(syllabus_md: str, week_label: str) -> str:
+    """Pull a week's readings from the syllabus Weekly Schedule.
+
+    Returns the section's markdown (bullets and prose) minus the Slides
+    and Exercise bullets (those live elsewhere on the Canvas module),
+    or "" if the week heading isn't found.
+    """
+    m = re.search(
+        rf"^###\s+{re.escape(week_label)}[:\s][^\n]*\n(.*?)(?=^###\s|\Z)",
+        syllabus_md, re.MULTILINE | re.DOTALL)
+    if not m:
+        return ""
+    kept, skipping = [], False
+    for line in m.group(1).splitlines():
+        stripped = line.strip()
+        if stripped.startswith("- "):
+            skipping = bool(_SKIP_BULLET_RE.match(stripped))
+            if not skipping:
+                kept.append(line)
+        elif not stripped:
+            skipping = False  # blank line ends any bullet continuation
+            kept.append(line)
+        elif not skipping:
+            kept.append(line)
+    return "\n".join(kept).strip()
 
 
 def split_discussion(md_text: str) -> tuple[str, str]:
