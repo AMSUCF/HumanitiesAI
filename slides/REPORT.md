@@ -11,7 +11,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - MOVED from 2025 deck 3 slide 13: "Turing suggested the following: “the question, ‘Can machines" — Mitchell part now assigned in Week 1
 
 ## Week 2 — Week Two: Ghosts — Generation
-- slides: 47 total (42 native, 3 moved in, 0 cut from source deck(s), draft=yes)
+- slides: 40 total (42 native, 3 moved in, 0 cut from source deck(s), draft=yes)
   - MOVED from 2025 deck 4 slide 14: "I’m saving the image discussions for next week, and focusing" — Mitchell part now assigned in Week 2 [vision: Cover of Melanie Mitchell's AI: A Guide for Thinking Humans]
   - MOVED from 2025 deck 4 slide 15: "(untitled)" — Mitchell part now assigned in Week 2 [vision: Quote on trustworthy decision makers, machine learning ethics]
   - MOVED from 2025 deck 4 slide 16: "(untitled)" — Mitchell part now assigned in Week 2 [vision: Quote referencing superintelligence discussion in 'final chapter']

@@ -134,6 +134,7 @@
 .reveal .full-image .src, .reveal .src { text-align: center; }
 
 .reveal blockquote.long-quote {
+  box-sizing: border-box;
   font-size: 0.85em; line-height: 1.5; font-style: italic;
   border-left: 3px solid var(--band-accent); padding-left: 0.8em;
   margin: 0 0 0.6em; background: none; box-shadow: none; width: 100%;
