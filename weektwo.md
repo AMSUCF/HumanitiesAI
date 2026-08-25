@@ -38,9 +38,9 @@ Refine the poem through at least ten iterations, working toward a final version 
 
 For your final iteration(s), ask Claude to create an **artifact** that displays your poem in a formatted website, like this one:
 
-![Claude Website Example](images/claude-artifact-example.png)
+![Claude artifact preview with the Publish artifact menu open](images/claude-artifact-publish.png)
 
-Use the publish button in Claude's interface (as demonstrated in the screenshot above) to create a shareable web version of your creative work. For instance, here's this [terrible fake Blake poem](https://claude.ai/public/artifacts/03f77173-efbf-4b0c-90c3-cac5bafb3bbe). Include both the published website link and your reflection in your discussion post.
+Use the publish button in Claude's interface (as demonstrated in the screenshot above) to create a shareable web version of your creative work. For instance, here's this fake Blake pairing, [*Songs of a New Machine*](https://claude.ai/public/artifacts/14813a35-0e34-4d91-acbf-79ae85bfb771) — the full prompt-by-prompt process behind it is walked through in this week's slides. Include both the published website link and your reflection in your discussion post.
 
 ### Discussion
 
