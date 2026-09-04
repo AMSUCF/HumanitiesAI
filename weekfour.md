@@ -66,3 +66,5 @@ After completing our readings, iterate on a distant read of your selected text f
 Bring the Bamman, Underwood, and Smith piece directly into your reflection: where, if anywhere, did you notice your model's assumptions skewing toward a narrower literary canon than the text you actually chose deserved? Did that skew show up in the bag of words, the character network, the genre guess — or did you not notice it until you went looking?
 
 Finally, one glance back at the epigraph: whose memory is in the room when you look at your word cloud or character network — yours, the author's, or the model's?
+
+Don't forget to reply twice to peers (1 point / reply) for full credit!

@@ -46,3 +46,5 @@ For each image you create, briefly document your process, including initial atte
 After completing this week's readings, share your favorite three AI-generated images and the process / tools that made them. Document both your prompting process and your critical observations about what these tools reveal about visual representation, cultural assumptions, and the boundaries of AI creativity. Remember to include citations to the readings to ground your observations and critique.
 
 Finally, put Haraway's cyborg in conversation with Demsky's account of prompting Midjourney toward images he could live with: does treating a generated body as a Haraway-style cyborg change how responsible you feel for what it looks like? (The epigraph's shrug — a body is just a self-preserving program — is one available answer; you don't have to accept it.)
+
+Don't forget to reply twice to peers (1 point / reply) for full credit!

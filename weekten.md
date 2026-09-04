@@ -114,3 +114,5 @@ Share the link to your deployed GitHub Pages site (or, if you're still troublesh
 - If you tried the optional stretch goal, how did handing the recommendation logic itself to Claude's reasoning change what the app could (and couldn't) do?
 - *AI for Good*'s second chapter, "Physician Heal Thyself," is about handing consequential judgment to AI systems in a domain — healthcare — where the stakes of a wrong inference are much higher than a bad book recommendation. What does your (much lower-stakes) experience this week suggest about what it takes to trust an AI system's reasoning over your own, and where that trust should stop?
 - Finally, a gesture at the epigraph's proposed fusion: did anything emerge from you and Claude Code together that neither would have produced alone — or is that framing too grand for what was really just careful delegation?
+
+Don't forget to reply twice to peers (1 point / reply) for full credit!

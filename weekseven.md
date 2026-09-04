@@ -57,3 +57,5 @@ Your discussion post should combine your knowledge (and samples) from your own e
 If you're looking for more material to draw on: Science SARU's new *The Ghost in the Shell* series (dir. Mokochan, script EnJoe Toh) premieres July 7, 2026 on Prime Video and airs new episodes through the semester — fair game as supplemental viewing and discussion material if you're following along.
 
 Finally: the Sora arc added plausible frames where no event existed, and for six months a lot of people found that convincing before the tool itself vanished. What does a hype cycle that ran from launch to shutdown in under seven months suggest about the gap between what these tools are claimed to do and what they can actually sustain?
+
+Don't forget to reply twice to peers (1 point / reply) for full credit!

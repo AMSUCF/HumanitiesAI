@@ -69,3 +69,5 @@ Once you've completed your recommendation system in Claude's artifact viewer, yo
 This week, share the link to your Claude artifact recommendation system, and think through its relationship to *AI for Good*'s opening chapters. Tyrangiel's introduction and first chapter, "I Believe the Children Are Our Future," make a case for AI's constructive uses on behalf of institutions and communities that mostly lack the resources to build these tools themselves; your recommendation site is a much smaller, much stranger version of that same premise — an interactive tool built almost entirely by delegation. What types of expertise went into each stage of building it? What assumptions or gaps do you see in the dataset you produced, and whose taste or canon does it end up reflecting?
 
 Finally, a quick gesture at the epigraph — a tool demanding standing as the author of its own actions: did your project this week stay the careful delegation Willison describes, or did it do more than you explicitly told it to?
+
+Don't forget to reply twice to peers (1 point / reply) for full credit!

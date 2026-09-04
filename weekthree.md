@@ -57,6 +57,8 @@ Be particularly wary of misinterpretation of complex sources, and note where cor
 
 ### Discussion
 
+Now that we are past drop/add and everyone is settled in, replying to your peers will count for 2 points of each discussion (1 point / reply). From this week on, don't forget to reply twice to peers for full credit!
+
 After reviewing the findings Claude has presented from your query, share a summary and any unexpected or interesting results back in your discussion post. Consider how this experience with AI-assisted research reflects broader questions about the role of AI in knowledge work and the role of human expertise in research and analysis. Given our discussions of labor this week, how do you feel about this approach to outsourcing a preliminary query? Was it useful? How does this compare to other ways you've worked with chatbots prior to this class?
 
 Finally, a nod to the epigraph: when Research synthesizes an answer out of that sea of information, what did verifying (or failing to verify) its sources tell you about who is actually doing the knowing?

@@ -78,3 +78,5 @@ The design of this entire course site is an example of this type of workflow —
 Share your deployed website link along with reflection on the agentic development process. How did you feel about your level of control? Where were the points of frustration? Would you make use of this for prototyping or managing digital projects in the future? Connect your experience to Meredith Martin's ["Command Lines for the Humanities"](https://www.cambridge.org/core/journals/pmla/article/command-lines-for-the-humanities/097F959E6971063D05B085E698354BA2) and to Willison's account of designing agentic loops — cite at least one of our readings.
 
 Finally, the epigraph in one question: is the site Claude Code built from your one brief a copy without an original — and does "agentic" overstate how much the system was deciding on its own?
+
+Don't forget to reply twice to peers (1 point / reply) for full credit!

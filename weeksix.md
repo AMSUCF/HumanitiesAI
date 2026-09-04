@@ -42,3 +42,5 @@ As you work, think about how this might change your approach to text-to-image pr
 Take screenshots of highlights (particularly visualizations and other analysis) or links to artifacts generated to share out in the discussion. You should be able to submit a large number of images at once using your Claude.ai subscription, so try to push the limits and see what type of results you can get working towards analysis at scale. Stick with Claude Sonnet 5 to avoid quickly running into usage caps. While it will be easier to analyze the accuracy of the results with images you are familiar with, consider branching out as you experiment to see how useful you find the translations provided.
 
 Finally, a gesture back at the epigraph: a machine-written caption is a model collecting an archive's information to use in its own way. Whose reading is that description — and does it matter, if it becomes the way most future viewers encounter the artifact?
+
+Don't forget to reply twice to peers (1 point / reply) for full credit!
