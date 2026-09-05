@@ -28,6 +28,8 @@ As we've been reading in *The AI Con*, LLMs themselves operate as "synthetic tex
 
 This is also a good week to sit with Karen Hao's "Inside the story that enraged OpenAI," her *MIT Technology Review* excerpt from *Empire of AI*. Hao's reporting traces the human labor, material costs, and political economy behind the "sea of information" these systems are trained on and search through — a useful corrective to keep in mind whenever a research tool hands you a tidy, confident-sounding synthesis. Her skepticism about how these companies describe their own products is a good model for how you should approach whatever Claude gives back to you this week.
 
+For a very different register, read Steven Levy's WIRED piece, "Who Cares if AI Is Conscious—It's Basically Alive," alongside Hao: Levy takes the models' own claims about themselves seriously in a way *The AI Con* would call hype. Hold both views in mind as you read the confident, first-person synthesis Research hands you.
+
 Claude's Research mode works agentically: rather than returning a single search result, it runs a series of searches that build on one another, decides what to investigate next based on what it's already found, and returns a synthesized answer along with citations you can check yourself. This is meant as a response to the earlier, well-documented problem of chatbots hallucinating sources that don't exist — the citations are there so you can verify Claude's synthesis against the actual material, rather than simply trusting it. Whether that verification step actually happens is up to you as the researcher, which is exactly the point of this exercise.
 
 From these readings, identify a research question that interests you. Some potential areas to explore might include:

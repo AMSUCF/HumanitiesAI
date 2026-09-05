@@ -256,7 +256,7 @@ def deck_page(week_num: int, stem: str, meta: dict, sections: list[str],
 <script src="../assets/reveal/dist/reveal.js"></script>
 <script src="../assets/reveal/plugin/notes/notes.js"></script>
 <script>
-Reveal.initialize({{ hash: true, slideNumber: 'c/t',
+Reveal.initialize({{ hash: true, slideNumber: 'c/t', mouseWheel: true,
   width: 1280, height: 720, margin: 0.05,
   plugins: [ RevealNotes ] }});
 </script>
