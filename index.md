@@ -213,7 +213,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *The AI Con* - Chapter 3: Leisure for Me, Gig Work for Thee: AI Hype at Work
 -   [Kirschenbaum, Matthew. "Prepare for the Textpocalypse." *The Atlantic.* March 8, 2023.](https://www.theatlantic.com/technology/archive/2023/03/ai-chatgpt-writing-language-models/673318/)
 -   [Hao, Karen. "Inside the story that enraged OpenAI." *MIT Technology Review.* May 19, 2025.](https://www.technologyreview.com/2025/05/19/1116614/hao-empire-ai-openai/)
--   [Levy, Steven. "Who Cares if AI Is Conscious—It's Basically Alive." *WIRED.* September 4, 2026.](https://www.wired.com/story/who-cares-if-ai-is-conscious-its-basically-alive/)
+-   *Optional:* [Levy, Steven. "Who Cares if AI Is Conscious—It's Basically Alive." *WIRED.* September 4, 2026.](https://www.wired.com/story/who-cares-if-ai-is-conscious-its-basically-alive/)
 -   **Note:** Monday, September 7 is Labor Day. The university holiday does not pause this asynchronous module -- coursework and discussion continue as usual.
 -   [**Exercise: Research and Sources**](weekthree.md)
 
