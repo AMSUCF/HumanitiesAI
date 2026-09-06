@@ -93,9 +93,17 @@
 <script src="../assets/reveal/dist/reveal.js"></script>
 <script src="../assets/reveal/plugin/notes/notes.js"></script>
 <script>
-Reveal.initialize({ hash: true, slideNumber: 'c/t', mouseWheel: true,
+Reveal.initialize({ hash: true, slideNumber: 'c/t',
   width: 1280, height: 720, margin: 0.05,
-  plugins: [ RevealNotes ] });
+  plugins: [ RevealNotes ] }).then(() => {
+  // wheel navigation: one slide per gesture, using standard deltaY
+  let lastStep = 0;
+  document.addEventListener('wheel', e => {
+    if (Date.now() - lastStep < 700) return;
+    lastStep = Date.now();
+    if (e.deltaY > 0) Reveal.next(); else if (e.deltaY < 0) Reveal.prev();
+  }, { passive: true });
+});
 </script>
 </body>
 </html>

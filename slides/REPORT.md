@@ -17,7 +17,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - MOVED from 2025 deck 4 slide 16: "(untitled)" — Mitchell part now assigned in Week 2 [vision: Quote referencing superintelligence discussion in 'final chapter']
 
 ## Week 3 — Week Three: Ghosts — Sources
-- slides: 38 total (25 native, 11 moved in, 0 cut from source deck(s), draft=yes)
+- slides: 34 total (25 native, 11 moved in, 0 cut from source deck(s), draft=no)
   - MOVED from 2025 deck 5 slide 19: "(untitled)" — Mitchell part now assigned in Week 3 [vision: 'Chapter 4: Who, What, When, Where, Why' title + soldier/dog figure 6]
   - MOVED from 2025 deck 5 slide 20: "(untitled)" — Mitchell part now assigned in Week 3 [vision: 'Easy Things Are Hard (Especially in Vision)': Minsky/Papert Summer Vision]
   - MOVED from 2025 deck 5 slide 21: "(untitled)" — Mitchell part now assigned in Week 3 [vision: Google captcha screenshot illustrating image-recognition training in her chapter]
