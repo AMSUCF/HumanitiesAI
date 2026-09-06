@@ -5,13 +5,14 @@ import json
 import os
 import re
 import sys
+from datetime import date, datetime, time
 from pathlib import Path
 
 import frontmatter
 import yaml
 from dotenv import load_dotenv
 
-from converter import (UNIT_COLORS, apply_canvas_style, due_at_utc,
+from converter import (TZ, UNIT_COLORS, apply_canvas_style, due_at_utc,
                        extract_readings, load_week, lock_at_utc, render_html,
                        split_discussion, unlock_at_utc)
 
@@ -21,6 +22,25 @@ STATE_FILE = Path(".state.json")
 # deploys keep it in place of the placeholder paragraph
 VIDEO_EMBED_RE = re.compile(
     r'<p><iframe[^>]*data-media-type="video".*?</iframe></p>', re.DOTALL)
+
+
+def now_et() -> datetime:
+    return datetime.now(TZ)
+
+
+def is_live(start_date: date, now: datetime | None = None) -> bool:
+    """A module is live from midnight ET on its start date.
+
+    Live content is frozen: students are already working in it, so deploys
+    leave it alone unless --force is passed.
+    """
+    now = now or now_et()
+    return datetime.combine(start_date, time(0, 0), tzinfo=TZ) <= now
+
+
+def av_is_live(av: dict, now: datetime | None = None) -> bool:
+    """Activity Verification freezes once its open date has passed."""
+    return bool(av.get("open")) and is_live(av["open"], now)
 
 
 def plan_week(path: Path, site_base: str, syllabus_md: str = "") -> dict:
@@ -51,6 +71,7 @@ def plan_week(path: Path, site_base: str, syllabus_md: str = "") -> dict:
     return {
         "stem": path.stem,
         "module": c["module"],
+        "week_start": c["week_start"],
         "points": int(c["points"]),
         "extra_credit": bool(c.get("extra_credit", False)),
         "due_at": due_at_utc(c["due"]),
@@ -86,6 +107,8 @@ def main(argv=None) -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--publish", action="store_true")
     ap.add_argument("--simple-syllabus", action="store_true")
+    ap.add_argument("--force", action="store_true",
+                    help="also update modules that have already opened")
     args = ap.parse_args(argv)
 
     cfg = yaml.safe_load(Path("course.yml").read_text(encoding="utf-8"))
@@ -105,6 +128,17 @@ def main(argv=None) -> int:
     syllabus_md = frontmatter.load(str(syl_path)).content if syl_path.exists() else ""
     plans = [plan_week(root / f"{s}.md", cfg["site_base"], syllabus_md)
              for s in stems]
+
+    # freeze check first: anything students can already see is left alone
+    now = now_et()
+    if not args.force:
+        for p in plans:
+            if is_live(p["week_start"], now):
+                print(f"[frozen] {p['module']} opened {p['week_start']} and is live; "
+                      f"not redeployed (pass --force to override)")
+        plans = [p for p in plans if not is_live(p["week_start"], now)]
+        if not plans and not args.all:
+            return 1
 
     if args.dry_run:
         prev = Path("preview")
@@ -182,14 +216,18 @@ def main(argv=None) -> int:
 
             other_group_id = client.upsert_assignment_group(cfg["assignment_groups"]["other"])
             av = cfg["activity_verification"]
-            av_id = client.upsert_assignment(
-                av["name"], av["points"], due_at_utc(av["due"]), other_group_id,
-                ["online_url", "online_text_entry"], args.publish,
-                known_id=state.get("activity_verification_id"),
-                unlock_at=unlock_at_utc(av["open"]) if av.get("open") else None,
-                lock_at=lock_at_utc(av["due"]))
-            state["activity_verification_id"] = av_id
-            print("deployed: Syllabus page, Activity Verification")
+            if av_is_live(av, now) and not args.force:
+                print(f"[frozen] {av['name']} opened {av['open']} and is live; not updated")
+                print("deployed: Syllabus page")
+            else:
+                av_id = client.upsert_assignment(
+                    av["name"], av["points"], due_at_utc(av["due"]), other_group_id,
+                    ["online_url", "online_text_entry"], args.publish,
+                    known_id=state.get("activity_verification_id"),
+                    unlock_at=unlock_at_utc(av["open"]) if av.get("open") else None,
+                    lock_at=lock_at_utc(av["due"]))
+                state["activity_verification_id"] = av_id
+                print("deployed: Syllabus page, Activity Verification")
     finally:
         STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
 

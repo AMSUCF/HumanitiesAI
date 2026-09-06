@@ -53,6 +53,7 @@ cd canvas
 | `--week NAME` | Operate on a single week only, e.g. `--week weekfive`. Mutually exclusive in practice with `--all` (pass one or the other). |
 | `--dry-run` | Don't call the Canvas API. Render each page/discussion to `preview/*.html` and print a one-line summary per week. Safe to run repeatedly with no credentials required. |
 | `--publish` | When actually deploying (no `--dry-run`), create/update pages, discussions, and assignments as **published** instead of the default unpublished. |
+| `--force` | Also update modules (and the Activity Verification assignment) that have already opened. Without it, anything live is frozen — see below. |
 | `--simple-syllabus` | Ignore `--all`/`--week`. Read `index.md`, split it into `## `-headed sections, and write `preview/simple_syllabus.html` as a paste-ready package. Requires no Canvas credentials. |
 
 Examples:
@@ -64,6 +65,21 @@ Examples:
 ..\.venv\Scripts\python deploy.py --all --publish
 ..\.venv\Scripts\python deploy.py --simple-syllabus
 ```
+
+## Live content is frozen
+
+Before doing anything else, `deploy.py` checks each selected week's
+`week_start` against the current time in America/New_York. A module is live
+from midnight ET on its start date, and live modules are **skipped** — their
+pages and discussion are already in front of students, so redeploying would
+overwrite whatever has been adjusted by hand in Canvas. Skipped weeks print a
+`[frozen]` line; `--week NAME` on a live week exits non-zero with the same
+message. The Activity Verification assignment freezes the same way once its
+`open` date passes. The Syllabus page is course-wide and is always updated by
+`--all`.
+
+Pass `--force` to override the freeze for a deliberate fix to a live module,
+ideally with `--week NAME` so only that module is touched.
 
 ## Deploy order
 

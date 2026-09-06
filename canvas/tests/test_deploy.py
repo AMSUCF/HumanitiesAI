@@ -28,6 +28,7 @@ def test_dry_run_writes_previews_and_no_network(tmp_path, monkeypatch, capsys):
         "  due: 2026-08-30\n  points: 6\n  discussion: true\n"
         "  extra_credit: false\n  unit: ghosts\n---\nBody\n\n### Discussion\n\nQ?\n",
         encoding="utf-8")
+    monkeypatch.setattr(deploy, "now_et", lambda: deploy.datetime(2026, 8, 20, tzinfo=deploy.TZ))
     deploy.main(["--all", "--dry-run"])
     assert (tmp_path / "preview" / "weekone.html").exists()
     out = capsys.readouterr().out
@@ -150,3 +151,4 @@ def test_video_embed_regex_matches_canvas_media_iframe():
     assert m and m.group(0).startswith("<p><iframe")
     assert m.group(0).endswith("</iframe></p>")
     assert "rest" not in m.group(0)
+
