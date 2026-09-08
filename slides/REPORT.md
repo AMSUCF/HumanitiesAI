@@ -31,7 +31,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - MOVED from 2025 deck 5 slide 31: "(untitled)" — Mitchell part now assigned in Week 3 [vision: 'The Ethics of Face Recognition' text + Clearview/ICE news screenshot]
 
 ## Week 4 — Week Four: Ghosts — Reading
-- slides: 50 total (29 native, 19 moved in, 0 cut from source deck(s), draft=yes)
+- slides: 42 total (29 native, 19 moved in, 0 cut from source deck(s), draft=no)
   - MOVED from 2025 deck 6 slide 14: "(untitled)" — Mitchell part now assigned in Week 4 [vision: Melanie Mitchell Substack 'Magical Thinking on AI', response to Friedman]
   - MOVED from 2025 deck 6 slide 15: "(untitled)" — Mitchell part now assigned in Week 4 [vision: Mitchell post continues: Claude red-teaming, Shanahan on LLM roleplay]
   - MOVED from 2025 deck 6 slide 16: "(untitled)" — Mitchell part now assigned in Week 4 [vision: Mitchell post continues: moral reasoning, magical thinking conclusion]
