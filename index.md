@@ -242,7 +242,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [**Slides: Week Six**](slides/weeksix.html)
 -   *The AI Con* - Chapter 6: I'm Sorry, Dave, I'm Afraid I Can't Do That: AI Doomers, AI Boosters, and Why None of That Makes Sense
 -   *Algorithms of Oppression* - Searching for Black Girls
--   [Jebb, Louis. "On process: Refik Anadol seeks to demystify AI art by showing how it is put together." *The Art Newspaper.* April 5, 2024.](https://www.theartnewspaper.com/2024/04/05/on-process-refik-anadol-seeks-to-demystify-ai-art-by-showing-how-it-is-put-together)
+-   [Epstein, Greg. "Silicon Valley's Obsession with AI looks a lot like religion." *The MIT Press Reader.* 2024.](https://thereader.mitpress.mit.edu/silicon-valleys-obsession-with-ai-looks-a-lot-like-religion/)
 -   *Recommended (optional; PDF in Webcourses):* [Menotti, Gabriel. "The model is the museum: generative AI and the expropriation of cultural heritage." *AI & Society* (2025).](https://link.springer.com/article/10.1007/s00146-025-02290-1)
 -   [**Exercise: Archival Images**](weeksix.md)
 
