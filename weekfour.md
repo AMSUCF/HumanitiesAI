@@ -24,9 +24,18 @@ This week, we're going to go further in our interactions with prompt-based syste
 
 ### AI-Assisted Distant Read
 
-Start by selecting 5-10 texts: novels, short stories, or other texts relevant to your interests. [Project Gutenberg](https://www.gutenberg.org/) is the easiest source (anything other than *Frankenstein*, as I'm using that here as a sample), and make sure you download the "Plain Text UTF-8" version of each as a .txt file and put them all together in one folder. For instance, the plain text version of *Frankenstein* is the file here: [TXT](https://www.gutenberg.org/cache/epub/41445/pg41445.txt). You'll notice that this plain text version has some noise at the top of the file, and at the end — this is information and metadata added by Project Gutenberg. We could delete that ourselves, but we're going to try out the model's preprocessing capabilities and have it work with us throughout the entire process. So, gather your plain text files into a folder for now, then set up a project in Cowork or Work pointed at that folder (as shown in the video and screenshots) before you start prompting.
+Start by selecting 5-10 texts: novels, short stories, magazines, or other texts relevant to your interests. There are two recommended sources, and both give you plain text files that the models can work with directly:
 
-Here's a guiding set of basic prompts to try — these are general, and you should adapt them to your set of texts:
+- [Project Gutenberg](https://www.gutenberg.org/) is the easiest source for literary texts. Make sure you download the "Plain Text UTF-8" version of each as a .txt file. For instance, the plain text version of *Frankenstein* is the file here: [TXT](https://www.gutenberg.org/cache/epub/41445/pg41445.txt).
+- The [Internet Archive](https://archive.org/) is the best source for periodicals and out-of-copyright nonfiction. Browse the [book collection](https://archive.org/details/texts), [The Magazine Rack](https://archive.org/details/magazine_rack), or a narrower set such as [Computer Magazines](https://archive.org/details/computermagazines); on any item's page, look under "Download Options" and choose the **Full Text** (.txt) file rather than the PDF. My sample this week uses ten bound volumes from the archive's [Dr. Dobb's Journal](https://archive.org/details/dr_dobbs_journal) collection, so pick something other than that.
+
+Put all of your .txt files together in one folder. You'll notice that these plain text versions have some noise: Project Gutenberg adds header and footer metadata to every file, and the Internet Archive's texts are OCR output, with the misspellings and broken words that come with scanning. We could clean that ourselves, but we're going to try out the model's preprocessing capabilities and have it work with us throughout the entire process. So, gather your plain text files into a folder for now, then set up a project in Cowork or Work pointed at that folder (as shown in the video and screenshots) before you start prompting.
+
+Here's the prompt I used to generate the sample outputs below, working from a folder of Dr. Dobb's volumes. I ran it twice, once with Claude Fable 5.1 and once with ChatGPT's GPT-6 Astra, and both sets of results are linked below. For your own work, use either Claude or ChatGPT with whichever model you have access to: the prompt works the same way in both.
+
+> I'm conducting a distant read of Dobbs journal. This is a subset for an initial pass. Let's analyze the full text distribution using a bag of words, create a concordance for exploring important topics in this period of computer history, break down the themes, sentiment analysis, and topics across the ten journals, and build an interactive visual interface for exploring across the set.
+
+That one prompt does a lot of work at once, and the models can handle it. But you'll get more out of the exercise if you also break the process into steps and interrogate each one. Here's a guiding set of basic prompts to try — these are general, and you should adapt them to your set of texts:
 
 - I'd like to do some comparative distant reading analysis of the texts in this folder. Can you help me through the process?
 - These are Project Gutenberg versions of the texts. Let's start by pre-processing them for analysis, stripping the header and footer metadata from each.
@@ -38,21 +47,21 @@ Here's a guiding set of basic prompts to try — these are general, and you shou
 - Can you visualize the most frequent phrases across the set, and which are distinctive to a single text?
 - Which of these texts is the outlier, and what makes it one?
 
-This is an area where we can see significant improvement in the visualizations themselves over different models of generative AI. Here's a few examples from an earlier run of this exercise, generated with ChatGPT, to compare:
+This is an area where we can see significant improvement in the visualizations themselves over different models of generative AI. Here are the two sample outputs from my Dr. Dobb's prompt, one from each platform, to compare. Both are live, so click through and explore them. These were generated with the top-tier models on each platform, but the same prompts will work with whichever Claude or ChatGPT model you have access to, and it's worth noting how your results differ:
 
-![phrases](images/phrases.png)
-*Figure 1. Frequent bigrams and trigrams*
+- [Dr. Dobb's Distant Read](https://claude.ai/code/artifact/62b1c96b-749f-4efc-8d03-27479626517e), generated with Claude Fable 5.1
+- [Distant Read of Dobbs: Corpus Explorer](https://dobbs-distant-read.profwho.chatgpt.site/), generated with ChatGPT (GPT-6 Astra)
 
-![word cloud](images/wordcloud.png)
-*Figure 2. Word cloud, after iterating stop words*
+![Claude's Dr. Dobb's Distant Read interface, showing the corpus overview with word counts per volume and a volume register](images/dobbs-claude.png)
+*Figure 1. Claude's interface: corpus overview, with prose vs. listing-heavy pages per volume*
 
-![character network](images/network.png)
-*Figure 3. Character network, weighting for significance*
+![ChatGPT's Distant Read of Dobbs corpus explorer, showing term trends and frequent content words](images/dobbs-chatgpt.png)
+*Figure 2. ChatGPT's interface: term trends across the decade and frequent content words*
 
-And here's archived output generated with Claude Opus 4.1 (2025), linked as artifacts — a sample from last year's version of this exercise, which worked with a single text. For your own work this term, use the current models (Claude Opus 5 or Fable 5.1, or GPT-6 Astra):
+![ChatGPT's concordance view, with matches per 10,000 tokens for "public domain" and nearby words](images/dobbs-concordance.png)
+*Figure 3. ChatGPT's concordance: keyword-in-context search for "public domain" across the volumes*
 
-- [Word Cloud](https://claude.ai/public/artifacts/16c6479e-19e5-41fd-9cdf-a1a9562a4fda)
-- [Character Network Visualization](https://claude.ai/public/artifacts/3341474e-aea1-4f7b-8b1a-1fa1e6a57fdf)
+Notice that the two models made different decisions from the same prompt: about how to chunk the texts, what to count, which volume is missing and how to flag it, and how much of the printed code to treat as noise versus evidence. Those decisions are part of what you're evaluating.
 
 Use Ted Underwood's "A Genealogy of Distant Reading" to guide your process and question development, and hold onto Underwood's more recent piece with David Bamman and Noah A. Smith, "The Literary Canons of Large-Language Models," as you go — it's a useful check on what you're about to do. Their argument is that LLMs have absorbed a canon of their own, shaped by whatever got digitized, scraped, and repeated most often across their training data, and that this canon is uneven in ways that are easy to miss if you only look at the output. As the model helps you analyze your chosen texts, watch for moments where its analysis leans on assumptions about "the novel" or "character" or "genre" that come from a narrow, canon-shaped sense of what literature looks like, rather than from your specific texts. This matters even more when you're comparing several texts at once: the model's sense of which of your texts is "typical" and which is the outlier is itself a canon judgment.
 
