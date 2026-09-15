@@ -233,7 +233,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *Artificial Intelligence* - Part V: The Barrier of Meaning
 -   *The AI Con* - Chapter 5: Artifice or Intelligence? AI Hype in Art, Journalism, and Science
 -   *Algorithms of Oppression* - A Society; Searching
--   Haraway, Donna. "A Cyborg Manifesto" (excerpt).
+-   [Goode, Lauren. "One of AI's Fiercest Critics Says All the Doom Talk Is 'Meant to Distract Us'" (interview with Timnit Gebru). *WIRED.* September 11, 2026.](https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/)
+-   [Mitchell, Melanie. "Misleading Metaphors and Real Risks." *AI: A Guide for Thinking Humans* (Substack). September 10, 2026.](https://aiguide.substack.com/p/misleading-metaphors-and-real-risks)
 -   [Demsky, Ian. "My Month with Midjourney." *Electronic Book Review.* April 2, 2023.](https://electronicbookreview.com/publications/my-month-with-midjourney/)
 -   [**Exercise: Image Generation**](weekfive.md)
 
