@@ -53,7 +53,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - MOVED from 2025 deck 9 slide 29: "(untitled)" — Noble chapter now assigned in Week 4 [vision: Noble book text on missing social/human context in algorithms]
 
 ## Week 5 — Week Five: Shells — Aesthetics
-- slides: 41 total (19 native, 17 moved in, 0 cut from source deck(s), draft=no; patched: +7 reading slides, +1 ChatGPT Images, 4 native slides dropped, 4 images replaced/added, divider and provenance notes removed)
+- slides: 42 total (19 native, 17 moved in, 0 cut from source deck(s), draft=no; patched: +7 reading slides, +1 ChatGPT Images, 4 native slides dropped, 4 images replaced/added, divider and provenance notes removed, UCF spaceship closer)
   - MOVED from 2025 deck 7 slide 5: "(untitled)" — Mitchell part now assigned in Week 5 [vision: Ch.13 'Ask Me Anything', Star Trek Data quote on humor/QA systems]
   - MOVED from 2025 deck 7 slide 6: "(untitled)" — Mitchell part now assigned in Week 5 [vision: Star Trek 'Hello Computer' meme + text on Siri/Alexa understanding limits]
   - MOVED from 2025 deck 7 slide 7: "(untitled)" — Mitchell part now assigned in Week 5 [vision: Watson/Jeopardy Ken Jennings 'human loser' quote and answer clues]
