@@ -22,7 +22,7 @@ This week's readings turn from the bodies on screen to the stories told about th
 
 ## Tutorial: Shells and Image Generation
 
-For this week's exercise, you'll be following the example set by Ian Demsky's ["My Month with Midjourney"](https://electronicbookreview.com/publications/my-month-with-midjourney/) to explore AI image generation through systematic experimentation and critical reflection. As this week's readings discuss, generative imagery is particularly (and understandably!) contentious, and the availability and ease of use of these tools has serious implications for work and communication broadly. While working through this process, keep in mind Melanie Mitchell's discussions of how a model relates to objects, and iterate your prompting to be as clear and specific as possible.
+For this week's exercise, you'll be following the example set by Ian Demsky's ["My Month with Midjourney"](https://electronicbookreview.com/publications/my-month-with-midjourney/) (discussed during the lecture video) and specific prompts to explore AI image generation through systematic experimentation and critical reflection. As this week's readings discuss, generative imagery is particularly (and understandably!) contentious, and the availability and ease of use of these tools has serious implications for work and communication broadly. While working through this process, keep in mind Melanie Mitchell's discussions of how a model relates to objects, and iterate your prompting to be as clear and specific as possible.
 
 ### Text to Image Experimentation
 
