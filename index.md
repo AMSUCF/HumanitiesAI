@@ -244,6 +244,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *The AI Con* - Chapter 6: I'm Sorry, Dave, I'm Afraid I Can't Do That: AI Doomers, AI Boosters, and Why None of That Makes Sense
 -   *Algorithms of Oppression* - Searching for Black Girls
 -   [Epstein, Greg. "Silicon Valley's Obsession with AI looks a lot like religion." *The MIT Press Reader.* 2024.](https://thereader.mitpress.mit.edu/silicon-valleys-obsession-with-ai-looks-a-lot-like-religion/)
+-   [Willison, Simon. "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war." September 22, 2026.](https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/)
 -   *Recommended (optional; PDF in Webcourses):* [Menotti, Gabriel. "The model is the museum: generative AI and the expropriation of cultural heritage." *AI & Society* (2025).](https://link.springer.com/article/10.1007/s00146-025-02290-1)
 -   [**Exercise: Archival Images**](weeksix.md)
 
