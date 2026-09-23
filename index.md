@@ -82,7 +82,7 @@ divided into three sections:
     schedule of required readings is listed in the syllabus: additional
     recommended readings will be provided in each module.
 -   **Exercises.** Each week's exercise will
-    involve experimenting with and reflecting upon generative AI tools in different contexts. Most will use the required Anthropic subscription, but some other free tools or trials will be recommended throughout.
+    involve experimenting with and reflecting upon generative AI tools in different contexts. Most will use your required Claude or ChatGPT subscription, but some other free tools or trials will be recommended throughout.
 -   **Reflective Discussion.** A weekly online discussion will provide
     the opportunity to share the process of each exercise: the emphasis is not
     on "success" or "failure," but on critiquing the process and
@@ -128,7 +128,7 @@ guide the week's making experiments. Relevant recent articles will be integrated
 
 ## Required Subscriptions
 
-Students will need to subscribe to [Anthropic's Claude](https://claude.ai/) for hands-on exercises throughout the semester. A paid subscription is required to access the full functionality needed for course assignments.
+Students will need a paid subscription to either [Anthropic's Claude](https://claude.ai/) or [OpenAI's ChatGPT](https://chatgpt.com/) for hands-on exercises throughout the semester; the choice of platform is yours. A paid subscription is required to access the full functionality needed for course assignments.
 
 ## Evaluation and Grading
 

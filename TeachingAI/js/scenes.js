@@ -68,7 +68,7 @@ const SCENES = [
         '<strong>Reflective Discussion</strong> — share the process: the emphasis is not on “success” or “failure”',
         'Modules open Mondays and close the following Sunday; no synchronous meetings',
         'A public course website is the canonical version; Canvas mirrors it. Web slide decks and exercise videos carry the lectures',
-        'Required: a paid Claude subscription (Pro covers the semester), plus free tools and trials along the way',
+        'Required: a paid subscription to Claude or ChatGPT — the student’s choice — plus free tools and trials along the way',
       ],
     },
     dialogue: "It runs fully asynchronously online. Every week is the same rhythm — read, make, reflect. The public website is the course of record, and Canvas mirrors it, so anyone can follow along. One practical note: because of tool installs, students need administrative access to their own machines.",
@@ -236,7 +236,7 @@ const SCENES = [
         ['UNITS', 'Textual / Visual / Procedural', 'Ghosts / Shells / Puppet Masters + coda'],
         ['CALENDAR', '15 modules', '14: build and deploy merge into one week'],
         ['RESEARCH', 'Research mode, Opus 4', 'Cowork or ChatGPT Work → projects in chat'],
-        ['PLATFORMS', 'Claude for text and code', 'Claude or ChatGPT, side by side'],
+        ['SUBSCRIPTION', 'Paid Claude, required', 'Paid Claude or ChatGPT, student’s choice'],
         ['READING', 'One text (Frankenstein)', 'Comparative read of 5–10 texts'],
         ['VIDEO', 'Veo 3, Sora', 'Veo 3.1; Sora’s shutdown as case study'],
         ['CODE', 'Sci-fi book recommender', 'Cyborg + AI media recommender'],
@@ -428,7 +428,7 @@ const SCENES = [
         { q: 'Maybe have one thing and build on the one thing that was started instead of everyone … doing something completely new.', a: 'Fall 2024' },
       ],
     },
-    dialogue: "And the critiques are fair. Paying for a subscription to a technology the course critiques is a real tension. Asynchronous delivery costs us live discussion. And a new tool every week is a lot. Those comments are part of why the course stays under construction.",
+    dialogue: "And the critiques are fair. Paying for a subscription to a technology the course critiques is a real tension — this year students at least choose between Claude and ChatGPT. Asynchronous delivery costs us live discussion. And a new tool every week is a lot. Those comments are part of why the course stays under construction.",
   },
 
   // ===== CLOSE =====

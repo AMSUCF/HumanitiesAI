@@ -110,6 +110,8 @@ const Engine = (() => {
   };
 
   function renderPanels(scene) {
+    engaged = false;
+    $('focus-hint').classList.add('hidden');
     const panels = scene.panels || (scene.panel ? [scene.panel] : []);
     content.innerHTML = panels.map(p => RENDER[p.type](p)).join('');
     content.querySelectorAll('.embed').forEach(sizeEmbed);
@@ -124,9 +126,19 @@ const Engine = (() => {
     frame.style.width = (w / z) + 'px';
     frame.style.height = (h / z) + 'px';
     frame.style.transform = `scale(${z})`;
-    frame.addEventListener('mouseleave', releaseFocus);
-    frame.addEventListener('mouseenter', () => $('focus-hint').classList.remove('hidden'));
+    frame.addEventListener('mouseleave', () => { engaged = false; releaseFocus(); });
+    frame.addEventListener('mouseenter', () => { engaged = true; $('focus-hint').classList.remove('hidden'); });
   }
+
+  // Embedded demos often focus their own input when they load, which would swallow the
+  // arrow keys and clicker. Until the pointer is actually over a demo, take focus back.
+  let engaged = false;
+  window.addEventListener('blur', () => {
+    setTimeout(() => {
+      const el = document.activeElement;
+      if (el && el.tagName === 'IFRAME' && !engaged) { el.blur(); window.focus(); }
+    }, 0);
+  });
 
   function releaseFocus() {
     $('focus-hint').classList.add('hidden');
