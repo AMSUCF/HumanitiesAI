@@ -73,7 +73,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - MOVED from 2025 deck 10 slide 13: "(untitled)" — Noble chapter now assigned in Week 5 [vision: Book section 'The Importance of Google' text from Algorithms of Oppression]
 
 ## Week 6 — Week Six: Shells — Art and Creativity
-- slides: 18 total (11 native, 5 moved in, 7 cut from source deck(s), draft=yes)
+- slides: 24 total (11 native, 5 moved in, 7 cut from source deck(s), draft=yes; patched: SB 53, Vox, and Science/ELSI news slides cut, source links on main-section slides, 2 MIT News attribution-decay slides after the Atlantic, Paperclips moved to an AI doomer section with The AI Doc poster and 3 Epstein slides, Stanford Review race-swap slide closing the Noble section, 3 Menotti slides and Babylonian Vision after Noble)
   - MOVED from 2025 deck 11 slide 13: "(untitled)" — Noble chapter now assigned in Week 6 [vision: Noble quote 'Who Is Responsible for the Results?' Black girls search]
   - MOVED from 2025 deck 11 slide 15: "(untitled)" — Noble chapter now assigned in Week 6 [vision: Noble quote on search engines perpetuating narratives, girls marginalized]
   - MOVED from 2025 deck 11 slide 16: "(untitled)" — Noble chapter now assigned in Week 6 [vision: Peter Morville keyword/long-tail quote used in Noble's book]
