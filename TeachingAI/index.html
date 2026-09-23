@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teaching Humanities in the Age of AI</title>
+  <meta name="description" content="Ghosts, Shells, and Puppet Masters: designing ENG 6806, Humanities in the Age of AI — a presentation by Anastasia Salter.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="stage">
+
+    <div id="viewport">
+      <canvas id="world" width="320" height="140" aria-hidden="true"></canvas>
+      <div id="scanlines" aria-hidden="true"></div>
+
+      <header id="hud">
+        <div id="hud-left">
+          <span id="hud-mark">&#9673;</span>
+          <span id="hud-section">TEACHING AI</span>
+        </div>
+        <nav id="hud-sections" aria-label="Sections"></nav>
+        <div id="hud-right">
+          <span id="hud-construction" class="hidden">UNDER CONSTRUCTION &middot; UPDATED WEEKLY</span>
+          <span id="hud-counter">00/00</span>
+        </div>
+      </header>
+
+      <main id="content" aria-live="polite"></main>
+      <div id="fx" aria-hidden="true"></div>
+      <div id="focus-hint" class="hidden">LINKED TO LIVE DEMO &middot; move the pointer off the screen to return</div>
+    </div>
+
+    <footer id="dialogue">
+      <div id="speaker">A. SALTER</div>
+      <div id="dialogue-text"></div>
+      <div id="dialogue-controls">
+        <button id="prev-btn" aria-label="Previous">&#9664;</button>
+        <button id="next-btn" aria-label="Next">&#9654;</button>
+      </div>
+    </footer>
+
+    <div id="debug" class="hidden"></div>
+  </div>
+
+  <script src="js/pixel.js"></script>
+  <script src="js/avatar.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/engine.js"></script>
+</body>
+</html>
