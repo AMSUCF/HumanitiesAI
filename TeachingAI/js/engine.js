@@ -98,7 +98,12 @@ const Engine = (() => {
 
     embed: (p) => `<section class="panel media embed" style="${box(p)}" data-zoom="${p.zoom || 0.7}">
         <div class="bar"><span><span class="live">&#9679; LIVE</span> &nbsp;${p.label}</span><a href="${p.src}" target="_blank" rel="noopener">OPEN &#8599;</a></div>
-        <div class="screen"><iframe src="${p.src}" title="${p.label}" referrerpolicy="no-referrer"></iframe></div>
+        <div class="screen"><iframe src="${p.src}" title="${p.label}" referrerpolicy="${p.referrer || 'no-referrer'}" allow="${p.allow || ''}" allowfullscreen></iframe></div>
+        ${p.caption ? `<div class="caption">${p.caption}</div>` : ''}</section>`,
+
+    video: (p) => `<section class="panel media" style="${box(p)}">
+        <div class="bar"><span>${p.label}</span></div>
+        <div class="screen"><video src="${p.src}" controls preload="metadata"></video></div>
         ${p.caption ? `<div class="caption">${p.caption}</div>` : ''}</section>`,
 
     voices: (p) => `<section class="panel" style="${box(p, { auto: true })}">${tag(p)}

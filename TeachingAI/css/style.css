@@ -251,7 +251,7 @@ table.weeks td.tool { color: var(--dim); }
 .panel.media .bar .live { color: var(--magenta); animation: blink 1.4s steps(2) infinite; }
 .panel.media .bar a { color: var(--amber); text-decoration: none; }
 .panel.media .screen { flex: 1; position: relative; background: #000; overflow: hidden; }
-.panel.media .screen img { width: 100%; height: 100%; object-fit: contain; display: block; background: #050809; }
+.panel.media .screen img, .panel.media .screen video { width: 100%; height: 100%; object-fit: contain; display: block; background: #050809; }
 .panel.media .screen iframe { position: absolute; left: 0; top: 0; border: 0; background: #fff; transform-origin: 0 0; }
 .panel.media .caption { padding: 8px 16px 10px; font-size: 21px; color: var(--dim); line-height: 1.05; }
 

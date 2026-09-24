@@ -174,7 +174,8 @@ def main(argv=None) -> int:
             try:
                 st = state.setdefault(p["stem"], {})
                 module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"],
-                                                 published=args.publish or None)
+                                                 published=args.publish or None,
+                                                 known_id=st.get("module_id"))
                 pos = 1
                 if p["stem"] in lecture_stems:
                     lecture_html = p["lecture_html"]

@@ -24,7 +24,7 @@ title: Humanities in the Age of AI
   - [Week Four: Ghosts - Reading (Monday, September 14 - Sunday, September 20)](#week-four-ghosts---reading-monday-september-14---sunday-september-20)
   - [Week Five: Shells - Aesthetics (Monday, September 21 - Sunday, September 27)](#week-five-shells---aesthetics-monday-september-21---sunday-september-27)
   - [Week Six: Shells - Art and Creativity (Monday, September 28 - Sunday, October 4)](#week-six-shells---art-and-creativity-monday-september-28---sunday-october-4)
-  - [Week Seven: Shells - Video and Realism (Monday, October 5 - Sunday, October 11)](#week-seven-shells---video-and-realism-monday-october-5---sunday-october-11)
+  - [Week Seven: Shells - Videos and Animation (Monday, October 5 - Sunday, October 11)](#week-seven-shells---videos-and-animation-monday-october-5---sunday-october-11)
   - [Week Eight: Shells - Perceptions (Monday, October 12 - Sunday, October 18)](#week-eight-shells---perceptions-monday-october-12---sunday-october-18)
   - [Week Nine: Puppet Masters - Distant Coding (Monday, October 19 - Sunday, October 25)](#week-nine-puppet-masters---distant-coding-monday-october-19---sunday-october-25)
   - [Week Ten: Puppet Masters - Building and Deploying (Monday, October 26 - Sunday, November 1)](#week-ten-puppet-masters---building-and-deploying-monday-october-26---sunday-november-1)
@@ -250,7 +250,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *Recommended (optional; PDF in Webcourses):* [Menotti, Gabriel. "The model is the museum: generative AI and the expropriation of cultural heritage." *AI & Society* (2025).](https://link.springer.com/article/10.1007/s00146-025-02290-1)
 -   [**Exercise: Archival Images**](weeksix.md)
 
-### Week Seven: Shells - Video and Realism (Monday, October 5 - Sunday, October 11)
+### Week Seven: Shells - Videos and Animation (Monday, October 5 - Sunday, October 11)
 
 -   [**Slides: Week Seven**](slides/weekseven.html)
 -   *The AI Con* - Chapter 7: Do You Believe in Hope After Hype?
@@ -258,7 +258,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [Google DeepMind. "Veo 3.1."](https://deepmind.google/models/veo/)
 -   ["AI & the Film Industry: Production." Tech Policy @ Duke Sanford.](https://techpolicy.sanford.duke.edu/blog/ai-the-film-industry-production/)
 -   *Framing note:* OpenAI's Sora was discontinued in 2026 (the app and web experience closed April 26, 2026). Consider its rapid rise and shutdown alongside Veo 3.1 as a hype-cycle case study for this week's Chapter 7 reading.
--   [**Exercise: Video**](weekseven.md)
+-   [**Exercise: Videos and Animation**](weekseven.md)
 
 ### Week Eight: Shells - Perceptions (Monday, October 12 - Sunday, October 18)
 
