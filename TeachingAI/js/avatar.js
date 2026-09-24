@@ -146,7 +146,7 @@ const Avatar = (() => {
   let x = 40, targetX = 40, facing = 1, walkT = 0, visible = true;
   let camo = 0; // 0 = solid, 1 = fully cloaked (thermoptic camouflage)
   let camoTarget = 0;
-  const SPEED = 42; // world px per second
+  const SPEED = 24; // world px per second: an unhurried walk-in
 
   function setTarget(tx, instant) {
     targetX = tx;
@@ -180,7 +180,7 @@ const Avatar = (() => {
     if (!visible) return;
     let pose = 'idle';
     if (isWalking()) {
-      pose = ['walk1', 'walk2', 'walk3', 'walk4'][Math.floor(walkT * 8) % 4];
+      pose = ['walk1', 'walk2', 'walk3', 'walk4'][Math.floor(walkT * 5) % 4];
     } else if (t % 4.2 < 0.14) {
       pose = 'blink';
     }

@@ -20,7 +20,7 @@ const Engine = (() => {
     { id: 'feedback', label: 'VOICES', name: '06 // STUDENT RESPONSE' },
   ];
 
-  let index = -1, busy = false, typer = null, debug = false;
+  let index = -1, busy = false, typer = null, debug = false, skipWalk = false;
 
   // ---------- scaling ----------
   function fit() {
@@ -186,8 +186,10 @@ const Engine = (() => {
   const wait = (ms) => new Promise(r => setTimeout(r, ms));
 
   async function go(i, instant) {
-    if (i < 0 || i >= SCENES.length || i === index || busy) return;
+    if (busy) { skipWalk = true; return; }     // a press mid-walk just finishes the walk
+    if (i < 0 || i >= SCENES.length || i === index) return;
     busy = true;
+    skipWalk = false;
     const scene = SCENES[i];
     const prev = SCENES[index];
     index = i;
@@ -198,6 +200,8 @@ const Engine = (() => {
 
     const roomChanges = !prev || prev.room !== scene.room;
     if (roomChanges && !instant && prev) {
+      clearInterval(typer);
+      dialogue.textContent = '';
       Avatar.cloak(true);
       await wait(380);
       const kind = scene.transition || (scene.room === 'net' || prev.room === 'net' ? 'dive' : 'fade');
@@ -210,6 +214,11 @@ const Engine = (() => {
       Avatar.setTarget(scene.x ?? 40);           // …and walk in while decloaking
       await wait(kind === 'dive' ? 450 : 330);
       Avatar.cloak(false);
+      // let the room breathe: content arrives once the Major has stopped walking
+      const t0 = performance.now();
+      while (Avatar.isWalking() && !skipWalk && performance.now() - t0 < 5000) await wait(50);
+      if (Avatar.isWalking()) Avatar.setTarget(scene.x ?? 40, true);
+      await wait(skipWalk ? 0 : 250);
     } else {
       if (roomChanges) World.load(scene.room);
       // same room: pace a little between scenes so the Major keeps moving
