@@ -460,4 +460,10 @@ const SCENES = [
     },
     dialogue: "That's the course: a frame from 1995, tools from last Tuesday, and a steady insistence that humanists belong in the room where these systems are made and critiqued. Thank you — the site is open, and so is the question of where the ghost ends and the shell begins.",
   },
+
+  // ===== THANK YOU: just the Major on the rooftop =====
+  {
+    room: 'rooftop', x: 52,
+    dialogueHtml: `Thank you! Find me at <a href="https://anastasiasalter.net/" target="_blank" rel="noopener">anastasiasalter.net</a>, and the course at <a href="${SITE}" target="_blank" rel="noopener">anastasiasalter.net/HumanitiesAI</a>.`,
+  },
 ];

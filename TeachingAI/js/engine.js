@@ -147,7 +147,8 @@ const Engine = (() => {
   }
 
   // ---------- dialogue ----------
-  function type(text) {
+  // html (optional) replaces the typed text once it finishes, so links can live in the dialogue
+  function type(text, html) {
     clearInterval(typer);
     dialogue.textContent = '';
     dialogue.classList.add('typing');
@@ -155,7 +156,11 @@ const Engine = (() => {
     typer = setInterval(() => {
       i += 2;
       dialogue.textContent = text.slice(0, i);
-      if (i >= text.length) { clearInterval(typer); dialogue.classList.remove('typing'); }
+      if (i >= text.length) {
+        clearInterval(typer);
+        dialogue.classList.remove('typing');
+        if (html) dialogue.innerHTML = html;
+      }
     }, 16);
   }
 
@@ -180,6 +185,7 @@ const Engine = (() => {
     const n = String(SCENES.length - 1).padStart(2, '0');
     $('hud-counter').textContent = `${String(index).padStart(2, '0')}/${n}`;
     $('speaker').textContent = scene.speaker || 'A. SALTER';
+    $('next-btn').style.visibility = index === SCENES.length - 1 ? 'hidden' : '';
   }
 
   // ---------- scene changes ----------
@@ -231,7 +237,8 @@ const Engine = (() => {
 
     renderPanels(scene);
     updateHud(scene);
-    type(scene.dialogue || '');
+    const html = scene.dialogueHtml;
+    type(html ? html.replace(/<[^>]+>/g, '') : (scene.dialogue || ''), html);
     if (debug) $('debug').textContent = `scene ${i} · room ${scene.room} · x ${scene.x ?? 40}`;
     busy = false;
   }
