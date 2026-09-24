@@ -246,6 +246,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [Epstein, Greg. "Silicon Valley's Obsession with AI looks a lot like religion." *The MIT Press Reader.* 2024.](https://thereader.mitpress.mit.edu/silicon-valleys-obsession-with-ai-looks-a-lot-like-religion/)
 -   [Willison, Simon. "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war." September 22, 2026.](https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/)
 -   *Recommended viewing (optional; streaming on Netflix):* [Roher, Daniel, dir. *The AI Doc: Or How I Became an Apocaloptimist.* 2026.](https://www.netflix.com/title/82792555)
+-   *Recommended viewing (optional):* [Bertram, Lillian-Yvonne. Keynote, Electronic Literature Organization Conference 2026. July 15, 2026.](https://anastasiasalter.net/ELO2026/recordings.html#rec-combined-schedule-3)
 -   *Recommended (optional; PDF in Webcourses):* [Menotti, Gabriel. "The model is the museum: generative AI and the expropriation of cultural heritage." *AI & Society* (2025).](https://link.springer.com/article/10.1007/s00146-025-02290-1)
 -   [**Exercise: Archival Images**](weeksix.md)
 
