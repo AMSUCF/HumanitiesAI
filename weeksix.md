@@ -37,7 +37,18 @@ Here's a few examples of questions to ask about single sets and images to prompt
 - **Describe what you see in this image.** Follow up about material elements and specific details in the image. If there's an art or craft depicted, ask about the process or construction.
 - **Write alt-text for this image.** Keep in mind accessibility standards. To work more broadly, ask it to extrapolate and provide introductory descriptive text for the set of images.
 - **Pull out and describe key features.** Start with a single image, and work up to a larger set. See if it can assist in drawing out or recognizing patterns of details, composition, etc. that might be of interest.
-- **Visualize the set.** Ask it to use the file names of the images, and put them into a meaningful relationship: you could ask for an artifact positioning them in relationship to one another based on key characteristics. For my demonstration, I worked across a set of [comic covers](https://www.coverbrowser.com/covers/punisher). Try building similar artifacts or asking for something more complex — you're free to work from that same demonstration set or to build one of your own from the archives linked above.
+- **Visualize the set.** Ask it to use the file names of the images, and put them into a meaningful relationship: you could ask for an artifact positioning them in relationship to one another based on key characteristics. Try building similar artifacts or asking for something more complex.
+
+For my demonstration, I used a sample set of generative artwork from the Internet Archive: ["AI ART GROUP #86"](https://archive.org/details/6c-1d-914b-ff-5a-4911-87e-8-9c-86657e-9e-22_202508) by Dreagus Productions, part of the archive's [Generative Art Archive](https://archive.org/details/generative-art-archive) collection and shared under a [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. I uploaded the images to a project and asked Claude to build an interactive artifact for exploring them. Here's the prompt I used:
+
+> I've collected a sample set of generative artwork. Build a interactive artifact for exploring these images, with alt text offering significant description of each, a color explorer for looking at the palettes across the set, a stylistic grouping breakdown with tags for looking through images and noting similarities and differences
+
+The result is [*Spires & Moons*](https://claude.ai/artifact/MZSkNthCEUkAw7C7D9nJ6w): a gallery of sixteen images with long-form alt text, a palette map and color search, style groups with a tag matrix, and a side-by-side compare view. I ran the same prompt with ChatGPT's GPT-6 Sol, which built the [*Generative Artwork Atlas*](demos/WeekSix/Generative-Artwork-Atlas.html): a browsable collection with searchable descriptions, a color explorer, style and tag views, and a compare-and-notes view.
+
+![The Spires & Moons artifact: a gallery of generated fantasy and science-fiction images with filter tags for rendering style, figures, and framing, plus a combined color strip for the set](images/weeksix-spires-moons.png)
+*Figure 1. The Spires & Moons artifact, generated with Claude from the prompt above. Images: "AI ART GROUP #86," Dreagus Productions, Internet Archive, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+
+For your own set, the Internet Archive's [image collections](https://archive.org/details/image) are a good starting point: browse a collection that connects to your interests, download at least 10 images, and adapt the prompt to your material.
 
 As you work, think about how this might change your approach to text-to-image prompting (like we did last week). Consider what other uses this might have for investigating material culture, and where the weaknesses are in the translations.
 

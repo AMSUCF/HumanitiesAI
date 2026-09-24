@@ -343,6 +343,24 @@ const SCENES = [
     dialogue: "Week Five moves to shells. If a ghost can be generated, a shell can be too. My own Midjourney results for 'professor of digital culture' make the point faster than any lecture: everyone apparently shops at the same glasses store.",
   },
   {
+    section: 'assignments', room: 'archive', x: 36,
+    panels: [
+      {
+        type: 'image', label: 'WEEK 6 // CLAUDE: SPIRES &amp; MOONS', src: '../images/weeksix-spires-moons.png',
+        href: 'https://claude.ai/artifact/MZSkNthCEUkAw7C7D9nJ6w',
+        alt: 'The Spires and Moons artifact: a gallery of generated fantasy and science-fiction images with filter tags and a combined color strip',
+        box: { x: 290, y: 12, w: 470, h: 500 },
+        caption: '“Build a interactive artifact for exploring these images, with alt text offering significant description of each, a color explorer…”',
+      },
+      {
+        type: 'embed', label: 'GPT-6 SOL', src: SITE + 'demos/WeekSix/Generative-Artwork-Atlas.html', zoom: 0.5,
+        box: { x: 776, y: 12, w: 484, h: 500 },
+        caption: 'Live: the same prompt, as ChatGPT built it. Images: <a href="https://archive.org/details/6c-1d-914b-ff-5a-4911-87e-8-9c-86657e-9e-22_202508" target="_blank" rel="noopener">“AI ART GROUP #86,” Dreagus Productions</a>, Internet Archive, CC BY-SA 4.0.',
+      },
+    ],
+    dialogue: "Week Six turns images back into text. Students gather at least ten images, often from the Internet Archive, and ask a model to describe, caption, and group them. I gave Claude and GPT-6 Sol the same prompt for a set of generative artwork: alt text for each image, a color explorer, and stylistic groupings with tags.",
+  },
+  {
     section: 'assignments', room: 'street', x: 44,
     panel: {
       type: 'image', label: 'WEEK 8 // IMAGES AS INFORMATION', src: '../images/fakecat.png',
