@@ -375,11 +375,10 @@ const SCENES = [
     section: 'assignments', room: 'lab', x: 40,
     panels: [
       {
-        type: 'image', label: 'WK 7 // OPUS 5.5', src: '../images/weekseven-land-of-jazz-claude.png',
-        href: 'https://claude.ai/artifact/6HKYU628vbfCyUXggxsTbm',
-        alt: 'The Land of Jazz artifact: a painted vaudeville title card reading Take Me to the Land of Jazz, A Brushstroke Jamboree',
+        type: 'video', label: 'WK 7 // OPUS 5.5', src: '../images/weekseven-land-of-jazz-claude.mp4',
+        poster: '../images/weekseven-land-of-jazz-claude.png',
         box: { x: 290, y: 12, w: 316, h: 500 },
-        caption: '“Make an artistic, silly symphony inspired, web animation using p5 brushstrokes…”',
+        caption: '“Make an artistic, silly symphony inspired, web animation using p5 brushstrokes…” <a href="https://claude.ai/artifact/6HKYU628vbfCyUXggxsTbm" target="_blank" rel="noopener">Artifact</a>.',
       },
       {
         type: 'embed', label: 'CHATGPT', src: SITE + 'demos/WeekSeven/Take-Me-to-the-Land-of-Jazz/index.html', zoom: 0.4,

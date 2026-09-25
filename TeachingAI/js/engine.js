@@ -103,7 +103,7 @@ const Engine = (() => {
 
     video: (p) => `<section class="panel media" style="${box(p)}">
         <div class="bar"><span>${p.label}</span></div>
-        <div class="screen"><video src="${p.src}" controls preload="metadata"></video></div>
+        <div class="screen"><video src="${p.src}"${p.poster ? ` poster="${p.poster}"` : ''} controls preload="metadata"></video></div>
         ${p.caption ? `<div class="caption">${p.caption}</div>` : ''}</section>`,
 
     voices: (p) => `<section class="panel" style="${box(p, { auto: true })}">${tag(p)}
