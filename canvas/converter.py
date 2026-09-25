@@ -50,7 +50,7 @@ def _rewrite(html: str, site_base: str) -> str:
         url = re.sub(r"^(\./)+", "", url)
         return f'{attr}="{base}/{url}"'
 
-    return re.sub(r'(href|src)="([^"]+)"', fix, html)
+    return re.sub(r'(href|src|poster)="([^"]+)"', fix, html)
 
 
 def render_html(md_text: str, site_base: str) -> str:
