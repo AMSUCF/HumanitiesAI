@@ -257,6 +257,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *Algorithms of Oppression* - Future of Knowledge in Public
 -   [Meta AI Research. "Bringing Your Muse to Life." September 23, 2026.](https://research.meta.ai/blog/bringing-your-muse-to-life)
 -   [Klee, Miles. "AI 'Actor' Tilly Norwood Told Me That 'All Lives Matter.'" *WIRED.* September 2026.](https://www.wired.com/story/ai-actor-tilly-norwood-told-me-that-all-lives-matter/)
+-   [Politano, Joseph. "AI and the Fall? of the Creative Class." *Apricitas Economics.* September 27, 2026.](https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class)
 -   *Recommended viewing (optional):* [Willison, Simon. "2026 in LLMs (so far)." Closing keynote, WeAreDevelopers World Congress North America. September 25, 2026.](https://www.youtube.com/watch?v=GAkIytR7vcc) ([annotated slides and notes](https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/))
 -   *Framing note:* OpenAI's Sora was discontinued in 2026 (the app and web experience closed April 26, 2026). Consider its rapid rise and shutdown as a hype-cycle case study for this week's Chapter 7 reading.
 -   [**Exercise: Videos and Animation**](weekseven.md)
