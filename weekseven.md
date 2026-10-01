@@ -74,6 +74,29 @@ Whichever tool you use, think through the biases and assumptions in the output. 
 
 The styles are close: all three Land of Jazz examples reach for the rubber-hose look of 1920s and 1930s cartoons. The difference is in what's underneath. The Gemini clip is twenty seconds of pixels that can't be edited except by prompting again. The p5 animations run the full length of the song, and their code can be read, changed, and re-timed. Whichever method you choose, think about what the result borrows from, and from whom: the "silly symphony" in the prompt names a specific studio tradition and the animators who built it.
 
+#### Beyond songs: spoken word and text
+
+Neither method needs a song. Narration, a lecture, a speech, or a passage of text can be the source just as well. For a second demonstration, I took a segment of [*A Communications Primer*](https://archive.org/details/communications_primer) (1953), Charles and Ray Eames's short film explaining Claude Shannon's model of communication (a message passing from source to transmitter, through a noisy channel, to a receiver and destination), and asked for a cyberpunk aesthetic. For the animations, I attached the audio of the segment to the Option 1 prompt, with one change:
+
+> Make an artistic, cyberpunk inspired, web animation using p5 brushstrokes and dynamic scenes to build a well-timed video that echoes the lyrics and timing.
+
+Claude (Opus 5.5) built a p5.js animation timed to the narration. It captions the narrator word by word and draws each stage of Shannon's diagram as it's named: a vocal waveform, an oscilloscope channel, a spiraling cochlea wired to the brain, and noise scribbling across parallel lines for "redundancy."
+
+<video src="images/weekseven-communications-primer-claude.mp4" poster="images/weekseven-communications-primer-claude.png" controls></video>
+*Figure 3. A screen recording of Claude's p5.js animation of a segment of* A Communications Primer *(1953), reimagined with a cyberpunk aesthetic.*
+
+ChatGPT (GPT-6.1 Sol, High thinking) built *Signal / Noise* from the same audio and prompt. It casts the exchange as two neon profiles, one speaking and one listening, linked by a wave that carries a heart from one head to the other, with chapter titles and subtitles for each line of narration.
+
+<video src="images/weekseven-communications-primer-chatgpt.mp4" poster="images/weekseven-communications-primer-chatgpt.png" controls></video>
+*Figure 4. A screen recording of* Signal / Noise*, ChatGPT's p5.js animation of the same segment.*
+
+Gemini can't take an audio file, so I gave it a transcript of the segment instead, with the same request for a cyberpunk aesthetic. Veo 3.1 generated live-action-style footage: glowing brains, code scrolling across a cyborg's face, and neon sound waves entering an implanted ear.
+
+<video src="images/weekseven-communications-primer-gemini.mp4" poster="images/weekseven-communications-primer-gemini.png" controls></video>
+*Figure 5. The video Gemini (Veo 3.1) generated from a transcript of the same segment.*
+
+Compare what each model does with the same idea. Both animations stay close to the film's explanation and keep the narration on screen. Claude draws the technical diagram, while ChatGPT turns it into a story about two people and a feeling passed between them. Gemini's footage swaps the diagrams for bodies (who did it cast as the cyborgs?) and drops the explanation almost entirely. "Cyberpunk" is as loaded a style prompt as "silly symphony": it pulls in neon, implants, and rain-slicked sets from decades of film and anime, *Ghost in the Shell* among them.
+
 ### Critiquing Generated Video and Animation
 
 Now that you've explored the tools within some limitations, choose a generated video or animation to analyze and critique (your own, one of the examples above, or one you find elsewhere), with particular attention to the tensions of perception, vision, and labor drawn out through this week's readings. Keep in mind the concerns raised in Brett Halperin's talk, ["Hollywood Film Workers Strike Against AI: Understanding Algorithmic Resistance to Generative Cinematography"](https://stars.library.ucf.edu/elo2024/algorithmsandimaginaries/schedule/3/), as well as this week's readings: Meta's ["Bringing Your Muse to Life"](https://research.meta.ai/blog/bringing-your-muse-to-life), which pitches turning a single still image into a real-time talking, gesturing character, and Miles Klee's WIRED interview with the AI "actor" Tilly Norwood, ["AI 'Actor' Tilly Norwood Told Me That 'All Lives Matter'"](https://www.wired.com/story/ai-actor-tilly-norwood-told-me-that-all-lives-matter/), which shows what happens when a synthetic performer is put in front of the press. Joseph Politano's ["AI and the Fall? of the Creative Class"](https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class) adds the economic picture: America has lost more than 200,000 jobs in media, film, and the arts over four years, with film and television production hit hardest. Together they raise the stakes behind the tools you've just been experimenting with: who a generated performer displaces, and whose values it speaks for. Animation has its own labor history, too: think about whose styles and techniques a prompt like "silly symphony inspired" calls up.
