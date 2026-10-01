@@ -154,7 +154,7 @@ const SCENES = [
       text: 'This same critique can be brought to the output of current generative AI, which can produce a wide range of cultural objects… but should not be mistaken for an expert in that form.',
       note: 'We start with ELIZA and Racter, not ChatGPT. “In this case, the process is more interesting than the output, which is fairly trite.”',
     },
-    dialogue: "The first principle is history. We open with ELIZA, the 1966 therapist bot, and Racter, the 1980s 'author' of a book of poetry. The critiques people made of Racter's output apply almost word for word to today's models — and students find that clarifying rather than discouraging.",
+    dialogue: "The first principle is history. We open with ELIZA, the 1966 therapist bot. The ELIZA effect, people reading understanding and empathy into a limited, pre-programmed chatbot, still shapes how people are reacting to AI today — and students find that clarifying rather than discouraging.",
   },
   {
     section: 'philosophy', room: 'lab', x: 40,
