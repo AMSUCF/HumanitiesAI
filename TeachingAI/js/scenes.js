@@ -21,7 +21,7 @@ const SCENES = [
       sub: 'Designing a humanities course that keeps pace with AI',
       byline: '<strong>Anastasia Salter</strong><br>Professor of English, UCF<br>Director, Texts &amp; Technology PhD<br>President, Electronic Literature Organization',
     },
-    dialogue: "Welcome. This talk walks through a graduate course I teach, Humanities in the Age of AI, as it runs right now in Fall 2026. Use the arrows or click to move through it. The deck is built the way the course is: in the open, on the web, and with a lot of help from the tools we're studying.",
+    dialogue: "Welcome. This talk walks through a graduate course I teach, Humanities in the Age of AI, as it runs right now in Fall 2026. Use the arrows or click to move through it. The deck is built the way the course is: in the open, on the web, and with a little help from the tools we're studying.",
   },
 
   // ===== 01 COURSE INTRODUCTION =====
@@ -41,7 +41,7 @@ const SCENES = [
       text: "You don't get interesting output just by prompting a text bot.",
       note: "Knowing about and acknowledging that history can be really important for helping both your colleagues and your students stop thinking about things like ChatGPT as something that sprung up yesterday — and to provide models for how we can critically and creatively engage with text generation output without expecting it to substitute for expertise.",
     },
-    dialogue: "Why design it this way? Text generation has a long history, and it can be both a creative and intentional practice. For over a decade, NaNoGenMo has brought author-coders together to generate novels. That history is the antidote to hype — and to the idea that expertise no longer matters.",
+    dialogue: "Why design it this way? Text generation has a long history, and it can be both a creative and intentional practice. For decades, my field, electronic literature, has experimented with generative text. That history is the antidote to hype — and to the idea that expertise no longer matters.",
   },
   {
     section: 'intro', room: 'street', x: 44,
@@ -55,7 +55,7 @@ const SCENES = [
         { k: 'BACKGROUND', v: 'Humanists first: no coding experience assumed — the exercises scaffold everything from prompting to Git' },
       ],
     },
-    dialogue: "The students are a mix: our new Digital Humanities in the Age of AI certificate, Texts and Technology PhD students, and MA students, mostly from Arts and Humanities but some from outside the college. Programming isn't a prerequisite, and by Week Ten they are deploying websites anyway.",
+    dialogue: "The students are a mix: our new Digital Humanities in the Age of AI certificate, Texts and Technology PhD students, and MA students, mostly from Arts and Humanities but some from outside the college. Programming isn't a prerequisite, and students build code literacy through exercises including distant reading, web development, and game design.",
   },
   {
     section: 'intro', room: 'ops', x: 34,
@@ -71,7 +71,7 @@ const SCENES = [
         'Required: a paid subscription to Claude or ChatGPT — the student’s choice — plus free tools and trials along the way',
       ],
     },
-    dialogue: "It runs fully asynchronously online. Every week is the same rhythm — read, make, reflect. The public website is the course of record, and Canvas mirrors it, so anyone can follow along. One practical note: because of tool installs, students need administrative access to their own machines.",
+    dialogue: "It runs fully asynchronously online. Every week is the same rhythm — read, make, reflect. The public website is the course of record, and Canvas mirrors it, so anyone can follow along. One practical note: because of tool installs, students need administrative access to their own machines. And UCF does not support any of the agentic tools recommended.",
   },
   {
     section: 'intro', room: 'ops', x: 34,
@@ -102,7 +102,7 @@ const SCENES = [
       cite: '— design notes for the Fall 2026 rebuild',
       note: 'The Puppet Master — an agent “born in a sea of information” that exceeds its task — frames the agentic turn. Each week opens with a verbatim line from the film; each discussion closes with a gesture back at it.',
     },
-    dialogue: "Why a 1995 anime? Because it asked these questions before the chatbots did. The ghost and the shell give students a vocabulary that isn't marketing language, and the Puppet Master — a program that outgrows its task — turns out to be a remarkably good lens for agents.",
+    dialogue: "Why a 1995 anime? Because science fiction asked these questions and framed how we engage with AI. The ghost and the shell give students a vocabulary that isn't marketing language, and the Puppet Master — a program that outgrows its task — turns out to be a remarkably good lens for agents.",
   },
 
   // ===== 02 OBJECTIVES + COMPETENCIES =====
