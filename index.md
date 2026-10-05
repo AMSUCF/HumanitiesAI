@@ -267,7 +267,7 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   *Algorithms of Oppression* - Future of Information Culture; Conclusion
 -   [Farrell, Henry. "After software eats the world, what comes out the other end?" October 3, 2024.](https://www.programmablemutter.com/p/after-software-eats-the-world-what)
 -   [404 Media. "Pinterest Is Drowning in a Sea of AI Slop and Auto-Moderation." February 2026.](https://www.404media.co/pinterest-is-drowning-in-a-sea-of-ai-slop-and-auto-moderation/)
--   [404 Media. "Where Facebook's AI Slop Comes From."](https://www.404media.co/where-facebooks-ai-slop-comes-from/)
+-   [Ridout, Travis N., Erika Franklin Fowler, and Michael Franz. "We've Tracked $80M of Spending on Almost 170 AI-Generated Political Ads This Year – It's Weird." *The Conversation.* October 5, 2026.](https://theconversation.com/weve-tracked-80m-of-spending-on-almost-170-ai-generated-political-ads-this-year-its-weird-292105)
 -   [**Exercise: Images as Information**](weekeight.md)
 
 ### Week Nine: Puppet Masters - Distant Coding (Monday, October 19 - Sunday, October 25)
