@@ -20,13 +20,13 @@ The Puppet Master says this to Kusanagi as a challenge to hold onto a fixed self
 
 ## Tutorial: Images as Information
 
-We've been working a lot with the creation and analysis of AI-generated images in controlled environments. Now, as we prepare to shift our attention from images to code, we're going to investigate how AI imagery is already present and circulating in online communities and social spaces. This week focuses on developing your ability to identify AI-generated content "in the wild" and understanding how these images are already changing the information landscape.
+We've been working a lot with the creation and analysis of AI-generated images in controlled environments. Now, as we prepare to shift our attention from images to code, we're going to investigate how AI imagery is already present and circulating in online communities and social spaces. This week focuses on developing your ability to identify AI-generated content "in the wild" and understanding how these images have already fundamentally changed our information ecosystem.
 
 ### Choosing Your Investigation Focus
 
-First, select a current topic or hobby that genuinely interests you. This could be anything from home decoration, quilting, embroidery, cooking, gardening, fashion, fitness, art, gaming, or any other area where visual content plays a significant role in community sharing and discussion. The key is to choose something you have some familiarity with, as this will help you better assess what looks "normal" versus potentially artificial in that space.
+First, select a current topic or hobby that genuinely interests you. This could be anything from home decoration, quilting, embroidery, cooking, gardening, fashion, fitness, art, gaming, music, concerts, events marketing, film, comics, or any other area where visual content plays a significant role in community sharing and discussion. The key is to choose something you have some familiarity with, as this will help you better assess what looks "normal" versus potentially artificial in that space.
 
-For example, I spend a lot of time in textile groups, and AI embroidery is everywhere — including in patterns being sold on Etsy. An embroiderer and designer, Anne Marie Oliver, has spoken about the problem both [in an interview](https://egausa.org/anne-marie-oliver-impact-ai-embroidery/) and in [a post designed to help people recognize fake embroidery](https://lolliandgrace.com/blogs/blog/artificial-intelligence-in-the-embroidery-space). Here's an archived 2025 sample of the type of not-achievable embroidery that commonly circulated in these spaces, generated at the time with OpenAI's GPT Image 1 model — since superseded by [GPT Image 2](https://openai.com/index/introducing-chatgpt-images-2-0/), released April 21, 2026:
+For example, I spend a lot of time in textile groups, and AI embroidery is everywhere — including in patterns being sold on Etsy. An embroiderer and designer, Anne Marie Oliver, has spoken about the problem both [in an interview](https://egausa.org/anne-marie-oliver-impact-ai-embroidery/) and in [a post designed to help people recognize fake embroidery](https://lolliandgrace.com/blogs/blog/artificial-intelligence-in-the-embroidery-space). Here's an archived 2025 sample of the type of not-achievable embroidery that commonly circulated in these spaces, generated at the time with OpenAI's GPT Image 1 model — since superseded by [GPT Images 2](https://openai.com/index/introducing-chatgpt-images-2-0/), released April 21, 2026 (example below) and now [GPT Images 2.5](https://openai.com/index/introducing-chatgpt-images-2-5/) as of September, included in our demo video:
 
 ![Fake Cat Embroidery](images/fakecat.png)
 
@@ -43,9 +43,9 @@ Next, spend time exploring your chosen topic across various social media platfor
 - TikTok (tutorial videos, showcases)
 - Specialized forums or websites for your chosen interest
 
-As you browse, look for images that strike you as potentially AI-generated. Images are not as obvious as they used to be, so consider how AI might be specifically used (or misused) in your chosen community. Are people using AI to create inspiration images? To fake completed projects? To generate tutorial content? To create product mockups? Document at least three images that either clearly appear to be AI-generated or are sparking debate among viewers about their authenticity.
+As you browse, look for images that strike you as potentially AI-generated. Images are not as obvious as they used to be, so consider how AI might be specifically used (or misused) in your chosen community. Are people using AI to create inspiration images? To fake completed projects? To generate tutorial content? To create product mockups? Document at least three images that either clearly appear to be AI-generated or are sparking debate among viewers about their authenticity and the appropriateness of bringing AI into a space.
 
-Try using Claude Sonnet 5 (the current release) to analyze the images, asking specifically if it is AI-generated: this imitates the functionality of the AI "detection" tools currently being widely marketed.
+Try using Claude Opus 5.5 (released in late September 2026) or ChatGPT 6.1 Sol (released the same week) to analyze the images, asking specifically if it is AI-generated: this imitates the functionality of the AI "detection" tools currently being widely marketed, as discussed in this week's video - AI is being sold as the solution to AI everything in the information landscape.
 
 ### Discussion
 
