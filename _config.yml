@@ -9,6 +9,8 @@ exclude:
 - canvas/
 - undergrad/canvas/
 - undergrad/README.md
+- undergrad/slides/build_decks.py
+- undergrad/slides/decks.yml
 - docs/
 - slides/REPORT.md
 - slides/__pycache__/

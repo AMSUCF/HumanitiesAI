@@ -1,0 +1,225 @@
+/* ENG 3861 slide theme for reveal.js: same palette as undergrad/assets/undergrad.css */
+
+:root {
+  --paper: #fff7e3;
+  --dots: #f1dfb8;
+  --panel: #ffffff;
+  --ink: #1b1035;
+  --ink-soft: #4a3f66;
+  --pink: #ff3d7f;
+  --blue: #2e5bff;
+  --yellow: #ffd23f;
+  --mint: #00b894;
+  --orange: #ff7a1a;
+  --unit: var(--blue);
+  --r-background-color: var(--paper);
+  --r-main-color: var(--ink);
+}
+
+html, body, .reveal-viewport {
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--dots) 1.5px, transparent 1.6px);
+  background-size: 22px 22px;
+}
+
+.reveal {
+  color: var(--ink);
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  font-size: 34px;
+  line-height: 1.4;
+}
+.reveal .slides { text-align: left; }
+.reveal a { color: var(--blue); font-weight: 700; text-decoration: underline;
+  text-decoration-color: var(--pink); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.reveal em { font-style: italic; }
+.reveal strong { font-weight: 700; }
+
+.unit-words { --unit: var(--blue); }
+.unit-images { --unit: var(--pink); }
+.unit-code { --unit: var(--mint); }
+.unit-coda { --unit: var(--orange); }
+
+/* ---------- window frame ---------- */
+
+.win {
+  background: var(--panel);
+  border: 4px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 12px 12px 0 var(--ink);
+  overflow: hidden;
+}
+.win-bar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 18px;
+  background: var(--yellow);
+  border-bottom: 4px solid var(--ink);
+  font-family: "Press Start 2P", monospace;
+  font-size: 15px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--ink);
+}
+.win-bar .dots { display: inline-flex; gap: 8px; }
+.win-bar .dots i { display: block; width: 18px; height: 18px;
+  border: 3px solid var(--ink); border-radius: 4px; }
+.win-bar .dots i:nth-child(1) { background: var(--pink); }
+.win-bar .dots i:nth-child(2) { background: var(--blue); }
+.win-bar .dots i:nth-child(3) { background: var(--mint); }
+.win-body { padding: 34px 44px; }
+
+/* cycle titlebar colors so the deck feels lively */
+.reveal .slides > section:nth-child(4n+1) .win-bar { background: var(--yellow); }
+.reveal .slides > section:nth-child(4n+2) .win-bar { background: #8fe9d3; }
+.reveal .slides > section:nth-child(4n+3) .win-bar { background: #ffb3cf; }
+.reveal .slides > section:nth-child(4n) .win-bar { background: #b9c8ff; }
+
+.sticker {
+  display: inline-block;
+  padding: 6px 18px;
+  border: 4px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--unit);
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 18px; letter-spacing: 1px; text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+.unit-code .sticker, .unit-coda .sticker { color: var(--ink); }
+
+/* ---------- title slide ---------- */
+
+.title-slide .win { margin-top: 40px; }
+.title-slide .win-bar { background: var(--pink) !important; color: #fff; }
+.title-slide .win-body { padding: 44px 56px 40px; }
+.title-slide .kicker { margin: 18px 0 6px; font-family: "VT323", monospace;
+  font-size: 40px; color: var(--ink-soft); }
+.title-slide h1 {
+  margin: 0;
+  font-family: "Bungee", sans-serif; font-weight: 400;
+  font-size: 76px; line-height: 1.05; color: var(--ink);
+  text-shadow: 6px 6px 0 var(--unit);
+  text-transform: none;
+}
+.title-slide .prompt { margin: 26px 0 0; font-family: "VT323", monospace;
+  font-size: 38px; color: #00805f; }
+.title-slide .prompt .cursor { animation: blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---------- section slide ---------- */
+
+.reveal .slides section.section-slide {
+  display: flex !important; flex-direction: column; justify-content: center;
+}
+.section-slide .big {
+  align-self: flex-start;
+  padding: 18px 34px;
+  background: var(--unit);
+  border: 5px solid var(--ink);
+  box-shadow: 14px 14px 0 var(--ink);
+  color: #fff;
+  font-family: "Bungee", sans-serif; font-size: 72px; line-height: 1.1;
+  transform: rotate(-2deg);
+}
+.unit-code .section-slide .big, .unit-coda .section-slide .big { color: var(--ink); }
+.section-slide .sub { margin-top: 44px; font-family: "VT323", monospace;
+  font-size: 44px; color: var(--ink-soft); }
+
+/* ---------- headings on content slides ---------- */
+
+.reveal h2.slide-title {
+  display: inline-block;
+  margin: 0 0 26px;
+  padding: 4px 18px;
+  background: var(--yellow);
+  border: 4px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  font-family: "Bungee", sans-serif; font-weight: 400;
+  font-size: 46px; line-height: 1.2; color: var(--ink);
+  text-transform: none; transform: rotate(-1deg);
+}
+
+/* ---------- quote slide ---------- */
+
+.quote-slide .win { margin-top: 10px; }
+.quote-slide blockquote {
+  position: relative;
+  margin: 0; padding: 0 0 0 104px;
+  width: auto; box-shadow: none; background: none;
+  font-size: 40px; line-height: 1.38; font-style: normal;
+}
+.quote-slide blockquote.long { font-size: 32px; }
+.quote-slide blockquote::before {
+  content: "\201C";
+  position: absolute; left: 0; top: -10px;
+  font-family: "Bungee", sans-serif; font-size: 120px; line-height: 1;
+  color: var(--unit);
+}
+.quote-slide .cite {
+  margin: 28px 0 0 104px;
+  font-family: "VT323", monospace; font-size: 34px; color: var(--ink-soft);
+}
+.quote-slide .cite::before { content: "— "; }
+
+/* ---------- image slide ---------- */
+
+.reveal .slides section.image-slide {
+  display: flex !important; flex-direction: column; align-items: center; justify-content: center;
+}
+.image-slide .win { display: inline-flex; flex-direction: column; max-width: 100%; }
+.image-slide .win-body { padding: 0; background: var(--ink); }
+.image-slide img {
+  display: block; margin: 0 auto;
+  max-width: 1160px; max-height: 560px; width: auto; height: auto;
+  object-fit: contain;
+}
+.image-slide.no-caption img { max-height: 620px; }
+.image-slide .caption {
+  margin: 22px 0 0; max-width: 1100px; text-align: center;
+  font-size: 28px; line-height: 1.35;
+}
+.image-slide .credit { font-family: "VT323", monospace; font-size: 26px; color: var(--ink-soft); }
+
+/* ---------- bullets ---------- */
+
+.points-slide ul { list-style: none; margin: 0; padding: 0; }
+.points-slide li { position: relative; margin: 0 0 20px; padding-left: 56px; font-size: 36px; }
+.points-slide li::before {
+  content: ""; position: absolute; left: 0; top: 10px;
+  width: 26px; height: 26px;
+  background: var(--unit); border: 4px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink); transform: rotate(8deg);
+}
+.points-slide li:nth-child(3n+2)::before { background: var(--yellow); }
+.points-slide li:nth-child(3n)::before { background: var(--pink); }
+
+/* ---------- terminal / prompt slide ---------- */
+
+.term { background: #1b1035; }
+.term .win-body { font-family: "VT323", monospace; font-size: 42px; line-height: 1.3; color: #7dffb3; }
+.term .win-body .ps { color: var(--yellow); }
+.term .label { margin: 0 0 14px; color: #ffb3cf; font-size: 32px; }
+
+/* ---------- question slide ---------- */
+
+.question-slide .win-body { padding: 44px 50px; }
+.question-slide .q { font-family: "Bungee", sans-serif; font-size: 48px; line-height: 1.25; }
+.question-slide .hint { margin-top: 28px; font-size: 30px; color: var(--ink-soft); }
+
+/* ---------- readings slide ---------- */
+
+.readings-slide li { font-size: 30px; }
+.readings-slide .what { display: block; font-family: "VT323", monospace; font-size: 28px; color: var(--ink-soft); }
+
+/* ---------- reveal chrome ---------- */
+
+.reveal .slide-number {
+  background: var(--ink); color: var(--yellow);
+  font-family: "Press Start 2P", monospace; font-size: 12px; padding: 6px 10px;
+}
+.reveal .controls { color: var(--pink); }
+.reveal .progress { color: var(--pink); height: 6px; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .title-slide .prompt .cursor { animation: none; }
+}
