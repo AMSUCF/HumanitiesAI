@@ -74,8 +74,11 @@ def extract_readings(syllabus_md: str, week_label: str) -> str:
         syllabus_md, re.MULTILINE | re.DOTALL)
     if not m:
         return ""
+    # a "#### Do" subheading (undergrad syllabus) starts the exercise half
+    # of the module, which belongs on the exercise page, not the lecture page
+    section = re.split(r"^####\s+Do\b", m.group(1), maxsplit=1, flags=re.MULTILINE)[0]
     kept, skipping = [], False
-    for line in m.group(1).splitlines():
+    for line in section.splitlines():
         stripped = line.strip()
         if stripped.startswith("- "):
             skipping = bool(_SKIP_BULLET_RE.match(stripped))

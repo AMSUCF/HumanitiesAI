@@ -1,3 +1,4 @@
+import textwrap
 import json
 from pathlib import Path
 import deploy
@@ -140,6 +141,31 @@ def test_plan_week_lecture_lists_readings_before_video(tmp_path):
 def test_extract_readings_missing_week_returns_empty():
     from converter import extract_readings
     assert extract_readings(SYLLABUS, "Week Nine") == ""
+
+
+def test_extract_readings_stops_at_do_subheading():
+    # undergrad syllabus: one heading per module, Think / Do as subheadings;
+    # only the Think readings belong on the lecture page
+    from converter import extract_readings
+    syl = textwrap.dedent("""        ### Module One: What Is DH? (Weeks 1-2, January 11 - 24)
+
+        #### Think: Week 1 (January 11 - 17)
+
+        -   Kirschenbaum reading
+
+        #### Do: Week 2 (January 18 - 24)
+
+        -   **Watch:** a video
+        -   [**Exercise: Chatbots**](moduleone.md)
+
+        ### Module Two: Text (Weeks 3-4, January 25 - February 7)
+
+        -   Chiang reading
+        """)
+    out = extract_readings(syl, "Module One")
+    assert "Kirschenbaum reading" in out
+    assert "Watch" not in out and "Do: Week 2" not in out
+    assert "Chiang" not in out
 
 
 def test_video_embed_regex_matches_canvas_media_iframe():

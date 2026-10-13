@@ -20,21 +20,13 @@ title: Digital Humanities Approaches to AI
 - [How Every Exercise Is Graded](#how-every-exercise-is-graded)
 - [Asynchronous Online Course Structure](#asynchronous-online-course-structure)
 - [Module Schedule](#module-schedule)
-  - [Module One: What Is Digital Humanities? (Think: Week 1, January 11 - 17)](#module-one-what-is-digital-humanities-think-week-1-january-11---17)
-  - [Module One, Do: Talking to Chatbots (Week 2, January 18 - 24)](#module-one-do-talking-to-chatbots-week-2-january-18---24)
-  - [Module Two: Generating Text, Checking Sources (Think: Week 3, January 25 - 31)](#module-two-generating-text-checking-sources-think-week-3-january-25---31)
-  - [Module Two, Do: Fact-Checking the Machine (Week 4, February 1 - 7)](#module-two-do-fact-checking-the-machine-week-4-february-1---7)
-  - [Module Three: Reading at Scale (Think: Week 5, February 8 - 14)](#module-three-reading-at-scale-think-week-5-february-8---14)
-  - [Module Three, Do: Distant Reading with Voyant and AI (Week 6, February 15 - 21)](#module-three-do-distant-reading-with-voyant-and-ai-week-6-february-15---21)
-  - [Module Four: Generating Images (Think: Week 7, February 22 - 28)](#module-four-generating-images-think-week-7-february-22---28)
-  - [Module Four, Do: Prompting Images (Week 8, March 1 - 7)](#module-four-do-prompting-images-week-8-march-1---7)
-  - [Module Five: Archives and Collections (Think: Week 9, March 8 - 14)](#module-five-archives-and-collections-think-week-9-march-8---14)
-  - [Spring Break (March 15 - 21)](#spring-break-march-15---21)
-  - [Module Five, Do: Describing the Archive (Week 10, March 22 - 28)](#module-five-do-describing-the-archive-week-10-march-22---28)
-  - [Module Six: Building with AI (Think: Week 11, March 29 - April 4)](#module-six-building-with-ai-think-week-11-march-29---april-4)
-  - [Module Six, Do: Build a Mini-Exhibit (Week 12, April 5 - 11)](#module-six-do-build-a-mini-exhibit-week-12-april-5---11)
-  - [Module Seven: Values and Futures (Think: Week 13, April 12 - 18)](#module-seven-values-and-futures-think-week-13-april-12---18)
-  - [Module Seven, Do: A Study Companion and Its Values (Week 14, April 19 - 25)](#module-seven-do-a-study-companion-and-its-values-week-14-april-19---25)
+  - [Module One: What Is Digital Humanities? (Weeks 1-2, January 11 - 24)](#module-one-what-is-digital-humanities-weeks-1-2-january-11---24)
+  - [Module Two: Generating Text, Checking Sources (Weeks 3-4, January 25 - February 7)](#module-two-generating-text-checking-sources-weeks-3-4-january-25---february-7)
+  - [Module Three: Reading at Scale (Weeks 5-6, February 8 - 21)](#module-three-reading-at-scale-weeks-5-6-february-8---21)
+  - [Module Four: Generating Images (Weeks 7-8, February 22 - March 7)](#module-four-generating-images-weeks-7-8-february-22---march-7)
+  - [Module Five: Archives and Collections (Weeks 9-10, March 8 - 28)](#module-five-archives-and-collections-weeks-9-10-march-8---28)
+  - [Module Six: Building with AI (Weeks 11-12, March 29 - April 11)](#module-six-building-with-ai-weeks-11-12-march-29---april-11)
+  - [Module Seven: Values and Futures (Weeks 13-14, April 12 - 25)](#module-seven-values-and-futures-weeks-13-14-april-12---25)
   - [Final Portfolio and Reflection (Due Tuesday, May 4)](#final-portfolio-and-reflection-due-tuesday-may-4)
 
 ## Course Description
@@ -132,89 +124,103 @@ This course is fully asynchronous and online. There are no scheduled class meeti
 
 Classes run from **Monday, January 11 through Monday, April 26, 2027**, with Spring Break **March 15 - 21** and the final exam period **April 28 - May 4**. Each module has a Think week and a Do week, both running Monday through Sunday. The Final Portfolio and Reflection is due during the exam period, on **Tuesday, May 4**.
 
-### Module One: What Is Digital Humanities? (Think: Week 1, January 11 - 17)
+### Module One: What Is Digital Humanities? (Weeks 1-2, January 11 - 24)
+
+#### Think: Week 1 (January 11 - 17)
 
 -   [**Slides: Module One**](slides/moduleone.html)
 -   [Kirschenbaum, Matthew. "What Is Digital Humanities and What's It Doing in English Departments?" *ADE Bulletin* 150 (2010).](https://mkirschenbaum.wordpress.com/wp-content/uploads/2011/03/ade-final.pdf)
 -   [Mars, Roman. "The ELIZA Effect." *99% Invisible*, episode 382. December 10, 2019.](https://99percentinvisible.org/episode/the-eliza-effect/) (podcast, with [transcript](https://99percentinvisible.org/episode/the-eliza-effect/transcript))
 -   **Due: Activity Verification (Friday, January 15)**
 
-### Module One, Do: Talking to Chatbots (Week 2, January 18 - 24)
+#### Do: Week 2 (January 18 - 24)
 
 -   **Note:** Monday, January 18 is Martin Luther King Jr. Day. The holiday does not pause this asynchronous module.
 -   **Watch:** [Artificial Intelligence in 1978](https://www.youtube.com/watch?v=UCcdiFa7fhM) (Joseph Weizenbaum, GBH Archives, about 4 minutes)
 -   [**Exercise: Talking to Chatbots, Then and Now**](moduleone.md) (due Sunday, January 24)
 
-### Module Two: Generating Text, Checking Sources (Think: Week 3, January 25 - 31)
+### Module Two: Generating Text, Checking Sources (Weeks 3-4, January 25 - February 7)
+
+#### Think: Week 3 (January 25 - 31)
 
 -   [**Slides: Module Two**](slides/moduletwo.html)
 -   [Chiang, Ted. "ChatGPT Is a Blurry JPEG of the Web." *The New Yorker.* February 9, 2023.](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
 -   [Kirschenbaum, Matthew. "Prepare for the Textpocalypse." *The Atlantic.* March 8, 2023.](https://www.theatlantic.com/technology/archive/2023/03/ai-chatgpt-writing-language-models/673318/)
 
-### Module Two, Do: Fact-Checking the Machine (Week 4, February 1 - 7)
+#### Do: Week 4 (February 1 - 7)
 
 -   **Watch:** [Critical Legal AI Literacies: Emily Bender on “LLMs and the Lawyer’s Search for Meaning”](https://www.youtube.com/watch?v=gG5R-TdfXhw) (Emily M. Bender, Yale Law Library, about 20 minutes)
 -   [**Exercise: Fact-Checking the Machine**](moduletwo.md) (due Sunday, February 7)
 
-### Module Three: Reading at Scale (Think: Week 5, February 8 - 14)
+### Module Three: Reading at Scale (Weeks 5-6, February 8 - 21)
+
+#### Think: Week 5 (February 8 - 14)
 
 -   [**Slides: Module Three**](slides/modulethree.html)
 -   [Underwood, Ted. "Seven ways humanists are using computers to understand text." *The Stone and the Shell.* June 4, 2015.](https://tedunderwood.com/2015/06/04/seven-ways-humanists-are-using-computers-to-understand-text/)
 -   [Posner, Miriam. "How did they make that?" August 29, 2013.](https://miriamposner.com/blog/how-did-they-make-that/)
 
-### Module Three, Do: Distant Reading with Voyant and AI (Week 6, February 15 - 21)
+#### Do: Week 6 (February 15 - 21)
 
 -   **Watch:** [Text Analysis: A Walking Tour of What People are Using in Digital Humanities Right Now](https://www.youtube.com/watch?v=X5eAULsBm0w) (Miriam Posner, about 31 minutes)
 -   *Optional:* [Introduction to Voyant Tools: Basic Distant Reading of Literature](https://www.youtube.com/watch?v=rQbf6V77ScA) (UMF Digital Humanities & Video Game Studies Lab, about 21 minutes)
 -   [**Exercise: Distant Reading with Voyant and AI**](modulethree.md) (due Sunday, February 21)
 
-### Module Four: Generating Images (Think: Week 7, February 22 - 28)
+### Module Four: Generating Images (Weeks 7-8, February 22 - March 7)
+
+#### Think: Week 7 (February 22 - 28)
 
 -   [**Slides: Module Four**](slides/modulefour.html)
 -   [D'Ignazio, Catherine, and Lauren F. Klein. "The Power Chapter." *Data Feminism.* MIT Press, 2020.](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7)
 -   [Turk, Victoria. "How AI reduces the world to stereotypes." *Rest of World.* October 10, 2023.](https://restofworld.org/2023/ai-image-stereotypes/)
 -   [Demsky, Ian. "My Month with Midjourney." *Electronic Book Review.* April 2, 2023.](https://electronicbookreview.com/publications/my-month-with-midjourney/)
 
-### Module Four, Do: Prompting Images (Week 8, March 1 - 7)
+#### Do: Week 8 (March 1 - 7)
 
 -   **Watch:** [How biased are our algorithms?](https://www.youtube.com/watch?v=UXuJ8yQf6dI) (Safiya Umoja Noble, TEDxUIUC, about 17 minutes)
 -   [**Exercise: Prompting Images**](modulefour.md) (due Sunday, March 7)
 
-### Module Five: Archives and Collections (Think: Week 9, March 8 - 14)
+### Module Five: Archives and Collections (Weeks 9-10, March 8 - 28)
+
+#### Think: Week 9 (March 8 - 14)
 
 -   [**Slides: Module Five**](slides/modulefive.html)
 -   [Crawford, Kate, and Trevor Paglen. "Excavating AI: The Politics of Images in Machine Learning Training Sets." September 19, 2019.](https://excavating.ai/)
 -   [Always Already Computational: Collections as Data. "The Santa Barbara Statement on Collections as Data." 2017-2018.](https://collectionsasdata.github.io/statement/)
 
-### Spring Break (March 15 - 21)
+#### Spring Break (March 15 - 21)
 
 No coursework is due over Spring Break. Module Five's Do week picks up when you return.
 
-### Module Five, Do: Describing the Archive (Week 10, March 22 - 28)
+#### Do: Week 10 (March 22 - 28)
 
 -   **Watch:** [Art in the age of machine intelligence](https://www.youtube.com/watch?v=UxQDG6WQT5s) (Refik Anadol, TED, about 12 minutes)
 -   *Optional:* [Training Humans](https://www.youtube.com/watch?v=P4JpD1PWBDI) (Kate Crawford and Trevor Paglen, Fondazione Prada, about 5 minutes)
 -   [**Exercise: Describing the Archive**](modulefive.md) (due Sunday, March 28)
 
-### Module Six: Building with AI (Think: Week 11, March 29 - April 4)
+### Module Six: Building with AI (Weeks 11-12, March 29 - April 11)
+
+#### Think: Week 11 (March 29 - April 4)
 
 -   [**Slides: Module Six**](slides/modulesix.html)
 -   [Ramsay, Stephen. "On Building." January 11, 2011. (Archived copy.)](https://web.archive.org/web/20251228181813/https://stephenramsay.us/text/2011/01/11/on-building/)
 -   [Willison, Simon. "Here's how I use LLMs to help me write code." March 11, 2025.](https://simonwillison.net/2025/Mar/11/using-llms-for-code/)
 -   **Note:** The university withdrawal deadline is Friday, April 2.
 
-### Module Six, Do: Build a Mini-Exhibit (Week 12, April 5 - 11)
+#### Do: Week 12 (April 5 - 11)
 
 -   **Watch:** [2025 in LLMs so far, illustrated by Pelicans on Bicycles](https://www.youtube.com/watch?v=YpY83-kA7Bo) (Simon Willison, AI Engineer, about 18 minutes)
 -   [**Exercise: Build a Mini-Exhibit**](modulesix.md) (due Sunday, April 11)
 
-### Module Seven: Values and Futures (Think: Week 13, April 12 - 18)
+### Module Seven: Values and Futures (Weeks 13-14, April 12 - 25)
+
+#### Think: Week 13 (April 12 - 18)
 
 -   [**Slides: Module Seven**](slides/moduleseven.html)
 -   [Spiro, Lisa. "'This Is Why We Fight': Defining the Values of the Digital Humanities." *Debates in the Digital Humanities.* University of Minnesota Press, 2012.](https://dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/9e014167-c688-43ab-8b12-0f6746095335)
 -   [Underwood, Ted. "A more interesting upside of AI." July 2, 2025.](https://tedunderwood.com/2025/07/02/a-more-interesting-upside-of-ai/)
 
-### Module Seven, Do: A Study Companion and Its Values (Week 14, April 19 - 25)
+#### Do: Week 14 (April 19 - 25)
 
 -   **Watch:** [Why We Need To Democratise How We Build AI](https://www.youtube.com/watch?v=D28aL_5LH2Q) (Karen Hao, TEDxGateway, about 11 minutes)
 -   [**Exercise: A Study Companion and Its Values**](moduleseven.md) (due Sunday, April 25)
