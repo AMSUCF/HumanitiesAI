@@ -1044,3 +1044,8 @@ h1::before, h2::before {
   color: var(--text-muted);
   font-size: 0.85rem;
 }
+
+/* Undergraduate course (undergrad/) unit badges: same palette, plain-language units */
+.unit-badge--words { background: #0f766e; }
+.unit-badge--images { background: #b45309; }
+.unit-badge--code { background: #365314; }

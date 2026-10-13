@@ -7,6 +7,8 @@ exclude:
 - .superpowers/
 - 2025/*old.md
 - canvas/
+- undergrad/canvas/
+- undergrad/README.md
 - docs/
 - slides/REPORT.md
 - slides/__pycache__/

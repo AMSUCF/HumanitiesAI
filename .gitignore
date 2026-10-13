@@ -8,3 +8,8 @@ oldslides/
 
 # student evaluation comments (private)
 Anastasia Salter Comments Report*.pdf
+
+# undergraduate course deployer state (same rules as canvas/)
+undergrad/canvas/.env
+undergrad/canvas/preview/
+undergrad/canvas/.state.json

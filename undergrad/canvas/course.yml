@@ -1,0 +1,18 @@
+# Canvas config for ENG 3861 (undergraduate), same schema as ../../canvas/course.yml.
+# CANVAS_COURSE_ID is not known yet; it goes in undergrad/canvas/.env when the shell exists.
+site_base: https://anastasiasalter.net/HumanitiesAI/undergrad
+timezone: America/New_York
+assignment_groups:
+  exercises: Exercises
+  other: Course Requirements
+syllabus_file: index.md
+weeks: [moduleone, moduletwo, modulethree, modulefour, modulefive, modulesix, moduleseven]
+extra: [finalreflection]
+activity_verification: {name: "Activity Verification", points: 5, open: 2027-01-11, due: 2027-01-15}
+# Plain-language units replacing ghosts/shells/puppetmasters. The grad converter
+# hardcodes its unit table, so it needs to read this block before deploying (see ../README.md).
+units:
+  words: {label: "Words", color: "#0f766e"}
+  images: {label: "Images", color: "#b45309"}
+  code: {label: "Code", color: "#365314"}
+  coda: {label: "Futures", color: "#475569"}
