@@ -142,6 +142,7 @@ Classes run from **Monday, January 11 through Monday, April 26, 2027**, with Spr
 ### Module One, Do: Talking to Chatbots (Week 2, January 18 - 24)
 
 -   **Note:** Monday, January 18 is Martin Luther King Jr. Day. The holiday does not pause this asynchronous module.
+-   **Watch:** [Artificial Intelligence in 1978](https://www.youtube.com/watch?v=UCcdiFa7fhM) (Joseph Weizenbaum, GBH Archives, about 4 minutes)
 -   [**Exercise: Talking to Chatbots, Then and Now**](moduleone.md) (due Sunday, January 24)
 
 ### Module Two: Generating Text, Checking Sources (Think: Week 3, January 25 - 31)
@@ -152,6 +153,7 @@ Classes run from **Monday, January 11 through Monday, April 26, 2027**, with Spr
 
 ### Module Two, Do: Fact-Checking the Machine (Week 4, February 1 - 7)
 
+-   **Watch:** [Critical Legal AI Literacies: Emily Bender on “LLMs and the Lawyer’s Search for Meaning”](https://www.youtube.com/watch?v=gG5R-TdfXhw) (Emily M. Bender, Yale Law Library, about 20 minutes)
 -   [**Exercise: Fact-Checking the Machine**](moduletwo.md) (due Sunday, February 7)
 
 ### Module Three: Reading at Scale (Think: Week 5, February 8 - 14)
@@ -162,6 +164,8 @@ Classes run from **Monday, January 11 through Monday, April 26, 2027**, with Spr
 
 ### Module Three, Do: Distant Reading with Voyant and AI (Week 6, February 15 - 21)
 
+-   **Watch:** [Text Analysis: A Walking Tour of What People are Using in Digital Humanities Right Now](https://www.youtube.com/watch?v=X5eAULsBm0w) (Miriam Posner, about 31 minutes)
+-   *Optional:* [Introduction to Voyant Tools: Basic Distant Reading of Literature](https://www.youtube.com/watch?v=rQbf6V77ScA) (UMF Digital Humanities & Video Game Studies Lab, about 21 minutes)
 -   [**Exercise: Distant Reading with Voyant and AI**](modulethree.md) (due Sunday, February 21)
 
 ### Module Four: Generating Images (Think: Week 7, February 22 - 28)
@@ -173,6 +177,7 @@ Classes run from **Monday, January 11 through Monday, April 26, 2027**, with Spr
 
 ### Module Four, Do: Prompting Images (Week 8, March 1 - 7)
 
+-   **Watch:** [How biased are our algorithms?](https://www.youtube.com/watch?v=UXuJ8yQf6dI) (Safiya Umoja Noble, TEDxUIUC, about 17 minutes)
 -   [**Exercise: Prompting Images**](modulefour.md) (due Sunday, March 7)
 
 ### Module Five: Archives and Collections (Think: Week 9, March 8 - 14)
@@ -187,6 +192,8 @@ No coursework is due over Spring Break. Module Five's Do week picks up when you 
 
 ### Module Five, Do: Describing the Archive (Week 10, March 22 - 28)
 
+-   **Watch:** [Art in the age of machine intelligence](https://www.youtube.com/watch?v=UxQDG6WQT5s) (Refik Anadol, TED, about 12 minutes)
+-   *Optional:* [Training Humans](https://www.youtube.com/watch?v=P4JpD1PWBDI) (Kate Crawford and Trevor Paglen, Fondazione Prada, about 5 minutes)
 -   [**Exercise: Describing the Archive**](modulefive.md) (due Sunday, March 28)
 
 ### Module Six: Building with AI (Think: Week 11, March 29 - April 4)
@@ -198,6 +205,7 @@ No coursework is due over Spring Break. Module Five's Do week picks up when you 
 
 ### Module Six, Do: Build a Mini-Exhibit (Week 12, April 5 - 11)
 
+-   **Watch:** [2025 in LLMs so far, illustrated by Pelicans on Bicycles](https://www.youtube.com/watch?v=YpY83-kA7Bo) (Simon Willison, AI Engineer, about 18 minutes)
 -   [**Exercise: Build a Mini-Exhibit**](modulesix.md) (due Sunday, April 11)
 
 ### Module Seven: Values and Futures (Think: Week 13, April 12 - 18)
@@ -208,6 +216,7 @@ No coursework is due over Spring Break. Module Five's Do week picks up when you 
 
 ### Module Seven, Do: A Study Companion and Its Values (Week 14, April 19 - 25)
 
+-   **Watch:** [Why We Need To Democratise How We Build AI](https://www.youtube.com/watch?v=D28aL_5LH2Q) (Karen Hao, TEDxGateway, about 11 minutes)
 -   [**Exercise: A Study Companion and Its Values**](moduleseven.md) (due Sunday, April 25)
 
 ### Final Portfolio and Reflection (Due Tuesday, May 4)
