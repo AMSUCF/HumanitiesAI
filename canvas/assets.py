@@ -80,9 +80,15 @@ def _sha(p: Path) -> str:
 
 
 def sync_assets(client, cfg, root, state, force=False):
+    """Upload new or changed assets and reserve the pages.
+
+    Returns (files, pages, missing): file ids by rel path, page slugs, and
+    the rel paths found deleted in Canvas and left alone (not re-uploaded).
+    """
     found = find_assets(cfg, root)
     check_decks_fresh(root)
     known = state.setdefault("files", {})
+    missing = set()
     for rel, path in found.items():
         rec, sha = known.get(rel), _sha(path)
         if rec and rec["sha256"] == sha:
@@ -92,6 +98,7 @@ def sync_assets(client, cfg, root, state, force=False):
             if live is None:
                 print(f"[missing in Canvas] {rel} was deleted or replaced in Canvas Files; "
                       f"not re-uploaded (pass --force to upload it again)")
+                missing.add(rel)
                 continue
             if live != rec["updated_at"]:
                 print(f"[edited in Canvas] {rel} was replaced in Canvas Files; "
@@ -112,7 +119,7 @@ def sync_assets(client, cfg, root, state, force=False):
             pages[f"{stem}:lecture"] = st.get("lecture_url") or client.find_or_create_page(
                 f"{_label(root, stem)} Readings + Lecture")
             st["lecture_url"] = pages[f"{stem}:lecture"]
-    return {rel: r["id"] for rel, r in known.items()}, pages
+    return {rel: r["id"] for rel, r in known.items()}, pages, missing
 
 
 def _title(root, stem):

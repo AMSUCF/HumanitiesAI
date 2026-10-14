@@ -82,8 +82,16 @@ def test_missing_in_canvas_is_skipped(tmp_path, capsys):
     root, cfg, state = _synced(tmp_path)
     capsys.readouterr()
     c = FakeClient(live_updated=None)
-    assets.sync_assets(c, cfg, root, state)
+    files, _, missing = assets.sync_assets(c, cfg, root, state)
     assert c.uploads == [] and "[missing in Canvas]" in capsys.readouterr().out
+    assert missing == {"slides/moduleone.pptx"}
+    assert files["slides/moduleone.pptx"] == 5      # old id kept, flagged as missing
+
+
+def test_sync_reports_nothing_missing_when_edited_or_uploaded(tmp_path):
+    root, cfg, state = _synced(tmp_path)
+    assert assets.sync_assets(FakeClient(live_updated="T2-gta"), cfg, root, state)[2] == set()
+    assert assets.sync_assets(FakeClient(), cfg, root, state)[2] == set()   # uploads
 
 
 def test_force_reuploads_missing_and_edited(tmp_path):

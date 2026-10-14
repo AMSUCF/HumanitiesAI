@@ -506,9 +506,15 @@ def _grad_course(tmp_path):
     return tmp_path
 
 
-def test_grad_live_run_unchanged_apart_from_guard(tmp_path, monkeypatch, capsys):
+class NoGuardCanvas(FakeCanvas):
+    """A grad-course client: the edit guard must never ask for updated_at."""
+    def updated_at(self, kind, ref):
+        raise AssertionError(f"updated_at({kind!r}, {ref!r}) called outside self-contained")
+
+
+def test_grad_live_run_unchanged(tmp_path, monkeypatch, capsys):
     canvas = _grad_course(tmp_path)
-    fake = FakeCanvas(code="ENG6806")
+    fake = NoGuardCanvas(code="ENG6806")
     _live(monkeypatch, canvas, fake)
     assert deploy.main(["--all"]) == 0
     assert "deploying to: Humanities and AI (ENG6806)" in capsys.readouterr().out
@@ -519,7 +525,40 @@ def test_grad_live_run_unchanged_apart_from_guard(tmp_path, monkeypatch, capsys)
     assert 'href="https://x.y/slides/weekone.html"' in fake.bodies["Week One: G"]
     assert 'href="https://x.y/weekone.html"' in fake.bodies["Syllabus"]
     st = _state(canvas)
-    assert st["weekone"]["page_updated"] and st["syllabus_updated"]
+    assert not [k for k in st["weekone"] if k.endswith("_updated")]
+    assert "syllabus_updated" not in st
+
+
+def test_grad_live_run_ignores_stale_markers(tmp_path, monkeypatch, capsys):
+    # grad lecture pages are edited in Canvas on purpose (hand-added videos):
+    # markers left in state must not make the deployer skip anything
+    canvas = _grad_course(tmp_path)
+    fake = NoGuardCanvas(code="ENG6806")
+    _live(monkeypatch, canvas, fake, state={
+        "syllabus_url": "syllabus", "syllabus_updated": "OLD",
+        "weekone": {"module_id": 11, "lecture_url": "week-one-readings-+-lecture",
+                    "lecture_updated": "OLD", "page_url": "week-one-g",
+                    "page_updated": "OLD", "discussion_id": 21,
+                    "discussion_updated": "OLD"}})
+    assert deploy.main(["--all"]) == 0
+    assert "in Canvas]" not in capsys.readouterr().out
+    assert [c[1] for c in fake.of("page")] == ["Week One Readings + Lecture", "Week One: G",
+                                               "Syllabus"]
+    assert fake.of("discussion") == [("discussion", "Exercise Discussion: Week One: G", 21)]
+    assert [c[1] for c in fake.of("item")] == ["Page", "Page", "Discussion"]
+
+
+def test_deck_missing_in_canvas_gets_no_file_item(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas(live={("files", 5): None})
+    _live(monkeypatch, canvas, fake, state={"files": {"slides/moduleone.pptx": {
+        "id": 5, "sha256": "an-older-build", "updated_at": "F1"}}})
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert "[missing in Canvas] slides/moduleone.pptx" in capsys.readouterr().out
+    assert not fake.of("upload")
+    assert fake.of("item") == [("item", "Page", "module-one-readings-+-lecture", 1),
+                               ("item", "Page", "module-one-x", 2),
+                               ("item", "Discussion", 21, 3)]
 
 
 def test_grad_dry_run_writes_no_syllabus_preview(tmp_path, monkeypatch):

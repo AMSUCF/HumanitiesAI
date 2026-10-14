@@ -199,6 +199,7 @@ def main(argv=None) -> int:
     # a self-contained course rewrites every repo link to its Canvas target:
     # placeholder ids on a dry run, the uploaded files and reserved pages live
     link_map = slide_ids = course_path = api_base = None
+    missing_files = set()   # files deleted in Canvas that sync_assets left alone
     if not args.dry_run:
         load_dotenv(Path.cwd() / ".env")
         import requests
@@ -215,7 +216,8 @@ def main(argv=None) -> int:
         state = _load_state()
         if self_contained:
             try:
-                files, pages = assets.sync_assets(client, cfg, root, state, force=args.force)
+                files, pages, missing_files = assets.sync_assets(
+                    client, cfg, root, state, force=args.force)
             except requests.HTTPError as e:
                 raise SystemExit(f"asset sync failed: {e}")
             finally:
@@ -284,6 +286,17 @@ def main(argv=None) -> int:
             print(f"[dry-run] {GUIDE_TITLE} (unpublished, in no module)")
         return 0
 
+    # The edit guard is for self-contained (handed-off) courses only. The grad
+    # course edits lecture pages in Canvas on purpose (hand-added videos, kept
+    # via VIDEO_EMBED_RE), so it makes no updated_at calls and stores no markers.
+    def guard(kind, ref, stored, title):
+        return (edited_in_canvas(client, kind, ref, stored, args.force, title)
+                if self_contained else None)
+
+    def stamp(target, key, kind, ref):
+        if self_contained:
+            target[key] = client.updated_at(kind, ref)
+
     group_id = client.upsert_assignment_group(cfg["assignment_groups"]["exercises"])
     lecture_stems = set(cfg["weeks"])
     try:
@@ -297,9 +310,8 @@ def main(argv=None) -> int:
                 pos = 1
                 # an item skipped as edited keeps its module slot; a deleted one does not
                 if p["stem"] in lecture_stems:
-                    skip = edited_in_canvas(client, "pages", st.get("lecture_url"),
-                                            st.get("lecture_updated"), args.force,
-                                            p["lecture_title"])
+                    skip = guard("pages", st.get("lecture_url"), st.get("lecture_updated"),
+                                 p["lecture_title"])
                     if not skip:
                         lecture_html = p["lecture_html"]
                         live = (client.get_page_body(st["lecture_url"])
@@ -311,32 +323,32 @@ def main(argv=None) -> int:
                         st["lecture_url"] = client.upsert_page(
                             p["lecture_title"], lecture_html, args.publish,
                             known_url=st.get("lecture_url"))
-                        st["lecture_updated"] = client.updated_at("pages", st["lecture_url"])
+                        stamp(st, "lecture_updated", "pages", st["lecture_url"])
                     if skip != "missing":
                         client.add_to_module(module_id, "Page", st["lecture_url"],
                                              position=pos)
                     pos += 1
-                    if slide_ids:
+                    if slide_ids and f"slides/{p['stem']}.pptx" not in missing_files:
                         client.add_to_module(module_id, "File", slide_ids[p["stem"]],
                                              position=pos)
                         pos += 1
-                skip = edited_in_canvas(client, "pages", st.get("page_url"),
-                                        st.get("page_updated"), args.force, p["module"])
+                skip = guard("pages", st.get("page_url"), st.get("page_updated"), p["module"])
                 if not skip:
                     st["page_url"] = client.upsert_page(p["module"], p["page_html"],
                                                         args.publish,
                                                         known_url=st.get("page_url"))
-                    st["page_updated"] = client.updated_at("pages", st["page_url"])
+                    stamp(st, "page_updated", "pages", st["page_url"])
                 if skip != "missing":
                     client.add_to_module(module_id, "Page", st["page_url"], position=pos)
                 pos += 1
                 if p["has_discussion"]:
                     title = f"Exercise Discussion: {p['module']}"
                     known = st.get("discussion_id")
-                    skip = edited_in_canvas(client, "discussion_topics", known,
-                                            st.get("discussion_updated"), args.force, title)
+                    skip = guard("discussion_topics", known, st.get("discussion_updated"),
+                                 title)
                     if not skip:
-                        if (args.force and known and st.get("discussion_updated")
+                        if (self_contained and args.force and known
+                                and st.get("discussion_updated")
                                 and client.updated_at("discussion_topics", known) is None):
                             known = None   # deleted in Canvas: --force recreates it
                         st["discussion_id"] = client.upsert_discussion(
@@ -345,8 +357,8 @@ def main(argv=None) -> int:
                             p["due_at"], group_id, args.publish,
                             known_id=known,
                             unlock_at=p["unlock_at"], lock_at=p["lock_at"])
-                        st["discussion_updated"] = client.updated_at(
-                            "discussion_topics", st["discussion_id"])
+                        stamp(st, "discussion_updated", "discussion_topics",
+                              st["discussion_id"])
                     if skip != "missing":
                         client.add_to_module(module_id, "Discussion", st["discussion_id"],
                                              position=pos)
@@ -356,20 +368,19 @@ def main(argv=None) -> int:
 
         if args.all:
             done = []
-            if not edited_in_canvas(client, "pages", state.get("syllabus_url"),
-                                    state.get("syllabus_updated"), args.force, "Syllabus"):
+            if not guard("pages", state.get("syllabus_url"), state.get("syllabus_updated"),
+                         "Syllabus"):
                 state["syllabus_url"] = client.upsert_page(
                     "Syllabus", syllabus_html, args.publish,
                     known_url=state.get("syllabus_url"))
-                state["syllabus_updated"] = client.updated_at("pages", state["syllabus_url"])
+                stamp(state, "syllabus_updated", "pages", state["syllabus_url"])
                 done.append("Syllabus page")
-            if guide_html is not None and not edited_in_canvas(
-                    client, "pages", state.get("guide_url"), state.get("guide_updated"),
-                    args.force, GUIDE_TITLE):
+            if guide_html is not None and not guard(
+                    "pages", state.get("guide_url"), state.get("guide_updated"), GUIDE_TITLE):
                 # for the instructor only: never published, never in a module
                 state["guide_url"] = client.upsert_page(
                     GUIDE_TITLE, guide_html, False, known_url=state.get("guide_url"))
-                state["guide_updated"] = client.updated_at("pages", state["guide_url"])
+                stamp(state, "guide_updated", "pages", state["guide_url"])
                 done.append("Instructor Guide")
 
             other_group_id = client.upsert_assignment_group(cfg["assignment_groups"]["other"])
