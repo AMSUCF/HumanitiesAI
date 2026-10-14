@@ -127,7 +127,7 @@ def test_plan_week_lecture_lists_readings_before_video(tmp_path):
     plan = deploy.plan_week(wk, site_base="https://x.y", syllabus_md=SYLLABUS)
     html = plan["lecture_html"]
     assert plan["lecture_title"] == "Week One Readings + Lecture"
-    assert "<h2>Readings</h2>" in html and "<h2>Lecture</h2>" in html
+    assert '<h2 id="readings">Readings</h2>' in html and '<h2 id="lecture">Lecture</h2>' in html
     assert html.index("Readings") < html.index("Lecture")
     assert "Part I: Background" in html
     assert html.index("Part I: Background") < html.index("video lecture will be posted")

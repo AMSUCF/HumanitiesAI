@@ -47,7 +47,7 @@ def kramdown_id(text: str) -> str:
     return t.replace(" ", "-").lower()
 
 
-_HEADING_RE = re.compile(r"<h([1-6])>(.*?)</h>", re.DOTALL)
+_HEADING_RE = re.compile(r"<h([1-6])>(.*?)</h\1>", re.DOTALL)
 
 
 def _add_heading_ids(html: str) -> str:
