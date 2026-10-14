@@ -12,7 +12,7 @@ import frontmatter
 import yaml
 from dotenv import load_dotenv
 
-from converter import (TZ, UNIT_COLORS, apply_canvas_style, due_at_utc,
+from converter import (TZ, UNIT_COLORS, apply_canvas_style, configure_units, due_at_utc,
                        extract_readings, load_week, lock_at_utc, render_html,
                        split_discussion, unlock_at_utc)
 
@@ -43,7 +43,8 @@ def av_is_live(av: dict, now: datetime | None = None) -> bool:
     return bool(av.get("open")) and is_live(av["open"], now)
 
 
-def plan_week(path: Path, site_base: str, syllabus_md: str = "") -> dict:
+def plan_week(path: Path, site_base: str, syllabus_md: str = "", *,
+              late_hours=None, link_map=None, slides=None, unresolved=None) -> dict:
     doc = load_week(path)
     c = doc.canvas
     if c["unit"] not in UNIT_COLORS:
@@ -76,7 +77,9 @@ def plan_week(path: Path, site_base: str, syllabus_md: str = "") -> dict:
         "extra_credit": bool(c.get("extra_credit", False)),
         "due_at": due_at_utc(c["due"]),
         "unlock_at": unlock_at_utc(c["week_start"]),
-        "lock_at": due_at_utc(c["due"]) if c.get("hard_close") else lock_at_utc(c["due"]),
+        "lock_at": (lock_at_utc(c["due"], grace_hours=late_hours) if late_hours is not None
+                    else due_at_utc(c["due"]) if c.get("hard_close")
+                    else lock_at_utc(c["due"])),
         "lecture_title": f"{week_label} Readings + Lecture",
         "lecture_html": lecture_html,
         "lecture_placeholder": placeholder,
@@ -112,6 +115,8 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
 
     cfg = yaml.safe_load(Path("course.yml").read_text(encoding="utf-8"))
+    configure_units(cfg.get("units"))
+    late_hours = cfg.get("late_window_hours")
     root = _course_root(cfg)
 
     if args.simple_syllabus:
@@ -126,7 +131,8 @@ def main(argv=None) -> int:
 
     syl_path = root / cfg["syllabus_file"]
     syllabus_md = frontmatter.load(str(syl_path)).content if syl_path.exists() else ""
-    plans = [plan_week(root / f"{s}.md", cfg["site_base"], syllabus_md)
+    plans = [plan_week(root / f"{s}.md", cfg["site_base"], syllabus_md,
+                       late_hours=late_hours)
              for s in stems]
 
     # freeze check first: anything students can already see is left alone
@@ -160,7 +166,7 @@ def main(argv=None) -> int:
                   + (" [extra credit]" if p["extra_credit"] else ""))
         return 0
 
-    load_dotenv()
+    load_dotenv(Path.cwd() / ".env")
     import requests
     from canvas_client import CanvasClient
     client = CanvasClient(os.environ["CANVAS_API_URL"],
@@ -226,7 +232,8 @@ def main(argv=None) -> int:
                     ["online_url", "online_text_entry"], args.publish,
                     known_id=state.get("activity_verification_id"),
                     unlock_at=unlock_at_utc(av["open"]) if av.get("open") else None,
-                    lock_at=lock_at_utc(av["due"]))
+                    lock_at=(lock_at_utc(av["due"], grace_hours=late_hours)
+                             if late_hours is not None else lock_at_utc(av["due"])))
                 state["activity_verification_id"] = av_id
                 print("deployed: Syllabus page, Activity Verification")
     finally:

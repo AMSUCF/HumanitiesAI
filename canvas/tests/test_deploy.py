@@ -178,3 +178,31 @@ def test_video_embed_regex_matches_canvas_media_iframe():
     assert m.group(0).endswith("</iframe></p>")
     assert "rest" not in m.group(0)
 
+
+
+def test_plan_week_uses_late_hours(tmp_path):
+    wk = tmp_path / "moduleone.md"
+    wk.write_text("---\ncanvas:\n  module: \"Module One: X\"\n  week_start: 2027-01-11\n"
+                  "  due: 2027-01-24\n  points: 10\n  discussion: true\n  unit: ghosts\n"
+                  "  hard_close: true\n---\nBody\n\n### Discussion\n\nQ?\n", encoding="utf-8")
+    plan = deploy.plan_week(wk, site_base="https://x.y", late_hours=24)
+    assert plan["lock_at"] == "2027-01-26T04:59:00Z"   # hours win over hard_close
+
+def test_main_loads_env_from_cwd_only(tmp_path, monkeypatch):
+    calls = []
+    monkeypatch.setattr(deploy, "load_dotenv", lambda *a, **k: calls.append(a))
+    monkeypatch.chdir(tmp_path)
+    # minimal course; no env -> KeyError after load_dotenv is called
+    (tmp_path / "course.yml").write_text(
+        "site_base: https://x.y\nassignment_groups: {exercises: E, other: O}\n"
+        "syllabus_file: index.md\nweeks: [weekone]\n", encoding="utf-8")
+    (tmp_path / "weekone.md").write_text(
+        "---\ncanvas:\n  module: M1\n  week_start: 2030-01-07\n  due: 2030-01-13\n"
+        "  points: 6\n  discussion: false\n  unit: ghosts\n---\nBody\n", encoding="utf-8")
+    for k in ("CANVAS_API_URL", "CANVAS_API_TOKEN", "CANVAS_COURSE_ID"):
+        monkeypatch.delenv(k, raising=False)
+    try:
+        deploy.main(["--all"])
+    except KeyError:
+        pass
+    assert calls and Path(calls[0][0]) == tmp_path / ".env"

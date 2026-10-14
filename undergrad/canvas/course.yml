@@ -10,14 +10,12 @@ weeks: [moduleone, moduletwo, modulethree, modulefour, modulefive, modulesix, mo
 extra: [finalreflection]
 activity_verification: {name: "Activity Verification", points: 5, open: 2027-01-11, due: 2027-01-15}
 # Every discussion (exercises and the final) stays open 24 hours past its
-# Sunday 11:59 PM due date, then closes. The grad deployer hardcodes a
-# 7-day window (lock_at_utc grace_days=7), so it needs to read this value.
+# Sunday 11:59 PM due date, then closes.
 late_window_hours: 24
 # Each module is Think week (week_start) + Do week (do_start, in the week
 # files' front matter). The lecture page belongs to Think, the exercise page
 # and discussion to Do; the deployer can optionally unlock the discussion at do_start.
-# Plain-language units replacing ghosts/shells/puppetmasters. The grad converter
-# hardcodes its unit table, so it needs to read this block before deploying (see ../README.md).
+# Plain-language units replacing ghosts/shells/puppetmasters.
 units:
   words: {label: "Words", color: "#0f766e"}
   images: {label: "Images", color: "#b45309"}

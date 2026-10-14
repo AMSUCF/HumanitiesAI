@@ -87,3 +87,21 @@ def test_lock_at_utc_one_week_grace():
     assert lock_at_utc(date(2026, 8, 30)) == "2026-09-07T03:59:00Z"
     # DST edge: due Sun Nov 1 (fallback day) -> locks Nov 8 23:59 EST -> Nov 9 04:59Z
     assert lock_at_utc(date(2026, 11, 1)) == "2026-11-09T04:59:00Z"
+
+
+from converter import configure_units, UNIT_COLORS, UNIT_LABELS, lock_at_utc, apply_canvas_style
+from datetime import date
+
+def test_configure_units_merges_course_units():
+    configure_units({"words": {"label": "Words", "color": "#0f766e"}})
+    assert UNIT_COLORS["words"] == "#0f766e" and UNIT_LABELS["words"] == "Words"
+    assert "ghosts" in UNIT_COLORS  # grad units untouched
+
+def test_lock_at_utc_hour_window():
+    # Sunday Jan 24 2027 23:59 ET + 24h = Mon Jan 25 23:59 ET = Jan 26 04:59Z
+    assert lock_at_utc(date(2027, 1, 24), grace_hours=24) == "2027-01-26T04:59:00Z"
+
+def test_apply_canvas_style_drops_site_unit_badge():
+    configure_units({"words": {"label": "Words", "color": "#0f766e"}})
+    html = apply_canvas_style('<p><span class="unit-badge unit-badge--words">Words</span></p><p>Hi</p>', "words")
+    assert "unit-badge" not in html and html.count("Words") == 1

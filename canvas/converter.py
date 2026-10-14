@@ -110,13 +110,27 @@ def unlock_at_utc(start_date) -> str:
     return dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def lock_at_utc(due_date, grace_days: int = 7) -> str:
-    """Hard close: one week of no-penalty late submissions after the due date."""
-    dt = datetime.combine(due_date + timedelta(days=grace_days), time(23, 59), tzinfo=TZ)
+def configure_units(units: dict | None) -> None:
+    """Merge a course.yml `units:` block into the unit tables (in place,
+    so modules that imported UNIT_COLORS by name see the change)."""
+    for key, u in (units or {}).items():
+        UNIT_COLORS[key] = u["color"]
+        UNIT_LABELS[key] = u["label"]
+
+
+def lock_at_utc(due_date, grace_days: int = 7, grace_hours: int | None = None) -> str:
+    """Hard close after the due date: grace_hours if given, else grace_days."""
+    due = datetime.combine(due_date, time(23, 59), tzinfo=TZ)
+    dt = due + (timedelta(hours=grace_hours) if grace_hours is not None
+                else timedelta(days=grace_days))
     return dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+_BADGE_RE = re.compile(r'<span class="unit-badge[^"]*">[^<]*</span>\s*')
+
+
 def apply_canvas_style(html: str, unit: str) -> str:
+    html = _BADGE_RE.sub("", html)
     color, label = UNIT_COLORS[unit], UNIT_LABELS[unit]
     band = (
         f'<div style="border-top: 6px solid {color}; padding: 12px 0 4px 0; '
