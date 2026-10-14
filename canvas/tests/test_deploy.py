@@ -201,10 +201,9 @@ def test_main_loads_env_from_cwd_only(tmp_path, monkeypatch):
         "  points: 6\n  discussion: false\n  unit: ghosts\n---\nBody\n", encoding="utf-8")
     for k in ("CANVAS_API_URL", "CANVAS_API_TOKEN", "CANVAS_COURSE_ID"):
         monkeypatch.delenv(k, raising=False)
-    try:
+    import pytest
+    with pytest.raises(SystemExit):
         deploy.main(["--all"])
-    except KeyError:
-        pass
     assert calls and Path(calls[0][0]) == tmp_path / ".env"
 
 
@@ -289,28 +288,49 @@ def _slug(title):
 
 
 class FakeCanvas:
-    """Records every call; updated_at answers from `live`, else a stable stamp."""
-    def __init__(self, live=None, code="ENG3861-0001"):
+    """Records every call; updated_at answers from `live`, else a stable stamp
+    (an exception in `live` is raised). `removed` items were taken out of
+    their module in Canvas; `modules`/`pages` already exist in the course."""
+    def __init__(self, live=None, code="ENG3861-0001", removed=(), modules=(), pages=()):
         self.calls, self.bodies, self.live, self.code = [], {}, dict(live or {}), code
+        self.removed, self.modules, self.pages = set(removed), list(modules), set(pages)
+        self.repositions, self.module_kw = [], []
     def course_info(self): return {"name": "Humanities and AI", "course_code": self.code}
     def upsert_assignment_group(self, name): self.calls.append(("group", name)); return 7
-    def upsert_assignment(self, name, *a, **k): self.calls.append(("assignment", name)); return 8
-    def upsert_module(self, name, **k): self.calls.append(("module", name)); return 11
+    def upsert_assignment(self, name, *a, known_id=None, **k):
+        self.calls.append(("assignment", name, known_id)); return known_id or 8
+    def upsert_module(self, name, **k):
+        self.calls.append(("module", name)); self.module_kw.append(k); return 11
+    def publish_page(self, url): self.calls.append(("publish", "page", url))
+    def publish_discussion(self, i): self.calls.append(("publish", "discussion", i))
+    def publish_assignment(self, i): self.calls.append(("publish", "assignment", i))
+    def publish_module(self, i): self.calls.append(("publish", "module", i))
+    def module_names(self): self.calls.append(("list-modules",)); return list(self.modules)
+    def find_page(self, title):
+        self.calls.append(("find-page", title))
+        return _slug(title) if title in self.pages else None
     def upsert_page(self, title, body, published=False, known_url=None):
         self.calls.append(("page", title, published, known_url)); self.bodies[title] = body
         return known_url or _slug(title)
     def upsert_discussion(self, title, message, *a, known_id=None, **k):
         self.calls.append(("discussion", title, known_id)); self.bodies[title] = message
         return known_id or 21
-    def add_to_module(self, module_id, kind, ref, position=None):
-        self.calls.append(("item", kind, ref, position))
+    def add_to_module(self, module_id, kind, ref, position=None, reposition=True,
+                      add_missing=True):
+        if (kind, ref) in self.removed and not add_missing:
+            self.calls.append(("not-added", kind, ref)); return False
+        self.calls.append(("item", kind, ref, position)); self.repositions.append(reposition)
+        return True
     def get_page_body(self, url): return None
     def upload_file(self, path, folder, ctype):
         self.calls.append(("upload", path.name)); return {"id": 5, "updated_at": "F1"}
     def find_or_create_page(self, title):
         self.calls.append(("reserve", title)); return _slug(title)
     def updated_at(self, kind, ref):
-        return self.live.get((kind, ref), f"{kind}/{ref}@T1")
+        v = self.live.get((kind, ref), f"{kind}/{ref}@T1")
+        if isinstance(v, Exception):
+            raise v
+        return v
     def of(self, kind): return [c for c in self.calls if c[0] == kind]
 
 
@@ -378,7 +398,9 @@ def test_edit_guard_skips_page_edited_in_canvas(tmp_path, monkeypatch, capsys):
         "module_id": 11, "page_url": "module-one-x", "page_updated": "T1"}})
     assert deploy.main(["--week", "moduleone"]) == 0
     assert not [c for c in fake.of("page") if c[1] == "Module One: X"]
-    assert "[edited in Canvas] Module One: X" in capsys.readouterr().out
+    assert ("[edited in Canvas] Module One: X was edited in Canvas; not redeployed "
+            "(pass --overwrite-canvas-edits to override)") in capsys.readouterr().out
+    assert not fake.of("publish")              # no --publish: nothing published
     # the skipped page keeps its place in the module
     assert ("item", "Page", "module-one-x", 3) in fake.calls
     assert _state(canvas)["moduleone"]["page_updated"] == "T1"
@@ -393,26 +415,28 @@ def test_edit_guard_skips_discussion_deleted_in_canvas(tmp_path, monkeypatch, ca
     assert not fake.of("discussion")
     assert not [c for c in fake.of("item") if c[1] == "Discussion"]   # not re-added
     assert ("[missing in Canvas] Exercise Discussion: Module One: X was deleted in Canvas; "
-            "not recreated (pass --force to recreate it)") in capsys.readouterr().out
+            "not recreated (pass --overwrite-canvas-edits to recreate it)"
+            ) in capsys.readouterr().out
 
 
-def test_edit_guard_force_overrides_and_restamps(tmp_path, monkeypatch, capsys):
+def test_edit_guard_overwrite_overrides_and_restamps(tmp_path, monkeypatch, capsys):
     canvas = _sc_course(tmp_path)
     fake = FakeCanvas(live={("pages", "module-one-x"): "T2-gta-edit"})
     _live(monkeypatch, canvas, fake, state={"moduleone": {
         "module_id": 11, "page_url": "module-one-x", "page_updated": "T1"}})
-    assert deploy.main(["--week", "moduleone", "--force"]) == 0
+    assert deploy.main(["--week", "moduleone", "--overwrite-canvas-edits"]) == 0
     assert ("page", "Module One: X", False, "module-one-x") in fake.calls
     assert "[edited in Canvas]" not in capsys.readouterr().out
     assert _state(canvas)["moduleone"]["page_updated"] == "T2-gta-edit"
 
 
-def test_force_recreates_discussion_deleted_in_canvas(tmp_path, monkeypatch):
+def test_overwrite_recreates_discussion_deleted_in_canvas(tmp_path, monkeypatch):
     canvas = _sc_course(tmp_path)
-    fake = FakeCanvas(live={("discussion_topics", 21): None})
+    # the recreated topic gets a new id (21); the deleted one was 31
+    fake = FakeCanvas(live={("discussion_topics", 31): None})
     _live(monkeypatch, canvas, fake, state={"moduleone": {
-        "module_id": 11, "discussion_id": 21, "discussion_updated": "sha:abc"}})
-    assert deploy.main(["--week", "moduleone", "--force"]) == 0
+        "module_id": 11, "discussion_id": 31, "discussion_updated": "sha:abc"}})
+    assert deploy.main(["--week", "moduleone", "--overwrite-canvas-edits"]) == 0
     assert ("discussion", "Exercise Discussion: Module One: X", None) in fake.calls
 
 
@@ -519,6 +543,10 @@ class NoGuardCanvas(FakeCanvas):
     """A grad-course client: the edit guard must never ask for updated_at."""
     def updated_at(self, kind, ref):
         raise AssertionError(f"updated_at({kind!r}, {ref!r}) called outside self-contained")
+    def module_names(self):
+        raise AssertionError("lost-state check outside self-contained")
+    def find_page(self, title):
+        raise AssertionError("lost-state check outside self-contained")
 
 
 def test_grad_live_run_unchanged(tmp_path, monkeypatch, capsys):
@@ -535,7 +563,11 @@ def test_grad_live_run_unchanged(tmp_path, monkeypatch, capsys):
     assert 'href="https://x.y/weekone.html"' in fake.bodies["Syllabus"]
     st = _state(canvas)
     assert not [k for k in st["weekone"] if k.endswith("_updated")]
-    assert "syllabus_updated" not in st
+    assert "syllabus_updated" not in st and "av_updated" not in st
+    assert "module_items" not in st["weekone"]
+    # grad modules are always upserted (name, unlock_at) and items repositioned
+    assert fake.of("module") == [("module", "Week One: G")]
+    assert fake.module_kw[0]["unlock_at"] and set(fake.repositions) == {True}
 
 
 def test_grad_live_run_ignores_stale_markers(tmp_path, monkeypatch, capsys):
@@ -589,6 +621,9 @@ class PublishBumps(FakeCanvas):
     def upsert_module(self, name, **k):
         self.bumped = self.bumped or bool(k.get("published"))
         return super().upsert_module(name, **k)
+    def publish_module(self, i):
+        self.bumped = True
+        return super().publish_module(i)
     def updated_at(self, kind, ref):
         v = super().updated_at(kind, ref)
         return f"{v}+published" if self.bumped and kind != "files" else v
@@ -631,7 +666,8 @@ def test_page_missing_in_canvas_gives_up_its_position(tmp_path, monkeypatch, cap
                                ("item", "Discussion", 21, 3)]
 
 
-@pytest.mark.parametrize("status, hint", [(401, "fresh CANVAS_API_TOKEN"), (403, "HTTP 403")])
+@pytest.mark.parametrize("status, hint", [(401, "fresh CANVAS_API_TOKEN"), (403, "HTTP 403"),
+                                          (404, "check CANVAS_COURSE_ID in .env")])
 def test_course_info_http_error_is_a_clean_exit(tmp_path, monkeypatch, status, hint):
     import requests
 
@@ -650,3 +686,276 @@ def test_grad_dry_run_writes_no_syllabus_preview(tmp_path, monkeypatch):
     deploy.main(["--all", "--dry-run"])
     assert (tmp_path / "preview" / "weekone-lecture.html").exists()
     assert not (tmp_path / "preview" / "syllabus.html").exists()
+
+
+# --- final fix wave: --overwrite-canvas-edits (R15) --------------------------
+
+def test_force_no_longer_overrides_the_edit_guard(tmp_path, monkeypatch, capsys):
+    # --force is the freeze override only; the GTA's edit survives it
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas(live={("pages", "module-one-x"): "T2-gta-edit"})
+    _live(monkeypatch, canvas, fake, state={"moduleone": {
+        "module_id": 11, "page_url": "module-one-x", "page_updated": "T1"}})
+    assert deploy.main(["--week", "moduleone", "--force"]) == 0
+    assert not [c for c in fake.of("page") if c[1] == "Module One: X"]
+    out = capsys.readouterr().out
+    assert "[edited in Canvas] Module One: X" in out and "overwritten" not in out
+
+
+def test_force_does_not_reupload_a_replaced_deck(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    state = {"files": {"slides/moduleone.pptx": {
+        "id": 5, "sha256": "an-older-build", "updated_at": "F1"}}}
+    fake = FakeCanvas(live={("files", 5): "F2-gta-replaced"})
+    _live(monkeypatch, canvas, fake, state=state)
+    assert deploy.main(["--week", "moduleone", "--force"]) == 0
+    assert not fake.of("upload")
+    assert "[edited in Canvas] slides/moduleone.pptx was replaced" in capsys.readouterr().out
+    fake = FakeCanvas(live={("files", 5): "F2-gta-replaced"})
+    _live(monkeypatch, canvas, fake, state=state)
+    assert deploy.main(["--week", "moduleone", "--overwrite-canvas-edits"]) == 0
+    assert fake.of("upload") == [("upload", "moduleone.pptx")]
+
+
+def test_overwrite_flag_warns_at_start_of_run(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake)
+    assert deploy.main(["--week", "moduleone", "--overwrite-canvas-edits"]) == 0
+    first = capsys.readouterr().out.splitlines()[0]
+    assert "--overwrite-canvas-edits" in first and "overwritten" in first
+
+
+# --- I3: --publish publishes items kept as edited -----------------------------
+
+def test_publish_publishes_items_kept_as_edited(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    lec = "module-one-readings-+-lecture"
+    fake = FakeCanvas(live={("pages", lec): "T2-gta", ("pages", "module-one-x"): "T2-gta",
+                            ("discussion_topics", 21): "T2-gta"})
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone", "--publish"]) == 0
+    assert not fake.of("page") and not fake.of("discussion")       # content kept
+    assert fake.of("publish") == [("publish", "module", 11), ("publish", "page", lec),
+                                  ("publish", "page", "module-one-x"),
+                                  ("publish", "discussion", 21)]
+    out = capsys.readouterr().out
+    for title in ("Module One Readings + Lecture", "Module One: X",
+                  "Exercise Discussion: Module One: X"):
+        assert f"[edited in Canvas] {title}: kept your Canvas version, published it" in out
+    st = _state(canvas)["moduleone"]
+    assert st["page_updated"] == "pages/module-one-x@T1"            # not re-stamped
+
+
+def test_publish_publishes_edited_syllabus_never_the_guide(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    _with_guide(canvas)
+    g = canvas / "instructor-guide.md"
+    g.write_text(g.read_text(encoding="utf-8").replace("../", ""), encoding="utf-8")
+    guide = _slug(deploy.GUIDE_TITLE)
+    state = {**_stamped_state(), "syllabus_url": "syllabus", "syllabus_updated": "T1",
+             "guide_url": guide, "guide_updated": "T1"}
+    fake = FakeCanvas(live={("pages", "syllabus"): "T2-gta", ("pages", guide): "T2-gta"})
+    _live(monkeypatch, canvas, fake, state=state)
+    assert deploy.main(["--all", "--publish"]) == 0
+    assert ("publish", "page", "syllabus") in fake.calls
+    assert ("publish", "page", guide) not in fake.calls
+    assert not [c for c in fake.of("page") if c[1] in ("Syllabus", deploy.GUIDE_TITLE)]
+    assert "[edited in Canvas] Syllabus: kept your Canvas version, published it" in \
+        capsys.readouterr().out
+
+
+# --- I5: a lost .state.json -----------------------------------------------------
+
+@pytest.mark.parametrize("existing", [
+    {"modules": ["Module One: X"]}, {"pages": ["Syllabus"]},
+    {"pages": ["Instructor Guide (not visible to students)"]}])
+@pytest.mark.parametrize("state_text", [None, "", "{}"])
+def test_lost_state_aborts_when_course_has_content(tmp_path, monkeypatch, existing,
+                                                    state_text):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas(**existing)
+    _live(monkeypatch, canvas, fake)
+    if state_text is not None:
+        (canvas / ".state.json").write_text(state_text, encoding="utf-8")
+    with pytest.raises(SystemExit, match=r"state.*missing.*--overwrite-canvas-edits"):
+        deploy.main(["--week", "moduleone"])
+    assert not [c for c in fake.calls if c[0] not in ("list-modules", "find-page")]
+
+
+def test_lost_state_with_overwrite_proceeds(tmp_path, monkeypatch):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas(modules=["Module One: X"], pages=["Syllabus"])
+    _live(monkeypatch, canvas, fake)
+    assert deploy.main(["--week", "moduleone", "--overwrite-canvas-edits"]) == 0
+    assert fake.of("upload") and fake.of("page")
+
+
+def test_fresh_course_with_no_state_proceeds(tmp_path, monkeypatch):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas(modules=["Some Other Module"])
+    _live(monkeypatch, canvas, fake)
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert fake.of("list-modules") and fake.of("upload")
+
+
+@pytest.mark.parametrize("failure", ["http", "none"])
+def test_failed_stamp_read_after_upsert_fails_loudly(tmp_path, monkeypatch, failure):
+    import requests
+    canvas = _sc_course(tmp_path)
+    err = requests.HTTPError("500 Server Error") if failure == "http" else None
+    fake = FakeCanvas(live={("pages", "module-one-x"): err})
+    _live(monkeypatch, canvas, fake)
+    with pytest.raises(SystemExit, match="Module One: X"):
+        deploy.main(["--week", "moduleone"])
+    assert ("page", "Module One: X", False, "module-one-x") in fake.calls
+    # never a url with no stamp: the next run treats the page as edited
+    st = _state(canvas)["moduleone"]
+    assert st["page_url"] == "module-one-x" and st["page_updated"] == deploy.UNREAD_STAMP
+
+
+# --- I6: module structure and Activity Verification (R16) ---------------------
+
+def test_known_module_is_not_renamed_or_redated(tmp_path, monkeypatch):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert not fake.of("module") and not fake.of("publish")
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone", "--publish"]) == 0
+    assert not fake.of("module") and fake.of("publish") == [("publish", "module", 11)]
+
+
+def test_new_module_is_created_and_overwrite_updates_known(tmp_path, monkeypatch):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake)
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert fake.of("module") == [("module", "Module One: X")]
+    assert fake.module_kw[0]["unlock_at"] == "2030-01-07T05:00:00Z"
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone", "--overwrite-canvas-edits"]) == 0
+    assert fake.of("module") == [("module", "Module One: X")]
+    assert fake.module_kw[0]["known_id"] == 11
+
+
+def test_self_contained_items_are_never_moved(tmp_path, monkeypatch):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert fake.repositions and set(fake.repositions) == {False}
+    assert _state(canvas)["moduleone"]["module_items"] == [
+        "Page:module-one-readings-+-lecture", "File:5", "Page:module-one-x", "Discussion:21"]
+
+
+def test_item_removed_from_module_in_canvas_is_not_readded(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    state = _stamped_state()
+    state["moduleone"]["module_items"] = [
+        "Page:module-one-readings-+-lecture", "File:5", "Page:module-one-x", "Discussion:21"]
+    fake = FakeCanvas(removed={("Page", "module-one-x")})
+    _live(monkeypatch, canvas, fake, state=state)
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert ("not-added", "Page", "module-one-x") in fake.calls
+    assert fake.of("item")[-1] == ("item", "Discussion", 21, 3)      # gave up its slot
+    assert ("[removed in Canvas] Module One: X was removed from its module in Canvas; "
+            "not re-added (pass --overwrite-canvas-edits to re-add it)"
+            ) in capsys.readouterr().out
+    assert "Page:module-one-x" in _state(canvas)["moduleone"]["module_items"]
+    fake = FakeCanvas(removed={("Page", "module-one-x")})
+    _live(monkeypatch, canvas, fake)
+    assert deploy.main(["--week", "moduleone", "--overwrite-canvas-edits"]) == 0
+    assert ("item", "Page", "module-one-x", 3) in fake.calls
+
+
+def _av_state(**av):
+    return {**_stamped_state(), "syllabus_url": "syllabus",
+            "syllabus_updated": "pages/syllabus@T1", **av}
+
+
+def test_activity_verification_is_stamped_and_guarded(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    _with_av(canvas)
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake)
+    assert deploy.main(["--all"]) == 0
+    st = _state(canvas)
+    assert st["activity_verification_id"] == 8 and st["av_updated"] == "assignments/8@T1"
+    # edited in Canvas: kept; with --publish, published as is
+    fake = FakeCanvas(live={("assignments", 8): "A2-gta"})
+    _live(monkeypatch, canvas, fake)
+    capsys.readouterr()
+    assert deploy.main(["--all", "--publish"]) == 0
+    assert not fake.of("assignment")
+    assert ("publish", "assignment", 8) in fake.calls
+    assert "[edited in Canvas] AV: kept your Canvas version, published it" in \
+        capsys.readouterr().out
+    assert _state(canvas)["av_updated"] == "assignments/8@T1"
+
+
+def test_activity_verification_deleted_in_canvas(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    _with_av(canvas)
+    state = _av_state(activity_verification_id=9, av_updated="assignments/9@T1")
+    fake = FakeCanvas(live={("assignments", 9): None})
+    _live(monkeypatch, canvas, fake, state=state)
+    assert deploy.main(["--all", "--publish"]) == 0
+    assert not fake.of("assignment") and not [c for c in fake.of("publish")
+                                              if c[1] == "assignment"]
+    assert "[missing in Canvas] AV was deleted in Canvas" in capsys.readouterr().out
+    fake = FakeCanvas(live={("assignments", 9): None})
+    _live(monkeypatch, canvas, fake, state=state)
+    assert deploy.main(["--all", "--overwrite-canvas-edits"]) == 0
+    assert fake.of("assignment") == [("assignment", "AV", None)]      # recreated
+
+
+# --- M3: credentials -----------------------------------------------------------
+
+def test_missing_env_is_a_clean_exit_naming_the_env_path(tmp_path, monkeypatch):
+    canvas = _sc_course(tmp_path)
+    monkeypatch.chdir(canvas)
+    for k in ("CANVAS_API_URL", "CANVAS_API_TOKEN", "CANVAS_COURSE_ID"):
+        monkeypatch.delenv(k, raising=False)
+    with pytest.raises(SystemExit) as e:
+        deploy.main(["--week", "moduleone"])
+    msg = str(e.value)
+    assert str(canvas / ".env") in msg and "CANVAS_API_URL" in msg
+
+
+# --- M5b: syllabus fragment links ------------------------------------------------
+
+def _broken_anchors(canvas):
+    syl = canvas.parent / "index.md"
+    syl.write_text("---\n---\n[toc](#ai-use-policy) [old](#module-one-old-dates)\n\n"
+                   "## AI Use Policy\n\n[m](moduleone.md)\n", encoding="utf-8")
+    md = canvas.parent / "moduleone.md"
+    md.write_text(md.read_text(encoding="utf-8").replace(
+        "Q?", "Q? [see](index.md#gone)"), encoding="utf-8")
+
+
+def test_dry_run_reports_broken_syllabus_anchors(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    _broken_anchors(canvas)
+    monkeypatch.chdir(canvas)
+    assert deploy.main(["--all", "--dry-run"]) == 0
+    out = capsys.readouterr().out
+    assert "[broken anchor] index.md: #module-one-old-dates" in out
+    assert "[broken anchor] moduleone: #gone" in out
+    assert "#ai-use-policy" not in out
+    # a --week run still checks the module's links against the syllabus
+    assert deploy.main(["--week", "moduleone", "--dry-run"]) == 0
+    assert "[broken anchor] moduleone: #gone" in capsys.readouterr().out
+
+
+def test_live_run_with_broken_anchor_aborts_before_any_write(tmp_path, monkeypatch):
+    canvas = _sc_course(tmp_path)
+    _broken_anchors(canvas)
+    fake = FakeCanvas()
+    _live(monkeypatch, canvas, fake)
+    with pytest.raises(SystemExit, match="moduleone: #gone"):
+        deploy.main(["--week", "moduleone"])
+    assert not fake.of("page") and not fake.of("module") and not fake.of("discussion")

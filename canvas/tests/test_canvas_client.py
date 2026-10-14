@@ -214,3 +214,70 @@ def test_updated_at_file_uses_course_independent_url():
 def test_course_info():
     responses.get(COURSE, json={"name": "N", "course_code": "C"})
     assert c42().course_info()["course_code"] == "C"
+
+
+# --- publish-only updates, guard support (final fix wave) ------------------
+
+import json as _json
+
+
+@responses.activate
+def test_publish_page_sends_only_published():
+    rsp = responses.put(f"{COURSE}/pages/syllabus", json={"url": "syllabus"})
+    c42().publish_page("syllabus")
+    assert _json.loads(rsp.calls[0].request.body) == {"wiki_page": {"published": True}}
+
+
+@responses.activate
+def test_publish_discussion_sends_only_published():
+    rsp = responses.put(f"{COURSE}/discussion_topics/21", json={"id": 21})
+    c42().publish_discussion(21)
+    assert _json.loads(rsp.calls[0].request.body) == {"published": True}
+
+
+@responses.activate
+def test_publish_assignment_and_module_send_only_published():
+    a = responses.put(f"{COURSE}/assignments/8", json={"id": 8})
+    m = responses.put(f"{COURSE}/modules/11", json={"id": 11})
+    c42().publish_assignment(8)
+    c42().publish_module(11)
+    assert _json.loads(a.calls[0].request.body) == {"assignment": {"published": True}}
+    assert _json.loads(m.calls[0].request.body) == {"module": {"published": True}}
+
+
+@responses.activate
+def test_updated_at_assignment():
+    responses.get(f"{COURSE}/assignments/8", json={"id": 8, "updated_at": "A1"})
+    assert c42().updated_at("assignments", 8) == "A1"
+
+
+@responses.activate
+def test_add_to_module_without_reposition_leaves_existing_item():
+    responses.get(f"{COURSE}/modules/7/items",
+                  json=[{"id": 1, "type": "Page", "page_url": "lec", "position": 3}])
+    assert c42().add_to_module(7, "Page", "lec", position=1, reposition=False) is True
+    assert len(responses.calls) == 1                    # only the GET, no move
+
+
+@responses.activate
+def test_add_to_module_without_add_missing_does_not_add():
+    responses.get(f"{COURSE}/modules/7/items", json=[])
+    assert c42().add_to_module(7, "File", 5, position=2, add_missing=False) is False
+    assert len(responses.calls) == 1                    # no POST
+
+
+@responses.activate
+def test_add_to_module_reports_added_item():
+    responses.get(f"{COURSE}/modules/7/items", json=[])
+    responses.post(f"{COURSE}/modules/7/items", json={"id": 3})
+    assert c42().add_to_module(7, "File", 5, position=2) is True
+
+
+@responses.activate
+def test_find_page_and_module_names():
+    responses.get(f"{COURSE}/pages", json=[{"title": "Syllabus", "url": "syllabus"}])
+    responses.get(f"{COURSE}/modules", json=[{"id": 1, "name": "Module One: X"}])
+    assert c42().find_page("Syllabus") == "syllabus"
+    assert c42().find_page("Nope") is None
+    assert c42().module_names() == ["Module One: X"]
+    assert all(c.request.method == "GET" for c in responses.calls)

@@ -123,7 +123,13 @@ class CanvasClient:
         return self._post(f"{self.course}/assignments", payload)["id"]
 
     def add_to_module(self, module_id: int, item_type: str, ref,
-                      position: int | None = None) -> None:
+                      position: int | None = None, reposition: bool = True,
+                      add_missing: bool = True) -> bool:
+        """Put an item in a module; True if it is in the module afterwards.
+
+        reposition=False leaves an item already there where it is (only a
+        new item gets `position`); add_missing=False never adds one.
+        """
         items = self._get_all(f"{self.course}/modules/{module_id}/items")
         if item_type == "Page":
             found = next((i for i in items if i.get("page_url") == ref), None)
@@ -133,13 +139,35 @@ class CanvasClient:
                           if i.get("content_id") == ref and i["type"] == item_type), None)
             item = {"type": item_type, "content_id": ref}
         if found is not None:
-            if position is not None and found.get("position") != position:
+            if (reposition and position is not None
+                    and found.get("position") != position):
                 self._put(f"{self.course}/modules/{module_id}/items/{found['id']}",
                           {"module_item": {"position": position}})
-            return
+            return True
+        if not add_missing:
+            return False
         if position is not None:
             item["position"] = position
         self._post(f"{self.course}/modules/{module_id}/items", {"module_item": item})
+        return True
+
+    def module_names(self) -> list[str]:
+        return [m["name"] for m in self._get_all(f"{self.course}/modules")]
+
+    # publish-only updates: they leave every other field, including any
+    # edit made in Canvas, as it is
+    def publish_page(self, url: str) -> None:
+        self._put(f"{self.course}/pages/{url}", {"wiki_page": {"published": True}})
+
+    def publish_discussion(self, topic_id) -> None:
+        self._put(f"{self.course}/discussion_topics/{topic_id}", {"published": True})
+
+    def publish_assignment(self, assignment_id) -> None:
+        self._put(f"{self.course}/assignments/{assignment_id}",
+                  {"assignment": {"published": True}})
+
+    def publish_module(self, module_id) -> None:
+        self._put(f"{self.course}/modules/{module_id}", {"module": {"published": True}})
 
     def course_info(self) -> dict:
         r = self.s.get(self.course)
@@ -164,19 +192,28 @@ class CanvasClient:
             out = self.s.get(out["location"]).json()
         return out
 
-    def find_or_create_page(self, title: str) -> str:
-        """Return the page url slug; an existing page is never modified."""
+    def find_page(self, title: str) -> str | None:
+        """The url slug of the page titled exactly `title`, else None."""
         for p in self._get_all(f"{self.course}/pages", search_term=title):
             if p["title"] == title:
                 return p["url"]
+        return None
+
+    def find_or_create_page(self, title: str) -> str:
+        """Return the page url slug; an existing page is never modified."""
+        url = self.find_page(title)
+        if url is not None:
+            return url
         return self._post(f"{self.course}/pages",
                           {"wiki_page": {"title": title, "body": "<p></p>",
                                          "published": False}})["url"]
 
     def updated_at(self, kind: str, ref) -> str | None:
-        """Change marker for a page, discussion topic or file; None on 404.
+        """Change marker for a page, discussion topic, assignment or file
+        (kind "pages", "discussion_topics", "assignments", "files"); None
+        on 404.
 
-        Pages and files return `updated_at` as written. Discussion topics may
+        Pages, assignments and files return `updated_at` as written. Discussion topics may
         not expose `updated_at`, so fall back to "sha:" + sha256 of a stable
         JSON of the title, message and the assignment's due_at,
         points_possible, lock_at and unlock_at: an edit to any of them in

@@ -85,8 +85,11 @@ def _sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def sync_assets(client, cfg, root, state, force=False):
+def sync_assets(client, cfg, root, state, overwrite=False):
     """Upload new or changed assets and reserve the pages.
+
+    A file replaced or deleted in Canvas Files is the instructor's version
+    and is kept, unless `overwrite` (--overwrite-canvas-edits).
 
     Returns (files, pages, missing): file ids by rel path, page slugs, and
     the rel paths found deleted in Canvas and left alone (not re-uploaded).
@@ -100,22 +103,22 @@ def sync_assets(client, cfg, root, state, force=False):
         # every known file is checked live, changed locally or not, so a file
         # deleted in Canvas is never wired into a module under its dead id
         live = client.updated_at("files", rec["id"]) if rec else None
-        if rec and live is None and not force:
-            if rec["sha256"] == sha:
-                print(f"[missing in Canvas] {rel} was deleted in Canvas Files; left out "
-                      f"of its module (pass --force to upload it again)")
-            else:
-                print(f"[missing in Canvas] {rel} was deleted or replaced in Canvas Files; "
-                      f"not re-uploaded (pass --force to upload it again)")
+        if rec and live is None and not overwrite:
+            # Canvas may retire the old id when a file is replaced, so a
+            # missing id can be the instructor's replacement: never re-upload
+            print(f"[missing in Canvas] {rel} was deleted or replaced in Canvas Files; "
+                  f"kept as is (pass --overwrite-canvas-edits to upload the repo copy "
+                  f"over it)")
             missing.add(rel)
             continue
         if rec and live is not None and rec["sha256"] == sha:
-            continue      # unchanged here; a different live stamp is the GTA's version
-        if rec and not force:
             if live != rec["updated_at"]:
-                print(f"[edited in Canvas] {rel} was replaced in Canvas Files; "
-                      f"not re-uploaded (pass --force to override)")
-                continue
+                print(f"[edited in Canvas] {rel} was replaced in Canvas Files; kept")
+            continue      # unchanged here; a different live stamp is the GTA's version
+        if rec and not overwrite and live != rec["updated_at"]:
+            print(f"[edited in Canvas] {rel} was replaced in Canvas Files; not re-uploaded "
+                  f"(pass --overwrite-canvas-edits to upload the repo copy over it)")
+            continue
         ctype = PPTX_TYPE if path.suffix == ".pptx" else IMAGE_TYPES[path.suffix.lower()]
         out = client.upload_file(path, FOLDERS[rel.split("/")[0]], ctype)
         stamp = out.get("updated_at") or client.updated_at("files", out["id"])

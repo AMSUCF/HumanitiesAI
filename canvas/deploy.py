@@ -123,29 +123,74 @@ def _render_page(md, cfg, link_map, label, unresolved) -> str:
     return html
 
 
-def edited_in_canvas(client, kind, ref, stored, force, title) -> str | None:
+OVERWRITE_FLAG = "--overwrite-canvas-edits"
+# stored when an item's change marker could not be read back after a deploy:
+# it never matches Canvas, so the next run treats the item as edited (safe)
+UNREAD_STAMP = "unread"
+
+
+def edited_in_canvas(client, kind, ref, stored, overwrite, title,
+                     quiet=False) -> str | None:
     """Edit guard: "edited" or "missing" when `ref` was changed or deleted
     in Canvas since our last upsert recorded `stored`, else None (deploy).
 
     Once someone edits an item in Canvas, Canvas is its master copy, so it
-    is left alone unless --force.
+    is left alone unless --overwrite-canvas-edits. `quiet` leaves the
+    "edited" notice to the caller (it publishes the item and says so).
     """
-    if force or not ref or not stored:
+    if overwrite or not ref or not stored:
         return None
     live = client.updated_at(kind, ref)
     if live is None:
         print(f"[missing in Canvas] {title} was deleted in Canvas; "
-              f"not recreated (pass --force to recreate it)")
+              f"not recreated (pass {OVERWRITE_FLAG} to recreate it)")
         return "missing"
     if live != stored:
-        print(f"[edited in Canvas] {title} was edited in Canvas; "
-              f"not redeployed (pass --force to override)")
+        if not quiet:
+            print(f"[edited in Canvas] {title} was edited in Canvas; "
+                  f"not redeployed (pass {OVERWRITE_FLAG} to override)")
         return "edited"
     return None
 
 
+def check_lost_state(client, cfg, root) -> None:
+    """Self-contained live runs with no deploy state: refuse to deploy over a
+    course that already has this course's modules or pages, since without
+    the state every Canvas edit there would be overwritten unguarded."""
+    labels = {assets._label(root, s) for s in cfg["weeks"] + cfg.get("extra", [])}
+    found = [f"module '{n}'" for n in client.module_names()
+             if n.split(":")[0].strip() in labels]
+    found += [f"page '{t}'" for t in ("Syllabus", GUIDE_TITLE) if client.find_page(t)]
+    if found:
+        raise SystemExit(
+            f"the deploy state for this course is missing ({STATE_FILE.resolve()} is "
+            f"missing or empty) but the course already has {', '.join(found)}: restore "
+            f".state.json from backup (undergrad/canvas/.state.json for ENG 3861), or "
+            f"pass {OVERWRITE_FLAG} to deploy over what is in Canvas")
+
+
+_HEADING_ID_RE = re.compile(r'<h[1-6][^>]*\sid="([^"]+)"')
+
+
+def broken_anchors(sources, syllabus_html, syllabus_href) -> list[tuple[str, str]]:
+    """(label, fragment) for each link to a syllabus heading that does not
+    exist: `#frag` links inside the syllabus (`own`) and `<syllabus>#frag`
+    links anywhere. sources: (label, html, own) triples."""
+    ids = set(_HEADING_ID_RE.findall(syllabus_html))
+    to_syllabus = re.compile(r'href="' + re.escape(syllabus_href) + r'#([^"]+)"')
+    out = []
+    for label, html, own in sources:
+        frags = to_syllabus.findall(html) + (re.findall(r'href="#([^"]+)"', html)
+                                             if own else [])
+        out += [(label, f) for f in frags if f not in ids]
+    return list(dict.fromkeys(out))
+
+
 def _load_state() -> dict:
-    return json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
+    if not STATE_FILE.exists():
+        return {}
+    text = STATE_FILE.read_text(encoding="utf-8").strip()
+    return json.loads(text) if text else {}
 
 
 def _save_state(state: dict) -> None:
@@ -161,6 +206,19 @@ def _course_root(cfg: dict) -> Path:
     raise FileNotFoundError("week files not found relative to cwd")
 
 
+ENV_KEYS = ("CANVAS_API_URL", "CANVAS_API_TOKEN", "CANVAS_COURSE_ID")
+
+
+def _load_env() -> None:
+    env = Path.cwd() / ".env"
+    load_dotenv(env)
+    lacking = [k for k in ENV_KEYS if not os.environ.get(k)]
+    if lacking:
+        where = env if env.exists() else f"{env} (there is no such file)"
+        raise SystemExit(f"{', '.join(lacking)} not set: put "
+                         f"{'it' if len(lacking) == 1 else 'them'} in {where}")
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true")
@@ -169,9 +227,17 @@ def main(argv=None) -> int:
     ap.add_argument("--publish", action="store_true")
     ap.add_argument("--simple-syllabus", action="store_true")
     ap.add_argument("--force", action="store_true",
-                    help="also update modules that have already opened, "
-                         "and items edited in Canvas")
+                    help="also redeploy modules (and Activity Verification) that "
+                         "have already opened")
+    ap.add_argument(OVERWRITE_FLAG, action="store_true",
+                    help="self-contained courses: also overwrite items edited, "
+                         "replaced, removed or deleted in Canvas since the last "
+                         "deploy, and deploy even if .state.json is lost")
     args = ap.parse_args(argv)
+    overwrite = args.overwrite_canvas_edits
+    if overwrite:
+        print(f"[overwrite] {OVERWRITE_FLAG}: edits made in Canvas to anything this "
+              f"run deploys will be overwritten")
 
     cfg = yaml.safe_load(Path("course.yml").read_text(encoding="utf-8"))
     configure_units(cfg.get("units"))
@@ -201,7 +267,7 @@ def main(argv=None) -> int:
     link_map = slide_ids = course_path = api_base = None
     missing_files = set()   # files deleted in Canvas that sync_assets left alone
     if not args.dry_run:
-        load_dotenv(Path.cwd() / ".env")
+        _load_env()
         import requests
         from canvas_client import CanvasClient
         client = CanvasClient(os.environ["CANVAS_API_URL"],
@@ -212,7 +278,9 @@ def main(argv=None) -> int:
         except requests.HTTPError as e:
             code = getattr(e.response, "status_code", None)
             hint = ("; Canvas token rejected (expired?); put a fresh CANVAS_API_TOKEN "
-                    "in .env" if code == 401 else "")
+                    "in .env" if code == 401
+                    else "; no such course: check CANVAS_COURSE_ID in .env" if code == 404
+                    else "")
             raise SystemExit(f"could not read the Canvas course (HTTP {code}){hint}")
         print(f"deploying to: {info.get('name')} ({info.get('course_code')})")
         want = cfg.get("expect_course_code")
@@ -221,9 +289,14 @@ def main(argv=None) -> int:
                              f"{str(want)!r}; wrong CANVAS_COURSE_ID?")
         state = _load_state()
         if self_contained:
+            if not state and not overwrite:
+                try:
+                    check_lost_state(client, cfg, root)
+                except requests.HTTPError as e:
+                    raise SystemExit(f"could not check the course for existing content: {e}")
             try:
                 files, pages, missing_files = assets.sync_assets(
-                    client, cfg, root, state, force=args.force)
+                    client, cfg, root, state, overwrite=overwrite)
             except requests.HTTPError as e:
                 raise SystemExit(f"asset sync failed: {e}")
             finally:
@@ -249,11 +322,33 @@ def main(argv=None) -> int:
             guide_html = _render_page(frontmatter.load(str(guide)).content, cfg, link_map,
                                       cfg["instructor_guide"], unresolved)
     unresolved = list(dict.fromkeys(unresolved))
-    if unresolved and not args.dry_run:
-        raise SystemExit("links with no Canvas target; fix them before deploying:\n"
-                         + "\n".join(f"  {f}: {path}" for f, path in unresolved))
+    broken = []
+    if self_contained:
+        # links into the syllabus must land on a heading: its TOC anchors
+        # carry term dates, so a date change can silently break them
+        syl_ids_html = (syllabus_html if syllabus_html is not None
+                        else _render_page(syllabus_md, cfg, link_map, "", []))
+        sources = [(p["stem"], html, False) for p in plans
+                   for html in (p["page_html"], p["discussion_html"], p["lecture_html"])]
+        if syllabus_html is not None:
+            sources.append((cfg["syllabus_file"], syllabus_html, True))
+        if guide_html is not None:
+            sources.append((cfg["instructor_guide"], guide_html, False))
+        broken = broken_anchors(sources, syl_ids_html, link_map["index.html"])
+    if (unresolved or broken) and not args.dry_run:
+        problems = []
+        if unresolved:
+            problems.append("links with no Canvas target; fix them before deploying:\n"
+                            + "\n".join(f"  {f}: {path}" for f, path in unresolved))
+        if broken:
+            problems.append("links to syllabus headings that don't exist; fix them "
+                            "before deploying:\n"
+                            + "\n".join(f"  {f}: #{frag}" for f, frag in broken))
+        raise SystemExit("\n".join(problems))
     for f, path in unresolved:
         print(f"[unresolved] {f}: {path}")
+    for f, frag in broken:
+        print(f"[broken anchor] {f}: #{frag}")
 
     # freeze check: anything students can already see is left alone
     now = now_et()
@@ -295,13 +390,51 @@ def main(argv=None) -> int:
     # The edit guard is for self-contained (handed-off) courses only. The grad
     # course edits lecture pages in Canvas on purpose (hand-added videos, kept
     # via VIDEO_EMBED_RE), so it makes no updated_at calls and stores no markers.
-    def guard(kind, ref, stored, title):
-        return (edited_in_canvas(client, kind, ref, stored, args.force, title)
+    def guard(kind, ref, stored, title, publishable=False):
+        return (edited_in_canvas(client, kind, ref, stored, overwrite, title,
+                                 quiet=publishable and args.publish)
                 if self_contained else None)
 
-    def stamp(target, key, kind, ref):
-        if self_contained:
-            target[key] = client.updated_at(kind, ref)
+    def publish_kept(publish, title):
+        # --publish on an item kept as edited: publish it as it is in Canvas,
+        # without re-stamping (it stays the instructor's version)
+        publish()
+        print(f"[edited in Canvas] {title}: kept your Canvas version, published it")
+
+    def record(target, ref_key, ref, stamp_key, kind, title):
+        # store a deployed item's ref; in a self-contained course, always
+        # with its fresh change marker, never without one
+        target[ref_key] = ref
+        if not self_contained:
+            return
+        try:
+            marker, why = client.updated_at(kind, ref), "Canvas returned none"
+        except requests.HTTPError as e:
+            marker, why = None, str(e)
+        if marker is None:
+            target[stamp_key] = UNREAD_STAMP
+            raise SystemExit(
+                f"deployed {title} but could not read back its change marker ({why}). "
+                f"The next deploy will report it as [edited in Canvas]; pass "
+                f"{OVERWRITE_FLAG} then if nobody has edited it in Canvas since")
+        target[stamp_key] = marker
+
+    def place(module_id, st, kind, ref, title, pos):
+        # put an item in its module at `pos`; returns the next free position.
+        # Self-contained (R16): items already there are never moved, and an
+        # item the instructor took out of the module is not put back.
+        if not self_contained:
+            client.add_to_module(module_id, kind, ref, position=pos)
+            return pos + 1
+        key, ours = f"{kind}:{ref}", st.setdefault("module_items", [])
+        if not client.add_to_module(module_id, kind, ref, position=pos, reposition=False,
+                                    add_missing=overwrite or key not in ours):
+            print(f"[removed in Canvas] {title} was removed from its module in Canvas; "
+                  f"not re-added (pass {OVERWRITE_FLAG} to re-add it)")
+            return pos
+        if key not in ours:
+            ours.append(key)
+        return pos + 1
 
     group_id = client.upsert_assignment_group(cfg["assignment_groups"]["exercises"])
     lecture_stems = set(cfg["weeks"])
@@ -310,25 +443,36 @@ def main(argv=None) -> int:
             try:
                 st = state.setdefault(p["stem"], {})
                 title = f"Exercise Discussion: {p['module']}"
-                # guards are read before upsert_module: publishing a module can
-                # publish its items in Canvas and bump their updated_at
+                # guards are read before the module is published: publishing a
+                # module can publish its items in Canvas and bump their updated_at
                 lecture_skip = (guard("pages", st.get("lecture_url"),
-                                      st.get("lecture_updated"), p["lecture_title"])
+                                      st.get("lecture_updated"), p["lecture_title"], True)
                                 if p["stem"] in lecture_stems else None)
                 page_skip = guard("pages", st.get("page_url"), st.get("page_updated"),
-                                  p["module"])
+                                  p["module"], True)
                 disc_skip = (guard("discussion_topics", st.get("discussion_id"),
-                                   st.get("discussion_updated"), title)
+                                   st.get("discussion_updated"), title, True)
                              if p["has_discussion"] else None)
-                module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"],
-                                                 published=args.publish or None,
-                                                 known_id=st.get("module_id"))
+                known_module = st.get("module_id")
+                if self_contained and known_module and not overwrite:
+                    # R16: the instructor may rename or redate a module in
+                    # Canvas, so a known module only ever gets published
+                    module_id = known_module
+                    if args.publish:
+                        client.publish_module(module_id)
+                else:
+                    module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"],
+                                                     published=args.publish or None,
+                                                     known_id=known_module)
                 st["module_id"] = module_id
                 pos = 1
                 # an item skipped as edited keeps its module slot; a deleted one
                 # is not re-added and gives up its position
                 if p["stem"] in lecture_stems:
                     skip = lecture_skip
+                    if skip == "edited" and args.publish:
+                        publish_kept(lambda: client.publish_page(st["lecture_url"]),
+                                     p["lecture_title"])
                     if not skip:
                         lecture_html = p["lecture_html"]
                         live = (client.get_page_body(st["lecture_url"])
@@ -337,81 +481,97 @@ def main(argv=None) -> int:
                         if video:
                             lecture_html = lecture_html.replace(
                                 p["lecture_placeholder"], video.group(0))
-                        st["lecture_url"] = client.upsert_page(
-                            p["lecture_title"], lecture_html, args.publish,
-                            known_url=st.get("lecture_url"))
-                        stamp(st, "lecture_updated", "pages", st["lecture_url"])
+                        record(st, "lecture_url",
+                               client.upsert_page(p["lecture_title"], lecture_html,
+                                                  args.publish,
+                                                  known_url=st.get("lecture_url")),
+                               "lecture_updated", "pages", p["lecture_title"])
                     if skip != "missing":
-                        client.add_to_module(module_id, "Page", st["lecture_url"],
-                                             position=pos)
-                        pos += 1
-                    if slide_ids and f"slides/{p['stem']}.pptx" not in missing_files:
-                        client.add_to_module(module_id, "File", slide_ids[p["stem"]],
-                                             position=pos)
-                        pos += 1
+                        pos = place(module_id, st, "Page", st["lecture_url"],
+                                    p["lecture_title"], pos)
+                    deck = f"slides/{p['stem']}.pptx"
+                    if slide_ids and deck not in missing_files:
+                        pos = place(module_id, st, "File", slide_ids[p["stem"]], deck, pos)
                 skip = page_skip
+                if skip == "edited" and args.publish:
+                    publish_kept(lambda: client.publish_page(st["page_url"]), p["module"])
                 if not skip:
-                    st["page_url"] = client.upsert_page(p["module"], p["page_html"],
-                                                        args.publish,
-                                                        known_url=st.get("page_url"))
-                    stamp(st, "page_updated", "pages", st["page_url"])
+                    record(st, "page_url",
+                           client.upsert_page(p["module"], p["page_html"], args.publish,
+                                              known_url=st.get("page_url")),
+                           "page_updated", "pages", p["module"])
                 if skip != "missing":
-                    client.add_to_module(module_id, "Page", st["page_url"], position=pos)
-                    pos += 1
+                    pos = place(module_id, st, "Page", st["page_url"], p["module"], pos)
                 if p["has_discussion"]:
                     known = st.get("discussion_id")
                     skip = disc_skip
+                    if skip == "edited" and args.publish:
+                        publish_kept(lambda: client.publish_discussion(known), title)
                     if not skip:
-                        if (self_contained and args.force and known
+                        if (self_contained and overwrite and known
                                 and st.get("discussion_updated")
                                 and client.updated_at("discussion_topics", known) is None):
-                            known = None   # deleted in Canvas: --force recreates it
-                        st["discussion_id"] = client.upsert_discussion(
-                            title, p["discussion_html"],
-                            0 if p["extra_credit"] else p["points"],
-                            p["due_at"], group_id, args.publish,
-                            known_id=known,
-                            unlock_at=p["unlock_at"], lock_at=p["lock_at"])
-                        stamp(st, "discussion_updated", "discussion_topics",
-                              st["discussion_id"])
+                            known = None   # deleted in Canvas: the override recreates it
+                        record(st, "discussion_id",
+                               client.upsert_discussion(
+                                   title, p["discussion_html"],
+                                   0 if p["extra_credit"] else p["points"],
+                                   p["due_at"], group_id, args.publish,
+                                   known_id=known,
+                                   unlock_at=p["unlock_at"], lock_at=p["lock_at"]),
+                               "discussion_updated", "discussion_topics", title)
                     if skip != "missing":
-                        client.add_to_module(module_id, "Discussion", st["discussion_id"],
-                                             position=pos)
+                        pos = place(module_id, st, "Discussion", st["discussion_id"],
+                                    title, pos)
                 print(f"deployed: {p['module']}")
             except requests.HTTPError as e:
                 raise SystemExit(f"deploy failed at '{p['module']}': {e}")
 
         if args.all:
             done = []
-            if not guard("pages", state.get("syllabus_url"), state.get("syllabus_updated"),
-                         "Syllabus"):
-                state["syllabus_url"] = client.upsert_page(
-                    "Syllabus", syllabus_html, args.publish,
-                    known_url=state.get("syllabus_url"))
-                stamp(state, "syllabus_updated", "pages", state["syllabus_url"])
+            skip = guard("pages", state.get("syllabus_url"), state.get("syllabus_updated"),
+                         "Syllabus", True)
+            if skip == "edited" and args.publish:
+                publish_kept(lambda: client.publish_page(state["syllabus_url"]), "Syllabus")
+            if not skip:
+                record(state, "syllabus_url",
+                       client.upsert_page("Syllabus", syllabus_html, args.publish,
+                                          known_url=state.get("syllabus_url")),
+                       "syllabus_updated", "pages", "Syllabus")
                 done.append("Syllabus page")
             if guide_html is not None and not guard(
                     "pages", state.get("guide_url"), state.get("guide_updated"), GUIDE_TITLE):
                 # for the instructor only: never published, never in a module
-                state["guide_url"] = client.upsert_page(
-                    GUIDE_TITLE, guide_html, False, known_url=state.get("guide_url"))
-                stamp(state, "guide_updated", "pages", state["guide_url"])
+                record(state, "guide_url",
+                       client.upsert_page(GUIDE_TITLE, guide_html, False,
+                                          known_url=state.get("guide_url")),
+                       "guide_updated", "pages", GUIDE_TITLE)
                 done.append("Instructor Guide")
 
             other_group_id = client.upsert_assignment_group(cfg["assignment_groups"]["other"])
             av = cfg["activity_verification"]
+            av_id = state.get("activity_verification_id")
             if av_is_live(av, now) and not args.force:
                 print(f"[frozen] {av['name']} opened {av['open']} and is live; not updated")
             else:
-                av_id = client.upsert_assignment(
-                    av["name"], av["points"], due_at_utc(av["due"]), other_group_id,
-                    ["online_url", "online_text_entry"], args.publish,
-                    known_id=state.get("activity_verification_id"),
-                    unlock_at=unlock_at_utc(av["open"]) if av.get("open") else None,
-                    lock_at=(lock_at_utc(av["due"], grace_hours=late_hours)
-                             if late_hours is not None else lock_at_utc(av["due"])))
-                state["activity_verification_id"] = av_id
-                done.append("Activity Verification")
+                skip = guard("assignments", av_id, state.get("av_updated"), av["name"], True)
+                if skip == "edited" and args.publish:
+                    publish_kept(lambda: client.publish_assignment(av_id), av["name"])
+                if not skip:
+                    if (self_contained and overwrite and av_id and state.get("av_updated")
+                            and client.updated_at("assignments", av_id) is None):
+                        av_id = None   # deleted in Canvas: the override recreates it
+                    record(state, "activity_verification_id",
+                           client.upsert_assignment(
+                               av["name"], av["points"], due_at_utc(av["due"]),
+                               other_group_id, ["online_url", "online_text_entry"],
+                               args.publish, known_id=av_id,
+                               unlock_at=unlock_at_utc(av["open"]) if av.get("open") else None,
+                               lock_at=(lock_at_utc(av["due"], grace_hours=late_hours)
+                                        if late_hours is not None
+                                        else lock_at_utc(av["due"]))),
+                           "av_updated", "assignments", av["name"])
+                    done.append("Activity Verification")
             if done:
                 print("deployed: " + ", ".join(done))
     finally:
