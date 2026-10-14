@@ -91,15 +91,21 @@ def sync_assets(client, cfg, root, state, force=False):
     missing = set()
     for rel, path in found.items():
         rec, sha = known.get(rel), _sha(path)
-        if rec and rec["sha256"] == sha:
-            continue
-        if rec and not force:
-            live = client.updated_at("files", rec["id"])
-            if live is None:
+        # every known file is checked live, changed locally or not, so a file
+        # deleted in Canvas is never wired into a module under its dead id
+        live = client.updated_at("files", rec["id"]) if rec else None
+        if rec and live is None and not force:
+            if rec["sha256"] == sha:
+                print(f"[missing in Canvas] {rel} was deleted in Canvas Files; left out "
+                      f"of its module (pass --force to upload it again)")
+            else:
                 print(f"[missing in Canvas] {rel} was deleted or replaced in Canvas Files; "
                       f"not re-uploaded (pass --force to upload it again)")
-                missing.add(rel)
-                continue
+            missing.add(rel)
+            continue
+        if rec and live is not None and rec["sha256"] == sha:
+            continue      # unchanged here; a different live stamp is the GTA's version
+        if rec and not force:
             if live != rec["updated_at"]:
                 print(f"[edited in Canvas] {rel} was replaced in Canvas Files; "
                       f"not re-uploaded (pass --force to override)")

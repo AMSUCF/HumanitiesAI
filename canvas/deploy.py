@@ -207,7 +207,13 @@ def main(argv=None) -> int:
         client = CanvasClient(os.environ["CANVAS_API_URL"],
                               os.environ["CANVAS_API_TOKEN"],
                               os.environ["CANVAS_COURSE_ID"])
-        info = client.course_info()
+        try:
+            info = client.course_info()
+        except requests.HTTPError as e:
+            code = getattr(e.response, "status_code", None)
+            hint = ("; Canvas token rejected (expired?); put a fresh CANVAS_API_TOKEN "
+                    "in .env" if code == 401 else "")
+            raise SystemExit(f"could not read the Canvas course (HTTP {code}){hint}")
         print(f"deploying to: {info.get('name')} ({info.get('course_code')})")
         want = cfg.get("expect_course_code")
         if want and str(want) not in (info.get("course_code") or ""):
@@ -303,15 +309,26 @@ def main(argv=None) -> int:
         for p in plans:
             try:
                 st = state.setdefault(p["stem"], {})
+                title = f"Exercise Discussion: {p['module']}"
+                # guards are read before upsert_module: publishing a module can
+                # publish its items in Canvas and bump their updated_at
+                lecture_skip = (guard("pages", st.get("lecture_url"),
+                                      st.get("lecture_updated"), p["lecture_title"])
+                                if p["stem"] in lecture_stems else None)
+                page_skip = guard("pages", st.get("page_url"), st.get("page_updated"),
+                                  p["module"])
+                disc_skip = (guard("discussion_topics", st.get("discussion_id"),
+                                   st.get("discussion_updated"), title)
+                             if p["has_discussion"] else None)
                 module_id = client.upsert_module(p["module"], unlock_at=p["unlock_at"],
                                                  published=args.publish or None,
                                                  known_id=st.get("module_id"))
                 st["module_id"] = module_id
                 pos = 1
-                # an item skipped as edited keeps its module slot; a deleted one does not
+                # an item skipped as edited keeps its module slot; a deleted one
+                # is not re-added and gives up its position
                 if p["stem"] in lecture_stems:
-                    skip = guard("pages", st.get("lecture_url"), st.get("lecture_updated"),
-                                 p["lecture_title"])
+                    skip = lecture_skip
                     if not skip:
                         lecture_html = p["lecture_html"]
                         live = (client.get_page_body(st["lecture_url"])
@@ -327,12 +344,12 @@ def main(argv=None) -> int:
                     if skip != "missing":
                         client.add_to_module(module_id, "Page", st["lecture_url"],
                                              position=pos)
-                    pos += 1
+                        pos += 1
                     if slide_ids and f"slides/{p['stem']}.pptx" not in missing_files:
                         client.add_to_module(module_id, "File", slide_ids[p["stem"]],
                                              position=pos)
                         pos += 1
-                skip = guard("pages", st.get("page_url"), st.get("page_updated"), p["module"])
+                skip = page_skip
                 if not skip:
                     st["page_url"] = client.upsert_page(p["module"], p["page_html"],
                                                         args.publish,
@@ -340,12 +357,10 @@ def main(argv=None) -> int:
                     stamp(st, "page_updated", "pages", st["page_url"])
                 if skip != "missing":
                     client.add_to_module(module_id, "Page", st["page_url"], position=pos)
-                pos += 1
+                    pos += 1
                 if p["has_discussion"]:
-                    title = f"Exercise Discussion: {p['module']}"
                     known = st.get("discussion_id")
-                    skip = guard("discussion_topics", known, st.get("discussion_updated"),
-                                 title)
+                    skip = disc_skip
                     if not skip:
                         if (self_contained and args.force and known
                                 and st.get("discussion_updated")

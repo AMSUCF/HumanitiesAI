@@ -169,12 +169,32 @@ def test_updated_at_none_on_404():
     assert c42().updated_at("pages", "gone") is None
 
 
+TOPIC = {"id": 5, "title": "Exercise Discussion: M1", "message": "<p>hi</p>",
+         "assignment": {"due_at": "2027-01-25T04:59:00Z", "points_possible": 10,
+                        "lock_at": "2027-01-26T04:59:00Z", "unlock_at": "2027-01-11T05:00:00Z"}}
+
+
 @responses.activate
-def test_updated_at_discussion_falls_back_to_message_hash():
-    import hashlib
-    responses.get(f"{COURSE}/discussion_topics/5", json={"id": 5, "message": "<p>hi</p>"})
+def test_updated_at_discussion_falls_back_to_content_hash():
+    import hashlib, json
+    responses.get(f"{COURSE}/discussion_topics/5", json=TOPIC)
+    a = TOPIC["assignment"]
+    want = json.dumps({"title": TOPIC["title"], "message": TOPIC["message"],
+                       "due_at": a["due_at"], "points_possible": 10,
+                       "lock_at": a["lock_at"], "unlock_at": a["unlock_at"]}, sort_keys=True)
     assert c42().updated_at("discussion_topics", 5) == \
-        "sha:" + hashlib.sha256(b"<p>hi</p>").hexdigest()
+        "sha:" + hashlib.sha256(want.encode("utf-8")).hexdigest()
+
+
+@responses.activate
+def test_updated_at_discussion_marker_sees_due_date_and_title_changes():
+    moved = {**TOPIC, "assignment": {**TOPIC["assignment"], "due_at": "2027-01-27T04:59:00Z"}}
+    renamed = {**TOPIC, "title": "Renamed"}
+    for body in (TOPIC, moved, renamed, TOPIC):
+        responses.get(f"{COURSE}/discussion_topics/5", json=body)
+    markers = [c42().updated_at("discussion_topics", 5) for _ in range(4)]
+    assert markers[0] == markers[3]                     # stable for the same topic
+    assert len(set(markers[:3])) == 3                   # due date or title change shows
 
 
 @responses.activate

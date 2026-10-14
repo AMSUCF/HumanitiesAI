@@ -84,8 +84,36 @@ def test_missing_in_canvas_is_skipped(tmp_path, capsys):
     c = FakeClient(live_updated=None)
     files, _, missing = assets.sync_assets(c, cfg, root, state)
     assert c.uploads == [] and "[missing in Canvas]" in capsys.readouterr().out
-    assert missing == {"slides/moduleone.pptx"}
+    # every known file is checked live, so the unchanged image is missing too
+    assert missing == {"slides/moduleone.pptx", "images/a.png"}
     assert files["slides/moduleone.pptx"] == 5      # old id kept, flagged as missing
+
+
+def test_unchanged_file_deleted_in_canvas_is_missing(tmp_path, capsys):
+    # no local rebuild, but the GTA deleted the deck in Canvas Files
+    root = _course(tmp_path); cfg = {**CFG, "self_contained": True}
+    state = {}
+    assets.sync_assets(FakeClient(), cfg, root, state)
+    capsys.readouterr()
+    c = FakeClient(live_updated=None)
+    _, _, missing = assets.sync_assets(c, cfg, root, state)
+    assert missing == {"slides/moduleone.pptx", "images/a.png"} and c.uploads == []
+    out = capsys.readouterr().out.splitlines()
+    assert len(out) == 2 and all(l.startswith("[missing in Canvas]") for l in out)
+    c = FakeClient(live_updated=None)
+    _, _, missing = assets.sync_assets(c, cfg, root, state, force=True)
+    assert sorted(c.uploads) == ["a.png", "moduleone.pptx"] and missing == set()
+
+
+def test_unchanged_file_replaced_in_canvas_is_left_alone(tmp_path, capsys):
+    # same local sha, different live stamp: that is the GTA's version, say nothing
+    root = _course(tmp_path); cfg = {**CFG, "self_contained": True}
+    state = {}
+    assets.sync_assets(FakeClient(), cfg, root, state)
+    capsys.readouterr()
+    c = FakeClient(live_updated="T5-gta")
+    _, _, missing = assets.sync_assets(c, cfg, root, state)
+    assert c.uploads == [] and missing == set() and capsys.readouterr().out == ""
 
 
 def test_sync_reports_nothing_missing_when_edited_or_uploaded(tmp_path):
@@ -99,7 +127,9 @@ def test_force_reuploads_missing_and_edited(tmp_path):
         root, cfg, state = _synced(_mk(tmp_path, str(live)))
         c = FakeClient(live_updated=live)
         assets.sync_assets(c, cfg, root, state, force=True)
-        assert c.uploads == ["moduleone.pptx"]
+        # a deleted file comes back even if unchanged here; an edited one only if changed
+        want = ["a.png", "moduleone.pptx"] if live is None else ["moduleone.pptx"]
+        assert sorted(c.uploads) == want
 
 
 def test_upload_without_updated_at_fetches_it(tmp_path):

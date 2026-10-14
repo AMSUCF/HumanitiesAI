@@ -548,17 +548,92 @@ def test_grad_live_run_ignores_stale_markers(tmp_path, monkeypatch, capsys):
     assert [c[1] for c in fake.of("item")] == ["Page", "Page", "Discussion"]
 
 
-def test_deck_missing_in_canvas_gets_no_file_item(tmp_path, monkeypatch, capsys):
+@pytest.mark.parametrize("stored_sha", [
+    "an-older-build",                                    # rebuilt locally since
+    __import__("hashlib").sha256(b"PK").hexdigest(),     # unchanged locally
+])
+def test_deck_missing_in_canvas_gets_no_file_item(tmp_path, monkeypatch, capsys, stored_sha):
     canvas = _sc_course(tmp_path)
     fake = FakeCanvas(live={("files", 5): None})
     _live(monkeypatch, canvas, fake, state={"files": {"slides/moduleone.pptx": {
-        "id": 5, "sha256": "an-older-build", "updated_at": "F1"}}})
+        "id": 5, "sha256": stored_sha, "updated_at": "F1"}}})
     assert deploy.main(["--week", "moduleone"]) == 0
     assert "[missing in Canvas] slides/moduleone.pptx" in capsys.readouterr().out
     assert not fake.of("upload")
     assert fake.of("item") == [("item", "Page", "module-one-readings-+-lecture", 1),
                                ("item", "Page", "module-one-x", 2),
                                ("item", "Discussion", 21, 3)]
+
+
+def _stamped_state():
+    return {"moduleone": {
+        "module_id": 11,
+        "lecture_url": "module-one-readings-+-lecture",
+        "lecture_updated": "pages/module-one-readings-+-lecture@T1",
+        "page_url": "module-one-x", "page_updated": "pages/module-one-x@T1",
+        "discussion_id": 21, "discussion_updated": "discussion_topics/21@T1"}}
+
+
+class PublishBumps(FakeCanvas):
+    """Publishing a module publishes its items, bumping their updated_at."""
+    bumped = False
+    def upsert_module(self, name, **k):
+        self.bumped = self.bumped or bool(k.get("published"))
+        return super().upsert_module(name, **k)
+    def updated_at(self, kind, ref):
+        v = super().updated_at(kind, ref)
+        return f"{v}+published" if self.bumped and kind != "files" else v
+
+
+def test_module_publish_does_not_trip_the_edit_guard(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    fake = PublishBumps()
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone", "--publish"]) == 0
+    assert "in Canvas]" not in capsys.readouterr().out
+    assert [c[1] for c in fake.of("page")] == ["Module One Readings + Lecture", "Module One: X"]
+    assert fake.of("discussion") == [("discussion", "Exercise Discussion: Module One: X", 21)]
+    st = _state(canvas)["moduleone"]
+    assert st["page_updated"] == "pages/module-one-x@T1+published"   # re-stamped after
+
+
+def test_lecture_edited_in_canvas_is_skipped_and_keeps_its_slot(tmp_path, monkeypatch, capsys):
+    # the GTA added a lecture video in Canvas
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas(live={("pages", "module-one-readings-+-lecture"): "T2-gta-video"})
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert "[edited in Canvas] Module One Readings + Lecture" in capsys.readouterr().out
+    assert [c[1] for c in fake.of("page")] == ["Module One: X"]
+    assert fake.of("item") == [("item", "Page", "module-one-readings-+-lecture", 1),
+                               ("item", "File", 5, 2),
+                               ("item", "Page", "module-one-x", 3),
+                               ("item", "Discussion", 21, 4)]
+
+
+def test_page_missing_in_canvas_gives_up_its_position(tmp_path, monkeypatch, capsys):
+    canvas = _sc_course(tmp_path)
+    fake = FakeCanvas(live={("pages", "module-one-readings-+-lecture"): None})
+    _live(monkeypatch, canvas, fake, state=_stamped_state())
+    assert deploy.main(["--week", "moduleone"]) == 0
+    assert "[missing in Canvas] Module One Readings + Lecture" in capsys.readouterr().out
+    assert fake.of("item") == [("item", "File", 5, 1),
+                               ("item", "Page", "module-one-x", 2),
+                               ("item", "Discussion", 21, 3)]
+
+
+@pytest.mark.parametrize("status, hint", [(401, "fresh CANVAS_API_TOKEN"), (403, "HTTP 403")])
+def test_course_info_http_error_is_a_clean_exit(tmp_path, monkeypatch, status, hint):
+    import requests
+
+    class Rejected(FakeCanvas):
+        def course_info(self):
+            r = requests.Response(); r.status_code = status
+            raise requests.HTTPError(f"{status} Client Error", response=r)
+    canvas = _sc_course(tmp_path)
+    _live(monkeypatch, canvas, Rejected())
+    with pytest.raises(SystemExit, match=hint):
+        deploy.main(["--week", "moduleone"])
 
 
 def test_grad_dry_run_writes_no_syllabus_preview(tmp_path, monkeypatch):

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 
 import requests
 
@@ -176,7 +177,10 @@ class CanvasClient:
         """Change marker for a page, discussion topic or file; None on 404.
 
         Pages and files return `updated_at` as written. Discussion topics may
-        not expose `updated_at`, so fall back to "sha:" + sha256(message).
+        not expose `updated_at`, so fall back to "sha:" + sha256 of a stable
+        JSON of the title, message and the assignment's due_at,
+        points_possible, lock_at and unlock_at: an edit to any of them in
+        Canvas changes the marker.
         """
         root = self.course.split("/courses/")[0]
         url = (f"{root}/files/{ref}" if kind == "files"
@@ -187,6 +191,10 @@ class CanvasClient:
         r.raise_for_status()
         body = r.json()
         if kind == "discussion_topics" and not body.get("updated_at"):
+            a = body.get("assignment") or {}
+            content = {"title": body.get("title"), "message": body.get("message") or "",
+                       **{k: a.get(k) for k in
+                          ("due_at", "points_possible", "lock_at", "unlock_at")}}
             return "sha:" + hashlib.sha256(
-                (body.get("message") or "").encode("utf-8")).hexdigest()
+                json.dumps(content, sort_keys=True).encode("utf-8")).hexdigest()
         return body.get("updated_at")
