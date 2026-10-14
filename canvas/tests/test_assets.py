@@ -15,6 +15,8 @@ def _course(tmp_path):
         '---\ncanvas:\n  module: "Module One: X"\n---\n![x](images/a.png)\n', encoding="utf-8")
     (tmp_path / "finalreflection.md").write_text(
         '---\ncanvas:\n  module: "Finals: Y"\n---\nhi\n', encoding="utf-8")
+    later = time.time() + 1000      # the deck is built after its sources
+    os.utime(tmp_path / "slides" / "moduleone.pptx", (later, later))
     return tmp_path
 
 def test_find_assets(tmp_path):
@@ -32,6 +34,19 @@ def test_stale_deck_is_an_error(tmp_path):
     os.utime(root / "slides" / "moduleone.pptx", (old, old))
     with pytest.raises(SystemExit, match="moduleone.pptx"):
         assets.check_decks_fresh(root)
+
+def test_deck_older_than_its_module_md_is_an_error(tmp_path):
+    # the title slide carries the module name and dates from moduleone.md
+    root = _course(tmp_path)
+    deck = root / "slides" / "moduleone.pptx"
+    old = time.time() - 100
+    os.utime(root / "slides" / "decks.yml", (old - 50, old - 50))
+    os.utime(deck, (old, old))
+    with pytest.raises(SystemExit, match=r"moduleone\.md is newer than moduleone\.pptx.*build_pptx\.py"):
+        assets.check_decks_fresh(root)
+    os.utime(root / "moduleone.md", (old - 10, old - 10))
+    assets.check_decks_fresh(root)            # both sources older: fresh
+
 
 def test_link_map(tmp_path):
     m = assets.build_link_map(CFG, "/courses/9",

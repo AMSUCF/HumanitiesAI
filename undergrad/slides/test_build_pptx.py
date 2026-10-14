@@ -133,6 +133,18 @@ def test_core_properties_are_deterministic():
     assert not cp.last_modified_by
     assert cp.title == _meta("moduleone")["canvas"]["module"]
 
+def test_rebuild_is_byte_identical(tmp_path):
+    # zip entries carry no build time, so an unchanged deck keeps its sha
+    # and the deployer does not re-upload it
+    a, b = tmp_path / "a.pptx", tmp_path / "b.pptx"
+    bp.save_deck(bp.build_deck("moduleone", DECKS["moduleone"], _meta("moduleone")), a)
+    bp.save_deck(bp.build_deck("moduleone", DECKS["moduleone"], _meta("moduleone")), b)
+    assert a.read_bytes() == b.read_bytes()
+    import zipfile
+    with zipfile.ZipFile(a) as z:
+        assert {i.date_time for i in z.infolist()} == {(2027, 1, 1, 0, 0, 0)}
+        assert z.infolist()[0].filename == "[Content_Types].xml"
+
 LOW_CONTRAST_FILLS = {"00B894", "FF7A1A"}   # mint, orange
 
 def _fill_hex(fill):

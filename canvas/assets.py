@@ -41,6 +41,12 @@ def check_decks_fresh(root: Path) -> None:
     if stale:
         raise SystemExit(f"decks.yml is newer than {', '.join(stale)}: "
                          f"run build_pptx.py before deploying")
+    # each title slide carries the module name and dates from {stem}.md
+    for p in sorted((root / "slides").glob("*.pptx")):
+        md = root / f"{p.stem}.md"
+        if md.exists() and p.stat().st_mtime < md.stat().st_mtime:
+            raise SystemExit(f"{md.name} is newer than {p.name}: "
+                             f"run build_pptx.py before deploying")
 
 
 def build_link_map(cfg, course_path, files, pages) -> dict[str, str]:

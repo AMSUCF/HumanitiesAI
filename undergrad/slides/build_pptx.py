@@ -17,6 +17,7 @@ import io
 import os
 import re
 import sys
+import zipfile
 from datetime import datetime
 from functools import lru_cache
 from pathlib import Path
@@ -523,12 +524,30 @@ def build_deck(stem: str, slides: list[dict], meta: dict) -> Presentation:
     return prs
 
 
+ZIP_DATE = (2027, 1, 1, 0, 0, 0)
+
+
+def save_deck(prs: Presentation, out: Path) -> None:
+    """Save with every zip entry stamped ZIP_DATE, not the build time, so an
+    unchanged deck rebuilds byte for byte (same sha, no re-upload)."""
+    buf = io.BytesIO()
+    prs.save(buf)
+    fixed = io.BytesIO()
+    with zipfile.ZipFile(buf) as src, zipfile.ZipFile(fixed, "w") as dst:
+        for info in src.infolist():
+            entry = zipfile.ZipInfo(info.filename, date_time=ZIP_DATE)
+            entry.compress_type = info.compress_type
+            entry.external_attr = info.external_attr
+            dst.writestr(entry, src.read(info.filename))
+    Path(out).write_bytes(fixed.getvalue())
+
+
 def main() -> int:
     decks = yaml.safe_load((HERE / "decks.yml").read_text(encoding="utf-8"))
     for stem, slides in decks.items():
         meta = frontmatter.load(str(COURSE / f"{stem}.md")).metadata
         out = HERE / f"{stem}.pptx"
-        build_deck(stem, slides, meta).save(out)
+        save_deck(build_deck(stem, slides, meta), out)
         print(f"{stem}.pptx: {len(slides) + 1} slides, {out.stat().st_size // 1024} KB")
     return 0
 

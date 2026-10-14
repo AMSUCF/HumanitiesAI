@@ -230,7 +230,16 @@ def _sc_course(tmp_path):
         "syllabus_file: index.md\nweeks: [moduleone]\nself_contained: true\n"
         "late_window_hours: 24\nunits: {words: {label: Words, color: '#0f766e'}}\n",
         encoding="utf-8")
+    _fresh(root / "slides" / "moduleone.pptx")
     return canvas
+
+
+def _fresh(deck):
+    # the deck is built after decks.yml and the module .md, even when a test
+    # edits the .md afterwards
+    import os, time
+    later = time.time() + 1000
+    os.utime(deck, (later, later))
 
 
 def test_self_contained_dry_run_has_no_site_links(tmp_path, monkeypatch, capsys):
