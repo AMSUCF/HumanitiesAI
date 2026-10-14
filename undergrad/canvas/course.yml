@@ -10,6 +10,7 @@ assignment_groups:
   exercises: Exercises
   other: Course Requirements
 syllabus_file: index.md
+instructor_guide: instructor-guide.md
 weeks: [moduleone, moduletwo, modulethree, modulefour, modulefive, modulesix, moduleseven]
 extra: [finalreflection]
 activity_verification: {name: "Activity Verification", points: 5, open: 2027-01-11, due: 2027-01-15}

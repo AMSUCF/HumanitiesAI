@@ -66,6 +66,21 @@ Examples:
 ..\.venv\Scripts\python deploy.py --simple-syllabus
 ```
 
+## course.yml keys
+
+`course.yml` sets `site_base`, `timezone`, `assignment_groups`,
+`syllabus_file`, `weeks`, `extra`, and `activity_verification`. These optional
+keys were added for the undergrad course (`undergrad/canvas/course.yml`). Each
+does nothing when absent, so this course's behavior is unchanged.
+
+| Key | Effect |
+| --- | --- |
+| `self_contained` | `true` deploys the course with everything inside Canvas: decks uploaded as `.pptx` under Files -> Lecture Slides and added as File items, images uploaded, every link rewritten to a Canvas target (a link with no target fails a live deploy). Redeploys also skip any page, discussion, or file edited in Canvas since the last deploy, printing `[edited in Canvas]` or `[missing in Canvas]`; `--force` overrides. |
+| `expect_course_code` | A string such as `"3861"`. The deployer exits if the Canvas course's code doesn't contain it, so a wrong `CANVAS_COURSE_ID` can't be deployed to. |
+| `instructor_guide` | Path (relative to `course.yml`) of a Markdown file. On `--all` runs it becomes the page "Instructor Guide (not visible to students)", always unpublished and outside every module. A dry run writes `preview/instructor-guide.html`. The deploy exits if the file is missing. |
+| `late_window_hours` | Hours after the due date that discussions (and the final) stay open before locking, for example `24`. Without it, the original late window applies. |
+| `units` | A map of `unit: {label, color}` merged into the built-in unit labels and colors, for courses whose week files use their own unit names. |
+
 ## Live content is frozen
 
 Before doing anything else, `deploy.py` checks each selected week's

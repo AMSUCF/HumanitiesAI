@@ -39,8 +39,10 @@ grad site's *Ghost in the Shell* styling or framing is used.
 | `index.md` | Syllabus page; its `### Module ...` sections feed each module's Readings + Lecture page |
 | `moduleone.md` ... `moduleseven.md` | One module each: exercise page + graded discussion (split at `### Discussion`) |
 | `finalreflection.md` | Finals module with a hard-closing discussion |
-| `canvas/course.yml` | Deployer config, same schema as `../canvas/course.yml` plus a `units` block |
-| `slides/<module>.html` | Lecture deck embedded on each Readings + Lecture page |
+| `canvas/course.yml` | Deployer config, same schema as `../canvas/course.yml` plus the self-contained keys and a `units` block |
+| `canvas/instructor-guide.md` | GTA-facing Instructor Guide page (never published) |
+| `slides/<module>.pptx` | Lecture deck, uploaded to Files -> Lecture Slides and added to the module as a File item |
+| `slides/<module>.html` | Web (reveal.js) version of the deck, used by the website only |
 
 ## Slides
 
@@ -53,44 +55,73 @@ don't prune those files without checking `decks.yml`. To edit a deck,
 change `decks.yml` and rebuild from `undergrad/slides/`:
 
 ```
-../../.venv/Scripts/python build_decks.py
+../../.venv/Scripts/python build_decks.py   # web versions
+../../.venv/Scripts/python build_pptx.py    # PowerPoint versions for Canvas
 ```
 
 Speaker notes (`notes:`) show in reveal's speaker view (press `S`).
 
 Front matter uses the same `canvas:` block as the grad week files, so the
-existing deployer reads these unchanged. `deploy.py --all --dry-run` was run
-against this folder with the units patched in, and all eight modules plan
-correctly.
+shared deployer reads these directly. See "Canvas handoff" below for the
+deploy.
 
-## Before the first Canvas deploy
+## Canvas handoff
 
-The deployer in `../canvas/` needs these small changes:
+This course deploys **self-contained** (`self_contained: true` in
+`canvas/course.yml`). The deployer uploads everything to Canvas: each deck goes
+in as an editable `.pptx` under Files -> Lecture Slides, the images are
+uploaded, and every link is rewritten to its Canvas target. Nothing in the
+deployed course points back at the website, so a graduate teaching assistant
+can run it with only Canvas and PowerPoint.
 
-1. **Units.** `converter.py` hardcodes `UNIT_COLORS`/`UNIT_LABELS` for
-   ghosts/shells/puppetmasters/coda. Have it merge in the `units` block from
-   `course.yml`.
-2. **`.env` lookup. Do this one first.** `deploy.py` calls `load_dotenv()` with
-   no path. Run from `undergrad/canvas/` as `python ../../canvas/deploy.py`, it
-   searches upward from the *script's* folder and would load
-   `canvas/.env`, which holds the **grad course ID**. Change it to load
-   `.env` from the working directory before running anything without
-   `--dry-run`.
-3. **24-hour close.** `converter.lock_at_utc` hardcodes a 7-day late window.
-   Read `late_window_hours: 24` from `course.yml` instead, for discussions
-   and the final alike (the final no longer uses `hard_close`).
-4. *(Optional)* **Do-week unlock.** Each week file has a `do_start` date. The
-   discussion could unlock then instead of at `week_start`. Leaving it open
-   from the start of Think week also works.
+Each module's items, in order: the "<Module> Readings + Lecture" page, the deck
+as a File item, the exercise page, and "Exercise Discussion: <module>". The
+lecture page has a placeholder line, "The <Module> video lecture will be posted
+here at the start of the week.", where the GTA drops the recording. The Do-week
+YouTube embeds are plain iframes in the week files, so they deploy with the
+exercise page. Discussions are due Sunday 11:59 PM ET and lock 24 hours later
+(`late_window_hours: 24`); the final locks 24 hours after it is due.
 
-The Think-week lecture page (Readings + Lecture) still has its placeholder
-for the lecture video, where the GTA drops the Canvas upload, and the
-deployer keeps that upload on redeploys. The Do-week YouTube embeds are
-plain iframes in the week files, so they deploy with the exercise page.
+`canvas/course.yml` also sets `expect_course_code: "3861"`, so the deployer
+refuses to run against a course whose code doesn't match (this keeps it away
+from the grad course ID), and `instructor_guide: instructor-guide.md`. The
+guide is a GTA-facing page that the deployer creates as "Instructor Guide (not
+visible to students)", always unpublished and outside every module. It is only
+deployed on `--all` runs, and it should have no repo-relative links.
 
-The lecture pages embed `{site_base}/slides/<module>.html`, which now exists
-for all seven modules.
+### Building the decks
 
-After that, put the new course ID and a token in `undergrad/canvas/.env`
-(gitignored) and follow the same dry-run, unpublished, review, `--publish`
-order as the grad course.
+Canvas gets PowerPoint files. Build them from `undergrad/slides/`:
+
+```
+../../.venv/Scripts/python build_pptx.py
+```
+
+`build_decks.py` still builds the reveal.js web versions, and both read
+`decks.yml`. A deploy stops if a `.pptx` is older than `decks.yml`, so rebuild
+after any edit. To review the PowerPoint versions, `export_pngs.ps1` renders
+every slide to PNG through PowerPoint.
+
+### Deploy order
+
+Put the new course ID and a token in `undergrad/canvas/.env` (gitignored; the
+deployer reads the `.env` in the working directory), then run from
+`undergrad/canvas/`:
+
+1. **Dry run:** `../../.venv/Scripts/python ../../canvas/deploy.py --all --dry-run`
+   writes `preview/` with no network calls. Check that it prints no
+   `[unresolved]` links, and read the previews, including
+   `preview/instructor-guide.html`.
+2. **Deploy unpublished:** the same command without `--dry-run`.
+3. **Review** the modules in Canvas.
+4. **Publish:** re-run with `--publish`.
+
+### After the handoff, Canvas is the master copy
+
+Once the GTA has the course, the repo should stop being edited for it. If a
+redeploy finds that something changed in Canvas since the last deploy (a page,
+a discussion, or a deck replaced in Files), it skips that item and prints
+`[edited in Canvas]` or `[missing in Canvas]`. `--force` overrides the skip.
+The new `course.yml` keys (`self_contained`, `expect_course_code`,
+`instructor_guide`, `late_window_hours`, `units`) do nothing when absent, so
+the grad course is unaffected; they are documented in `../canvas/README.md`.
