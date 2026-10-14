@@ -11,6 +11,7 @@ exclude:
 - undergrad/README.md
 - undergrad/slides/build_decks.py
 - undergrad/slides/build_pptx.py
+- undergrad/slides/export_pngs.ps1
 - undergrad/slides/test_build_pptx.py
 - undergrad/slides/decks.yml
 - docs/
