@@ -124,3 +124,14 @@ def test_link_map_reports_unresolved():
 
 def test_no_link_map_is_unchanged_grad_behavior():
     assert 'href="https://x.y/weektwo.html"' in render_html("[w](weektwo.md)", "https://x.y")
+
+
+def test_badge_strip_leaves_no_empty_paragraph():
+    configure_units({"words": {"label": "Words", "color": "#0f766e"}})
+    alone = apply_canvas_style(
+        '<p><span class="unit-badge unit-badge--words">Words</span></p>\n<p>Hi</p>', "words")
+    assert "<p></p>" not in alone and alone.endswith("<p>Hi</p>")
+    # a badge sharing its paragraph with text keeps the paragraph
+    shared = apply_canvas_style(
+        '<p><span class="unit-badge unit-badge--words">Words</span> Hi</p>', "words")
+    assert shared.endswith("<p>Hi</p>")

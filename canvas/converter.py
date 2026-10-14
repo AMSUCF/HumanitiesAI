@@ -152,7 +152,9 @@ def lock_at_utc(due_date, grace_days: int = 7, grace_hours: int | None = None) -
     return dt.astimezone(ZoneInfo("UTC")).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-_BADGE_RE = re.compile(r'<span class="unit-badge[^"]*">[^<]*</span>\s*')
+_BADGE = r'<span class="unit-badge[^"]*">[^<]*</span>'
+# a paragraph holding only the badge goes with it; else just the badge
+_BADGE_RE = re.compile(rf'<p>\s*{_BADGE}\s*</p>\s*|{_BADGE}\s*')
 
 
 def apply_canvas_style(html: str, unit: str) -> str:
