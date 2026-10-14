@@ -14,7 +14,7 @@ grad site's *Ghost in the Shell* styling or framing is used.
 ## Differences from the grad version
 
 - Seven two-week modules, each split into a **Think** week (readings, lecture
-  slides, and the lecture video the GTA adds in Webcourses) and a **Do** week
+  slides, and the lecture video the GTA adds in Canvas) and a **Do** week
   (a YouTube video embedded at the top of the exercise, then the exercise and
   discussion).
 - One exercise per module, 10 points each, graded with an explicit points
@@ -98,8 +98,10 @@ Canvas gets PowerPoint files. Build them from `undergrad/slides/`:
 ```
 
 `build_decks.py` still builds the reveal.js web versions, and both read
-`decks.yml`. A deploy stops if a `.pptx` is older than `decks.yml`, so rebuild
-after any edit. To review the PowerPoint versions, `export_pngs.ps1` renders
+`decks.yml`. A deploy stops if a `.pptx` is older than `decks.yml` or than its
+module's `.md` (the title slide shows the module name and dates from its front
+matter), so rebuild after any edit. Builds are byte-for-byte reproducible, so
+rebuilding an unchanged deck doesn't make the deployer upload it again. To review the PowerPoint versions, `export_pngs.ps1` renders
 every slide to PNG through PowerPoint.
 
 ### Deploy order
@@ -110,18 +112,36 @@ deployer reads the `.env` in the working directory), then run from
 
 1. **Dry run:** `../../.venv/Scripts/python ../../canvas/deploy.py --all --dry-run`
    writes `preview/` with no network calls. Check that it prints no
-   `[unresolved]` links, and read the previews, including
-   `preview/instructor-guide.html`.
+   `[unresolved]` links and no `[broken anchor]` lines (a link to a syllabus
+   heading that doesn't exist; the TOC anchors carry the term dates), and read
+   the previews, including `preview/instructor-guide.html`.
 2. **Deploy unpublished:** the same command without `--dry-run`.
-3. **Review** the modules in Canvas.
-4. **Publish:** re-run with `--publish`.
+3. **Review** the modules in Canvas. Anything edited in Canvas during the
+   review (for example the Syllabus TBDs) is kept by the next step.
+4. **Publish:** re-run with `--publish`. Items edited in Canvas are not
+   redeployed, but they are still published, and print `[edited in Canvas]
+   ...: kept your Canvas version, published it`.
+
+Every later redeploy must also pass `--publish`; one without it sends items
+back to unpublished.
+
+**Back up `undergrad/canvas/.state.json` after each deploy** (it is
+gitignored). It holds the Canvas ids and change markers the edit guard works
+from. If it is lost, a live deploy to a course that already has this course's
+modules, Syllabus, or Instructor Guide stops and asks for it back, rather than
+overwriting the course unguarded.
 
 ### After the handoff, Canvas is the master copy
 
 Once the GTA has the course, the repo should stop being edited for it. If a
 redeploy finds that something changed in Canvas since the last deploy (a page,
-a discussion, or a deck replaced in Files), it skips that item and prints
-`[edited in Canvas]` or `[missing in Canvas]`. `--force` overrides the skip.
+a discussion, the Activity Verification assignment, or a deck replaced in
+Files), it skips that item and prints `[edited in Canvas]` or `[missing in
+Canvas]`. Modules the deployer already created keep the name and dates they
+have in Canvas, their items are never reordered, and an item the GTA took out
+of a module prints `[removed in Canvas]` and is not put back.
+`--overwrite-canvas-edits` overrides all of this (the run says so on its first
+line); `--force` only redeploys modules that have already opened.
 The new `course.yml` keys (`self_contained`, `expect_course_code`,
 `instructor_guide`, `late_window_hours`, `units`) do nothing when absent, so
 the grad course is unaffected; they are documented in `../canvas/README.md`.

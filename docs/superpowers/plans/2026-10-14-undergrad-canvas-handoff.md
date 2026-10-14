@@ -1248,6 +1248,13 @@ This task contains no code. The user supplies the course ID and confirms the ter
   - the discussion due and lock times are Sunday and Monday 11:59 PM ET;
   - the Instructor Guide is unpublished.
 
-  **Test the replace flow once:** upload a renamed copy of one deck over the original with *Replace*, confirm the lecture-page preview follows it, then run `deploy.py --all` again and confirm it prints `[edited in Canvas]` for that deck.
+  **Live checks** (each one confirms an assumption the deployer makes):
+  - **No-change redeploy:** run `deploy.py --all` again right after the first deploy, with nothing changed anywhere. It must print no `[edited in Canvas]` lines.
+  - **Replace keeps the file id?** After the replace test below, note whether the deck's Canvas file id changed.
+  - **Module publish cascades?** Publish one module by hand and note whether its items get published too, and whether their `updated_at` moves.
+  - **Discussion GET includes `assignment`?** GET one discussion topic and confirm the plain response has an `assignment` object (the change marker reads its dates and points).
+  - **Heading ids survive?** Open the Syllabus HTML editor and confirm the `<h2 id="...">` / `<h3 id="...">` attributes are still there, so the TOC anchors jump.
+
+  **Test the replace flow once:** upload a renamed copy of one deck over the original with *Replace*, confirm the lecture-page preview follows it, then run `deploy.py --all` again. It must print `[edited in Canvas] slides/<deck>.pptx was replaced ...` or `[missing in Canvas] slides/<deck>.pptx was deleted or replaced ...`, and the GTA's deck must be kept (no `uploaded:` line for it).
 - [ ] **Step 6: Run `deploy.py --all --publish`** once the user approves (memory rule: always pass `--publish` when going live).
 - [ ] **Step 7: Update the memory files** (`undergrad-eng3861-course.md`) with the course ID, the handoff state, and the rule that Canvas is the master copy after handoff. Then commit `.state.json` if the grad course's state is committed, matching the grad convention.

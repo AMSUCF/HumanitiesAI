@@ -45,7 +45,7 @@ cd canvas
 
 ## Commands
 
-`deploy.py` accepts five flags:
+`deploy.py` accepts these flags:
 
 | Flag | Effect |
 | --- | --- |
@@ -53,7 +53,8 @@ cd canvas
 | `--week NAME` | Operate on a single week only, e.g. `--week weekfive`. Mutually exclusive in practice with `--all` (pass one or the other). |
 | `--dry-run` | Don't call the Canvas API. Render each page/discussion to `preview/*.html` and print a one-line summary per week. Safe to run repeatedly with no credentials required. |
 | `--publish` | When actually deploying (no `--dry-run`), create/update pages, discussions, and assignments as **published** instead of the default unpublished. |
-| `--force` | Also update modules (and the Activity Verification assignment) that have already opened. Without it, anything live is frozen — see below. |
+| `--force` | Also update modules (and the Activity Verification assignment) that have already opened. Without it, anything live is frozen — see below. It does nothing else. |
+| `--overwrite-canvas-edits` | Self-contained courses only (no effect on this course). Deploy over anything changed in Canvas since the last deploy: edited or deleted pages, discussions and Activity Verification, replaced or deleted files, renamed or redated modules, and module items taken out in Canvas. Also lets a live run go ahead when `.state.json` is lost. The run prints a warning on its first line. |
 | `--simple-syllabus` | Ignore `--all`/`--week`. Read `index.md`, split it into `## `-headed sections, and write `preview/simple_syllabus.html` as a paste-ready package. Requires no Canvas credentials. |
 
 Examples:
@@ -75,7 +76,7 @@ does nothing when absent, so this course's behavior is unchanged.
 
 | Key | Effect |
 | --- | --- |
-| `self_contained` | `true` deploys the course with everything inside Canvas: decks uploaded as `.pptx` under Files -> Lecture Slides and added as File items, images uploaded, every link rewritten to a Canvas target (a link with no target fails a live deploy). Redeploys also skip any page, discussion, or file edited in Canvas since the last deploy, printing `[edited in Canvas]` or `[missing in Canvas]`; `--force` overrides. |
+| `self_contained` | `true` deploys the course with everything inside Canvas: decks uploaded as `.pptx` under Files -> Lecture Slides and added as File items, images uploaded, every link rewritten to a Canvas target (a link with no target fails a live deploy). Redeploys also skip any page, discussion, Activity Verification, or file edited in Canvas since the last deploy, printing `[edited in Canvas]` or `[missing in Canvas]` (with `--publish`, a skipped item is still published as it is in Canvas). Modules already created keep their Canvas name and dates (`--publish` only publishes them), existing module items are never moved, and an item taken out of its module is not put back (`[removed in Canvas]`). A live run with no `.state.json` stops if the course already has this course's modules or pages. Links to syllabus headings that don't exist print `[broken anchor]` on a dry run and fail a live one. `--overwrite-canvas-edits` overrides the guards; `--force` does not. |
 | `expect_course_code` | A string such as `"3861"`. The deployer exits if the Canvas course's code doesn't contain it, so a wrong `CANVAS_COURSE_ID` can't be deployed to. |
 | `instructor_guide` | Path (relative to `course.yml`) of a Markdown file. On `--all` runs it becomes the page "Instructor Guide (not visible to students)", always unpublished and outside every module. A dry run writes `preview/instructor-guide.html`. The deploy exits if the file is missing. |
 | `late_window_hours` | Hours after the due date that discussions (and the final) stay open before locking, for example `24`. Without it, the original late window applies. |
