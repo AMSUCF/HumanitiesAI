@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import hashlib
+
 import requests
 
 
@@ -137,3 +139,54 @@ class CanvasClient:
         if position is not None:
             item["position"] = position
         self._post(f"{self.course}/modules/{module_id}/items", {"module_item": item})
+
+    def course_info(self) -> dict:
+        r = self.s.get(self.course)
+        r.raise_for_status()
+        return r.json()
+
+    def upload_file(self, path, folder: str, content_type: str) -> dict:
+        """Canvas three-step upload; replaces a same-named file in `folder`."""
+        data = path.read_bytes()
+        pre = self._post(f"{self.course}/files", {
+            "name": path.name, "size": len(data), "content_type": content_type,
+            "parent_folder_path": folder, "on_duplicate": "overwrite"})
+        # step 2 goes to the storage host, which must not get our token
+        r = requests.post(pre["upload_url"], data=pre["upload_params"],
+                          files={"file": (path.name, data, content_type)},
+                          allow_redirects=False)
+        if r.is_redirect:
+            r = self.s.get(r.headers["Location"])
+        r.raise_for_status()
+        out = r.json()
+        if "id" not in out and out.get("location"):
+            out = self.s.get(out["location"]).json()
+        return out
+
+    def find_or_create_page(self, title: str) -> str:
+        """Return the page url slug; an existing page is never modified."""
+        for p in self._get_all(f"{self.course}/pages", search_term=title):
+            if p["title"] == title:
+                return p["url"]
+        return self._post(f"{self.course}/pages",
+                          {"wiki_page": {"title": title, "body": "<p></p>",
+                                         "published": False}})["url"]
+
+    def updated_at(self, kind: str, ref) -> str | None:
+        """Change marker for a page, discussion topic or file; None on 404.
+
+        Pages and files return `updated_at` as written. Discussion topics may
+        not expose `updated_at`, so fall back to "sha:" + sha256(message).
+        """
+        root = self.course.split("/courses/")[0]
+        url = (f"{root}/files/{ref}" if kind == "files"
+               else f"{self.course}/{kind}/{ref}")
+        r = self.s.get(url)
+        if r.status_code == 404:
+            return None
+        r.raise_for_status()
+        body = r.json()
+        if kind == "discussion_topics" and not body.get("updated_at"):
+            return "sha:" + hashlib.sha256(
+                (body.get("message") or "").encode("utf-8")).hexdigest()
+        return body.get("updated_at")

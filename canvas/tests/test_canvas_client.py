@@ -130,3 +130,68 @@ def test_upsert_discussion_sends_availability_window():
     sent = j.loads(responses.calls[0].request.body)
     assert sent["assignment"]["unlock_at"] == "2026-08-24T04:00:00Z"
     assert sent["assignment"]["lock_at"] == "2026-09-07T03:59:00Z"
+
+
+from pathlib import Path
+
+API = "https://canvas.test"
+COURSE = f"{API}/api/v1/courses/42"
+
+
+def c42():
+    return CanvasClient(API, "tok", "42")
+
+
+@responses.activate
+def test_upload_file_three_step(tmp_path):
+    f = tmp_path / "moduleone.pptx"; f.write_bytes(b"PK..")
+    responses.post(f"{COURSE}/files", json={"upload_url": "https://up.test/x",
+                                            "upload_params": {"key": "k"}})
+    responses.post("https://up.test/x", status=302,
+                   headers={"Location": f"{API}/api/v1/files/7/create_success"})
+    responses.get(f"{API}/api/v1/files/7/create_success", json={"id": 7, "updated_at": "T1"})
+    out = c42().upload_file(f, "Lecture Slides", "application/x")
+    assert out["id"] == 7
+    pre = responses.calls[0].request
+    assert b'"on_duplicate": "overwrite"' in pre.body and b'"parent_folder_path": "Lecture Slides"' in pre.body
+    assert "Authorization" not in responses.calls[1].request.headers   # never send the token to the upload host
+
+
+@responses.activate
+def test_find_or_create_page_never_overwrites():
+    responses.get(f"{COURSE}/pages", json=[{"title": "Syllabus", "url": "syllabus"}])
+    assert c42().find_or_create_page("Syllabus") == "syllabus"
+    assert all(c.request.method == "GET" for c in responses.calls)
+
+
+@responses.activate
+def test_updated_at_none_on_404():
+    responses.get(f"{COURSE}/pages/gone", status=404)
+    assert c42().updated_at("pages", "gone") is None
+
+
+@responses.activate
+def test_updated_at_discussion_falls_back_to_message_hash():
+    import hashlib
+    responses.get(f"{COURSE}/discussion_topics/5", json={"id": 5, "message": "<p>hi</p>"})
+    assert c42().updated_at("discussion_topics", 5) == \
+        "sha:" + hashlib.sha256(b"<p>hi</p>").hexdigest()
+
+
+@responses.activate
+def test_updated_at_discussion_prefers_updated_at():
+    responses.get(f"{COURSE}/discussion_topics/5",
+                  json={"id": 5, "message": "m", "updated_at": "T9"})
+    assert c42().updated_at("discussion_topics", 5) == "T9"
+
+
+@responses.activate
+def test_updated_at_file_uses_course_independent_url():
+    responses.get(f"{API}/api/v1/files/7", json={"id": 7, "updated_at": "T3"})
+    assert c42().updated_at("files", 7) == "T3"
+
+
+@responses.activate
+def test_course_info():
+    responses.get(COURSE, json={"name": "N", "course_code": "C"})
+    assert c42().course_info()["course_code"] == "C"
