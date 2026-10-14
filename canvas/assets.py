@@ -87,13 +87,20 @@ def sync_assets(client, cfg, root, state, force=False):
         rec, sha = known.get(rel), _sha(path)
         if rec and rec["sha256"] == sha:
             continue
-        if rec and not force and client.updated_at("files", rec["id"]) != rec["updated_at"]:
-            print(f"[edited in Canvas] {rel} was replaced in Canvas Files; "
-                  f"not re-uploaded (pass --force to override)")
-            continue
+        if rec and not force:
+            live = client.updated_at("files", rec["id"])
+            if live is None:
+                print(f"[missing in Canvas] {rel} was deleted or replaced in Canvas Files; "
+                      f"not re-uploaded (pass --force to upload it again)")
+                continue
+            if live != rec["updated_at"]:
+                print(f"[edited in Canvas] {rel} was replaced in Canvas Files; "
+                      f"not re-uploaded (pass --force to override)")
+                continue
         ctype = PPTX_TYPE if path.suffix == ".pptx" else IMAGE_TYPES[path.suffix.lower()]
         out = client.upload_file(path, FOLDERS[rel.split("/")[0]], ctype)
-        known[rel] = {"id": out["id"], "sha256": sha, "updated_at": out.get("updated_at")}
+        stamp = out.get("updated_at") or client.updated_at("files", out["id"])
+        known[rel] = {"id": out["id"], "sha256": sha, "updated_at": stamp}
         print(f"uploaded: {rel}")
     pages = {"index": state.get("syllabus_url") or client.find_or_create_page("Syllabus")}
     state["syllabus_url"] = pages["index"]

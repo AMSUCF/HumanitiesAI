@@ -1,5 +1,4 @@
 import os, time
-from pathlib import Path
 import pytest
 import assets
 
@@ -63,3 +62,45 @@ def test_sync_skips_unchanged_and_edited(tmp_path, capsys):
     c = FakeClient(live_updated="T2-gta-replaced-it")
     assets.sync_assets(c, cfg, root, state)
     assert c.uploads == [] and "[edited in Canvas]" in capsys.readouterr().out
+
+
+class StampClient(FakeClient):
+    """Upload response omits updated_at; the follow-up fetch supplies it."""
+    def upload_file(self, path, folder, ctype):
+        self.uploads.append(path.name); return {"id": 5}
+
+
+def _synced(tmp_path):
+    root = _course(tmp_path); cfg = {**CFG, "self_contained": True}
+    state = {}
+    assets.sync_assets(FakeClient(), cfg, root, state)
+    (root / "slides" / "moduleone.pptx").write_bytes(b"PK2")
+    return root, cfg, state
+
+
+def test_missing_in_canvas_is_skipped(tmp_path, capsys):
+    root, cfg, state = _synced(tmp_path)
+    capsys.readouterr()
+    c = FakeClient(live_updated=None)
+    assets.sync_assets(c, cfg, root, state)
+    assert c.uploads == [] and "[missing in Canvas]" in capsys.readouterr().out
+
+
+def test_force_reuploads_missing_and_edited(tmp_path):
+    for live in (None, "T2-edited"):
+        root, cfg, state = _synced(_mk(tmp_path, str(live)))
+        c = FakeClient(live_updated=live)
+        assets.sync_assets(c, cfg, root, state, force=True)
+        assert c.uploads == ["moduleone.pptx"]
+
+
+def test_upload_without_updated_at_fetches_it(tmp_path):
+    root = _course(tmp_path); cfg = {**CFG, "self_contained": True}
+    state = {}
+    c = StampClient(live_updated="T7")
+    assets.sync_assets(c, cfg, root, state)
+    assert state["files"]["slides/moduleone.pptx"]["updated_at"] == "T7"
+
+
+def _mk(base, name):
+    d = base / name; d.mkdir(); return d

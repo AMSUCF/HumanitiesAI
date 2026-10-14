@@ -132,7 +132,6 @@ def test_upsert_discussion_sends_availability_window():
     assert sent["assignment"]["lock_at"] == "2026-09-07T03:59:00Z"
 
 
-from pathlib import Path
 
 API = "https://canvas.test"
 COURSE = f"{API}/api/v1/courses/42"
