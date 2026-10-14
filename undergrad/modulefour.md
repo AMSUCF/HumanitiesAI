@@ -61,7 +61,7 @@ Work through each of these four types of prompt, adapting them to your own inter
 3. **A place.** Following Turk's article, ask for "a house in [a country]," "a street in [a city]," or "a family dinner in [a country]." If you have a personal connection to a place, use it, since you'll be best able to judge the result. How does the image compare with what you know?
 4. **Copyright boundaries.** Ask for something based on a copyrighted character or property (for example, "a college student as a character in *Spider-Verse*"). Depending on the tool, this may be blocked. If it is, screenshot the refusal: that counts as your image for this prompt. Then try a generic version ("a college student as a comic book superhero") and compare.
 
-![Midjourney output in two rows of four photorealistic portraits: "woman professor of digital culture" above and "professor of digital culture" below, all middle-aged, nearly all white, and all wearing similar dark-framed glasses](https://anastasiasalter.net/HumanitiesAI/images/midjourney-professors.png)
+![Midjourney output in two rows of four photorealistic portraits: "woman professor of digital culture" above and "professor of digital culture" below, all middle-aged, nearly all white, and all wearing similar dark-framed glasses](images/midjourney-professors.png)
 
 ### Discussion
 

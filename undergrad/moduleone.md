@@ -49,7 +49,7 @@ If you haven't already, create a free account with at least one of [ChatGPT](htt
 
 #### Conversation One: ELIZA (at least 10 minutes)
 
-![A conversation with ELIZA in a retro terminal interface](https://anastasiasalter.net/HumanitiesAI/images/eliza.png)
+![A conversation with ELIZA in a retro terminal interface](images/eliza.png)
 
 Talk with [E.L.I.Z.A. Talking](https://www.masswerk.at/eliza/), Norbert Landsteiner's re-creation of Joseph Weizenbaum's original 1966 program (the one from the podcast). ELIZA plays a therapist who mostly turns your statements back into questions. Try talking to it about your week, about starting this class, or about whether computers can think. Then try to "break" it: what happens when you ask it a factual question, change the subject abruptly, or repeat yourself? **Screenshot 1:** your favorite moment.
 
