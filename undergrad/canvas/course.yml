@@ -1,6 +1,10 @@
 # Canvas config for ENG 3861 (undergraduate), same schema as ../../canvas/course.yml.
 # CANVAS_COURSE_ID is not known yet; it goes in undergrad/canvas/.env when the shell exists.
 site_base: https://anastasiasalter.net/HumanitiesAI/undergrad
+# Built to be handed off: everything lives in Canvas (decks as .pptx in
+# Files, images uploaded, links rewritten), nothing points back at the site.
+self_contained: true
+expect_course_code: "3861"
 timezone: America/New_York
 assignment_groups:
   exercises: Exercises
