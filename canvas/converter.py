@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import html as _html
 import re
 from dataclasses import dataclass
 from datetime import datetime, time, timedelta
@@ -39,22 +40,47 @@ def load_week(path) -> WeekDoc:
     return WeekDoc(Path(path), post.metadata, canvas, post.content)
 
 
-def _rewrite(html: str, site_base: str) -> str:
+def kramdown_id(text: str) -> str:
+    """Jekyll/kramdown auto_ids, so syllabus TOC links work in Canvas."""
+    t = re.sub(r"^[^a-zA-Z]+", "", text)
+    t = re.sub(r"[^a-zA-Z0-9 -]", "", t)
+    return t.replace(" ", "-").lower()
+
+
+_HEADING_RE = re.compile(r"<h([1-6])>(.*?)</h>", re.DOTALL)
+
+
+def _add_heading_ids(html: str) -> str:
+    def add(m):
+        plain = _html.unescape(re.sub(r"<[^>]+>", "", m.group(2)))
+        return f'<h{m.group(1)} id="{kramdown_id(plain)}">{m.group(2)}</h{m.group(1)}>'
+    return _HEADING_RE.sub(add, html)
+
+
+def _rewrite(html: str, site_base: str, link_map: dict[str, str] | None = None,
+             unresolved: list[str] | None = None) -> str:
     base = site_base.rstrip("/")
 
     def fix(m):
         attr, url = m.group(1), m.group(2)
-        if re.match(r"^(https?:|mailto:|#|data:|//)", url):
+        if re.match(r"^(https?:|mailto:|#|data:|//|/courses/)", url):
             return m.group(0)
         url = re.sub(r"\.md(?=(#|$))", ".html", url)
         url = re.sub(r"^(\./)+", "", url)
+        if link_map is not None:
+            path, _, frag = url.partition("#")
+            if path in link_map:
+                return f'{attr}="{link_map[path]}{"#" + frag if frag else ""}"'
+            if unresolved is not None:
+                unresolved.append(path)
         return f'{attr}="{base}/{url}"'
 
     return re.sub(r'(href|src|poster)="([^"]+)"', fix, html)
 
 
-def render_html(md_text: str, site_base: str) -> str:
-    return _rewrite(_md.render(md_text), site_base)
+def render_html(md_text: str, site_base: str, link_map: dict[str, str] | None = None,
+                unresolved: list[str] | None = None) -> str:
+    return _rewrite(_add_heading_ids(_md.render(md_text)), site_base, link_map, unresolved)
 
 
 TZ = ZoneInfo("America/New_York")

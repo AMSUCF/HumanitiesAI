@@ -1,6 +1,11 @@
 import textwrap
+from datetime import date
+
 import pytest
-from converter import load_week, render_html
+from converter import (
+    UNIT_COLORS, UNIT_LABELS, apply_canvas_style, configure_units, due_at_utc,
+    kramdown_id, load_week, lock_at_utc, render_html, split_discussion, unlock_at_utc,
+)
 
 def test_load_week_parses_canvas_block(tmp_path):
     f = tmp_path / "weekone.md"
@@ -49,9 +54,6 @@ def test_render_preserves_parent_traversal():
     html = render_html("[up](../other/page.md)", "https://x.y")
     assert 'href="https://x.y/../other/page.html"' in html
 
-from datetime import date
-from converter import split_discussion, due_at_utc, apply_canvas_style
-
 def test_split_discussion():
     page, disc = split_discussion("intro\n\n### Discussion\n\nQ1?\nQ2?")
     assert page == "intro"
@@ -77,20 +79,15 @@ def test_apply_canvas_style_bands_and_badges():
 def test_unlock_at_utc_monday_midnight():
     # Monday Aug 24 2026 00:00 ET (EDT, UTC-4) -> 04:00Z
     assert due_at_utc.__module__ == "converter"
-    from converter import unlock_at_utc
     assert unlock_at_utc(date(2026, 8, 24)) == "2026-08-24T04:00:00Z"
 
 
 def test_lock_at_utc_one_week_grace():
-    from converter import lock_at_utc
     # due Sun Aug 30 -> locks Sun Sep 6 23:59 EDT -> Sep 7 03:59Z
     assert lock_at_utc(date(2026, 8, 30)) == "2026-09-07T03:59:00Z"
     # DST edge: due Sun Nov 1 (fallback day) -> locks Nov 8 23:59 EST -> Nov 9 04:59Z
     assert lock_at_utc(date(2026, 11, 1)) == "2026-11-09T04:59:00Z"
 
-
-from converter import configure_units, UNIT_COLORS, UNIT_LABELS, lock_at_utc, apply_canvas_style
-from datetime import date
 
 def test_configure_units_merges_course_units():
     configure_units({"words": {"label": "Words", "color": "#0f766e"}})
@@ -105,3 +102,25 @@ def test_apply_canvas_style_drops_site_unit_badge():
     configure_units({"words": {"label": "Words", "color": "#0f766e"}})
     html = apply_canvas_style('<p><span class="unit-badge unit-badge--words">Words</span></p><p>Hi</p>', "words")
     assert "unit-badge" not in html and html.count("Words") == 1
+
+
+def test_kramdown_id_matches_jekyll_toc():
+    assert kramdown_id("Module One: What Is Digital Humanities? (Weeks 1-2, January 11 - 24)")         == "module-one-what-is-digital-humanities-weeks-1-2-january-11---24"
+    assert kramdown_id("AI Use Policy") == "ai-use-policy"
+
+def test_render_adds_heading_ids():
+    assert '<h2 id="ai-use-policy">AI Use Policy</h2>' in render_html("## AI Use Policy", "https://x.y")
+
+def test_link_map_rewrites_and_keeps_fragment():
+    m = {"index.html": "/courses/9/pages/syllabus", "slides/moduleone.html": "/courses/9/files/77"}
+    out = render_html("[p](index.md#ai-use-policy) [s](slides/moduleone.html)", "https://x.y", link_map=m)
+    assert 'href="/courses/9/pages/syllabus#ai-use-policy"' in out
+    assert 'href="/courses/9/files/77"' in out
+
+def test_link_map_reports_unresolved():
+    bad = []
+    out = render_html("![a](images/new.png)", "https://x.y", link_map={}, unresolved=bad)
+    assert bad == ["images/new.png"] and 'src="https://x.y/images/new.png"' in out
+
+def test_no_link_map_is_unchanged_grad_behavior():
+    assert 'href="https://x.y/weektwo.html"' in render_html("[w](weektwo.md)", "https://x.y")
