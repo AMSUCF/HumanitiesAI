@@ -20,54 +20,45 @@ For four weeks we asked what a ghost is, and for four more we asked what a shell
 
 ## Tutorial: Distant Coding
 
-This week builds on this unit's readings — Julia Evans's ["So you want to be a wizard"](https://wizardzines.com/zines/wizard/) and the opening sections of Simon Willison's [*Agentic Engineering Patterns*](https://simonwillison.net/guides/agentic-engineering-patterns/) — to think about what "programming" looks like when the interface is natural language rather than a text editor. Willison describes a coding agent as a model, a set of instructions, and a set of tools running in a loop, and he separates *agentic engineering*, where a person still decides what to build, specifies it, and checks what comes back, from *vibe coding*, where nobody reads the code at all. Ian Bogost's ["The Tragedy of AI Coding"](https://www.theatlantic.com/ideas/2026/10/ai-programming-big-tech-regulations/688960/) asks a different question: who benefits when anyone can make software this way, and why a tool that could have freed programmers has become another way for Big Tech to hold onto them. Delegation is the model for this week's exercise: you describe the outcome you want, review what comes back, and iterate from there rather than typing every line yourself. You'll build a small, structured dataset, then deploy it as an interactive site using Claude's artifact feature, without needing to edit any code directly. Instead, you'll follow my prompt sequence below and rewrite it in your own words — taking on, as Evans puts it, a project that looks too hard until you break it into pieces you can actually attempt.
+This week builds on this unit's readings — Julia Evans's ["So you want to be a wizard"](https://wizardzines.com/zines/wizard/) and the opening sections of Simon Willison's [*Agentic Engineering Patterns*](https://simonwillison.net/guides/agentic-engineering-patterns/) — to think about what "programming" looks like when the interface is natural language rather than a text editor. Willison describes a coding agent as a model, a set of instructions, and a set of tools running in a loop, and he separates *agentic engineering*, where a person still decides what to build, specifies it, and checks what comes back, from *vibe coding*, where nobody reads the code at all. Ian Bogost's ["The Tragedy of AI Coding"](https://www.theatlantic.com/ideas/2026/10/ai-programming-big-tech-regulations/688960/) asks a different question: who benefits when anyone can make software this way, and why a tool that could have freed programmers has become another way for Big Tech to hold onto them. Delegation is the model for this week's exercise: you describe the outcome you want, review what comes back, and iterate from there rather than typing every line yourself. You'll work inside a project in Claude or ChatGPT, and you'll keep the two halves of the build separate: first a dataset, gathered by having the model read a Wikipedia list and turn it into a JSON file, then a web interface that tracks, ranks, and recommends from that collection. You won't need to edit any code directly. Instead, you'll follow my prompts below and rewrite them in your own words — taking on, as Evans puts it, a project that looks too hard until you break it into pieces you can actually attempt.
 
-### Prompts for Building a Cyborg and AI Media Recommender
+### Setting Up Your Project
 
-These are the prompts I used to build a simple, Buzzfeed-style recommendation site for cyborg and AI media — anime, film, prose fiction, and games that explore artificial intelligence, cybernetic bodies, and human-machine hybridity, the same territory *Ghost in the Shell* itself occupies. The exact prompts I used for every stage, broken down to show the different stages of design, are below.
+Start by setting up a project: in Claude, create a new project; in ChatGPT, create a project and select Work mode. Building inside a project keeps the dataset and the interface together in one place, so you can come back to either one, and it's where we'll pick up next week.
 
-The Claude artifact feature will make it easier to watch the HTML file evolve as you iterate through the prompts. Your process should produce a complete interactive recommendation system within Claude's artifact viewer, which you can then publish and share.
+### Prompts for Building a Media Tracker and Recommender
 
-1.  **Initial Dataset Creation**
+These are the prompts I used to build a cyberpunk "what I've read / viewed / played" tracker and recommendation system. The first prompt builds only the dataset; the second builds the interface that works with it. Keep them as two separate steps, and check the JSON before you move on: everything the recommender does depends on what ended up in that file.
 
-    -   *Prompt*: "Create a list of 100 significant works of cyborg and AI media — spanning anime, film, prose fiction, and video games — that explore artificial intelligence, cybernetic bodies, or human-machine hybridity. Each entry should include the title, creator, year, medium (anime, film, fiction, or game), and one category from the following: Android and Replicant Narratives, Cybernetic Body Horror, Networked and Hive Minds, Rogue or Emergent AI, Companion and Domestic AI, Uploaded Consciousness, Military and Combat AI, Cyberpunk Society, Post-Human Futures, AI and Labor."
+1.  **Building the Dataset from Wikipedia**
 
-    -   *Suggested Modifications*: Try narrowing the dataset to a single medium (all anime, or all games) to see how its texture changes, or adjust the category list to match a different critical lens you'd rather explore. Be specific about the category options, since that structure is what the recommendation logic will lean on later.
+    -   *Prompt*: "We're making a cyberpunk 'what I've read / viewed / played' database and recommendation system. Start by building a JSON file with all the media examples noted here: https://en.wikipedia.org/wiki/List_of_cyberpunk_works"
 
-2.  **Converting the List to JSON**
+    -   *Suggested Modifications*: Replace cyberpunk with your own genre, and consider providing a link to a more defined subset to avoid using lots of tokens — as you can see, my demo took a while because of the length of that list! Before moving on, look at what the model pulled from the page: what fields did it give each entry, what did it skip, and did it invent anything that isn't on the list?
 
-    -   *Prompt*: "Take the list of 100 works of cyborg and AI media and convert it into a JSON file, structured with each entry's title, creator, year, medium, and category."
+2.  **Building the Tracker and Recommender**
 
-    -   *Suggested Modifications*: Verify the plain-text list looks right before asking for the JSON conversion. If you're new to this kind of work, keep the category list to one clean dimension rather than layering several at once.
+    -   *Prompt*: "ok, now build a web interface for working with this collection. it should include a tracker for marking media read / finished and ranking it, and a recommendation system for similarly tagged media based on what the user has already rated. give it a retro cyberpunk look."
 
-3.  **Displaying Works for User Rating**
+    -   *Suggested Modifications*: Change the look to fit your own genre, and keep iterating once the first version works: try a different way of weighting recommendations, a visualization of your ratings, or filters by medium or year. If you add features, mention them explicitly in your next prompt so the model keeps track of them going forward.
 
-    -   *Prompt*: "Create an HTML page with embedded script and style that takes the JSON data, selects 10 works at random, and displays them with radio buttons for users to rate them from 1 to 5 or select 'Haven't experienced it.'"
+### Publishing and Sharing
 
-    -   *Suggested Modifications*: Display one work at a time and let users decide when to stop, or add a skip option for works they have no interest in. If you add features like these, mention them explicitly in your next prompt so the model keeps track of them going forward.
+Feel free to expand on or iterate away from the system modeled here: our goal is to explore the process of iterating by combining real data and new interface elements to build interactivity. If you do something that breaks everything, you can always go back to a previous version, so it's fine to experiment.
 
-4.  **Generating Recommendations**
+When you're done, publish your tracker so others can use it: share your Claude artifact, or the hosted link ChatGPT gives you, the same way we've done with our other pages this semester. Hold onto your dataset and project — we'll build on them directly next week, when Week Ten has you deploying a project of your own.
 
-    -   *Prompt*: "After the user submits their ratings, display the top three categories based on the ratings they provided and recommend three works — make sure they are ones the user hasn't already rated."
+**For full credit, your discussion post must include:**
 
-    -   *Suggested Modifications*: Instead of just listing the top three categories, visualize the category preferences with a bar chart or pie chart. Try building a more sophisticated weighting system than a simple top-three count.
-
-5.  **Setting Display and Style Updates**
-
-    -   *Prompt*: "Make the page theme GitS-adjacent cyberpunk — dark UI, neon accents, styles and colors appropriate for that vibe."
-
-    -   *Suggested Modifications*: Push the theme further with animation or interface details that fit your specific dataset — a HUD-style readout, a scanline effect, whatever feels right for the works you've catalogued. Make it as complicated as you'd like.
-
-### Publishing Your Artifact
-
-Feel free to expand on or iterate away from the simple recommendation system modeled here: our goal is to explore the process of iterating by combining real data and new interface elements to build interactivity through Claude. If you do something that breaks everything, you can always go back to a previous version of the artifact, so it's fine to experiment.
-
-Once you've completed your recommendation system in Claude's artifact viewer, you'll need to publish it so others can interact with it. Share your Claude artifact the same way we've done with our other static pages this semester. Hold onto this dataset and site — we'll build on it directly next week, when Week Ten has you deploying a project of your own.
+-   the link to your published Claude artifact or ChatGPT hosted page;
+-   at least one screenshot from your building process (a prompt and the model's response, the JSON taking shape, or the interface mid-build);
+-   your responses to the discussion questions below;
+-   and replies to two peers (1 point / reply).
 
 ### Discussion
 
-This week, share the link to your Claude artifact recommendation system, and think through its relationship to *AI for Good*'s opening chapters. Tyrangiel's introduction and first chapter, "I Believe the Children Are Our Future," make a case for AI's constructive uses on behalf of institutions and communities that mostly lack the resources to build these tools themselves; your recommendation site is a much smaller, much stranger version of that same premise — an interactive tool built almost entirely by delegation. What types of expertise went into each stage of building it? What assumptions or gaps do you see in the dataset you produced, and whose taste or canon does it end up reflecting?
+This week, share the link to your Claude artifact or ChatGPT hosted page and at least one screenshot from your building process, and think through its relationship to *AI for Good*'s opening chapters. Tyrangiel's introduction and first chapter, "I Believe the Children Are Our Future," make a case for AI's constructive uses on behalf of institutions and communities that mostly lack the resources to build these tools themselves; your tracker is a much smaller, much stranger version of that same premise — an interactive tool built almost entirely by delegation. What types of expertise went into each stage of building it? Your dataset came from a Wikipedia list: what did the model keep, drop, or get wrong in turning it into JSON, and whose taste or canon does that list (and your recommender) end up reflecting?
 
-Finally, a quick gesture at the epigraph — a tool demanding standing as the author of its own actions: did your project this week stay the careful delegation Willison describes, or did it do more than you explicitly told it to?
+Finally, a quick gesture at the epigraph — a tool demanding standing as the author of its own actions: did your project this week stay the agentic engineering Willison describes, with you deciding and checking each step, or did it slide toward vibe coding, doing more than you explicitly told it to?
 
 Don't forget to reply twice to peers (1 point / reply) for full credit!
