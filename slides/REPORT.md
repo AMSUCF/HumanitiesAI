@@ -117,7 +117,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - CUT (2025 deck 8 slide 24): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Text: 'how we should convey tasks to machines']
 
 ## Week 9 — Week Nine: Puppet Masters — Distant Coding
-- slides: 30 total (15 native, 0 moved in, 8 cut from source deck(s), draft=no)
+- slides: 33 total (15 native, 0 moved in, 8 cut from source deck(s), draft=no)
   - CUT (2025 deck 9 slide 7): "the final books" — Code to Joy (Littman) removed from the course [vision: Shows both book covers: Code to Joy and Algorithms of Oppression]
   - CUT (2025 deck 9 slide 8): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Chapter 2 title page 'The What of Programming' from Littman's book]
   - CUT (2025 deck 9 slide 10): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Quote: programming as 'delegation of the will', Littman's voice]
