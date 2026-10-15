@@ -275,7 +275,8 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [**Slides: Week Nine**](slides/weeknine.html)
 -   *AI for Good* - Introduction and Chapter 1: "I Believe the Children Are Our Future"
 -   Evans, Julia. [*So you want to be a wizard.*](https://wizardzines.com/zines/wizard/)
--   [Willison, Simon. "Here's how I use LLMs to help me write code." March 11, 2025.](https://simonwillison.net/2025/Mar/11/using-llms-for-code/)
+-   [Willison, Simon. *Agentic Engineering Patterns.* 2026.](https://simonwillison.net/guides/agentic-engineering-patterns/) Read sections 1.1–1.4 ("What is agentic engineering?" through "AI should help us produce better code") and 2.1 ("How coding agents work").
+-   *(PDF in Webcourses):* [Bogost, Ian. "The Tragedy of AI Coding." *The Atlantic.* October 2026.](https://www.theatlantic.com/ideas/2026/10/ai-programming-big-tech-regulations/688960/)
 -   [**Exercise: Distant Coding**](weeknine.md)
 
 ### Week Ten: Puppet Masters - Building and Deploying (Monday, October 26 - Sunday, November 1)
