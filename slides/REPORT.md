@@ -53,7 +53,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - MOVED from 2025 deck 9 slide 29: "(untitled)" — Noble chapter now assigned in Week 4 [vision: Noble book text on missing social/human context in algorithms]
 
 ## Week 5 — Week Five: Shells — Aesthetics
-- slides: 42 total (19 native, 17 moved in, 0 cut from source deck(s), draft=no; patched: +7 reading slides, +1 ChatGPT Images, 4 native slides dropped, 4 images replaced/added, divider and provenance notes removed, UCF spaceship closer)
+- slides: 42 total (19 native, 17 moved in, 0 cut from source deck(s), draft=no)
   - MOVED from 2025 deck 7 slide 5: "(untitled)" — Mitchell part now assigned in Week 5 [vision: Ch.13 'Ask Me Anything', Star Trek Data quote on humor/QA systems]
   - MOVED from 2025 deck 7 slide 6: "(untitled)" — Mitchell part now assigned in Week 5 [vision: Star Trek 'Hello Computer' meme + text on Siri/Alexa understanding limits]
   - MOVED from 2025 deck 7 slide 7: "(untitled)" — Mitchell part now assigned in Week 5 [vision: Watson/Jeopardy Ken Jennings 'human loser' quote and answer clues]
@@ -73,7 +73,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - MOVED from 2025 deck 10 slide 13: "(untitled)" — Noble chapter now assigned in Week 5 [vision: Book section 'The Importance of Google' text from Algorithms of Oppression]
 
 ## Week 6 — Week Six: Shells — Art and Creativity
-- slides: 39 total (11 native, 5 moved in, 7 cut from source deck(s), draft=no; patched: SB 53, Vox, and Science/ELSI news slides cut; reordered as AI image breakdown (GAN, Atlantic, MPR News on the Walker Jeyifous "AI slop" misreading, MIT News attribution decay, Anadol, Menotti, Babylonian Vision), Noble on bias with three sequential Midjourney prompts (beautiful woman, black woman, beautiful black woman) after the search-results slide and the Stanford Review race swap after the advertising slide, then Blood in the Machine job loss into doom (AI Con ch. 6 opening, AP News on AI heads at the UN Security Council, doomer, and alignment passages, Paperclips, The AI Doc, Epstein, three AI Con passages on real harms), closing on three Epoch AI "plunging price of thought" slides; divider and provenance notes removed, descriptions kept as alt text, source lines added)
+- slides: 39 total (11 native, 5 moved in, 7 cut from source deck(s), draft=no)
   - MOVED from 2025 deck 11 slide 13: "(untitled)" — Noble chapter now assigned in Week 6 [vision: Noble quote 'Who Is Responsible for the Results?' Black girls search]
   - MOVED from 2025 deck 11 slide 15: "(untitled)" — Noble chapter now assigned in Week 6 [vision: Noble quote on search engines perpetuating narratives, girls marginalized]
   - MOVED from 2025 deck 11 slide 16: "(untitled)" — Noble chapter now assigned in Week 6 [vision: Peter Morville keyword/long-tail quote used in Noble's book]
@@ -88,7 +88,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - CUT (2025 deck 6 slide 13): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Ch.6 conclusion: real harms vs Doomer/Booster dystopian/utopian visions]
 
 ## Week 7 — Week Seven: Shells — Videos and Animation
-- slides: 40 total (25 native, 5 moved in, 1 cut from source deck(s), draft=no; patched: title slide, then LILY (Gemini) on its own slide; Forbes on Netflix VOID (two quotes) around a VOID explainer video; Wonka's The Golden Ticket trailer, centered, with the source line only; WIRED on Tilly Norwood split into two quotes around her "Take The Lead" music video; Apricitas on the creative class as a quote; Sleep Dealer and the synthetic-performer questions cut; AI Con ch. 7 with the HBR workslop screenshot replaced by UC Today on Meta Muse, the Forbes Flock cover headed "How It Started" followed by "How It's Going" (CBS News, Hawley's STOP Flock Abuse Act), and the ETIH knowledge-graph screenshot replaced by a live LiveBench embed; Lancaster University on AI-NCII as a single quote after the AI Con passages; Noble with alt text and source lines; Willison recommended viewing with the Kakapo party embedded; Land of Jazz exercise slides and "Any Image, Brought to Life" cut; closing on two Meta Muse Realtime Avatar quotes, the Muse "Yeti Smith" clip, then the two Guardian quotes (Dale, Seaborn) on Muse's cuteness; provenance notes removed)
+- slides: 40 total (25 native, 5 moved in, 1 cut from source deck(s), draft=no)
   - MOVED from 2025 deck 14 slide 25: "(untitled)" — Noble chapter now assigned in Week 7 [vision: Quotes Hope Olson's research on bounded search discourses and Venn diagram]
   - MOVED from 2025 deck 14 slide 26: "(untitled)" — Noble chapter now assigned in Week 7 [vision: Text on citation-analysis practices, indexing, and Library of Congress classification]
   - MOVED from 2025 deck 14 slide 27: "(untitled)" — Noble chapter now assigned in Week 7 [vision: Artstor screenshot, Figure 5.5 caption on Damali Ayo's 'Rent-A-Negro']
@@ -97,7 +97,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - CUT (2025 deck 7 slide 4): "(untitled)" — El Eternauta reading removed [vision: Verge article: Netflix used AI for building-collapse scene in The Eternaut]
 
 ## Week 8 — Week Eight: Shells — Perceptions
-- slides: 22 total (13 native, 7 moved in, 10 cut from source deck(s), draft=yes)
+- slides: 29 total (13 native, 7 moved in, 10 cut from source deck(s), draft=no)
   - MOVED from 2025 deck 15 slide 7: "(untitled)" — Noble chapter now assigned in Week 8 [vision: Book covers: Mitchell's Artificial Intelligence and Noble's Algorithms of Oppression (plus AI Con)]
   - MOVED from 2025 deck 15 slide 8: "(untitled)" — Noble chapter now assigned in Week 8 [vision: Chapter heading 'The Future of Information Culture' from Noble's book]
   - MOVED from 2025 deck 15 slide 12: "(untitled)" — Noble chapter now assigned in Week 8 [vision: Noble-style quote on big-data optimism, wake-up call]
@@ -117,7 +117,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - CUT (2025 deck 8 slide 24): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Text: 'how we should convey tasks to machines']
 
 ## Week 9 — Week Nine: Puppet Masters — Distant Coding
-- slides: 16 total (15 native, 0 moved in, 8 cut from source deck(s), draft=yes)
+- slides: 30 total (15 native, 0 moved in, 8 cut from source deck(s), draft=no)
   - CUT (2025 deck 9 slide 7): "the final books" — Code to Joy (Littman) removed from the course [vision: Shows both book covers: Code to Joy and Algorithms of Oppression]
   - CUT (2025 deck 9 slide 8): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Chapter 2 title page 'The What of Programming' from Littman's book]
   - CUT (2025 deck 9 slide 10): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Quote: programming as 'delegation of the will', Littman's voice]
