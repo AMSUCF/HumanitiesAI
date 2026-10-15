@@ -42,6 +42,14 @@ These are the prompts I used to build a cyberpunk "what I've read / viewed / pla
 
     -   *Suggested Modifications*: Change the look to fit your own genre, and keep iterating once the first version works: try a different way of weighting recommendations, a visualization of your ratings, or filters by medium or year. If you add features, mention them explicitly in your next prompt so the model keeps track of them going forward.
 
+### Two Examples
+
+Here's what those two prompts produced on each platform. Claude built [Dead Channel](https://claude.ai/artifact/McRZyc87ZWhLt6TFJbyhhH) as an artifact; ChatGPT built [Neon Archive](https://neon-archive-cyberpunk.profwho.chatgpt.site) as a hosted site. Open both and compare: same prompts, same Wikipedia list, but different interfaces, different counts of works, and different ideas of what a recommendation should be.
+
+![Dead Channel, a Claude artifact: a static-filled header, Index, My log, and Recommend tabs, filters by status, medium, and era, and a list of cyberpunk works from Wikipedia's list with theme tags and five rating cells each](images/weeknine-dead-channel.jpg)
+
+![Neon Archive, a ChatGPT-hosted site: "Log your signal. Find your next." with a neon city graphic, 516 archive files across 10 media channels, and a sidebar for the archive, my log, recommendations, and taste profile](images/weeknine-neon-archive.jpg)
+
 ### Publishing and Sharing
 
 Feel free to expand on or iterate away from the system modeled here: our goal is to explore the process of iterating by combining real data and new interface elements to build interactivity. If you do something that breaks everything, you can always go back to a previous version, so it's fine to experiment.
