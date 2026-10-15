@@ -219,6 +219,27 @@ def _load_env() -> None:
                          f"{'it' if len(lacking) == 1 else 'them'} in {where}")
 
 
+def _deployed_link_map(cfg) -> dict[str, str]:
+    """Absolute Canvas URLs for the pages and files of the last deploy, read
+    from .state.json and .env (no API calls). Simple Syllabus sits outside
+    Canvas, so its links need the full address."""
+    _load_env()
+    state = _load_state()
+    if not state.get("files") or not state.get("syllabus_url"):
+        raise SystemExit(f"no deployed pages in {STATE_FILE}: deploy the course first, "
+                         f"so Simple Syllabus links can point at it in Canvas")
+    stems = cfg["weeks"] + cfg.get("extra", [])
+    pages = {"index": state["syllabus_url"],
+             **{s: state[s]["page_url"] for s in stems if state.get(s, {}).get("page_url")}}
+    files = {rel: r["id"] for rel, r in state["files"].items()}
+    course = (f"{os.environ['CANVAS_API_URL'].rstrip('/')}"
+              f"/courses/{os.environ['CANVAS_COURSE_ID']}")
+    try:
+        return assets.build_link_map(cfg, course, files, pages)
+    except KeyError as e:
+        raise SystemExit(f"{STATE_FILE} has no {e} yet: run deploy.py --all first")
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true")
@@ -246,7 +267,12 @@ def main(argv=None) -> int:
 
     if args.simple_syllabus:
         from simple_syllabus import build_package
-        out = build_package(root / cfg["syllabus_file"], Path("preview"), cfg["site_base"])
+        link_map = _deployed_link_map(cfg) if cfg.get("self_contained") else None
+        unresolved = []
+        out = build_package(root / cfg["syllabus_file"], Path("preview"), cfg["site_base"],
+                            link_map, unresolved)
+        if unresolved:
+            raise SystemExit(f"{out}: no Canvas target for {sorted(set(unresolved))}")
         print(f"simple syllabus package: {out}")
         return 0
 

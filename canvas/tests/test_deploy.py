@@ -959,3 +959,34 @@ def test_live_run_with_broken_anchor_aborts_before_any_write(tmp_path, monkeypat
     with pytest.raises(SystemExit, match="moduleone: #gone"):
         deploy.main(["--week", "moduleone"])
     assert not fake.of("page") and not fake.of("module") and not fake.of("discussion")
+
+
+def test_simple_syllabus_self_contained_links_to_canvas(tmp_path, monkeypatch):
+    # Simple Syllabus sits outside Canvas: links go to the deployed Canvas
+    # pages and files (absolute, from .state.json), never to the website
+    canvas = _sc_course(tmp_path); monkeypatch.chdir(canvas)
+    for k, v in {"CANVAS_API_URL": "https://canvas.test", "CANVAS_API_TOKEN": "t",
+                 "CANVAS_COURSE_ID": "42"}.items():
+        monkeypatch.setenv(k, v)
+    (canvas / ".state.json").write_text(json.dumps({
+        "files": {"slides/moduleone.pptx": {"id": 7, "sha256": "x", "updated_at": "m"}},
+        "syllabus_url": "syllabus", "moduleone": {"page_url": "module-one-x"}}),
+        encoding="utf-8")
+    (tmp_path / "course" / "index.md").write_text(
+        "---\n---\n## Module Schedule\n\n[m](moduleone.md) [s](slides/moduleone.html) "
+        "[p](index.md#ai-use-policy) [e](https://example.org/)\n", encoding="utf-8")
+    assert deploy.main(["--simple-syllabus"]) == 0
+    html = (canvas / "preview" / "simple_syllabus.html").read_text(encoding="utf-8")
+    assert 'href="https://canvas.test/courses/42/pages/module-one-x"' in html
+    assert 'href="https://canvas.test/courses/42/files/7"' in html
+    assert 'href="https://canvas.test/courses/42/pages/syllabus#ai-use-policy"' in html
+    assert 'href="https://example.org/"' in html and "x.y" not in html
+
+
+def test_simple_syllabus_self_contained_needs_a_deploy_first(tmp_path, monkeypatch):
+    import pytest as _pytest
+    canvas = _sc_course(tmp_path); monkeypatch.chdir(canvas)
+    for k in ("CANVAS_API_URL", "CANVAS_API_TOKEN", "CANVAS_COURSE_ID"):
+        monkeypatch.setenv(k, "1")
+    with _pytest.raises(SystemExit, match="deploy the course first"):
+        deploy.main(["--simple-syllabus"])
