@@ -206,8 +206,22 @@ def test_updated_at_discussion_prefers_updated_at():
 
 @responses.activate
 def test_updated_at_file_uses_course_independent_url():
-    responses.get(f"{API}/api/v1/files/7", json={"id": 7, "updated_at": "T3"})
-    assert c42().updated_at("files", 7) == "T3"
+    responses.get(f"{API}/api/v1/files/7",
+                  json={"id": 7, "updated_at": "T3", "modified_at": "M1", "size": 10})
+    assert c42().updated_at("files", 7) == "7@M1#10"
+
+
+@responses.activate
+def test_file_marker_ignores_updated_at_but_sees_replace():
+    # live Canvas bumps updated_at after upload (preview conversion), and a
+    # Replace serves a new id from the old one
+    rec = {"id": 7, "modified_at": "M1", "size": 10}
+    responses.get(f"{API}/api/v1/files/7", json={**rec, "updated_at": "T1"})
+    responses.get(f"{API}/api/v1/files/7", json={**rec, "updated_at": "T2"})
+    responses.get(f"{API}/api/v1/files/7",
+                  json={"id": 8, "modified_at": "M2", "size": 11, "updated_at": "T3"})
+    m = [c42().updated_at("files", 7) for _ in range(3)]
+    assert m[0] == m[1] != m[2]
 
 
 @responses.activate

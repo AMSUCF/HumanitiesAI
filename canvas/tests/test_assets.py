@@ -151,9 +151,8 @@ def test_overwrite_reuploads_missing_and_edited(tmp_path):
         root, cfg, state = _synced(_mk(tmp_path, str(live)))
         c = FakeClient(live_updated=live)
         assets.sync_assets(c, cfg, root, state, overwrite=True)
-        # a deleted file comes back even if unchanged here; an edited one only if changed
-        want = ["a.png", "moduleone.pptx"] if live is None else ["moduleone.pptx"]
-        assert sorted(c.uploads) == want
+        # a deleted or replaced file comes back even if unchanged here
+        assert sorted(c.uploads) == ["a.png", "moduleone.pptx"]
 
 
 def test_upload_without_updated_at_fetches_it(tmp_path):
@@ -166,3 +165,16 @@ def test_upload_without_updated_at_fetches_it(tmp_path):
 
 def _mk(base, name):
     d = base / name; d.mkdir(); return d
+
+
+def test_replaced_file_returns_the_id_canvas_now_serves(tmp_path):
+    # live: a Replace gives the deck a new id; the old id redirects to it and
+    # the module File item moves to it, so pages and modules must use it
+    root = _course(tmp_path); cfg = {**CFG, "self_contained": True}
+    state = {}
+    assets.sync_assets(FakeClient(live_updated="5@M1#3"), cfg, root, state)
+    files, _, _ = assets.sync_assets(FakeClient(live_updated="9@M2#4"), cfg, root, state)
+    assert files["slides/moduleone.pptx"] == 9
+    assert state["files"]["slides/moduleone.pptx"]["id"] == 5     # kept as recorded
+    files, _, _ = assets.sync_assets(FakeClient(live_updated="5@M1#3"), cfg, root, state)
+    assert files["slides/moduleone.pptx"] == 5                     # untouched: stored id

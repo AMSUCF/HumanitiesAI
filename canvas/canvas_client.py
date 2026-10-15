@@ -213,7 +213,11 @@ class CanvasClient:
         (kind "pages", "discussion_topics", "assignments", "files"); None
         on 404.
 
-        Pages, assignments and files return `updated_at` as written. Discussion topics may
+        Pages and assignments return `updated_at` as written. A file returns
+        "<id>@<modified_at>#<size>" of what Canvas serves for `ref`: Canvas
+        bumps a file's updated_at by itself (preview conversion), and a
+        Replace gives the file a new id that the old id redirects to.
+        Discussion topics may
         not expose `updated_at`, so fall back to "sha:" + sha256 of a stable
         JSON of the title, message and the assignment's due_at,
         points_possible, lock_at and unlock_at: an edit to any of them in
@@ -227,6 +231,8 @@ class CanvasClient:
             return None
         r.raise_for_status()
         body = r.json()
+        if kind == "files":
+            return f"{body.get('id')}@{body.get('modified_at')}#{body.get('size')}"
         if kind == "discussion_topics" and not body.get("updated_at"):
             a = body.get("assignment") or {}
             content = {"title": body.get("title"), "message": body.get("message") or "",

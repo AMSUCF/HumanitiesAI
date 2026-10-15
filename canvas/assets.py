@@ -97,7 +97,7 @@ def sync_assets(client, cfg, root, state, overwrite=False):
     found = find_assets(cfg, root)
     check_decks_fresh(root)
     known = state.setdefault("files", {})
-    missing = set()
+    missing, served = set(), {}
     for rel, path in found.items():
         rec, sha = known.get(rel), _sha(path)
         # every known file is checked live, changed locally or not, so a file
@@ -112,16 +112,20 @@ def sync_assets(client, cfg, root, state, overwrite=False):
             missing.add(rel)
             continue
         if rec and live is not None and rec["sha256"] == sha:
-            if live != rec["updated_at"]:
+            if live == rec["updated_at"]:
+                continue
+            if not overwrite:
                 print(f"[edited in Canvas] {rel} was replaced in Canvas Files; kept")
-            continue      # unchanged here; a different live stamp is the GTA's version
+                served[rel] = _served_id(live, rec["id"])
+                continue  # unchanged here; a different live marker is the GTA's version
         if rec and not overwrite and live != rec["updated_at"]:
             print(f"[edited in Canvas] {rel} was replaced in Canvas Files; not re-uploaded "
                   f"(pass --overwrite-canvas-edits to upload the repo copy over it)")
+            served[rel] = _served_id(live, rec["id"])
             continue
         ctype = PPTX_TYPE if path.suffix == ".pptx" else IMAGE_TYPES[path.suffix.lower()]
         out = client.upload_file(path, FOLDERS[rel.split("/")[0]], ctype)
-        stamp = out.get("updated_at") or client.updated_at("files", out["id"])
+        stamp = client.updated_at("files", out["id"])   # same form as the live check
         known[rel] = {"id": out["id"], "sha256": sha, "updated_at": stamp}
         print(f"uploaded: {rel}")
     pages = {"index": state.get("syllabus_url") or client.find_or_create_page("Syllabus")}
@@ -134,7 +138,15 @@ def sync_assets(client, cfg, root, state, overwrite=False):
             pages[f"{stem}:lecture"] = st.get("lecture_url") or client.find_or_create_page(
                 f"{_label(root, stem)} Readings + Lecture")
             st["lecture_url"] = pages[f"{stem}:lecture"]
-    return {rel: r["id"] for rel, r in known.items()}, pages, missing
+    return {rel: served.get(rel, r["id"]) for rel, r in known.items()}, pages, missing
+
+
+def _served_id(marker, stored_id):
+    """The id Canvas now serves for a kept file. A Replace gives the file a
+    new id; the old one redirects, but module File items move to the new
+    one, so pages and module items must use it."""
+    head = str(marker).split("@", 1)[0]
+    return int(head) if "@" in str(marker) and head.isdigit() else stored_id
 
 
 def _title(root, stem):
