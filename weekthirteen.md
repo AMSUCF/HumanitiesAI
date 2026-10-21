@@ -31,9 +31,9 @@ This week, we're going to revisit the distant reading we did in Week Four, but n
 - [Bootstrap 5](https://getbootstrap.com/) is a CSS framework for creating responsive web interfaces.
 - [D3.js](https://d3js.org/) is a JavaScript library for creating interactive data visualizations.
 
-You might find it helpful to look at documentation for these libraries, or even web scraping and distant reading tutorials in Python, for ideas of things to try. Choose one of the two options below for building your pipeline: Claude Code for the web, or Claude Code for your desktop.
+You might find it helpful to look at documentation for these libraries, or even web scraping and distant reading tutorials in Python, for ideas of things to try. Choose one of the two options below for building your pipeline: Claude Code or Codex on the web, or Claude Code for your desktop.
 
-### Option One: Building Your Distant Reading System with Claude Code Web
+### Option One: Building Your Distant Reading System with Claude Code or Codex on the Web
 
 Before you start, choose five to ten related texts for your analysis and download them as .txt files from [Project Gutenberg](https://www.gutenberg.org/). Download them individually rather than scripting bulk downloads — Project Gutenberg has [rules about robots](https://www.gutenberg.org/policy/robot_access.html). Consider selecting texts that share a common theme, genre, author, or time period, so your comparative analysis has something real to say.
 
@@ -43,9 +43,9 @@ Once you have your texts:
 
 2. **Upload your Project Gutenberg texts** to the repository.
 
-3. **Open Claude Code Web** at [claude.ai/code](https://claude.ai/code) and connect it to your new repository. If you need the full walkthrough for generating a fine-grained personal access token and the rest of the connection mechanics, refer back to [Week Ten](weekten.md) — that page has the complete steps, and they haven't changed since then.
+3. **Open Claude Code on the web** at [claude.ai/code](https://claude.ai/code) **or Codex** at [chatgpt.com/codex](https://chatgpt.com/codex) and connect it to your new repository. If you need the connection steps, refer back to [Week Ten](weekten.md); if you gave the agent access to only specific repositories, add this new one on GitHub under **Settings → Applications → Installed GitHub Apps → Configure**.
 
-4. **Enter plan mode** by asking Claude to create a plan, the same way you did in previous weeks. Work conversationally through a similar series of prompts and clarifying questions to develop:
+4. **Enter plan mode** by asking the agent to create a plan, the same way you did in previous weeks. Work conversationally through a similar series of prompts and clarifying questions to develop:
    - A Python analysis script that processes your texts
    - An interactive web interface for visualizing the results
 
@@ -59,7 +59,7 @@ In this week's demo, I'll show you how to work locally with [Claude Code for you
 
 This week's readings turn the distant-reading question back on the tool doing the reading. ["Generative AI & Fictionality: How Novels Power Large Language Models"](https://arxiv.org/pdf/2603.01220) and ["AI as a Tool for Simulation-Based Experiments in Literary Studies"](https://arxiv.org/pdf/2606.02293) are recent scholarship on how digital humanists are actually using — and critiquing — LLMs for literary study right now, not in the abstract. Read them alongside your own pipeline results: where do these authors see LLMs opening up genuinely new kinds of literary analysis, and where are they skeptical? Does your experience building a sentiment/topic/style pipeline this week match their optimism, their skepticism, or some mix of both? And circle back to Week Four's Bamman, Underwood, and Smith piece on the literary canon large language models absorb — did your pipeline's choices (which texts got flagged as "on-topic," which stylistic patterns got treated as significant) show any of the same canon-shaped assumptions, now baked into code instead of a conversational answer?
 
-As you work through the analysis, consider how the relationship with text in distant reading connects to the other ways we've worked with AI, in both text and code, throughout the semester. Push for visualizations that mean something to you, not just ones that render. What did the computational approach reveal about your chosen texts that a single conversational pass with Claude wouldn't have? How did working with an AI agent to build the whole pipeline change your process compared to Week Four's more conversational distant-reading pass? After these multiple explorations with Claude Code, how do you feel about the use of agents in the larger context of labor, particularly given the tensions raised in this week's readings on AI and literary scholarship?
+As you work through the analysis, consider how the relationship with text in distant reading connects to the other ways we've worked with AI, in both text and code, throughout the semester. Push for visualizations that mean something to you, not just ones that render. What did the computational approach reveal about your chosen texts that a single conversational pass with Claude wouldn't have? How did working with an AI agent to build the whole pipeline change your process compared to Week Four's more conversational distant-reading pass? After these multiple explorations with Claude Code and Codex, how do you feel about the use of agents in the larger context of labor, particularly given the tensions raised in this week's readings on AI and literary scholarship?
 
 Finally, one last gesture at the epigraph — reading at this scale really is a parallel system of memory and thought — alongside the *AI for Good* Epilogue: does distant reading belong on Tyrangiel's list of constructive uses, or does something get lost when the reading itself is delegated to an agent?
 

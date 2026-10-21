@@ -282,8 +282,9 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 ### Week Ten: Puppet Masters - Building and Deploying (Monday, October 26 - Sunday, November 1)
 
 -   [**Slides: Week Ten**](slides/weekten.html)
--   *AI for Good* - Chapter 2: "Physician Heal Thyself"
--   [Willison, Simon. "Vibe engineering." October 7, 2025.](https://simonwillison.net/2025/Oct/7/vibe-engineering/) *(Willison flags "agentic engineering" as the settling term for this concept -- we'll discuss both.)*
+-   *AI for Good* - Chapter 2: "Physician, Heal Thyself"
+-   [Willison, Simon. *Agentic Engineering Patterns.* 2026.](https://simonwillison.net/guides/agentic-engineering-patterns/) Read sections 2.2 (["Using Git with coding agents"](https://simonwillison.net/guides/agentic-engineering-patterns/using-git-with-coding-agents/)) and 2.3 (["Subagents"](https://simonwillison.net/guides/agentic-engineering-patterns/subagents/)).
+-   *(PDF in Webcourses):* [Dave, Paresh. "AI Hacks Leave a Mess That AI Companies Aren't Paying For." *WIRED.* October 15, 2026.](https://www.wired.com/story/ai-hacks-leave-a-mess-that-ai-companies-arent-cleaning-up/)
 -   [**Exercise: Building and Deploying**](weekten.md)
 
 ### Week Eleven: Puppet Masters - Agentic Code (Monday, November 2 - Sunday, November 8)
