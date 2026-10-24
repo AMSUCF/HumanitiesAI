@@ -291,9 +291,9 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 -   [**Slides: Week Eleven**](slides/weekeleven.html)
 -   *AI for Good* - Chapter 3: "A Republic If You Can Optimize"
--   [Willison, Simon. "Designing agentic loops." September 30, 2025.](https://simonwillison.net/2025/Sep/30/designing-agentic-loops/)
+-   [Willison, Simon. "Battle Drones—a vibe coded RTS with audio-based multiplayer." October 20, 2026.](https://simonwillison.net/2026/Oct/20/battledrones/)
 -   [Martin, Meredith. "Command Lines for the Humanities." *PMLA/Publications of the Modern Language Association of America.* 2024;139(3):541-547. doi:10.1632/S0030812924000555](https://www.cambridge.org/core/journals/pmla/article/command-lines-for-the-humanities/097F959E6971063D05B085E698354BA2)
--   [**Exercise: Agentic Code**](weekeleven.md)
+-   [**Exercise: Iteration and Subagents**](weekeleven.md)
 
 ### Week Twelve: Puppet Masters - Local Ghosts (Monday, November 9 - Sunday, November 15)
 
