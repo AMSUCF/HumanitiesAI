@@ -65,6 +65,14 @@ When you're happy, merge the pull request into `main`.
 
 Want a change? Prompt again, review the new pull request, merge, and reload. Each round adds to the history.
 
+### Two Examples
+
+Here's what each tool built from the same idea, a twenty-question Halloween quiz that recommends three to five classic horror films. Codex built [Midnight Marquee](https://anastasiasalter.net/CodexDemo/) ([repository](https://github.com/AMSUCF/CodexDemo)); Claude Code built [Midnight Matinee](https://anastasiasalter.net/ClaudeHorrorDemo/) ([repository](https://github.com/AMSUCF/ClaudeHorrorDemo)). In both, I uploaded the same grim reaper and zombie clip art partway through and asked the agent to work it in. Open the sites, then open the commit histories: the Codex commits list me as the author, while the Claude Code commits list Claude.
+
+![Midnight Marquee, built with Codex: a dark, minimal cinema page reading "Everyone has a type of terror," with an "Admit One" ticket showing the grim reaper beside the first act of quiz questions](images/weekten-midnight-marquee-codex.jpg)
+
+![Midnight Matinee, built with Claude Code: a marquee title card framed by red curtains, "The Bijou Picture House proudly presents," with the zombie peeking over the sign and the grim reaper asking for "Cash, card... or soul" next to an "Admit One" button](images/weekten-midnight-matinee-claude.jpg)
+
 **For full credit, your discussion post must include:**
 
 -   the link to your live GitHub Pages site;
