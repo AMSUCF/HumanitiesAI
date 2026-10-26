@@ -128,7 +128,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - CUT (2025 deck 9 slide 18): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Quote comparing coding to learning an alien language, book text]
 
 ## Week 10 — Week Ten: Puppet Masters — Building and Deploying
-- slides: 29 total (27 native, 0 moved in, 12 cut from source deck(s), draft=yes)
+- slides: 43 total (27 native, 0 moved in, 12 cut from source deck(s), draft=no)
   - CUT (2025 deck 10 slide 16): "(untitled)" — Sora discontinued; tool references removed [vision: Article headline about OpenAI's Sora deepfakes of dead historical figures]
   - CUT (2025 deck 10 slide 17): "(untitled)" — Sora discontinued; tool references removed [vision: Text on Sora deepfakes of Robin Williams, MLK, Carlin, Hawking]
   - CUT (2025 deck 10 slide 19): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Chapter 3 title page 'Sequencing Commands' from Code to Joy]
@@ -143,7 +143,7 @@ Every cut and relocation below is machine-made and awaiting instructor review. D
   - CUT (2025 deck 11 slide 10): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Book text on decision trees, Occam's razor]
 
 ## Week 11 — Week Eleven: Puppet Masters — Agentic Code
-- slides: 18 total (17 native, 0 moved in, 12 cut from source deck(s), draft=yes)
+- slides: 27 total (17 native, 0 moved in, 12 cut from source deck(s), draft=no)
   - CUT (2025 deck 12 slide 2): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Chapter 5 title page 'Storing in Variables', Code to Joy]
   - CUT (2025 deck 12 slide 4): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Snow White/Dwarfs variables example, Code to Joy ch.5]
   - CUT (2025 deck 12 slide 6): "(untitled)" — Code to Joy (Littman) removed from the course [vision: Continues Snow White dwarf-count variables example]
