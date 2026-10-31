@@ -53,7 +53,7 @@ You can reference the [complete development process](https://github.com/AMSUCF/c
 
 ### Option Two: Working Locally with Claude Code for Desktop
 
-In this week's demo, I'll show you how to work locally with [Claude Code for your desktop](https://docs.claude.com/en/docs/claude-code/installation) to accomplish this same task. Installing Claude Code is not required, but it's recommended if you're interested in exploring computational work, or the kind of subagent workflows described in some of this week's readings — there's an option to continue working with subagents in next week's extra-credit module.
+In this week's demo, I'll show you how to work locally with [Claude Code for your desktop](https://docs.claude.com/en/docs/claude-code/installation) to accomplish this same task. Installing Claude Code is not required, but it's recommended if you're interested in exploring computational work, or the kind of subagent workflows described in some of this week's readings — there's an option to work with subagents in next week's extra-credit module.
 
 ### Discussion
 
