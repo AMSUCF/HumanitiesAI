@@ -299,8 +299,9 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 
 -   [**Slides: Week Twelve**](slides/weektwelve.html)
 -   *AI for Good* - Chapter 4: "Only Connect"
--   [Willison, Simon. "The lethal trifecta for AI agents: private data, untrusted content, and external communication." June 16, 2025.](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/)
--   [DeepSeek-R1 model card.](https://huggingface.co/deepseek-ai/DeepSeek-R1)
+-   [Willison, Simon. "The October inflection point for vibe game development." October 28, 2026.](https://simonwillison.net/2026/Oct/28/vibe-game-development/)
+-   [Masnick, Mike. "Sam Altman's Case Against Your RAM Is Efficient. That's the Problem." *Techdirt.* November 2, 2026.](https://www.techdirt.com/2026/11/02/sam-altmans-case-against-your-ram-is-efficient-thats-the-problem/)
+-   [Ford, Paul. "The Web Is More Than Enough." *The Aboard Newsletter* (Ftrain). October 21, 2026.](https://ftrain.com/aboard-the-web-is-more-than-enough)
 -   [**Exercise: Local Models**](weektwelve.md)
 
 ### Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, November 22)
