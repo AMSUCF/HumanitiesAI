@@ -179,6 +179,19 @@ def test_video_embed_regex_matches_canvas_media_iframe():
     assert "rest" not in m.group(0)
 
 
+def test_video_embed_regex_matches_iframe_left_inside_placeholder_em():
+    # week twelve, Nov 8 2026: the editor kept the placeholder's <em> around
+    # the uploaded video, the old regex missed it, and a deploy wiped the video
+    live = ('<h2>Lecture</h2>\n<p><em><iframe style="width: 480px;" '
+            'title="Video player for HumanitiesAI_Twelve.mp4" data-media-type="video" '
+            'src="https://webcourses.ucf.edu/media_attachments_iframe/1?x=1">'
+            '</iframe></em></p>\n<p><strong>Slides:</strong></p>')
+    m = deploy.VIDEO_EMBED_RE.search(live)
+    assert m and m.group(0).startswith("<p><em><iframe")
+    assert m.group(0).endswith("</iframe></em></p>")
+    assert "Slides" not in m.group(0)
+
+
 
 def test_plan_week_uses_late_hours(tmp_path):
     wk = tmp_path / "moduleone.md"

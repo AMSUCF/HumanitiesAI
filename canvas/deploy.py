@@ -22,8 +22,10 @@ GUIDE_TITLE = "Instructor Guide (not visible to students)"
 
 # an uploaded Canvas video embed, hand-placed on a live lecture page —
 # deploys keep it in place of the placeholder paragraph
+# (Canvas's editor may leave it inside the placeholder's <em>)
 VIDEO_EMBED_RE = re.compile(
-    r'<p><iframe[^>]*data-media-type="video".*?</iframe></p>', re.DOTALL)
+    r'<p>(?:<(?:em|strong|span)[^>]*>)*<iframe[^>]*data-media-type="video"'
+    r'.*?</iframe>(?:</(?:em|strong|span)>)*</p>', re.DOTALL)
 
 
 def now_et() -> datetime:
@@ -507,11 +509,16 @@ def main(argv=None) -> int:
                         if video:
                             lecture_html = lecture_html.replace(
                                 p["lecture_placeholder"], video.group(0))
-                        record(st, "lecture_url",
-                               client.upsert_page(p["lecture_title"], lecture_html,
-                                                  args.publish,
-                                                  known_url=st.get("lecture_url")),
-                               "lecture_updated", "pages", p["lecture_title"])
+                        if live and not video and 'data-media-type="video"' in live:
+                            # a video we can't lift out cleanly: never wipe it
+                            print(f"  [kept] {p['lecture_title']}: live video "
+                                  "embed not in the expected spot; page left as is")
+                        else:
+                            record(st, "lecture_url",
+                                   client.upsert_page(p["lecture_title"], lecture_html,
+                                                      args.publish,
+                                                      known_url=st.get("lecture_url")),
+                                   "lecture_updated", "pages", p["lecture_title"])
                     if skip != "missing":
                         pos = place(module_id, st, "Page", st["lecture_url"],
                                     p["lecture_title"], pos)
