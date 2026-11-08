@@ -31,8 +31,8 @@ Choose **one** of two options. Option One installs software and runs a model on 
 [Ollama](https://ollama.com/) is a free application for downloading open-weight models and running them on your own computer, with a chat window not unlike the browser-based chatbots we've been using.
 
 1. **Find your specs.** Look up your operating system, processor (or Apple chip), amount of RAM, graphics card and its memory (VRAM) if you have one, and free disk space. On a Mac, open the Apple menu → **About This Mac**. On Windows, go to **Settings → System → About**, and check **Task Manager → Performance** for your GPU.
-2. **Ask for a recommendation.** Give those specs to Claude or ChatGPT and ask it to suggest a model to run in Ollama. Turn on web search and ask it to check [Ollama's model library](https://ollama.com/library), since chatbots' knowledge of newer models can be out of date. Ask why it chose that model, what size it is, and what you give up compared to a larger one. Models range from about 1GB to well over 40GB, and the rough rule is that a model needs to fit in your RAM (or VRAM) with room to spare.
-3. **Install Ollama** from [ollama.com](https://ollama.com/) and download the recommended model, either from the model menu in Ollama's chat window or with `ollama run <model name>` in a terminal. Large downloads can take a while, so start early.
+2. **Ask for a recommendation.** Give those specs to Claude or ChatGPT and ask it to suggest a model to run in Ollama. Turn on web search and ask it to check [Ollama's model library](https://ollama.com/library), since chatbots' knowledge of newer models can be out of date. Ask why it chose that model, what size it is, and what you give up compared to a larger one. Models range from about 1GB to well over 40GB, and the rough rule is that a model needs to fit in your RAM (or VRAM) with room to spare. If you're not sure, or your computer has no graphics card with its own memory, Google's Gemma 4 E4B (`gemma4:e4b`), the 4-billion-parameter version I use in the video, is a good default for lower-RAM machines, and it's the one chatbots will most often suggest.
+3. **Install Ollama** from [ollama.com](https://ollama.com/). You don't need the terminal command on the download page: download the installer (the .exe on Windows, the .dmg or zip on Mac) and install it like any other app. Then download the recommended model, either from the model menu in Ollama's chat window or with `ollama run <model name>` in a terminal. Large downloads can take a while, so start early.
 4. **Test it.** Turn off your Wi-Fi and confirm the model still answers. Then put it through its paces: try the kinds of prompts you've used in earlier weeks, and give a few of the same prompts to Claude or ChatGPT to compare speed, quality, and refusals. Look up the model card on Hugging Face or Ollama to see whose model it is, how it was trained, and under what license. A model trained in one country or by one company may handle contentious questions very differently from another, so see if you can find points of friction. If you chose a reasoning model, read the "thinking" it shows before its answer.
 
 **For full credit**, share screenshots of the model-recommendation conversation and of your local model interactions (at least two).
@@ -46,14 +46,28 @@ Choose **one** of two options. Option One installs software and runs a model on 
 
    > Build a single-page HTML app that uses Transformers.js to run a small instruct language model entirely in the browser, preferring WebGPU and falling back to WASM. The model voices this character: [your character description]. Recommend the smallest model that can hold the character's voice, and tell me its download size. Include a "Download model" button with a progress bar, a short note explaining to visitors that the model is downloaded once and then runs entirely on their device, and a chat window styled to fit the character. Keep the conversation history short so the model doesn't run out of context.
 
-3. **Deploy it.** Put the page in a public GitHub repository and turn on GitHub Pages, as you did in [Week Ten](weekten.md); you can also build it directly in Claude Code on the web or Codex there. Pages that load models need to be served from a web address rather than opened as a file, and WebGPU works best in a current version of Chrome or Edge.
-4. **Test it.** Download the model and chat with your character. How well does a tiny model hold a voice? When does it break character, repeat itself, or make things up? Try asking for a slightly larger model and compare the download size, speed, and quality. This is the tradeoff the cloud hides from you.
+   Once the page is built, follow up with a second prompt to get it ready for publishing:
 
-**For full credit**, share screenshots of your interactions with the character (at least two) and the link to your deployed page.
+   > Make any changes necessary to optimize this for deployment on GitHub Pages.
+
+3. **Deploy it.** The easiest route is the one in the video: create a new, empty public repository and open it in Claude Code on the web or Codex, as you did in [Week Ten](weekten.md), and run both prompts there. (If you built the page in a regular chat instead, upload it to a new public repository.) Then:
+   - Make sure the agent's work is committed and pushed to `main`, merging its pull request if it opened one. Codex sometimes treats its own preview environment as the finished product, so you may need to ask it to commit and push.
+   - The GitHub Pages prompt usually adds an automatic deployment workflow. If it did, go to **Settings → Pages** and set **Source** to **GitHub Actions**, not **Deploy from a branch** as in Week Ten. (A plain HTML page you uploaded yourself, with no workflow, can still use Deploy from a branch.)
+   - If the first deployment failed because Pages wasn't turned on yet, open the **Actions** tab, select the failed run, and click **Re-run all jobs**. If you get stuck, paste the error or a screenshot back to the agent.
+   - Your page's link appears under **Settings → Pages**. Pages that load models need to be served from a web address rather than opened as a file, and WebGPU works best in a current version of Chrome or Edge.
+4. **Test it.** Download the model and chat with your character. How well does a tiny model hold a voice? When does it break character, repeat itself, or make things up? Try asking for a slightly larger model and compare the download size, speed, and quality. This is the tradeoff the cloud hides from you. Test the page in a private or incognito window too: if the model download fails with an unauthorized or access error, the page is probably using a Hugging Face download path that requires a login, so paste the error to the agent and ask it to use a public download path that works for anyone. You can also reshape the character yourself: the voice description and rules live in a file in your repository, which you can change with GitHub's **Edit this file** button.
+
+Here are two samples that use the Cheshire Cat as the character. Claude Code built [The Cheshire Cat](https://anastasiasalter.net/ClaudeSmallModel/), which runs LFM2.5-350M (about 300 MB); Codex built [The Cheshire Room](https://anastasiasalter.net/SmallModelDemo/), which runs SmolLM2-135M Instruct (about 200 MB). Download each model, ask the cat the same questions, and compare how the two tiny models hold the voice.
+
+![The Cheshire Cat, built with Claude Code: a grin and two eyes float over a dark purple striped background above the title. A "Before you ask" panel explains that the LFM2.5-350M model, about 300 MB, downloads once and runs entirely on your device, notes that WebGPU is available, and offers a gold "Download model" button. Below, the Cat's first message reads "Oh, you can see me. Most people only notice the grin."](images/weektwelve-cheshire-cat-claude.jpg)
+
+![The Cheshire Room, built with Codex: a light, cream-colored page with a sidebar reading "A little curious. Entirely yours." and a card for SmolLM2 Instruct (135M, 4-bit, about 200 MB) with a purple "Download model" button. The main panel shows a grinning purple cartoon cat over the heading "We're all curious here." and the cat's opening line, "Oh, there you are."](images/weektwelve-cheshire-room-codex.jpg)
+
+**For full credit**, share the link to your own deployed character chat on GitHub Pages.
 
 ### Discussion
 
-Share which option you chose, which model you ran and why, and your screenshots (plus your page link for Option Two). Then reflect:
+Share which option you chose and which model you ran and why, along with your screenshots (Option One) or the link to your character chat (Option Two). Then reflect:
 
 - What did you learn about the tradeoffs of running a model yourself — in memory, download size, speed, quality, and privacy — that the cloud tools hide? Tyrangiel argues that "what you decide not to do" with AI is part of how users shape it. Did this week change what you'd decide to use, or not use?
 - Altman frames local inference as an inefficient use of scarce memory; Masnick frames it as a question of control. Which argument persuades you more after this week, and what did you give up, in capability, convenience, or context, to keep the model on your own device?
@@ -61,5 +75,5 @@ Share which option you chose, which model you ran and why, and your screenshots 
 
 ### Grading
 
-- **4 points:** your discussion post with your screenshots (at least two of your model interactions) and reflection, plus your page link for Option Two.
+- **4 points:** your discussion post and reflection, with your screenshots for Option One (the model-recommendation conversation and at least two local model interactions) or the link to your deployed character chat for Option Two.
 - **2 points:** two replies to peers (1 point each).
