@@ -16,9 +16,9 @@ canvas:
 
 > "And where does the newborn go from here? The net is vast and infinite." — the merged Kusanagi/Puppet Master entity, closing line of [*Ghost in the Shell* (1995)](https://en.wikiquote.org/wiki/Ghost_in_the_Shell_(film))
 
-Kusanagi spent the whole film asking whether there was "a program called 'me.'" By the closing line she isn't asking anymore — she's answered the question by becoming something neither Kusanagi nor the Puppet Master was on its own, and all that's left to wonder is where that newborn thing goes from here. This coda asks the same question of the bots you've built and talked to all semester. We opened in Week One with ELIZA, a scripted ghost running Weizenbaum's old pattern-matching script, mouthing sympathy it didn't have. We're closing with you building your own: a Skill, a subagent, or a small fine-tuned model trained on texts you choose — something that, like the Puppet Master, might exceed the instructions you gave it.
+Kusanagi spent the whole film asking whether there was "a program called 'me.'" By the closing line she isn't asking anymore — she's answered the question by becoming something neither Kusanagi nor the Puppet Master was on its own, and all that's left to wonder is where that newborn thing goes from here. This coda asks the same question of the bots you've built and talked to all semester. We opened in Week One with ELIZA, a scripted ghost running Weizenbaum's old pattern-matching script, mouthing sympathy it didn't have. We're closing with you building your own: a Skill, a local model you try out at CHDR, or a small fine-tuned model trained on texts you choose — something that, like the Puppet Master, might exceed the instructions you gave it.
 
-**This module is entirely extra credit, and it is the last content module of the semester.** It opens Monday, November 30, right after Thanksgiving break, and is due Sunday, December 6. There are three independent tiers below, worth different point values, and you can attempt one, two, or all three: **Option One, Claude Skills, is worth up to 6 points; Option Two, Claude Code subagents, is worth up to 6 points; Option Three, fine-tuning your own model, is worth up to 10 points.** None of it is required — engage as much or as little as fits your goals and your current grade. Once this module closes, the only work left is the **Final Reflection, due Thursday, December 10,** during finals week.
+**This module is entirely extra credit, and it is the last content module of the semester.** It opens Monday, November 30, right after Thanksgiving break, and is due Sunday, December 6. There are three independent tiers below, worth different point values, and you can attempt one, two, or all three: **Option One, Claude Skills, is worth up to 6 points; Option Two, trying a local model at CHDR, is worth up to 6 points; Option Three, fine-tuning your own model, is worth up to 10 points.** None of it is required — engage as much or as little as fits your goals and your current grade. Once this module closes, the only work left is the **Final Reflection, due Thursday, December 10,** during finals week.
 
 ## Exercise: Custom Bots
 
@@ -34,13 +34,9 @@ As with your previous work with Claude, make sure to be as precise as possible. 
 
 Once Claude creates the skill, it will provide the file as a .zip. Save that and return to the settings page: select "Upload Skill" under settings, and upload your file. Make sure the skill is activated, and return to the chatbot. Prompt your own skill tool using the name listed in "skills," and test some outputs. Did it change the defaults you typically get from Claude? Was your intention realized?
 
-### Option Two: Claude Code Subagents (Extra Credit up to 6 points)
+### Option Two: A Local Model at CHDR (Extra Credit up to 6 points)
 
-This option requires Claude Code to be installed on your computer: unfortunately, it takes advantage of capabilities that the web version doesn't have, as the agents and their instructions are stored on your own hard drive. For this exercise, first open your terminal or command line and navigate to an empty folder, then type "claude" to start.
-
-Type "/agents" and press enter to launch the agents interface. Select "Create new agent" and press enter. I recommend adding the agent to "Personal" so that you can make use of it in the future, particularly if you have a concept for some customization that might be useful: for instance, you might build an agent dedicated to fixing the front-end design of a site, rather like the Skills option above. For examples, check out [this collection of Claude Code subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) and [this collection of quality-assurance agents, including "reality check Karen"](https://github.com/darcyegb/ClaudeCodeAgents).
-
-To run the agent in the future, invoke it in your prompts by using the name under which your agent was saved. Iterate and test your results, and consider refining the agent's description (stored on your computer as a Markdown file in the directory you specified). As before, try it out: was your intention realized?
+For this option, you'll try out a local model at UCF's Center for Humanities and Digital Research (CHDR). Details are coming soon.
 
 ### Option Three: Fine-Tuning (Extra Credit up to 10 points)
 
@@ -107,7 +103,7 @@ It might take some time to install your model, but after it downloads, you can r
 However far you got this week, connect it back to two points from earlier in the semester: the ELIZA conversation you had in Week One, and the Puppet Master presiding over the whole Puppet Masters unit.
 
 - If you built a **Skill**: did it change the defaults you typically get from Claude? Was your intention realized, or did Claude's read of your instructions surprise you?
-- If you built a **subagent**: what did you name it, what did you ask it to do, and did it stay inside those instructions or wander outside them the way the Puppet Master eventually did?
+- If you tried a **local model at CHDR**: what did you run, and how did it compare to the local models from Week Twelve? Did it stay inside your instructions, or wander outside them the way the Puppet Master eventually did?
 - If you **fine-tuned a model**: what did training on a century of pre-Kusanagi machine-mind anxiety — Shelley's Creature, Čapek's robots, von Harbou's Maria, Bierce's chess automaton, Hoffmann's Olimpia, Ellis's steam man — produce, once it started generating its own sentences? Did it sound like any one of those six texts in particular, or like something new stitched out of all of them?
 
 Compare whichever experience you chose to the bot interactions we had at the start of the semester. ELIZA's replies were fully pre-scripted; the Puppet Master's were not, and by the film's end it isn't clear that "scripted" and "not scripted" is even the right line to draw anymore. Where does your own custom bot fall on that line — closer to ELIZA's script, or closer to something that occasionally does what you didn't tell it to?

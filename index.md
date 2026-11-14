@@ -30,7 +30,7 @@ title: Humanities in the Age of AI
   - [Week Ten: Puppet Masters - Building and Deploying (Monday, October 26 - Sunday, November 1)](#week-ten-puppet-masters---building-and-deploying-monday-october-26---sunday-november-1)
   - [Week Eleven: Puppet Masters - Agentic Code (Monday, November 2 - Sunday, November 8)](#week-eleven-puppet-masters---agentic-code-monday-november-2---sunday-november-8)
   - [Week Twelve: Puppet Masters - Local Ghosts (Monday, November 9 - Sunday, November 15)](#week-twelve-puppet-masters---local-ghosts-monday-november-9---sunday-november-15)
-  - [Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, November 22)](#week-thirteen-puppet-masters---distant-reading-with-and-for-ai-monday-november-16---sunday-november-22)
+  - [Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, December 6)](#week-thirteen-puppet-masters---distant-reading-with-and-for-ai-monday-november-16---sunday-december-6)
   - [Thanksgiving Break (No Module, November 23 - 27)](#thanksgiving-break-no-module-november-23---27)
   - [Week Fourteen: The Net Is Vast and Infinite - Custom Bots (Extra Credit, Monday, November 30 - Sunday, December 6)](#week-fourteen-the-net-is-vast-and-infinite---custom-bots-extra-credit-monday-november-30---sunday-december-6)
   - [Final Reflection (Due Thursday, December 10)](#final-reflection-due-thursday-december-10)
@@ -151,9 +151,10 @@ please reach out to the instructor immediately.
 There is an extra credit making exercise available in Week 14 ("The
 Net Is Vast and Infinite" -- Custom Bots) for those who miss a week or
 want to push further with agentic tools: up to 6 points for building
-and sharing a custom Claude Skill, up to 6 points for building and
-sharing a subagent workflow, and up to 10 points for fine-tuning a
-small model on the semester's public-domain corpus. Grades will be
+and sharing a custom Claude Skill, up to 6 points for trying a local
+model at UCF's Center for Humanities and Digital Research (CHDR), and
+up to 10 points for fine-tuning a small model on the semester's
+public-domain corpus. Grades will be
 available through Webcourses and updated weekly.
 
 **Withdrawal Deadline:** The university withdrawal deadline for this course is **Friday, October 30, 2026**. Please review UCF's withdrawal policy and reach out to the instructor as soon as possible if you are considering withdrawing.
@@ -304,26 +305,23 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [Ford, Paul. "The Web Is More Than Enough." *The Aboard Newsletter* (Ftrain). October 21, 2026.](https://ftrain.com/aboard-the-web-is-more-than-enough)
 -   [**Exercise: Local Models**](weektwelve.md)
 
-### Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, November 22)
+### Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, December 6)
 
 -   [**Slides: Week Thirteen**](slides/weekthirteen.html)
 -   *AI for Good* - Epilogue
--   ["Generative AI & Fictionality: How Novels Power Large Language Models." arXiv:2603.01220 (2026).](https://arxiv.org/pdf/2603.01220)
--   ["AI as a Tool for Simulation-Based Experiments in Literary Studies." arXiv:2606.02293 (2026).](https://arxiv.org/pdf/2606.02293)
--   **Due Sunday, November 22 -- before Thanksgiving break.**
+-   Doctorow, C. (2025, October 16). The AI that we'll have after AI. *Pluralistic*. [https://pluralistic.net/2025/10/16/post-ai-ai/#productive-residue](https://pluralistic.net/2025/10/16/post-ai-ai/#productive-residue)
+-   Kirschenbaum, M. (2026, November 9). In the AI Era, Language is Now an Attack Surface. *Tech Policy Press*. [https://www.techpolicy.press/in-the-ai-era-language-is-now-an-attack-surface/](https://www.techpolicy.press/in-the-ai-era-language-is-now-an-attack-surface/)
+-   **Due Sunday, December 6 -- this exercise stays open through Thanksgiving break and the week after.**
 -   [**Exercise: Distant Reading with and for AI**](weekthirteen.md)
 
 ### Thanksgiving Break (No Module, November 23 - 27)
 
-No module this week -- enjoy the Thanksgiving break! There is no new reading, exercise, or discussion due during this week.
+No module this week -- enjoy the Thanksgiving break! There is no new reading, exercise, or discussion due during this week; Week Thirteen's exercise stays open through Sunday, December 6, if you'd like to keep working on it.
 
 ### Week Fourteen: The Net Is Vast and Infinite - Custom Bots (Extra Credit, Monday, November 30 - Sunday, December 6)
 
 -   [**Slides: Week Fourteen**](slides/weekfourteen.html)
-
-This coda module is **extra credit only** and carries no new *AI for Good* chapter -- instead, revisit the Introduction and Epilogue alongside our ELIZA and Puppet Master callbacks from earlier in the semester, working with the "Ghosts Before the Shell" public-domain corpus: Mary Shelley's *Frankenstein* ([Gutenberg #41445](https://www.gutenberg.org/ebooks/41445)), Karel Čapek's *R.U.R.* ([Gutenberg #59112](https://www.gutenberg.org/ebooks/59112)), Thea von Harbou's *Metropolis* ([Gutenberg #73727](https://www.gutenberg.org/ebooks/73727)), Ambrose Bierce's "Moxon's Master" (in [*Can Such Things Be?*, Gutenberg #4366](https://www.gutenberg.org/ebooks/4366)), E.T.A. Hoffmann's "The Sand-Man" (in [*Weird Tales, Vol. 1*, Gutenberg #31377](https://www.gutenberg.org/ebooks/31377)), and Edward S. Ellis's *The Huge Hunter; or, The Steam Man of the Prairies* ([Gutenberg #7506](https://www.gutenberg.org/ebooks/7506)).
-
--   [**Extra Credit Exercise: Custom Bots**](weekfourteen.md) -- choose one or more tiers: build and share a custom Claude Skill (up to 6 points), build and share a subagent workflow (up to 6 points), or fine-tune a small model on the corpus above (up to 10 points).
+-   [**Extra Credit Exercise: Custom Bots**](weekfourteen.md) -- choose one or more tiers: build and share a custom Claude Skill (up to 6 points), try a local model at CHDR (up to 6 points), or fine-tune a small model on a public-domain corpus (up to 10 points).
 
 ### Final Reflection (Due Thursday, December 10)
 
