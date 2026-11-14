@@ -44,11 +44,21 @@ Before you start, decide what you want to read. Pick a topic, hashtag, community
 
 **Hacker News.** Hacker News, the tech-industry forum run by the startup investor Y Combinator, has a public search API that needs no account or password at all, so it's the simpler choice if you'd rather skip the credentials step. It's also home to a constant, heated argument about AI. Keep in mind who's talking: its users skew heavily toward people who work in tech, and that's worth noticing when you interpret your results.
 
-**Public isn't the same as yours to republish.** Collect only what your question needs, and let your script pause between requests rather than hammering the API. Report patterns in aggregate, and strip usernames from the data before it goes into your repository, since your repository and your visualization site will both be public. Don't quote individual posts on your site without the poster's permission.
+**Public isn't the same as yours to republish.** Collect only what your question needs, and let your script pause between requests rather than hammering the API. Report patterns in aggregate, strip usernames from the data as soon as you collect it, and don't quote individual posts without the poster's permission.
 
 One more thing to watch, courtesy of this week's Kirschenbaum reading: every post you collect is text your agent may end up reading. Treat the posts as data, not as instructions, and notice if the agent ever starts acting on what the posts say rather than on what you asked it to do.
 
-### Building Your Distant Reading System with Claude Code or Codex on the Web
+### Local and Private Is the Better Method
+
+If you were doing this as research, you would do it on your own machine, in a private folder: collecting other people's posts, analyzing them, and keeping the data and results to yourself until you'd decided what was appropriate to publish. A public repository and a public website are the wrong home for a dataset of people's posts, even with usernames stripped. Option Two below works that way, and it's the one I'd recommend if you can install Claude Code.
+
+Option One, on the web, exists only because of the course context: it's the route that works without installing anything. If you take it, treat the repository and site as temporary. When you're done, delete the repository, or make it private and unpublish the site under **Settings → Pages**.
+
+Either way, you don't need to share a link. Post screenshots of your process and your visualizations in the discussion instead.
+
+Choose one of the two options below for building your pipeline: Claude Code or Codex on the web, or Claude Code for your desktop.
+
+### Option One: Building Your Distant Reading System with Claude Code or Codex on the Web
 
 1. **Create a new GitHub repository** for your distant reading project.
 
@@ -63,7 +73,13 @@ One more thing to watch, courtesy of this week's Kirschenbaum reading: every pos
 
 Cloud agents work in sandboxes with limited internet access, so the agent may not be able to reach Bluesky or Hacker News directly from its own session. If it can't, ask it to run the collection script as a GitHub Actions workflow that commits the collected data back to the repository (for Bluesky, the workflow reads your two repository secrets). That's the same Actions route you used to publish to Pages in [Week Twelve](weektwelve.md).
 
+When you've taken your screenshots, delete the repository, or make it private and unpublish the site under **Settings → Pages**.
+
 You can reference the [complete development process](https://github.com/AMSUCF/claude-distant-reading/blob/main/PROCESS.md) from an earlier version of this exercise, built on Project Gutenberg novels rather than social media, to see one possible plan and its outputs, including the analytical methods (text processing, sentiment analysis, topic modeling, style metrics) and visualization approaches (word clouds, sentiment charts, comparative metrics).
+
+### Option Two: Working Locally and Privately with Claude Code for Desktop
+
+In this week's demo, I'll show you how to work locally with [Claude Code for your desktop](https://docs.claude.com/en/docs/claude-code/installation) to accomplish this same task. This is the better way to do this kind of work: the collection script runs on your own machine with ordinary internet access, and the posts, the analysis, and the visualizations all stay in a private folder rather than on a public site. You don't need GitHub at all for this option. Open the visualization straight from the folder in your browser. If you're using Bluesky, keep your app password in a local `.env` file, and if you ever turn the folder into a repository, ask the agent to add that file to `.gitignore` first so it never reaches GitHub.
 
 ### Discussion
 
