@@ -5,7 +5,8 @@ hide_warning: true
 canvas:
   module: "Week Thirteen: Puppet Masters — Distant Reading with and for AI"
   week_start: 2026-11-16
-  due: 2026-12-06
+  due: 2026-11-22
+  close: 2026-12-06
   points: 6
   discussion: true
   extra_credit: false
@@ -18,7 +19,7 @@ canvas:
 
 Back in Week Four, distant reading meant you and Claude working through a single novel together, prompt by prompt, watching for the moments where a model's assumptions about "the novel" or "genre" leaned on a narrow, canon-shaped sense of literature. This week, the same practice moves to machine scale and off the bookshelf: instead of one text and a conversational back-and-forth, you'll build an actual pipeline — code that collects and reads hundreds or thousands of posts from Bluesky or Reddit at once, with an AI agent doing much of the engineering alongside you. The ghost in the archive is still there. This time the archive is people talking to each other in public, and it's being read by something that reads faster, and differently, than either of us do.
 
-**This module stays open through Sunday, December 6.** It opens Monday, November 16, and runs through Thanksgiving break (November 23–27) and the week after, so you have three weeks for it instead of the usual one. There's no new module during break week, and Week Fourteen opens Monday, November 30, alongside this one. Collecting data and building a pipeline take longer than a single conversational pass, so spread the work out rather than saving it all for December.
+**This module's work is due Sunday, November 22, before Thanksgiving break.** Because the break falls right after it, late submissions stay open an extra week: instead of the usual one-week late window, you can submit through Sunday, December 6. There's no new module during break week (November 23–27), and Week Fourteen opens Monday, November 30. Collecting data and building a pipeline take longer than a single conversational pass, so aim for November 22 and treat the extra time as a cushion.
 
 ## Exercise: Distant Reading with and for AI
 

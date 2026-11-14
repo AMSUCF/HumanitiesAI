@@ -30,7 +30,7 @@ title: Humanities in the Age of AI
   - [Week Ten: Puppet Masters - Building and Deploying (Monday, October 26 - Sunday, November 1)](#week-ten-puppet-masters---building-and-deploying-monday-october-26---sunday-november-1)
   - [Week Eleven: Puppet Masters - Agentic Code (Monday, November 2 - Sunday, November 8)](#week-eleven-puppet-masters---agentic-code-monday-november-2---sunday-november-8)
   - [Week Twelve: Puppet Masters - Local Ghosts (Monday, November 9 - Sunday, November 15)](#week-twelve-puppet-masters---local-ghosts-monday-november-9---sunday-november-15)
-  - [Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, December 6)](#week-thirteen-puppet-masters---distant-reading-with-and-for-ai-monday-november-16---sunday-december-6)
+  - [Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, November 22)](#week-thirteen-puppet-masters---distant-reading-with-and-for-ai-monday-november-16---sunday-november-22)
   - [Thanksgiving Break (No Module, November 23 - 27)](#thanksgiving-break-no-module-november-23---27)
   - [Week Fourteen: The Net Is Vast and Infinite - Custom Bots (Extra Credit, Monday, November 30 - Sunday, December 6)](#week-fourteen-the-net-is-vast-and-infinite---custom-bots-extra-credit-monday-november-30---sunday-december-6)
   - [Final Reflection (Due Thursday, December 10)](#final-reflection-due-thursday-december-10)
@@ -305,18 +305,18 @@ Classes run from **Monday, August 24 through Thursday, December 3, 2026**, with 
 -   [Ford, Paul. "The Web Is More Than Enough." *The Aboard Newsletter* (Ftrain). October 21, 2026.](https://ftrain.com/aboard-the-web-is-more-than-enough)
 -   [**Exercise: Local Models**](weektwelve.md)
 
-### Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, December 6)
+### Week Thirteen: Puppet Masters - Distant Reading with and for AI (Monday, November 16 - Sunday, November 22)
 
 -   [**Slides: Week Thirteen**](slides/weekthirteen.html)
 -   *AI for Good* - Epilogue
 -   Doctorow, C. (2025, October 16). The AI that we'll have after AI. *Pluralistic*. [https://pluralistic.net/2025/10/16/post-ai-ai/#productive-residue](https://pluralistic.net/2025/10/16/post-ai-ai/#productive-residue)
 -   Kirschenbaum, M. (2026, November 9). In the AI Era, Language is Now an Attack Surface. *Tech Policy Press*. [https://www.techpolicy.press/in-the-ai-era-language-is-now-an-attack-surface/](https://www.techpolicy.press/in-the-ai-era-language-is-now-an-attack-surface/)
--   **Due Sunday, December 6 -- this exercise stays open through Thanksgiving break and the week after.**
+-   **Due Sunday, November 22 -- before Thanksgiving break. Late submissions are accepted through Sunday, December 6, an extra week beyond the usual late window.**
 -   [**Exercise: Distant Reading with and for AI**](weekthirteen.md)
 
 ### Thanksgiving Break (No Module, November 23 - 27)
 
-No module this week -- enjoy the Thanksgiving break! There is no new reading, exercise, or discussion due during this week; Week Thirteen's exercise stays open through Sunday, December 6, if you'd like to keep working on it.
+No module this week -- enjoy the Thanksgiving break! There is no new reading, exercise, or discussion due during this week; Week Thirteen stays open for late submissions through Sunday, December 6.
 
 ### Week Fourteen: The Net Is Vast and Infinite - Custom Bots (Extra Credit, Monday, November 30 - Sunday, December 6)
 
