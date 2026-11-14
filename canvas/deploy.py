@@ -85,7 +85,9 @@ def plan_week(path: Path, site_base: str, syllabus_md: str = "", *,
         "extra_credit": bool(c.get("extra_credit", False)),
         "due_at": due_at_utc(c["due"]),
         "unlock_at": unlock_at_utc(c["week_start"]),
-        "lock_at": (lock_at_utc(c["due"], grace_hours=late_hours) if late_hours is not None
+        # `close:` (a date) keeps one week open past the usual late window
+        "lock_at": (due_at_utc(c["close"]) if c.get("close")
+                    else lock_at_utc(c["due"], grace_hours=late_hours) if late_hours is not None
                     else due_at_utc(c["due"]) if c.get("hard_close")
                     else lock_at_utc(c["due"])),
         "lecture_title": f"{week_label} Readings + Lecture",

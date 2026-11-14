@@ -86,6 +86,16 @@ def test_plan_week_hard_close_locks_at_due(tmp_path):
     assert plan["lock_at"] == plan["due_at"] == "2026-12-11T04:59:00Z"
 
 
+def test_plan_week_close_date_extends_lock(tmp_path):
+    wk = tmp_path / "weekthirteen.md"
+    wk.write_text(_week_md().replace("  due: 2026-08-30\n",
+                                     "  due: 2026-08-30\n  close: 2026-09-13\n"),
+                  encoding="utf-8")
+    plan = deploy.plan_week(wk, site_base="https://x.y", late_hours=24)
+    assert plan["due_at"] == "2026-08-31T03:59:00Z"
+    assert plan["lock_at"] == "2026-09-14T03:59:00Z"   # close wins over late hours
+
+
 def test_plan_week_lecture_embeds_slides(tmp_path):
     wk = tmp_path / "weekone.md"
     wk.write_text(
