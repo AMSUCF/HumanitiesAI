@@ -321,6 +321,10 @@ No module this week -- enjoy the Thanksgiving break! There is no new reading, ex
 ### Week Fourteen: The Net Is Vast and Infinite - Custom Bots (Extra Credit, Monday, November 30 - Sunday, December 6)
 
 -   [**Slides: Week Fourteen**](slides/weekfourteen.html)
+-   [Mollick, Ethan. "Fable 5.2 and Jagged AGI." *One Useful Thing.* November 9, 2026.](https://www.oneusefulthing.org/p/fable-52-and-jagged-agi)
+-   [Cohen, Dan. "Scholarship Will Soon Be Much Harder to Save." *Humane Ingenuity.* September 2, 2026.](https://newsletter.dancohen.org/archive/scholarship-will-soon-be-much-harder-to-save/)
+-   [Doctorow, Cory. "Separable." *Pluralistic.* November 3, 2026.](https://pluralistic.net/2026/11/03/nobody-is-home/#metabolizers)
+-   **Recommended viewing, after the course:** *Mrs. Davis* (Peacock), *Pluribus* (Apple TV), *Upload* (Prime Video), *Ghost in the Shell: Stand Alone Complex*, the *Matrix* films, and *Her*.
 -   [**Extra Credit Exercise: Custom Bots**](weekfourteen.md) -- choose one or more tiers: build and share a custom Claude Skill (up to 6 points), try a local model at CHDR (up to 6 points), or fine-tune a small model on a public-domain corpus (up to 10 points).
 
 ### Final Reflection (Due Thursday, December 10)
